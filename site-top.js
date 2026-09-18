@@ -20,3 +20,5 @@
  document.body.append(button);
  const update=()=>{button.hidden=window.scrollY<300;};window.addEventListener('scroll',update,{passive:true});update();
 })();
+// Separate optional module; existing Top button and map links remain independent.
+(()=>{if(document.querySelector('script[data-saqrim-quests]'))return;const script=document.createElement('script');script.src='site-quests.js?v=1';script.dataset.saqrimQuests='true';script.async=true;document.head.append(script);})();
