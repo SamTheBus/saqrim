@@ -8,7 +8,7 @@ checks=[]
 def check(name,ok):
     assert ok,name
     checks.append(name);print('PASS',name,flush=True)
-for path in ['catalog-source.html','catalog-tags.js','catalog.js','load-order.tsv','load-order.js','map.js','map-locations.json','worlds.js','world-data.js','quests-data.json','quests.js','site-quests.js','faith-data.js','stones-data.js']:
+for path in ['catalog-source.html','catalog-tags.js','catalog.js','load-order.tsv','load-order.js','map.js','map-locations.json','worlds.js','world-data.js','faith-data.js','stones-data.js']:
     check('unchanged data / core '+path,(ROOT/path).read_bytes()==subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT))
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
@@ -19,7 +19,7 @@ expected=[['./','Loot catalog · 617'],['load-order.html','Load order · 220'],[
 cases=[
  ('index.html','./','window.SaqrimCatalog'),
  ('load-order.html','load-order.html','document.querySelector("#mods").children.length===220'),
- ('quests.html','quests.html','document.querySelectorAll(".quest-card").length===22'),
+ ('quests.html','quests.html','document.querySelectorAll(".quest-card").length===46'),
  ('map.html','map.html','window.SaqrimMap&&window.SaqrimQuestMap&&window.SaqrimBlessingsMap'),
  ('worlds.html?world=solstheim','map.html','window.SaqrimWorlds&&window.SaqrimQuestMap&&window.SaqrimBlessingsMap'),
  ('worlds.html?world=evergloam','map.html','window.SaqrimWorlds&&window.SaqrimQuestMap&&window.SaqrimBlessingsMap'),

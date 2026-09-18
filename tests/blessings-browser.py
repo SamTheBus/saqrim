@@ -18,7 +18,7 @@ for name,sha in {
  'load-order.js':'d2707aa2dafc3378637258549136e113c34a5db7',
  'map.js':'203ffe2a9eea53db288d8878392f9baab5289c39',
  'worlds.js':'01b8cc348fa3a4c40ab179a1b203757a6118395a',
- 'site-quests.js':'92ceb6bdc66e3e3f9dbd47a093699ddb5c7b2a1c'
+ 'site-quests.js':'451b8fb4e1ecd8d99cde402a5956d27ac00b5efe'
 }.items(): check('unchanged '+name,blob(name)==sha)
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args): pass

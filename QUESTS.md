@@ -1,6 +1,6 @@
 # Quests & Rewards
 
-`quests.html` is a first collection of **22 quest and adventure cards** for the recorded PS5 installation, not every quest in Skyrim or every installed mod. Cards Q001–Q015 cover mod-added quests, encounters and clearly labeled adventure-wide guides. Q016–Q022 cover existing quest routes with modded loot.
+`quests.html` contains **46 quest and adventure cards** for the recorded PS5 installation, not every quest in Skyrim or every installed mod. Cards Q001–Q015 cover mod-added quests, encounters and clearly labeled adventure-wide guides. Q016–Q022 cover existing quest routes with modded loot. Expansion 2 adds Q023–Q046; see [the expansion notes](QUESTS-EXPANSION.md).
 
 ## Starting points and destinations
 
