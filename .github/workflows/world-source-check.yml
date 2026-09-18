@@ -1,0 +1,43 @@
+name: World map source check
+on:
+  push:
+    branches: [map-world-layers]
+    paths: ['.github/workflows/world-source-check.yml']
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Inspect public map sources
+        shell: python
+        run: |
+          import urllib.request, urllib.parse, json, concurrent.futures
+          urls=[
+            'https://gamemap.uesp.net/db/gamemap.php?action=get_worlds&db=sr',
+            'https://gamemap.uesp.net/db/gamemap.php?action=get_worlds&db=beyond',
+            'https://en.uesp.net/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata&titles=File:DB-map-Solstheim.jpg%7CFile:SR-map-Soul_Cairn.jpg%7CFile:SR-map-Forgotten_Vale.jpg%7CFile:SR-map-Blackreach.jpg',
+            'https://www.nexusmods.com/skyrimspecialedition/mods/3008?tab=images',
+            'https://www.nexusmods.com/skyrimspecialedition/mods/109541?tab=images',
+            'https://unorthodogg.com/'
+          ]
+          def inspect(url):
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Saqrim map reference research (github.com/SamTheBus/saqrim)'})
+              with urllib.request.urlopen(req,timeout=25) as res:
+                content=res.read(4000000).decode('utf8','replace')
+                if 'get_worlds' in url:
+                  try:
+                    obj=json.loads(content)
+                    print('WORLDS',url,json.dumps(obj,ensure_ascii=False)[:28000])
+                  except Exception: print('NON_JSON',url,content[:300])
+                elif 'api.php' in url: print('IMAGES',url,content[:16000])
+                else:
+                  import re
+                  links=re.findall(r'(?:src|href)=[\"\']([^\"\']+)[\"\']',content)
+                  relevant=[s for s in links if any(t in s for t in ['staticdelivery','youtube','youtu.be','creations.bethesda','png','jpg','webp'])]
+                  print('PAGE_ASSETS',url,json.dumps(relevant[:100]))
+            except Exception as exc: print('SOURCE_ERROR',url,repr(exc))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            list(pool.map(inspect,urls))
