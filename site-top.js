@@ -1,10 +1,10 @@
 'use strict';
 // Shared site navigation is independent of the map, reference data and quest loaders.
 (() => {
- const entries=[['./','Loot catalog · 617'],['load-order.html','Load order · 220'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
+ const entries=[['./','Loot catalog · 633'],['load-order.html','Load order · 220'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
  function activePath(){
   const file=location.pathname.split('/').pop()||'index.html';
-  if(['index.html','loot.html','catalog-source.html'].includes(file))return './';
+  if(['index.html','loot.html','catalog-source.html','catalog-current.html'].includes(file))return './';
   if(file==='worlds.html')return 'map.html';
   if(file==='blessings.html'){const kind=/^#(deity|shrine|stone)=/.exec(location.hash);return (kind?kind[1]==='stone':new URLSearchParams(location.search).get('tab')==='stones')?'standing-stones.html':'shrines.html';}
   return file;
@@ -46,4 +46,4 @@
  const update=()=>{button.hidden=window.scrollY<300;};window.addEventListener('scroll',update,{passive:true});update();
 })();
 // Separate optional module; existing Top button and map links remain independent.
-(()=>{if(document.querySelector('script[data-saqrim-quests]'))return;const script=document.createElement('script');script.src='site-quests.js?v=2';script.dataset.saqrimQuests='true';script.async=true;document.head.append(script);})();
+(()=>{if(document.querySelector('script[data-saqrim-quests]'))return;const script=document.createElement('script');script.src='site-quests.js?v=3';script.dataset.saqrimQuests='true';script.async=true;document.head.append(script);})();

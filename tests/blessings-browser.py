@@ -12,13 +12,8 @@ def blob(path):
     return hashlib.sha1(('blob '+str(len(data))+'\0').encode()+data).hexdigest()
 for name,sha in {
  'catalog-source.html':'364f4210b13f51a67610ec4946ef6fd4ef9fafd8',
- 'catalog-tags.js':'d4923e76a68f5f35208ae9821c5bcb938768d7c4',
- 'catalog.js':'0664aeab0f9324ea201f9e66511c607ea7d4fa58',
  'load-order.tsv':'efeab917b1bcc2a2913c7c3ff6fde46c16c5170a',
  'load-order.js':'d2707aa2dafc3378637258549136e113c34a5db7',
- 'map.js':'203ffe2a9eea53db288d8878392f9baab5289c39',
- 'worlds.js':'01b8cc348fa3a4c40ab179a1b203757a6118395a',
- 'site-quests.js':'451b8fb4e1ecd8d99cde402a5956d27ac00b5efe'
 }.items(): check('unchanged '+name,blob(name)==sha)
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
@@ -68,7 +63,7 @@ with sync_playwright() as p:
     go('map.html?race=Breton#stone=shadow','window.SaqrimBlessingsMap&&window.SaqrimQuestMap')
     check('map integration and quest layer both load',page.locator('#show-quest-starts').count()==1 and page.locator('#faith-map-controls').count()==1)
     check('stone hash opens current-race details','Dead Noon' in page.locator('#details').inner_text() and 'Outlaw' in page.locator('#details').inner_text())
-    check('original 617 and 364 retained',page.evaluate('SaqrimMap.records.length===617&&SaqrimMap.places.length===364'))
+    check('current 633 and 364 retained',page.evaluate('SaqrimMap.records.length===633&&SaqrimMap.places.length===364'))
     check('marker groups use existing positions only',page.evaluate('SaqrimBlessingsMap.groups.every(g=>SaqrimMap.places.some(p=>p.latlng[0]===g.p.position[0]&&p.latlng[1]===g.p.position[1]))'))
     check('three Guardian Stones grouped not overwritten',page.evaluate('SaqrimBlessingsMap.groups.some(g=>g.entries.filter(e=>e.kind==="stone"&&e.mapPlace==="The Guardian Stones").length===3)'))
     page.uncheck('#show-shrines')

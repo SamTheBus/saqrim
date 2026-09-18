@@ -29,8 +29,8 @@
   a.append(node('div','meta',r.id+' · #'+r.raw['LO #']+' '+r.raw['Installed mod']+' · '+pick(r)),node('h3','',r.raw.Target));
   const tags=node('div','tag-row');for(const t of new Set(Object.values(r.meta.tags).flat()))tags.append(node('span','tag',t));a.append(tags);
   for(const [label,key]of [['Where / unlock','Where / unlock'],['Effect / interest','Effect / interest'],['Evidence','Evidence status'],['Qualifications','Qualifications']]){if(!r.raw[key])continue;const p=node('p');p.append(node('strong','',label+': '),document.createTextNode(r.raw[key]));a.append(p);}
-  const refs=node('div','source-links');const full=node('a','','Open full catalog entry →');full.href='./#'+r.id;refs.append(full);
-  const urls=(r.raw['Source URL']||'').split(/\s*\|\s*/).filter(u=>/^https?:\/\//i.test(u));urls.forEach((u,i)=>refs.append(sourceLink(u,urls.length>1?'Original source '+(i+1):'Original source')));a.append(refs);
+  const audit=SaqrimTags.auditNode(r.raw);if(audit)a.append(audit);const refs=node('div','source-links');const full=node('a','','Open full catalog entry →');full.href='./#'+r.id;refs.append(full);
+  const urls=(r.raw['Source URL']||'').split(/\s*[|\n]\s*/).filter(u=>/^https?:\/\//i.test(u));urls.forEach((u,i)=>refs.append(sourceLink(u,urls.length>1?'Original source '+(i+1):'Original source')));a.append(refs);
   const local=r.links.filter(l=>l.world===world.id);
   if(!local.length)a.append(node('p','hint','No geographic pin has been established for this record. Its directions above remain available.'));
   for(const l of local){const box=node('div','association');const b=node('button','',(l.pin?'Show reference pin · ':'Read location notes · ')+l.place);b.type='button';b.addEventListener('click',()=>selectPlace(l.place));box.append(b,node('p','',kinds[l.kind]||l.kind));if(l.note)box.append(node('p','',l.note));a.append(box);}
@@ -136,8 +136,8 @@
   }
  }
  try{
-  const res=await fetch('catalog-source.html');if(!res.ok)throw Error('Catalog request failed.');const doc=new DOMParser().parseFromString(await res.text(),'text/html');const data=JSON.parse(doc.getElementById('dataset').textContent);
-  if(data.length!==617||new Set(data.map(r=>r['Catalog ID'])).size!==617)throw Error('Catalog integrity check failed.');
+  const res=await fetch('catalog-current.html?v=1');if(!res.ok)throw Error('Catalog request failed.');const doc=new DOMParser().parseFromString(await res.text(),'text/html');const data=JSON.parse(doc.getElementById('dataset').textContent);
+  if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
   places=SaqrimWorldData.places.map(p=>({...p,pin:Number.isFinite(p.x)&&Number.isFinite(p.y),items:[],matches:[]}));const lookup=new Map(places.map(p=>[pkey(p),p]));
   records=data.map(raw=>{const id=raw['Catalog ID'],meta=SaqrimTags.classify(raw);const links=(SaqrimWorldData.links[id]||[]).map(l=>{const location=lookup.get(l.world+'::'+l.place);if(!location)throw Error('Missing reference location: '+l.place);return {...l,location,pin:location.pin};});return {id,raw,meta,links,worlds:SaqrimWorldData.forRecord(raw),search:norm(Object.values(raw).join(' ')+' '+Object.values(meta.tags).flat().join(' '))};});
   for(const r of records)for(const l of r.links)if(!l.location.items.includes(r))l.location.items.push(r);

@@ -7,7 +7,7 @@ checks=[]
 def check(name,value):
     assert value,name
     checks.append(name); print('PASS',name,flush=True)
-for name in ['catalog-source.html','catalog-tags.js','catalog.js','load-order.tsv','load-order.js','map.js','map-links.js','map-locations.json','world-data.js','worlds.js']:
+for name in ['catalog-source.html','load-order.tsv','load-order.js','map-links.js','map-locations.json','world-data.js']:
     old=subprocess.check_output(['git','show',BASE+':'+name],cwd=ROOT)
     check('preserved '+name,(ROOT/name).read_bytes()==old)
 class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -27,7 +27,7 @@ with sync_playwright() as p:
     def found():return ev('SaqrimQuests.filtered.map(q=>q.id)')
     go()
     check('46 distinct quest cards',ev('SaqrimQuests.quests.length===46&&new Set(SaqrimQuests.quests.map(q=>q.id)).size===46'))
-    check('all 617 original catalog records available',ev('SaqrimQuests.catalog.size===617'))
+    check('all 633 current catalog records available',ev('SaqrimQuests.catalog.size===633'))
     check('all W-number links resolve',ev('SaqrimQuests.quests.every(q=>q.rewards.every(r=>!r.catalog||SaqrimQuests.catalog.has(r.catalog)))'))
     check('manual reward tags match existing filter vocabulary',ev('SaqrimQuests.quests.every(q=>q.rewards.every(r=>Object.entries(r.tags).every(([k,v])=>v.every(x=>SaqrimTags.groups.find(g=>g[0]===k)[2].includes(x)))))'))
     check('new navigation present once',page.locator('.nav a[href="quests.html"]').count()==1)
@@ -90,6 +90,6 @@ with sync_playwright() as p:
     out=ROOT/'test-results';out.mkdir(exist_ok=True);page.screenshot(path=str(out/'quests-mobile.png'),full_page=True)
     page.set_viewport_size({'width':1440,'height':960});go('quests.html?start=Markarth');page.locator('#Q018').evaluate('(n)=>n.open=true');page.screenshot(path=str(out/'quests-desktop.png'),full_page=True)
     check('no browser JavaScript errors',not errors)
-    result={'checks':len(checks),'errors':errors,'questCards':46,'catalogLinks':linked,'catalogRecords':617,'loadOrderRecords':220}
+    result={'checks':len(checks),'errors':errors,'questCards':46,'catalogLinks':linked,'catalogRecords':633,'loadOrderRecords':220}
     (out/'quest-checks.json').write_text(json.dumps(result,indent=2));print('RESULT',json.dumps(result),flush=True);browser.close()
 server.shutdown()

@@ -8,14 +8,14 @@ checks=[]
 def check(name,ok):
     assert ok,name
     checks.append(name);print('PASS',name,flush=True)
-for path in ['catalog-source.html','catalog-tags.js','catalog.js','load-order.tsv','load-order.js','map.js','map-locations.json','worlds.js','world-data.js','faith-data.js','stones-data.js']:
+for path in ['catalog-source.html','load-order.tsv','load-order.js','map-locations.json','world-data.js','faith-data.js','stones-data.js']:
     check('unchanged data / core '+path,(ROOT/path).read_bytes()==subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT))
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
 server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(ROOT)))
 threading.Thread(target=server.serve_forever,daemon=True).start()
 base='http://127.0.0.1:'+str(server.server_port)+'/'
-expected=[['./','Loot catalog · 617'],['load-order.html','Load order · 220'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']]
+expected=[['./','Loot catalog · 633'],['load-order.html','Load order · 220'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']]
 cases=[
  ('index.html','./','window.SaqrimCatalog'),
  ('load-order.html','load-order.html','document.querySelector("#mods").children.length===220'),

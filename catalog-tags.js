@@ -86,6 +86,7 @@ window.SaqrimTags = (() => {
   // No enchantment magnitude or health bonus is parsed as a base rating.
   const stats={damage:null,armor:null};
   if(Object.hasOwn(damage,id)){stats.damage=damage[id];urls.add(source(104381));notes.push('Base damage is the original author\'s value (Artifact of Might 1.0.3), not an observed PS5 inventory value. The port, skills and upgrades can change your displayed number.');}
+  tags.origin=[r['Artifact origin']||'Unreviewed / other'];tags.review=r['Artifact review status']?[r['Artifact review status']]:[];
   return {tags,stats,notes,urls:[...urls]};
  }
  const groups=[
@@ -95,7 +96,15 @@ window.SaqrimTags = (() => {
   ['weapon','Weapon type',['Sword','Dagger','War axe','Mace','Greatsword','Battleaxe','Warhammer','Bow','Crossbow','Staff','Firearm','Ammunition','Polearm','Quarterstaff','Claws','Whip','Unknown']],
   ['armor','Armor class',['Heavy armor','Light armor','Clothing','Unknown']],
   ['slot','Equipment slot',['Full set','Helmet / headwear','Body / robes','Hands / gauntlets','Feet / boots','Shield','Ring','Amulet / necklace','Circlet / crown','Cloak / cape','Unknown']],
+  ['origin','Item origin',['Changed vanilla / DLC unique','Replacement thane reward','Creation relic','Mod-added / other','Unreviewed / other']],
+  ['review','Artifact review',['Expected from documentation','Documented overlap','Possible later edit','Identity / acquisition check']],
   ['choice','My choices',['Want','Maybe','Skip','Undecided']]
  ];
- return {classify,groups};
+ function auditNode(raw){
+ const a=raw['Artifact audit'];if(!a)return null;const box=document.createElement('details');box.className='artifact-audit';box.style.cssText='border:1px solid #c5ab76;border-radius:8px;padding:12px;margin:14px 0;font-size:14px;overflow-wrap:anywhere';
+ const summary=document.createElement('summary');summary.textContent='Load-order review · '+a.status;box.append(summary);
+ for(const [key,label]of [["basis", "Evidence level"], ["expected", "Expected version / unresolved winner"], ["chain", "Recorded order / scope"], ["earlierEffect", "Earlier documented benefit — not a final effect"], ["appearance", "Appearance / assets"], ["acquisition", "Acquisition / distribution"], ["verification", "What is not verified"]]){if(!a[key])continue;const h=document.createElement('h4'),p=document.createElement('p');h.textContent=label;p.textContent=a[key];box.append(h,p);}
+ for(const [i,url]of a.sources.entries()){if(!url.startsWith('https://'))continue;const p=document.createElement('p'),link=document.createElement('a');link.textContent='Review source '+(i+1);link.href=url;link.target='_blank';link.rel='noopener noreferrer';p.append(link);box.append(p);}return box;
+ }
+ return {classify,groups,auditNode};
 })();

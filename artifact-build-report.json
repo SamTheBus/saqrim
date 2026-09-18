@@ -1,0 +1,32 @@
+{
+  "baseline": "0d86612cb4a2a8853490747fab37919ca5c75a19",
+  "original": 617,
+  "current": 633,
+  "added": 16,
+  "reviewed": 77,
+  "statusCounts": {
+    "Expected from documentation": 39,
+    "Possible later edit": 5,
+    "Documented overlap": 19,
+    "Identity / acquisition check": 14
+  },
+  "recordVerified": 0,
+  "newIDs": [
+    "W618",
+    "W619",
+    "W620",
+    "W621",
+    "W622",
+    "W623",
+    "W624",
+    "W625",
+    "W626",
+    "W627",
+    "W628",
+    "W629",
+    "W630",
+    "W631",
+    "W632",
+    "W633"
+  ]
+}

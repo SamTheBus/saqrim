@@ -19,7 +19,8 @@
   const r=item.r,q=$('search').value.toLowerCase().trim();
   if(q&&!q.split(/\s+/).every(t=>item.search.includes(t)))return false;
   if($('mod').value&&String(r['LO #'])!==$('mod').value)return false;
-  if($('only-new').checked&&Number(item.id.slice(1))<=551)return false;
+  if($('only-new').checked&&(Number(item.id.slice(1))<=551||Number(item.id.slice(1))>617))return false;
+  if($('only-artifact-batch').checked&&r['Artifact batch']!=='Familiar uniques 1')return false;
   for(const [group,set] of Object.entries(selected)){
    if(group===except||!set.size)continue;
    const values=group==='choice'?[pick(r)]:item.meta.tags[group];
@@ -43,7 +44,7 @@
  function render(){
   const filtered=records.filter(i=>matches(i)),visible=single?filtered.filter(i=>i.id===single):filtered;
   const wanted=data.filter(r=>pick(r)==='Want').length;
-  $('count').textContent=`${visible.length} / 617 shown · ${wanted} wanted`;
+  $('count').textContent=`${visible.length} / 633 shown · ${wanted} wanted`;
   const ids=new Set(visible.map(i=>i.id));
   const frag=document.createDocumentFragment();sorted(records).forEach(i=>{i.card.hidden=!ids.has(i.id);frag.append(i.card);});$('catalog').append(frag);
   $('empty').hidden=visible.length!==0;
@@ -59,11 +60,11 @@
   }
   return visible;
  }
- function reset(){for(const set of Object.values(selected))set.clear();for(const x of inputs)x.input.checked=false;$('search').value='';$('mod').value='';$('only-new').checked=false;$('known-only').checked=false;$('sort').value='catalog';single=null;render();}
+ function reset(){for(const set of Object.values(selected))set.clear();for(const x of inputs)x.input.checked=false;$('search').value='';$('mod').value='';$('only-new').checked=false;$('only-artifact-batch').checked=false;$('known-only').checked=false;$('sort').value='catalog';single=null;render();}
  function scrollResults(){$('catalog').scrollIntoView({behavior:'instant',block:'start'});}
  function openHash(){let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch(_){return;}const i=records.find(i=>i.id===hash);if(i){reset();i.card.open=true;requestAnimationFrame(()=>i.card.scrollIntoView({block:'start',behavior:'instant'}));}else if(/^category-[1-6]$/.test(hash)){reset();const cat=SaqrimTags.groups[0][2][Number(hash.slice(-1))-1];selected.category.add(cat);inputs.find(i=>i.group==='category'&&i.val===cat).input.checked=true;render();scrollResults();}}
  function panel(title,text,name,importing=false){$('transfer-title').textContent=title;$('transfer-text').value=text;$('transfer-text').readOnly=!importing;$('transfer').hidden=false;$('apply-import').hidden=!importing;$('file-label').hidden=!importing;$('save-backup').hidden=importing;$('copy').hidden=importing;transferName=name;saveJSON=name.endsWith('.json');$('transfer').scrollIntoView({block:'start',behavior:'instant'});}
- function backup(){return JSON.stringify({format:'skyrim-loot-choices',version:2,catalogTargets:617,exportedAt:new Date().toISOString(),choices:Object.fromEntries(data.map(r=>[r['Catalog ID'],pick(r)])),ratings},null,2);}
+ function backup(){return JSON.stringify({format:'skyrim-loot-choices',version:2,catalogTargets:data.length,exportedAt:new Date().toISOString(),choices:Object.fromEntries(data.map(r=>[r['Catalog ID'],pick(r)])),ratings},null,2);}
  function importBackup(raw){if(raw.length>2*1024*1024)throw Error('Backup is too large.');const parsed=JSON.parse(raw);if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw Error('Expected a JSON backup object.');const incoming=sanitizeChoices(parsed.choices||parsed),stats=sanitizeRatings(parsed.ratings||{});if(!Object.keys(incoming).length&&!Object.keys(stats).length)throw Error('No recognized W-numbers and values found.');Object.assign(choices,incoming);for(const [id,v]of Object.entries(stats))ratings[id]={...ratings[id],...v};write();records.forEach(i=>{updateChoice(i);updateStat(i);});single=null;render();say(`Imported ${Object.keys(incoming).length} choices and ${Object.keys(stats).length} personal rating records.`);}
  function updateStat(item){if(!item.statline)return;const {key,input,line}=item.statline;input.value=ratings[item.id]?.[key]??'';const author=item.meta.stats[key];line.textContent=`Author base ${key==='armor'?'armor':'damage'}: ${validNumber(author)?author:'Unknown'} · Your in-game value: ${ratings[item.id]?.[key]??'Not entered'}`;}
  function enrichCard(item){
@@ -85,16 +86,16 @@
   card.querySelector('.pick-select').addEventListener('change',e=>{choices[id]=e.target.value;updateChoice(item);write();render();say(id+' → '+pick(r)+(canSave?' · saved.':' · session only.'));});updateChoice(item);
  }
  try{
-  const res=await fetch('catalog-source.html');if(!res.ok)throw Error('Catalog data request failed.');
+  const res=await fetch('catalog-current.html?v=1');if(!res.ok)throw Error('Catalog data request failed.');
   const text=await res.text();const parsed=new DOMParser().parseFromString(text,'text/html');data=JSON.parse(parsed.getElementById('dataset').textContent);
-  if(data.length!==617||new Set(data.map(r=>r['Catalog ID'])).size!==617)throw Error('Catalog integrity check failed.');
+  if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
   choices=sanitizeChoices(read(KEY));ratings=sanitizeRatings(read(RKEY));
   records=data.map((r,index)=>{const id=r['Catalog ID'];const original=parsed.getElementById(id);if(!original)throw Error('Missing card '+id);const meta=SaqrimTags.classify(r);return {id,r,index,meta,card:document.importNode(original,true),search:(Object.values(r).join(' ')+' '+Object.values(meta.tags).flat().join(' ')).toLowerCase()};});
   for(const [group,title,values]of SaqrimTags.groups){selected[group]=new Set();const block=node('details','facet');block.open=['category','school','armor','slot'].includes(group);block.append(node('summary','',title));const field=node('fieldset');field.append(node('legend','',title));for(const val of values){const label=node('label','tick');const input=node('input');input.type='checkbox';input.dataset.group=group;input.value=val;const count=node('span','', '0');count.setAttribute('aria-hidden','true');label.append(input,node('span','',val),count);field.append(label);inputs.push({group,val,input,label:count});input.addEventListener('change',()=>{if(input.checked)selected[group].add(val);else selected[group].delete(val);single=null;render();});}block.append(field);$('facets').append(block);}
   const mods=new Map();for(const r of data)mods.set(String(r['LO #']),r['Installed mod']);[...mods].sort((a,b)=>Number(a[0])-Number(b[0])).forEach(([id,name])=>{const o=node('option','', '#'+id+' '+name);o.value=id;$('mod').append(o);});
   records.forEach(enrichCard);
   document.querySelectorAll('[disabled]').forEach(n=>n.disabled=false);
-  for(const id of ['search','mod','sort','only-new','stat-source','known-only'])$(id).addEventListener(id==='search'?'input':'change',()=>{single=null;render();});
+  for(const id of ['search','mod','sort','only-new','only-artifact-batch','stat-source','known-only'])$(id).addEventListener(id==='search'?'input':'change',()=>{single=null;render();});
   $('clear').addEventListener('click',reset);$('view-results').addEventListener('click',()=>{if(matchMedia('(max-width:720px)').matches)$('filter-panel').open=false;scrollResults();});
   $('expand').addEventListener('click',()=>records.forEach(i=>{if(!i.card.hidden)i.card.open=true;}));$('collapse').addEventListener('click',()=>records.forEach(i=>{if(!i.card.hidden)i.card.open=false;}));
   $('random').addEventListener('click',()=>{const pool=records.filter(i=>matches(i)&&pick(i.r)!=='Skip');if(!pool.length){say('No unskipped matches. Clear or change a filter.');return;}const item=pool[Math.floor(Math.random()*pool.length)];single=item.id;render();item.card.open=true;scrollResults();});
@@ -108,7 +109,9 @@
   window.addEventListener('hashchange',openHash);
   if(matchMedia('(max-width:720px)').matches)$('filter-panel').open=false;
   // Do not overwrite storage on startup. Existing records remain intact.
-  storageNote();render();openHash();
+  storageNote();
+  const query=new URLSearchParams(location.search);for(const [group,,vals]of SaqrimTags.groups)for(const value of query.getAll(group))if(vals.includes(value)){selected[group].add(value);inputs.find(i=>i.group===group&&i.val===value).input.checked=true;}if(query.get('batch')==='Familiar uniques 1')$('only-artifact-batch').checked=true;
+  render();openHash();
   window.SaqrimCatalog={records,render,reset,selected,sorted,value,statType};
  }catch(e){$('error').hidden=false;$('count').textContent='Interactive catalog unavailable';console.error(e);}
 })();

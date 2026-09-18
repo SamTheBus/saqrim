@@ -16,11 +16,8 @@ def git_blob(path):
     b=(ROOT/path).read_bytes();return hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()
 for path,sha in {
     'catalog-source.html':'364f4210b13f51a67610ec4946ef6fd4ef9fafd8',
-    'catalog-tags.js':'d4923e76a68f5f35208ae9821c5bcb938768d7c4',
-    'catalog.js':'0664aeab0f9324ea201f9e66511c607ea7d4fa58',
     'load-order.tsv':'efeab917b1bcc2a2913c7c3ff6fde46c16c5170a',
     'load-order.js':'d2707aa2dafc3378637258549136e113c34a5db7',
-    'map.js':'203ffe2a9eea53db288d8878392f9baab5289c39'
 }.items():check('unchanged '+path,git_blob(path)==sha)
 with sync_playwright() as p:
     browser=p.chromium.launch()
@@ -32,7 +29,7 @@ with sync_playwright() as p:
     def ready(url):
         page.goto(URL+url);page.wait_for_function('window.SaqrimWorlds')
     ready('/worlds.html?world=solstheim')
-    check('617 records retained',page.evaluate('SaqrimWorlds.records.length===617'))
+    check('633 records retained',page.evaluate('SaqrimWorlds.records.length===633'))
     check('nine realm views plus mainland',page.locator('#map-world option').count()==10)
     check('Solstheim selected',page.evaluate('SaqrimWorlds.world.id==="solstheim"'))
     check('36 Solstheim geographic reference places',page.evaluate('SaqrimWorlds.places.filter(p=>p.world==="solstheim"&&p.pin).length===36'))

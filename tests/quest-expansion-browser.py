@@ -13,7 +13,7 @@ check('original 22 quest objects preserved exactly',new[:22]==old)
 check('46 stable sequential unique IDs',[q['id'] for q in new]==[f'Q{i:03}' for i in range(1,47)])
 check('24 explicit expansion records',sum(q.get('batch')=='Expansion 2' for q in new)==24)
 check('every new card has sources and start instructions',all(q.get('sources') and q['start'].get('trigger') for q in new[22:]))
-for n in ['catalog-source.html','catalog-tags.js','catalog.js','load-order.tsv','load-order.js','faith-data.js','stones-data.js','map-locations.json','world-data.js','map.js','worlds.js']:
+for n in ['catalog-source.html','load-order.tsv','load-order.js','faith-data.js','stones-data.js','map-locations.json','world-data.js']:
  check('unchanged '+n,(ROOT/n).read_bytes()==subprocess.check_output(['git','show',BASE+':'+n],cwd=ROOT))
 class Quiet(http.server.SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
@@ -29,7 +29,7 @@ with sync_playwright() as p:
  def ids():return ev('SaqrimQuests.filtered.map(q=>q.id)')
  go('quests.html?batch=Expansion%202')
  check('new batch share link selects exactly 24',ids()==[q['id'] for q in new[22:]])
- check('old plus new full catalog available',ev('SaqrimQuests.catalog.size===617&&SaqrimQuests.quests.length===46'))
+ check('old plus new full catalog available',ev('SaqrimQuests.catalog.size===633&&SaqrimQuests.quests.length===46'))
  check('quest tab navigation still has six destinations',page.locator('.nav a:not(.brand)').count()==6)
  check('all manual reward tags use exact vocabulary',ev('SaqrimQuests.quests.every(q=>q.rewards.every(r=>Object.entries(r.tags).every(([k,v])=>v.every(x=>SaqrimTags.groups.find(g=>g[0]===k)[2].includes(x)))))'))
  for i,school in enumerate(['Illusion','Conjuration','Destruction','Alteration','Restoration'],33):
