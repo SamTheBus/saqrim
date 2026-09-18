@@ -1,0 +1,62 @@
+name: Quest expansion 2
+on:
+  push:
+    branches: [quest-expansion-2]
+    paths:
+      - 'tools/quest-expansion-data.py'
+      - 'tools/apply-quest-expansion.py'
+      - 'tests/quest-expansion-browser.py'
+      - '.github/workflows/quest-expansion-checks.yml'
+permissions:
+  contents: write
+concurrency:
+  group: quest-expansion-2
+  cancel-in-progress: true
+jobs:
+  build-check:
+    if: github.ref == 'refs/heads/quest-expansion-2'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build from the reviewed navigation baseline
+        run: python tools/apply-quest-expansion.py
+      - name: Install browser tools
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Check modified scripts
+        run: |
+          node --check quests.js
+          node --check site-quests.js
+          node --check site-top.js
+      - name: Expansion content and browser checks
+        run: python tests/quest-expansion-browser.py
+      - name: Existing quest journal checks
+        run: python tests/quest-browser.py
+      - name: Six-tab navigation checks
+        run: python tests/navigation-browser.py
+      - name: Shrine and standing-stone checks
+        run: python tests/blessings-browser.py
+      - name: Mainland map checks
+        run: python tests/map-browser.py
+      - name: Other-world map checks
+        run: python tests/world-browser.py
+      - name: Commit tested output to this working branch only
+        run: |
+          test "$GITHUB_REF" = refs/heads/quest-expansion-2
+          git config user.name 'Saqrim site builder'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add quests-data.json quests.js site-quests.js site-top.js index.html load-order.html map.html worlds.html quests.html shrines.html standing-stones.html blessings.html tests/quest-browser.py tests/navigation-browser.py tests/blessings-browser.py QUESTS.md QUESTS-EXPANSION.md
+          git commit -m "Publish tested expansion: 24 more quests, rewards and map links"
+          git push origin HEAD:quest-expansion-2
+          git rev-parse HEAD > test-results/tested-commit.txt
+          echo "TESTED_COMMIT=$(git rev-parse HEAD)"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quest-expansion-checks
+          path: test-results/
+          retention-days: 7
