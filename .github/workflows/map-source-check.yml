@@ -1,35 +1,63 @@
-name: Map source check
+name: Prepare map assets
 on:
   push:
     branches: [interactive-map]
     paths: ['.github/workflows/map-source-check.yml']
 permissions:
-  contents: read
+  contents: write
 jobs:
   sources:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
     steps:
-      - name: Validate and report public coordinate facts
+      - uses: actions/checkout@v4
+        with:
+          ref: interactive-map
+      - run: python -m pip install Pillow==11.3.0
+      - name: Build attributed map assets from pinned public sources
         shell: python
         run: |
-          import urllib.request, json, math
+          import urllib.request, json, io, pathlib, hashlib, base64
+          from PIL import Image
           root='https://raw.githubusercontent.com/lcbmann/keizaal-ranger-map/eebeb504a088f75c467bc8e601f8dc1209c2bc2f/'
-          data=json.load(urllib.request.urlopen(root+'data/skyrim-canon-atlas.generated.json',timeout=30))
-          det=73.8268130*74.5665700-0.215295427*(-0.324059025)
-          result=[]
+          out=pathlib.Path('assets/map');out.mkdir(parents=True,exist_ok=True)
+          def get(url):
+              with urllib.request.urlopen(url,timeout=45) as response:
+                  value=response.read(40000000)
+                  assert response.status==200
+                  return value
+          raw=get(root+'data/skyrim-canon-atlas.generated.json')
+          data=json.loads(raw)
+          assert len(data['features'])==350
+          points=[]
           for f in data['features']:
-              p=f['points'][0];x=p['x']-4067.73578;y=p['y']-3036.85421
-              cx=round((x*74.5665700-0.215295427*y)/det)
-              cy=round((73.8268130*y+0.324059025*x)/det)
-              result.append([f['title'],cx,cy])
-          print('LOCATION_FACTS_BEGIN')
-          for start in range(0,len(result),50): print(json.dumps(result[start:start+50],ensure_ascii=False,separators=(',',':')))
-          print('LOCATION_FACTS_END',len(result))
-          for url in ['https://tiles.modmapper.com/0/0/0.jpg','https://tiles.modmapper.com/2/1/1.jpg']:
-              try:
-                  response=urllib.request.urlopen(url,timeout=20)
-                  content=response.read()
-                  print('TILE',url,response.status,response.headers.get('Content-Type'),len(content),content[:3].hex())
-                  assert content.startswith(b'\xff\xd8\xff')
-              except Exception as exc: print('TILE_ERROR',url,repr(exc))
+              if f['title'] in ['Solstheim','Ferry Drop off Marker']:continue
+              p=f['points'][0]
+              assert 0<=p['x']<=8192 and 0<=p['y']<=6144
+              points.append([f['title'],p['x'],p['y']])
+          towns=[['Dawnstar',4604,4871],['Winterhold',5989,4794],['Windhelm',6414,3707],['Riften',7253,1312],['Falkreath',3475,1382],['Markarth',868,3097],['Solitude',2785,4907],['Morthal',3349,4119],['Whiterun',4452,2956],['Dragon Bridge',2095,4429],['Karthwasten',1591,3625],['Rorikstead',2471,3049],['Helgen',4286,1532],['Ivarstead',5385,1819],["Shor's Stone",6924,1827],['Riverwood',4376,2119]]
+          points+=towns
+          points.sort(key=lambda p:p[0].casefold())
+          assert len(points)==364 and len(set(p[0] for p in points))==364
+          pathlib.Path('map-locations.json').write_text(json.dumps({'width':8192,'height':6144,'coordinateOrigin':'bottom-left','precision':'Approximate exterior location areas, not exact item coordinates','source':root+'data/skyrim-canon-atlas.generated.json','townSource':root+'supabase/migrations/202608270001_add_authoritative_settlements.sql','locations':points},ensure_ascii=False,separators=(',',':'))+'\n')
+          original=get(root+'SR-map-Skyrim.jpg')
+          image=Image.open(io.BytesIO(original)).convert('RGB')
+          print('SOURCE_IMAGE',image.size,'bytes',len(original))
+          assert image.size==(8192,6144)
+          image.resize((4096,3072),Image.Resampling.LANCZOS).save(out/'skyrim.webp','WEBP',quality=78,method=6)
+          for name,url in {'leaflet.js':'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js','leaflet.css':'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css','LEAFLET-LICENSE.txt':'https://raw.githubusercontent.com/Leaflet/Leaflet/v1.9.4/LICENSE'}.items():
+              payload=get(url);(out/name).write_bytes(payload)
+              print(name,len(payload),'sha256',hashlib.sha256(payload).hexdigest())
+          (out/'SOURCES.txt').write_text('Skyrim map artwork: Bethesda Softworks, SR-map-Skyrim.jpg; source mirror: '+root+'SR-map-Skyrim.jpg\nCoordinates: factual names and approximate atlas positions from lcbmann/keizaal-ranger-map at pinned commit eebeb504a088f75c467bc8e601f8dc1209c2bc2f. Exported exterior-cell locations, plus reference settlement positions; not exact loot pins.\nLeaflet 1.9.4: https://leafletjs.com ; BSD-2-Clause, see LEAFLET-LICENSE.txt.\nNo license over Bethesda artwork or the upstream repository is asserted by Saqrim.\n')
+          preview=io.BytesIO();image.resize((360,270)).save(preview,'JPEG',quality=50)
+          print('PREVIEW_BASE64',base64.b64encode(preview.getvalue()).decode())
+          print('LOCATION_COUNT',len(points),'MAP_BYTES',(out/'skyrim.webp').stat().st_size)
+      - name: Commit only prepared map files to the working branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add map-locations.json assets/map/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add self-hosted Skyrim map, 364 approximate place markers and Leaflet 1.9.4'
+            git push origin HEAD:interactive-map
+          fi
