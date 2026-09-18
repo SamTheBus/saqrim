@@ -112,6 +112,10 @@ for name in ['blessings-browser.py','map-browser.py','world-browser.py','navigat
         t=t.replace("'"+file+"',",'').replace(",'"+file+"'",'')
     t=counts(t)
     t=t.replace('original 633','current 633').replace('all 633 original','all 633 current')
+    if name=='map-browser.py':
+        # 633 current records minus the unchanged 103 mainland associations.
+        t=replace(t,'all 514 unpinned notes available','all 530 unpinned notes available')
+        t=replace(t,'SaqrimMap.filteredItems.length===514','SaqrimMap.filteredItems.length===530 && SaqrimMap.filteredItems.length===SaqrimMap.records.filter(r=>!r.links.length).length')
     put('tests/'+name,t)
 
 summary=collections.Counter(a['status'] for a in audits.values())
