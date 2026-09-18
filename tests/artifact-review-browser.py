@@ -51,7 +51,9 @@ with sync_playwright() as p:
  go('index.html#W180');page.wait_for_selector('#W180[open]');check('axe headline does not promise Emberwisps','Emberwisp' not in page.locator('#W180>summary').inner_text())
  page.locator('#W180 .artifact-audit>summary').click();check('old axe benefit retained as earlier reference','Emberwisps' in page.locator('#W180 .artifact-audit').inner_text())
  ev('localStorage.setItem("skyrimLootChoices_v202_20260917",JSON.stringify({W180:"Want",W633:"Maybe"}));localStorage.setItem("saqrimObservedStats_v1",JSON.stringify({W012:{armor:123}}));localStorage.setItem("saqrim-load-order-220-2026-09-17","[1,2]");localStorage.setItem("saqrimQuestProgress_v1",JSON.stringify({Q033:{status:"In progress",notes:"Keep my note",rewardCollected:false}}))')
- saved=ev('JSON.stringify({...localStorage})');go('index.html#W633');check('old and new picks are read',page.input_value('#pick_W180')=='Want' and page.input_value('#pick_W633')=='Maybe')
+ # A fragment change does not reread storage into the existing page's closure.
+ saved=ev('JSON.stringify({...localStorage})');go('index.html?restore-test=1#W633');check('old and new picks are read',page.input_value('#pick_W180')=='Want' and page.input_value('#pick_W633')=='Maybe')
+ check('startup did not modify seeded saves',saved==ev('JSON.stringify({...localStorage})'))
  page.click('#backup');backup=page.input_value('#transfer-text');check('backup covers 633 and preserves personal stats',json.loads(backup)['catalogTargets']==633 and json.loads(backup)['ratings']['W012']['armor']==123)
  page.click('#close-transfer');page.click('#import');page.fill('#transfer-text',backup);page.click('#apply-import');check('new item choice round trip',page.input_value('#pick_W633')=='Maybe')
  # Import writes choices intentionally. Snapshot after import, then verify navigation performs no writes.
