@@ -1,0 +1,4 @@
+Skyrim map artwork: Bethesda Softworks, SR-map-Skyrim.jpg; source mirror: https://raw.githubusercontent.com/lcbmann/keizaal-ranger-map/eebeb504a088f75c467bc8e601f8dc1209c2bc2f/SR-map-Skyrim.jpg
+Coordinates: factual names and approximate atlas positions from lcbmann/keizaal-ranger-map at pinned commit eebeb504a088f75c467bc8e601f8dc1209c2bc2f. Exported exterior-cell locations, plus reference settlement positions; not exact loot pins.
+Leaflet 1.9.4: https://leafletjs.com ; BSD-2-Clause, see LEAFLET-LICENSE.txt.
+No license over Bethesda artwork or the upstream repository is asserted by Saqrim.
