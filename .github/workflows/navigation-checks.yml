@@ -1,0 +1,39 @@
+name: Navigation and separate guides
+on:
+  push:
+    branches: [navigation-split-guides]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install browser tools
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Check modified scripts
+        run: |
+          node --check site-top.js
+          node --check site-blessings.js
+          node --check blessings.js
+      - name: Check navigation and dedicated guide pages
+        run: python tests/navigation-browser.py
+      - name: Check shrine and stone behavior
+        run: python tests/blessings-browser.py
+      - name: Check mainland map
+        run: python tests/map-browser.py
+      - name: Check realm maps
+        run: python tests/world-browser.py
+      - name: Check quest journal
+        run: python tests/quest-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: navigation-browser-screenshots
+          path: test-results/
+          retention-days: 7
