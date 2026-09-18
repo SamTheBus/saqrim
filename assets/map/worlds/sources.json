@@ -1,0 +1,16 @@
+{
+  "icemoth": {
+    "image": "assets/map/worlds/icemoth.webp",
+    "originalSize": [
+      1025,
+      769
+    ],
+    "imageSize": [
+      1025,
+      769
+    ],
+    "source": "https://www.nexusmods.com/skyrimspecialedition/mods/109541?tab=images",
+    "imageURL": "https://staticdelivery.nexusmods.com/mods/1704/images/109541/109541-1731800006-736173188.png",
+    "credit": "Reference map posted by RoastGorilla439; map icons by Klime; Siege at Icemoth."
+  }
+}
