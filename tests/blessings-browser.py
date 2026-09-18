@@ -1,0 +1,118 @@
+"""Browser regressions against the real static site; no console or account data."""
+import functools, hashlib, http.server, json, pathlib, threading
+from playwright.sync_api import sync_playwright
+ROOT=pathlib.Path(__file__).resolve().parents[1]
+OUT=ROOT/'test-results'; OUT.mkdir(exist_ok=True)
+checks=[]
+def check(name, ok):
+    assert ok,name
+    checks.append(name); print('PASS',name,flush=True)
+def blob(path):
+    data=(ROOT/path).read_bytes()
+    return hashlib.sha1(('blob '+str(len(data))+'\0').encode()+data).hexdigest()
+for name,sha in {
+ 'catalog-source.html':'364f4210b13f51a67610ec4946ef6fd4ef9fafd8',
+ 'catalog-tags.js':'d4923e76a68f5f35208ae9821c5bcb938768d7c4',
+ 'catalog.js':'0664aeab0f9324ea201f9e66511c607ea7d4fa58',
+ 'load-order.tsv':'efeab917b1bcc2a2913c7c3ff6fde46c16c5170a',
+ 'load-order.js':'d2707aa2dafc3378637258549136e113c34a5db7',
+ 'map.js':'203ffe2a9eea53db288d8878392f9baab5289c39',
+ 'worlds.js':'01b8cc348fa3a4c40ab179a1b203757a6118395a',
+ 'site-quests.js':'92ceb6bdc66e3e3f9dbd47a093699ddb5c7b2a1c'
+}.items(): check('unchanged '+name,blob(name)==sha)
+class Quiet(http.server.SimpleHTTPRequestHandler):
+    def log_message(self,*args): pass
+server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(ROOT)))
+threading.Thread(target=server.serve_forever,daemon=True).start()
+base='http://127.0.0.1:'+str(server.server_port)+'/'
+with sync_playwright() as p:
+    browser=p.chromium.launch()
+    ctx=browser.new_context(viewport={'width':1400,'height':1000})
+    ctx.route('https://**',lambda route:route.abort())
+    page=ctx.new_page(); errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+    def go(path, ready):
+        page.goto(base+path);page.wait_for_function(ready,timeout=20000)
+    def fits(): return page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+    go('blessings.html','window.SaqrimBlessingsPage')
+    check('51 individually named deities',page.evaluate('SaqrimFaithData.deities.length===51'))
+    check('blessing follower and 100-percent devotee for every deity',page.evaluate('SaqrimFaithData.deities.every(d=>d.blessing&&d.follower&&d.devotee&&d.devoteeFavor===100)'))
+    check('unique deity and shrine identifiers',page.evaluate('new Set(SaqrimFaithData.deities.map(d=>d.id)).size===51&&new Set(SaqrimFaithData.shrines.map(d=>d.id)).size===SaqrimFaithData.shrines.length'))
+    check('all shrine deities resolve',page.evaluate('SaqrimFaithData.shrines.every(s=>s.deities.every(id=>SaqrimFaithData.deities.some(d=>d.id===id)))'))
+    check('13 stones by 10 races complete',page.evaluate('SaqrimStonesData.races.length===10&&SaqrimStonesData.stones.length===13&&SaqrimStonesData.races.every(r=>SaqrimStonesData.stones.every(s=>SaqrimStonesData.effects[r][s.key]?.name&&SaqrimStonesData.effects[r][s.key]?.text))'))
+    check('Breton second effect on all 13 stones only',page.evaluate('SaqrimStonesData.races.every(r=>SaqrimStonesData.stones.every(s=>Boolean(SaqrimStonesData.effects[r][s.key].extra)===(r==="Breton")))'))
+    check('all 13 standing stones have existing mainland references',page.evaluate('SaqrimStonesData.stones.every(s=>SaqrimBlessingsPage.resolve(s))'))
+    check('exact author-version uncertainty disclosed','does not establish' in page.locator('body').inner_text() or 'do not establish' in page.locator('body').inner_text())
+    page.fill('#faith-page-search','Julianos')
+    check('search narrows deities',page.locator('#faith-cards>.faith-card').count()==1)
+    page.locator('#deity-julianos>summary').click()
+    check('all three benefit stages visible','Shrine blessing' in page.locator('#deity-julianos').inner_text() and '100% favor' in page.locator('#deity-julianos').inner_text())
+    check('no invented numeric X value','scaling with favor' in page.locator('#deity-julianos').inner_text())
+    page.click('#faith-clear');page.click('#faith-tab-stones')
+    check('Breton default explicitly a preview','Breton preview' in page.locator('#faith-page-count').inner_text())
+    check('thirteen displayed stone cards',page.locator('#faith-cards>.faith-stone').count()==13)
+    for race in ['Argonian','Dark Elf','High Elf','Imperial','Khajiit','Nord','Orc','Redguard','Wood Elf','Breton']:
+        page.select_option('#faith-page-race-select',race)
+        check(race+' stone UI switches',page.locator('#faith-cards>.faith-stone[data-race="'+race+'"]').count()==13)
+    page.locator('#stone-shadow>summary').click()
+    check('Breton Shadow explicitly not tenfold total damage','not 10× total bow damage' in page.locator('#stone-shadow').inner_text())
+    check('Breton bonus separated',page.locator('#stone-shadow>.faith-card-body>.faith-breton-extra').count()==1)
+    page.select_option('#faith-page-race-select','Khajiit');page.locator('#stone-atronach>summary').click()
+    check('Khajiit Atronach repayment death warning visible','kills you' in page.locator('#stone-atronach').inner_text())
+    page.click('#faith-tab-shrines');page.fill('#faith-page-search','Morvunskar')
+    check('shared ancestral temple appears',page.locator('#faith-cards>.faith-location').count()==1)
+    page.locator('#faith-cards button').click()
+    check('seven ancestors share qualified location',page.locator('#faith-single .faith-deity').count()==7 and 'NOT the shrine' in page.locator('#faith-single').inner_text())
+    check('index desktop fits',fits())
+    page.evaluate('localStorage.setItem("skyrimLootChoices_v202_20260917",JSON.stringify({W417:"Want"}));localStorage.setItem("saqrimObservedStats_v1",JSON.stringify({W012:{armor:500}}));localStorage.setItem("saqrim-load-order-220-2026-09-17","[1,2,3]");localStorage.setItem("saqrimQuestProgress_v1",JSON.stringify({Q001:{status:"Completed",notes:"Preserve me"}}))')
+    old=page.evaluate('JSON.stringify({...localStorage})')
+    go('map.html?race=Breton#stone=shadow','window.SaqrimBlessingsMap&&window.SaqrimQuestMap')
+    check('map integration and quest layer both load',page.locator('#show-quest-starts').count()==1 and page.locator('#faith-map-controls').count()==1)
+    check('stone hash opens current-race details','Dead Noon' in page.locator('#details').inner_text() and 'Outlaw' in page.locator('#details').inner_text())
+    check('original 617 and 364 retained',page.evaluate('SaqrimMap.records.length===617&&SaqrimMap.places.length===364'))
+    check('marker groups use existing positions only',page.evaluate('SaqrimBlessingsMap.groups.every(g=>SaqrimMap.places.some(p=>p.latlng[0]===g.p.position[0]&&p.latlng[1]===g.p.position[1]))'))
+    check('three Guardian Stones grouped not overwritten',page.evaluate('SaqrimBlessingsMap.groups.some(g=>g.entries.filter(e=>e.kind==="stone"&&e.mapPlace==="The Guardian Stones").length===3)'))
+    page.uncheck('#show-shrines')
+    check('stone-only layer has eleven distinct reference sites',page.evaluate('SaqrimBlessingsMap.layer.getLayers().length===11'))
+    page.uncheck('#show-standing-stones')
+    check('both layers independently removable',page.evaluate('SaqrimBlessingsMap.layer.getLayers().length===0'))
+    check('quest markers unaffected by faith switches',page.evaluate('SaqrimQuestMap.layer.getLayers().length>0'))
+    page.check('#show-standing-stones');page.check('#show-shrines')
+    page.select_option('#faith-map-race','Orc')
+    check('changing map race refreshes selected stone','Stampede' in page.locator('#details').inner_text() and 'Dead Noon' not in page.locator('#details').inner_text())
+    page.evaluate('SaqrimMap.map.setZoom(1,{animate:false})')
+    check('zoomed name labels enabled',page.evaluate('SaqrimBlessingsMap.layer.getLayers().some(m=>m.getTooltip()?.options.permanent)'))
+    page.uncheck('#show-faith-labels')
+    check('permanent name labels toggle off',page.evaluate('SaqrimBlessingsMap.layer.getLayers().every(m=>!m.getTooltip()?.options.permanent)'))
+    page.evaluate('SaqrimBlessingsMap.select("shrine","ancestors",{focus:false})')
+    check('nearby shrine marker never presented as exact temple','SOUTH of Morvunskar' in page.locator('#details').inner_text() and 'NOT the shrine' in page.locator('#details').inner_text())
+    page.evaluate('SaqrimMap.selectPlace("Shrine of Azura",{focus:false})')
+    page.wait_for_selector('#details .faith-section')
+    check('existing place details link to shrine benefits',page.locator('#details .faith-section button').count()==1)
+    page.check('#show-faith-labels');page.select_option('#faith-map-deity','julianos');page.uncheck('#show-standing-stones')
+    check('deity map filter isolates shared Divine temple',page.evaluate('SaqrimBlessingsMap.layer.getLayers().length===1'))
+    page.evaluate('SaqrimBlessingsMap.layer.getLayers()[0].fire("click")')
+    page.wait_for_selector('.leaflet-popup .faith-ref-row');page.locator('.leaflet-popup .faith-ref-row').click()
+    check('marker click opens actual shrine profile cards',page.locator('#details .faith-deity').count()==8)
+    check('mainland desktop fits',fits());page.screenshot(path=str(OUT/'shrines-desktop.png'),full_page=True)
+    go('worlds.html?world=solstheim#shrine=reclamations','window.SaqrimBlessingsMap')
+    check('Raven Rock shrine group routes correctly',page.locator('#selection .faith-deity').count()==3)
+    check('realm points belong only to current world',page.evaluate('SaqrimBlessingsMap.groups.every(g=>g.entries.every(e=>e.world==="solstheim"))'))
+    go('worlds.html?world=apocrypha#shrine=mora-apocrypha','window.SaqrimBlessingsMap')
+    check('guide-only realm has no invented shrine markers',page.evaluate('SaqrimBlessingsMap.layer.getLayers().length===0'))
+    check('unmapped deity benefits still readable','Omniscience' in page.locator('#selection').inner_text())
+    check('guide controls remain visible',page.locator('#faith-map-controls').is_visible())
+    check('read-only saves unchanged',old==page.evaluate('JSON.stringify({...localStorage})'))
+    page.set_viewport_size({'width':390,'height':844})
+    go('map.html?race=Breton#stone=ritual','window.SaqrimBlessingsMap')
+    check('mobile map fits',fits());check('mobile Breton drawback retained','Magicka regeneration stops' in page.locator('#details').inner_text())
+    page.locator('#details').scroll_into_view_if_needed();page.screenshot(path=str(OUT/'stones-mobile.png'),full_page=True)
+    page.evaluate('window.scrollTo(0,document.body.scrollHeight)');page.wait_for_function('!document.getElementById("saqrim-top").hidden');page.click('#saqrim-top')
+    check('existing Top still instant',page.evaluate('scrollY===0'))
+    go('blessings.html?tab=stones&race=Breton#stone=shadow','window.SaqrimBlessingsPage')
+    check('mobile comparison fits',fits());check('shareable race/stone deep link opens card',page.locator('#stone-shadow').get_attribute('open') is not None)
+    check('new features did not alter old storage',old==page.evaluate('JSON.stringify({...localStorage})'))
+    check('no browser errors',not errors)
+    print('COVERAGE',page.evaluate('JSON.stringify({deities:SaqrimFaithData.deities.length,shrines:SaqrimFaithData.shrines.length,pinnedShrines:SaqrimFaithData.shrines.filter(s=>SaqrimBlessingsPage.resolve(s)).length,stones:SaqrimStonesData.stones.length,races:SaqrimStonesData.races.length,unpinnedShrines:SaqrimFaithData.shrines.filter(s=>!SaqrimBlessingsPage.resolve(s)).map(s=>s.id)})'),flush=True)
+    print('RESULT',json.dumps({'checks':len(checks),'errors':errors}),flush=True)
+    browser.close()
+server.shutdown()
