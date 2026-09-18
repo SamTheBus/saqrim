@@ -30,7 +30,7 @@ Lover|Poetry in Motion|Entering combat makes you ethereal for up to 5 seconds, e
 Ritual|Druidom|With a staff drawn, spells gain 50% power and cost 50% more Magicka.|Circle of Galen|Normal Magicka regeneration stops. A drawn staff supplies Magicka by losing charge; left staff drains first when dual-wielding.
 Serpent|Dark Constellation|In combat, your Magicka and Stamina stop regenerating and drain 5 points/second.|Star Curse|Applies Dark Constellation to foes within 33 feet as well; it does not remove your own drawback.
 Shadow|Dead Noon|A drawn bow marks targets after 1 second per 25 Health; hitting a marked foe scores 10× critical damage, not 10× total bow damage.|Outlaw|Movement speed +20% while a bow is drawn.
-Steed|Horsemanship|Your horse and nearby allies' horses gain 25% speed.|Roadside Rest|While stationary with hands lowered, Magicka/Stamina regeneration +50%.
+Steed|Horsemanship|Your horse and nearby allies gain 25% speed.|Roadside Rest|While stationary with hands lowered, Magicka/Stamina regeneration +50%.
 Tower|Iron Mask|During combat, sneaking is 50% better and sneak attacks gain 25% damage.|The Donjon|Sneak outside combat and activate a living target: 20-second mental slumber or until attacked, costing 50 Magicka; also increases pickpocket chance by 20%.`,
  'Dark Elf':`Mage|Spite|Spell effectiveness rises as Health falls, up to +25%.
 Thief|Blinding Ash|Fireblood also blinds targets and ends their combat.
