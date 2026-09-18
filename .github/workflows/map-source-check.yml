@@ -1,0 +1,35 @@
+name: Map source check
+on:
+  push:
+    branches: [interactive-map]
+    paths: ['.github/workflows/map-source-check.yml']
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Validate and report public coordinate facts
+        shell: python
+        run: |
+          import urllib.request, json, math
+          root='https://raw.githubusercontent.com/lcbmann/keizaal-ranger-map/eebeb504a088f75c467bc8e601f8dc1209c2bc2f/'
+          data=json.load(urllib.request.urlopen(root+'data/skyrim-canon-atlas.generated.json',timeout=30))
+          det=73.8268130*74.5665700-0.215295427*(-0.324059025)
+          result=[]
+          for f in data['features']:
+              p=f['points'][0];x=p['x']-4067.73578;y=p['y']-3036.85421
+              cx=round((x*74.5665700-0.215295427*y)/det)
+              cy=round((73.8268130*y+0.324059025*x)/det)
+              result.append([f['title'],cx,cy])
+          print('LOCATION_FACTS_BEGIN')
+          for start in range(0,len(result),50): print(json.dumps(result[start:start+50],ensure_ascii=False,separators=(',',':')))
+          print('LOCATION_FACTS_END',len(result))
+          for url in ['https://tiles.modmapper.com/0/0/0.jpg','https://tiles.modmapper.com/2/1/1.jpg']:
+              try:
+                  response=urllib.request.urlopen(url,timeout=20)
+                  content=response.read()
+                  print('TILE',url,response.status,response.headers.get('Content-Type'),len(content),content[:3].hex())
+                  assert content.startswith(b'\xff\xd8\xff')
+              except Exception as exc: print('TILE_ERROR',url,repr(exc))
