@@ -6,7 +6,7 @@
   const file=location.pathname.split('/').pop()||'index.html';
   if(['index.html','loot.html','catalog-source.html'].includes(file))return './';
   if(file==='worlds.html')return 'map.html';
-  if(file==='blessings.html')return /^#stone=/.test(location.hash)||new URLSearchParams(location.search).get('tab')==='stones'?'standing-stones.html':'shrines.html';
+  if(file==='blessings.html'){const kind=/^#(deity|shrine|stone)=/.exec(location.hash);return (kind?kind[1]==='stone':new URLSearchParams(location.search).get('tab')==='stones')?'standing-stones.html':'shrines.html';}
   return file;
  }
  function refresh(){
@@ -37,6 +37,8 @@
  if(document.getElementById('saqrim-top'))return;
  const style=document.createElement('style');
  style.textContent='.nav{height:auto!important;min-height:66px;flex-wrap:wrap}.nav a:not(.brand){min-height:44px;display:inline-flex;align-items:center}.saqrim-map-link{margin:0 0 12px}.saqrim-map-link a{color:#b0daff}@media(max-width:540px){.nav .brand{flex-basis:100%;margin-bottom:4px}.nav a:not(.brand){font-size:12px!important;padding:8px!important}}#saqrim-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:9000;border:1px solid #efcc8a;border-radius:999px;background:#efcc8a;color:#111820;padding:12px 18px;min-height:48px;font:750 15px system-ui;box-shadow:0 5px 25px #0007;cursor:pointer}#saqrim-top[hidden]{display:none!important}#saqrim-top:focus-visible{outline:3px solid white;outline-offset:3px}@media print{#saqrim-top{display:none!important}}';
+ // One visual treatment as well as one link order, including the reference pages.
+ style.textContent+='.nav[data-saqrim-navigation]{box-sizing:border-box;display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:6px;width:100%;max-width:none;margin:0;padding:12px max(12px,calc((100% - 1400px)/2));border-bottom:1px solid #334658;background:#111820}.nav[data-saqrim-navigation] .brand{display:block;flex:0 0 auto;margin:0 auto 0 0;padding:0;border:0;background:transparent;color:#efcc8a;font:800 17px/1.4 system-ui;letter-spacing:3px;text-decoration:none}.nav[data-saqrim-navigation] a:not(.brand){box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-height:44px;max-width:100%;margin:0;padding:10px 12px;border:1px solid #334658;border-radius:7px;background:transparent;color:#b0daff;font:500 14px/1.4 system-ui;letter-spacing:normal;text-decoration:none;white-space:nowrap}.nav[data-saqrim-navigation] a[aria-current="page"]{border-color:#efcc8a;color:#efcc8a;background:transparent}.nav[data-saqrim-navigation] a:hover{border-color:#efcc8a}.nav[data-saqrim-navigation] a:focus-visible{outline:3px solid #efcc8a;outline-offset:3px}@media(max-width:540px){.nav[data-saqrim-navigation] .brand{flex-basis:100%;margin:0 0 6px}.nav[data-saqrim-navigation] a:not(.brand){font-size:12px!important;padding:8px!important}}';
  document.head.append(style);
  const button=document.createElement('button');button.id='saqrim-top';button.type='button';button.textContent='↑ Top';button.setAttribute('aria-label','Jump to top instantly');button.hidden=true;
  button.addEventListener('click',()=>{window.scrollTo({top:0,left:0,behavior:'instant'});const top=document.querySelector('h1');if(top){top.tabIndex=-1;top.focus({preventScroll:true});}});
