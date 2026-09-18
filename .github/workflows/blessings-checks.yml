@@ -1,0 +1,37 @@
+name: Shrine and stone checks
+on:
+  push:
+    branches: [shrines-stones]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install browser tools
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Validate reference and integration scripts
+        run: |
+          node --check faith-data.js
+          node --check stones-data.js
+          node --check blessings-ui.js
+          node --check blessings.js
+          node --check site-blessings.js
+      - name: Shrine and standing-stone browser checks
+        run: python tests/blessings-browser.py
+      - name: Existing mainland map
+        run: python tests/map-browser.py
+      - name: Existing separate worlds
+        run: python tests/world-browser.py
+      - name: Existing quest journal
+        run: python tests/quest-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shrines-stones-browser-screenshots
+          path: test-results/
+          retention-days: 7
