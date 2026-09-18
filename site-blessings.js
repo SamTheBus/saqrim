@@ -2,10 +2,11 @@
 'use strict';
 (()=>{
  if(window.SaqrimBlessingsIntegration)return;window.SaqrimBlessingsIntegration=true;
+ const initialHash=location.hash;
  const nav=document.querySelector('.nav');if(nav&&!nav.querySelector('a[href="blessings.html"]')){const a=document.createElement('a');a.href='blessings.html';a.textContent='Shrines & stones';nav.append(a);}
  const element=document.getElementById('map')||document.getElementById('world-map');if(!element)return;
  const status=document.createElement('p');status.className='faith-loading';status.textContent='Loading shrine and standing-stone references…';element.parentElement.before(status);
- const css=document.createElement('link');css.rel='stylesheet';css.href='blessings.css?v=1';document.head.append(css);
+ if(!document.querySelector('link[href^="blessings.css"]')){const css=document.createElement('link');css.rel='stylesheet';css.href='blessings.css?v=1';document.head.append(css);}
  function script(src,global){if(window[global])return Promise.resolve();return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=()=>window[global]?resolve():reject(Error('Reference module missing'));s.onerror=()=>reject(Error('Reference file failed to load'));document.head.append(s);});}
  Promise.all([script('faith-data.js?v=1','SaqrimFaithData'),script('stones-data.js?v=1','SaqrimStonesData'),script('blessings-ui.js?v=1','SaqrimBlessingsUI')]).then(()=>{
   let attempts=0;const timer=setInterval(()=>{const api=window.SaqrimMap||window.SaqrimWorlds;if(api){clearInterval(timer);try{connect(api);status.remove();}catch(e){status.textContent='Shrine layer unavailable; your original map is unchanged. Open Shrines & stones for the full reference.';console.warn(e.message);}}else if(++attempts>=200){clearInterval(timer);status.textContent='The map is not ready. Shrine and stone details are available in the Shrines & stones tab.';}},100);
@@ -38,8 +39,8 @@
    if(!layer||(!mainland&&api.world?.kind!=='map'))return;
    for(const {p,entries}of groups){const kinds=new Set(entries.map(e=>e.kind)),mixed=kinds.size>1,stone=kinds.has('stone');const first=entries[0],label=entries.length===1?first.name:(entries.every(e=>e.kind==='stone')?'Guardian Stones · Mage / Thief / Warrior':entries.length+' shrine / stone references · '+p.name);const marker=L.marker(p.position,{icon:L.divIcon({className:'faith-marker-wrap',html:'<span class="faith-marker '+(mixed?'mixed':stone?'stone':'')+'">'+(mixed?'✦▲':stone?'▲':'✦')+'</span>',iconSize:[28,28],iconAnchor:[14,14]}),title:label+' · reference area',alt:label,zIndexOffset:450});const popup=U.node('div','faith-popup');popup.append(U.node('strong','',p.name+' · references'));for(const e of entries)popup.append(row(e));marker.bindPopup(popup,{maxWidth:340,maxHeight:300});marker.bindTooltip(document.createTextNode(label),{permanent:showLabels.checked&&api.map.getZoom()>=0.25,direction:'top',offset:[0,-14],className:'faith-map-label'});marker.on('click',()=>{if(entries.length===1)select(first.kind,first.id,{pan:false,focus:false});});marker.addTo(layer);}
   }
-  function hash(){let value='';try{value=decodeURIComponent(location.hash.slice(1));}catch(_){return;}const m=/^(shrine|stone)=(.+)$/.exec(value);if(m)select(m[1],m[2],{hash:false,focus:false});}
+  function hash(value=location.hash,restore=false){let decoded='';try{decoded=decodeURIComponent(value.slice(1));}catch(_){return;}const m=/^(shrine|stone)=(.+)$/.exec(decoded);if(m)select(m[1],m[2],{hash:restore,focus:false});}
   search.addEventListener('input',draw);deity.addEventListener('change',draw);$(mainland?'map-search':'world-search')?.addEventListener('input',()=>setTimeout(draw,0));$('map-world')?.addEventListener('change',()=>setTimeout(()=>{selectedEntry=null;draw();hash();},0));document.addEventListener('click',e=>{if(e.target.closest('#clear-map,#clear-filters'))setTimeout(draw,0);});window.addEventListener('hashchange',()=>setTimeout(()=>{hash();nearPanel();},0));window.addEventListener('popstate',()=>setTimeout(()=>{selectedRace=U.race(new URLSearchParams(location.search).get('race'));raceControl.select.value=selectedRace;draw();hash();},0));api.map?.on('zoomend',draw);api.map?.on('moveend',()=>{if(lastWorld!==currentWorld())setTimeout(draw,0);});
-  draw();hash();nearPanel();window.SaqrimBlessingsMap={layer,all,currentEntries,resolve,select,refresh:draw,get race(){return selectedRace;},get groups(){return groups;}};
+  draw();hash(initialHash||location.hash,true);nearPanel();window.SaqrimBlessingsMap={layer,all,currentEntries,resolve,select,refresh:draw,get race(){return selectedRace;},get groups(){return groups;}};
  }
 })();
