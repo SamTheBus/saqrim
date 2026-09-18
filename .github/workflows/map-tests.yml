@@ -1,7 +1,8 @@
 name: Map browser checks
 on:
   push:
-    branches: [interactive-map]
+    branches: [interactive-map, map-world-layers]
+    paths: ['map*', 'world*', 'catalog*', 'site-top.js', 'tests/**', '.github/workflows/map-tests.yml', 'assets/map/**']
 permissions:
   contents: read
 jobs:
@@ -19,8 +20,13 @@ jobs:
           node --check map.js
           node --check map-links.js
           node --check site-top.js
-      - name: Test actual map, catalog, navigation and saved choices
+          node --check world-data.js
+          node --check world-picker.js
+          node --check worlds.js
+      - name: Mainland map and preservation regression tests
         run: python tests/map-browser.py
+      - name: World switching, filters, geographic evidence and failure cases
+        run: python tests/world-browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
