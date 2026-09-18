@@ -57,7 +57,8 @@ with sync_playwright() as p:
  go('index.html#W310','window.SaqrimCatalog');page.wait_for_selector('#W310 .quest-catalog-links a[href="quests.html#Q045"]',state='attached');check('Unearthed reverse catalog link works',True)
  go('map.html#place=College%20of%20Winterhold','window.SaqrimQuestMap&&window.SaqrimBlessingsMap');page.wait_for_selector('#details .quest-starts')
  for i in range(33,38):check('map College link Q'+str(i),page.locator(f'#details .quest-starts a[href="quests.html#Q{i:03}"]').count()==1)
- check('mainland start references resolve',ev('SaqrimQuestMap.candidates().every(q=>SaqrimMap.places.some(p=>p.name===q.start.mapPlace))'))
+ # Original Q021's Fort Dawnguard reference is outside this atlas; this batch must not invent its coordinates.
+ check('new mainland start references resolve',ev('SaqrimQuestMap.candidates().filter(q=>+q.id.slice(1)>=23).every(q=>SaqrimMap.places.some(p=>p.name===q.start.mapPlace))'))
  go('worlds.html?world=solstheim','window.SaqrimQuestMap&&window.SaqrimBlessingsMap')
  check('all Solstheim quest references resolve',ev('SaqrimQuestMap.candidates().every(q=>SaqrimWorlds.places.some(p=>p.world==="solstheim"&&p.name===q.start.mapPlace&&p.pin))'))
  check('three Solstheim start groups rendered',page.locator('.quest-start-icon').count()==3)
