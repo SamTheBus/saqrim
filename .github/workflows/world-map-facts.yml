@@ -1,0 +1,44 @@
+name: World geography facts
+on:
+  push:
+    branches: [map-world-layers]
+    paths: ['.github/workflows/world-map-facts.yml']
+permissions:
+  contents: write
+jobs:
+  facts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - shell: python
+        run: |
+          import urllib.request,urllib.parse,json,re,pathlib,concurrent.futures,html
+          def get(url):return urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=15).read().decode('utf8','replace')
+          out=pathlib.Path('assets/map/worlds');out.mkdir(exist_ok=True,parents=True)
+          page=get('https://www.itemaps.com/maps/skyrim/solstheim')
+          i=page.find('Benkongerike');print('PLACE_HTML',page[max(0,i-500):i+1600])
+          print('MAP_ATTRS','\n'.join(t for t in re.findall('<[^>]+>',page) if any(w in t for w in ['data-map','data-world','data-bounds','data-image','data-tile']))[:10000])
+          print('ROWS','\n'.join(re.findall('<tr[^>]*>.*?</tr>',page,re.S)[:3]))
+          api='https://en.uesp.net/w/api.php?'+urllib.parse.urlencode({'action':'query','format':'json','titles':'File:User-Roger-Solstheim Map 02.jpg','prop':'imageinfo','iiprop':'url|size'})
+          metadata=json.loads(get(api));print('SOLSTHEIM_MAP',json.dumps(metadata))
+          (out/'solstheim-map-source.json').write_text(json.dumps(metadata))
+          # Only named place coordinates (facts), not the publisher's prose/code.
+          rows=re.findall('<tr[^>]*>(.*?)</tr>',page,re.S);facts=[]
+          for row in rows:
+            fields=[html.unescape(re.sub('<[^>]+>',' ',c)).strip() for c in re.findall('<t[dh][^>]*>(.*?)</t[dh]>',row,re.S)]
+            if fields and any('Benkongerike' in v for v in fields):print('SAMPLE_FIELDS',fields)
+            nums=[float(v.replace(',','')) for v in fields if re.fullmatch(r'-?[\d,]+(?:\.\d+)?',v)]
+            if len(nums)>=2:facts.append({'fields':fields,'xy':nums[:2]})
+          if facts:(out/'solstheim-place-facts.json').write_text(json.dumps(facts,ensure_ascii=False))
+          print('PARSED_FACTS',len(facts))
+          def inspect(url):
+            try:
+              text=get(url);print('SOURCE',url,'\n'.join(re.findall(r'.{0,150}(?:solstheim|Solstheim|tileLayer|imageOverlay|\.jpg|\.webp).{0,450}',text))[:6000])
+            except Exception as e: print('SOURCE_UNAVAILABLE',url,str(e))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=2) as p:list(p.map(inspect,['https://itemaps.com/assets/map.js?v=20260916-4','https://atlasforge.gg/skyrim/_next/static/chunks/pages/map/%5B%5B...map_world%5D%5D-79d6f33203f4310c.js']))
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/map/worlds
+          git diff --cached --quiet || (git commit -m 'Record source metadata and named Solstheim position facts' && git push origin HEAD:map-world-layers)
