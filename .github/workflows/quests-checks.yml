@@ -1,0 +1,37 @@
+name: Quest journal checks
+on:
+  push:
+    branches: [quests-rewards]
+    paths: ['quests*', 'site-quests.js', 'site-top.js', 'tests/quest-browser.py', '.github/workflows/quests-checks.yml']
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install browser tools
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Validate scripts
+        run: |
+          node --check quests.js
+          node --check site-quests.js
+          node --check site-top.js
+          python -m json.tool quests-data.json > /dev/null
+      - name: Check quest journal and existing-site integration
+        run: python tests/quest-browser.py
+      - name: Check original map behavior
+        run: python tests/map-browser.py
+      - name: Check existing realm views
+        run: python tests/world-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quest-journal-checks
+          path: test-results/
+          retention-days: 7
