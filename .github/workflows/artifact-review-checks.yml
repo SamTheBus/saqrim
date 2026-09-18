@@ -1,0 +1,63 @@
+name: Artifact review checks
+on:
+  push:
+    branches: [artifact-load-order-review]
+    paths:
+      - 'tools/artifact-review-data.py'
+      - 'tools/apply-artifact-review.py'
+      - 'tests/artifact-review-browser.py'
+      - '.github/workflows/artifact-review-checks.yml'
+permissions:
+  contents: write
+concurrency:
+  group: saqrim-artifact-review
+  cancel-in-progress: true
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install parsers and browser tools
+        run: |
+          python -m pip install beautifulsoup4==4.13.5 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Build from the published 46-quest baseline
+        run: python tools/apply-artifact-review.py
+      - name: Validate updated JavaScript
+        run: |
+          for script in catalog-tags.js catalog.js map.js worlds.js quests.js site-quests.js site-top.js; do node --check "$script"; done
+      - name: Artifact data, precedence and browser tests
+        run: python tests/artifact-review-browser.py
+      - name: Existing quest journal
+        run: python tests/quest-browser.py
+      - name: Existing quest expansion
+        run: python tests/quest-expansion-browser.py
+      - name: Six-tab navigation
+        run: python tests/navigation-browser.py
+      - name: Shrine and stone integration
+        run: python tests/blessings-browser.py
+      - name: Mainland map
+        run: python tests/map-browser.py
+      - name: Separate-world maps
+        run: python tests/world-browser.py
+      - name: Commit tested output to working branch only
+        run: |
+          test "$GITHUB_REF_NAME" = artifact-load-order-review
+          git add catalog-current.html artifact-review.json artifact-build-report.json ARTIFACT-REVIEW.md catalog-tags.js catalog.js catalog.css map.js worlds.js quests.js quests-data.json site-quests.js site-top.js index.html load-order.html map.html worlds.html quests.html shrines.html standing-stones.html blessings.html tests/blessings-browser.py tests/map-browser.py tests/world-browser.py tests/navigation-browser.py tests/quest-browser.py tests/quest-expansion-browser.py
+          if ! git diff --cached --quiet; then
+            git config user.name 'Saqrim site builder'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Add 16 familiar uniques and qualified item-specific load-order reviews'
+            git push origin HEAD:artifact-load-order-review
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: artifact-review-results
+          path: |
+            test-results/
+            artifact-build-report.json
+          retention-days: 7
