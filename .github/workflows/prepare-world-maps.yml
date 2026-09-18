@@ -1,0 +1,55 @@
+name: Prepare world map assets
+on:
+  push:
+    branches: [map-world-layers]
+    paths: ['.github/workflows/prepare-world-maps.yml']
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install Pillow==11.3.0
+      - name: Fetch reference maps and source metadata
+        shell: python
+        run: |
+          import urllib.request, urllib.parse, json, pathlib, io, re
+          from PIL import Image
+          def get(url):
+            req=urllib.request.Request(url,headers={'User-Agent':'Saqrim reference guide (github.com/SamTheBus/saqrim)'})
+            return urllib.request.urlopen(req,timeout=30).read()
+          def api(**args):
+            return json.loads(get('https://en.uesp.net/w/api.php?'+urllib.parse.urlencode({'format':'json',**args})))
+          output=pathlib.Path('assets/map/worlds');output.mkdir(parents=True,exist_ok=True)
+          titles=['SR-map-Solstheim.jpg','SR-map-Solstheim.png','DB-map-Solstheim.png','DB-map-Solstheim.jpg','SR-map-Soul Cairn.jpg','SR-map-Forgotten Vale.jpg','SR-map-Blackreach.jpg']
+          pages=api(action='query',titles='|'.join('File:'+t for t in titles),prop='imageinfo',iiprop='url|size|extmetadata')['query']['pages']
+          assets={}
+          for page in pages.values():
+            if not page.get('imageinfo'):continue
+            info=page['imageinfo'][0];title=page['title']
+            key='solstheim' if 'Solstheim' in title else 'soul-cairn' if 'Soul Cairn' in title else 'forgotten-vale' if 'Forgotten Vale' in title else 'blackreach'
+            image=Image.open(io.BytesIO(get(info['url']))).convert('RGB');size=image.size
+            image.thumbnail((3072,3072),Image.Resampling.LANCZOS)
+            image.save(output/(key+'.webp'),quality=88)
+            assets[key]={'image':str(output/(key+'.webp')),'originalSize':size,'imageSize':image.size,'source':info['descriptionurl'],'imageURL':info['url'],'credit':'Bethesda game imagery; map reference from UESP.','metadata':info.get('extmetadata',{})}
+            print('MAP_ASSET',key,json.dumps(assets[key]))
+          url='https://staticdelivery.nexusmods.com/mods/1704/images/109541/109541-1731800006-736173188.png'
+          image=Image.open(io.BytesIO(get(url))).convert('RGB');size=image.size;image.thumbnail((2000,2000),Image.Resampling.LANCZOS);image.save(output/'icemoth.webp',quality=92)
+          assets['icemoth']={'image':str(output/'icemoth.webp'),'originalSize':size,'imageSize':image.size,'source':'https://www.nexusmods.com/skyrimspecialedition/mods/109541?tab=images','imageURL':url,'credit':'Reference map posted by RoastGorilla439; map icons by Klime; Siege at Icemoth.'}
+          print('MAP_ASSET','icemoth',json.dumps(assets['icemoth']))
+          (output/'sources.json').write_text(json.dumps(assets,ensure_ascii=False,indent=2))
+          for title in ['Skyrim:Maps','Skyrim:Solstheim','Skyrim:Soul Cairn','Skyrim:Forgotten Vale','Skyrim:Blackreach']:
+            try:
+              obj=api(action='parse',page=title,prop='wikitext')
+              text=obj.get('parse',{}).get('wikitext',{}).get('*','')
+              lines=text.splitlines()
+              print('WIKI_MAP_REFERENCES',title,'\n'.join(line for line in lines if re.search('imagemap|map-|rect |circle |poly |Map Link|maplink',line,re.I))[:18000])
+            except Exception as exc: print('WIKI_ERROR',title,str(exc))
+      - name: Commit prepared assets to working branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/map/worlds
+          git diff --cached --quiet || (git commit -m 'Add attributed world reference map images' && git push origin HEAD:map-world-layers)
