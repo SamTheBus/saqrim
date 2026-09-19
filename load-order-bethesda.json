@@ -102,6 +102,22 @@
       "source": "https://creations.bethesda.net/en/skyrim/details/06e4a408-3a4f-489b-b04c-fd847f1ef918/Vokriinator__EN__",
       "sourceStatus": "Verified official PlayStation Bethesda listing",
       "checked": "2026-09-19"
+    },
+    "JaySerpa's Lines Expansion Bundle": {
+      "bethesdaTitle": "Jayserpa’s Lines Expansion Bundle",
+      "author": "CegoPorts",
+      "overview": "Bundles JaySerpa's dialogue and reaction expansions, adding roughly 3,000 lines that give NPCs more situational dialogue and reactions.",
+      "features": [
+        "Includes dialogue expansions for bandits, the Civil War, carriages and stables, Forsworn and Thalmor, vampires, brawls and Dremora.",
+        "Includes NPC reactions to invisibility, necromancy and frenzy.",
+        "Includes Additional Healing Reactions and Immersive Rejections.",
+        "The Bethesda listing identifies the included components individually and credits JaySerpa and AndrealphusVIII."
+      ],
+      "bethesdaVersion": "2.0",
+      "bethesdaInstallSize": "138.47 MB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/65488/Jayserpa_Lines_Expansion_Bundle",
+      "sourceStatus": "Verified official PlayStation Bethesda listing",
+      "checked": "2026-09-19"
     }
   }
 }
