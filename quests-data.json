@@ -77,7 +77,7 @@
    "id": "Q002",
    "title": "It's Just Business",
    "mod": "Granite Hill",
-   "lo": 154,
+   "lo": 149,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -117,7 +117,7 @@
    "id": "Q003",
    "title": "The Truth but not the Whole Truth",
    "mod": "Granite Hill",
-   "lo": 154,
+   "lo": 149,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -149,7 +149,7 @@
    "id": "Q004",
    "title": "Beneath a Hill of Granite",
    "mod": "Granite Hill",
-   "lo": 154,
+   "lo": 149,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -196,7 +196,7 @@
    "id": "Q005",
    "title": "Black Book: Stars Beyond the Void",
    "mod": "Granite Hill",
-   "lo": 154,
+   "lo": 149,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -362,7 +362,7 @@
    "id": "Q008",
    "title": "It Came from Akavir",
    "mod": "It Came from Akavir (PS5)",
-   "lo": 161,
+   "lo": 156,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -413,7 +413,7 @@
    "id": "Q009",
    "title": "A Dizzying Fall",
    "mod": "A Dizzying Fall (PS5)",
-   "lo": 156,
+   "lo": 151,
    "kind": "Mod encounter",
    "start": {
     "world": "skyrim",
@@ -441,7 +441,7 @@
    "id": "Q010",
    "title": "The Serpent's Covenant",
    "mod": "The Serpent's Covenant (PS5)",
-   "lo": 157,
+   "lo": 152,
    "kind": "Mod questline",
    "start": {
     "world": "skyrim",
@@ -473,7 +473,7 @@
    "id": "Q011",
    "title": "Mysteries of the Dwemer",
    "mod": "Mysteries of the Dwemer (PS5)",
-   "lo": 158,
+   "lo": 153,
    "kind": "Mod questline",
    "start": {
     "world": "skyrim",
@@ -507,7 +507,7 @@
    "id": "Q012",
    "title": "The Hunt for the Spectre",
    "mod": "The Hunt for the Spectre (PS5)",
-   "lo": 160,
+   "lo": 155,
    "kind": "Mod questline",
    "start": {
     "world": "skyrim",
@@ -702,7 +702,7 @@
    "id": "Q016",
    "title": "Arniel's Endeavor",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -755,7 +755,7 @@
    "id": "Q017",
    "title": "Impatience of a Saint",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "soul-cairn",
@@ -806,7 +806,7 @@
    "id": "Q018",
    "title": "No One Escapes Cidhna Mine",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -869,7 +869,7 @@
    "id": "Q019",
    "title": "Lost to the Ages",
    "mod": "Artificer / The Infinity Sword",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -931,7 +931,7 @@
    "id": "Q020",
    "title": "Touching the Sky",
    "mod": "Artificer / Occiglacies / Guns of Skyrim",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -1018,7 +1018,7 @@
    "id": "Q021",
    "title": "Lost Relic",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -1073,7 +1073,7 @@
    "id": "Q022",
    "title": "Ill Met by Moonlight",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -1130,7 +1130,7 @@
    "id": "Q023",
    "title": "The Breathing Abyss",
    "mod": "The Breathing Abyss",
-   "lo": 148,
+   "lo": 143,
    "kind": "Mod quest",
    "start": {
     "world": "skyrim",
@@ -1215,7 +1215,7 @@
    "id": "Q025",
    "title": "Moonpath to Elsweyr — adventure overview",
    "mod": "Moonpath to Elsweyr [PS5]",
-   "lo": 153,
+   "lo": 148,
    "kind": "Mod questline",
    "start": {
     "world": "skyrim",
@@ -1256,7 +1256,7 @@
    "id": "Q026",
    "title": "The Oblivion Engine",
    "mod": "Lucien - Fully Voiced Follower",
-   "lo": 162,
+   "lo": 157,
    "kind": "Mod companion quest",
    "start": {
     "world": "variable",
@@ -1303,7 +1303,7 @@
    "id": "Q027",
    "title": "Intruders",
    "mod": "Lucien - Fully Voiced Follower",
-   "lo": 162,
+   "lo": 157,
    "kind": "Mod companion quest",
    "start": {
     "world": "variable",
@@ -1355,7 +1355,7 @@
    "id": "Q028",
    "title": "The Heart of Dibella — expanded",
    "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 145,
+   "lo": 140,
    "kind": "Expanded existing quest",
    "start": {
     "world": "skyrim",
@@ -1415,7 +1415,7 @@
    "id": "Q029",
    "title": "Innocence Lost — expanded",
    "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 145,
+   "lo": 140,
    "kind": "Expanded existing quest",
    "start": {
     "world": "skyrim",
@@ -1480,7 +1480,7 @@
    "id": "Q030",
    "title": "Destroy the Dark Brotherhood! — expanded",
    "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 145,
+   "lo": 140,
    "kind": "Expanded existing quest",
    "start": {
     "world": "skyrim",
@@ -1528,6 +1528,11 @@
      "url": "https://www.gamebanshee.com/skyrim/walkthrough/destroythedarkbrotherhood.php",
      "label": "Original quest payout",
      "scope": "Base-game walkthrough, not the expansion's complete route."
+    },
+    {
+     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/151173",
+     "label": "Artificer compatibility patch for Destroy the Dark Brotherhood - Quest Expansion",
+     "scope": "Patch-author documentation; establishes the upstream acquisition conflict, not the exact PS5 bundle payload."
     }
    ],
    "destinations": [
@@ -1548,7 +1553,8 @@
    "notes": [
     "The expansion replaces the simple password handoff with an investigation. Do not follow an unmodified walkthrough for that step.",
     "After an Innocence Lost arrest, the expansion's alternate kidnapping route also requires the Constance follow-up and killing a vanilla Brotherhood contract target.",
-    "Rejecting the Brotherhood is a branching choice, not an additional route through its full membership storyline."
+    "Rejecting the Brotherhood is a branching choice, not an additional route through its full membership storyline.",
+    "Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 220-mod order; the exact PS5 bundle behavior remains untested."
    ],
    "batch": "Expansion 2"
   },
@@ -1556,7 +1562,7 @@
    "id": "Q031",
    "title": "Infiltration — expanded",
    "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 145,
+   "lo": 140,
    "kind": "Expanded existing quest",
    "start": {
     "world": "skyrim",
@@ -1611,7 +1617,7 @@
    "id": "Q032",
    "title": "Knight of the North — Crusader relic hunt",
    "mod": "Knight of the North - Divine Crusader Reworked (PS5)",
-   "lo": 159,
+   "lo": 154,
    "kind": "Adventure guide",
    "start": {
     "world": "skyrim",
@@ -1692,7 +1698,7 @@
    "id": "Q033",
    "title": "Illusion Ritual Spell",
    "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 41,
+   "lo": 39,
    "kind": "Existing quest · magic unlock",
    "start": {
     "world": "skyrim",
@@ -1785,7 +1791,7 @@
    "id": "Q034",
    "title": "Conjuration Ritual Spell",
    "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 41,
+   "lo": 39,
    "kind": "Existing quest · magic unlock",
    "start": {
     "world": "skyrim",
@@ -1908,7 +1914,7 @@
    "id": "Q035",
    "title": "Destruction Ritual Spell",
    "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 41,
+   "lo": 39,
    "kind": "Existing quest · magic unlock",
    "start": {
     "world": "skyrim",
@@ -2006,7 +2012,7 @@
    "id": "Q036",
    "title": "Alteration Ritual Spell",
    "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 41,
+   "lo": 39,
    "kind": "Existing quest · magic unlock",
    "start": {
     "world": "skyrim",
@@ -2093,7 +2099,7 @@
    "id": "Q037",
    "title": "Restoration Ritual Spell",
    "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 41,
+   "lo": 39,
    "kind": "Existing quest · magic unlock",
    "start": {
     "world": "skyrim",
@@ -2171,7 +2177,7 @@
    "id": "Q038",
    "title": "The Cursed Tribe",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2229,7 +2235,7 @@
    "id": "Q039",
    "title": "Waking Nightmare",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2278,7 +2284,7 @@
    "id": "Q040",
    "title": "A Night to Remember",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2323,7 +2329,7 @@
    "id": "Q041",
    "title": "The Taste of Death",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2382,7 +2388,7 @@
    "id": "Q042",
    "title": "The Wolf Queen Awakened",
    "mod": "Artificer / Knight of the North",
-   "lo": 159,
+   "lo": 154,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2460,7 +2466,7 @@
    "id": "Q043",
    "title": "Forbidden Legend",
    "mod": "Skyrim / Artificer setup",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · artifact hunt",
    "start": {
     "world": "skyrim",
@@ -2570,7 +2576,7 @@
    "id": "Q044",
    "title": "The Black Star",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "skyrim",
@@ -2634,7 +2640,7 @@
    "id": "Q045",
    "title": "Unearthed",
    "mod": "Artificer - An Artifact Overhaul",
-   "lo": 61,
+   "lo": 57,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "solstheim",
@@ -2751,7 +2757,7 @@
    "id": "Q046",
    "title": "Deathbrand",
    "mod": "Artifact of Might - My Version",
-   "lo": 69,
+   "lo": 65,
    "kind": "Existing quest · modded loot",
    "start": {
     "world": "solstheim",
@@ -2866,7 +2872,7 @@
   "Q042": {
    "Shield of Solitude": {
     "catalog": "W633",
-    "note": "Completion shield; ArteFakes is a later documented item editor than Artificer. Final effects remain unresolved.",
+    "note": "Completion shield; Artificer is now below ArteFakes in the current order, so its mechanics are the expected item-record outcome. ArteFakes appearance is not guaranteed without a compatibility patch.",
     "tags": {}
    }
   },
@@ -2890,5 +2896,5 @@
    }
   }
  },
- "catalogLinksScope": "Links to current artifact review; original quest records and reward roles are unchanged."
+ "catalogLinksScope": "Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam's current arrangement."
 }

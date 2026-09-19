@@ -103,7 +103,7 @@ window.SaqrimTags = (() => {
  function auditNode(raw){
  const a=raw['Artifact audit'];if(!a)return null;const box=document.createElement('details');box.className='artifact-audit';box.style.cssText='border:1px solid #c5ab76;border-radius:8px;padding:12px;margin:14px 0;font-size:14px;overflow-wrap:anywhere';
  const summary=document.createElement('summary');summary.textContent='Load-order review · '+a.status;box.append(summary);
- for(const [key,label]of [["basis", "Evidence level"], ["expected", "Expected version / unresolved winner"], ["chain", "Recorded order / scope"], ["earlierEffect", "Earlier documented benefit — not a final effect"], ["appearance", "Appearance / assets"], ["acquisition", "Acquisition / distribution"], ["verification", "What is not verified"]]){if(!a[key])continue;const h=document.createElement('h4'),p=document.createElement('p');h.textContent=label;p.textContent=a[key];box.append(h,p);}
+ for(const [key,label]of [["basis", "Evidence level"], ["expected", "Expected version / unresolved winner"], ["chain", "Recorded order / scope"], ["earlierEffect", "Other documented version / caveat"], ["appearance", "Appearance / assets"], ["acquisition", "Acquisition / distribution"], ["verification", "What is not verified"]]){if(!a[key])continue;const h=document.createElement('h4'),p=document.createElement('p');h.textContent=label;p.textContent=a[key];box.append(h,p);}
  for(const [i,url]of a.sources.entries()){if(!url.startsWith('https://'))continue;const p=document.createElement('p'),link=document.createElement('a');link.textContent='Review source '+(i+1);link.href=url;link.target='_blank';link.rel='noopener noreferrer';p.append(link);box.append(p);}return box;
  }
  return {classify,groups,auditNode};

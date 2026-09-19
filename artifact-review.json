@@ -5,18 +5,18 @@
   "catalogCount": 633,
   "added": 16,
   "recordVerified": 0,
-  "scope": "Recorded-order and public-documentation review; NOT an xEdit or PS5 plugin scan.",
+  "scope": "Current 18 September load-order and public-documentation review; NOT an xEdit or PS5 plugin scan.",
   "reviews": {
     "W306": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -28,11 +28,11 @@
       "status": "Possible later edit",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 documents this ring, but Wear Multiple Rings #110 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
-      "chain": "#61 Artificer → #62 Artificer–USSEP scope uninspected → #110 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
+      "chain": "#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.youtube.com/watch?v=4uyqCADqwPo&t=116s",
@@ -46,11 +46,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -62,11 +62,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -78,11 +78,11 @@
       "status": "Possible later edit",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 documents this ring, but Wear Multiple Rings #110 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
-      "chain": "#61 Artificer → #62 Artificer–USSEP scope uninspected → #110 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
+      "chain": "#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.youtube.com/watch?v=4uyqCADqwPo&t=116s",
@@ -96,11 +96,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -112,11 +112,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -128,11 +128,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -144,11 +144,11 @@
       "status": "Possible later edit",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 documents this ring, but Wear Multiple Rings #110 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
-      "chain": "#61 Artificer → #62 Artificer–USSEP scope uninspected → #110 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
+      "chain": "#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.youtube.com/watch?v=4uyqCADqwPo&t=116s",
@@ -162,11 +162,11 @@
       "status": "Possible later edit",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 documents this ring, but Wear Multiple Rings #110 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
-      "chain": "#61 Artificer → #62 Artificer–USSEP scope uninspected → #110 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
+      "chain": "#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.youtube.com/watch?v=4uyqCADqwPo&t=116s",
@@ -180,11 +180,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -196,11 +196,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -212,11 +212,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -228,11 +228,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -244,11 +244,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -260,11 +260,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -276,11 +276,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -292,11 +292,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -308,11 +308,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -324,11 +324,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -340,11 +340,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -356,11 +356,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -372,11 +372,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -388,11 +388,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -404,11 +404,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -420,11 +420,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -436,30 +436,30 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": false,
-      "earlierEffect": "Successive arrows intensify bleeding."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W540": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -471,11 +471,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -487,11 +487,11 @@
       "status": "Possible later edit",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 documents this ring, but Wear Multiple Rings #110 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
-      "chain": "#61 Artificer → #62 Artificer–USSEP scope uninspected → #110 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.",
+      "chain": "#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.youtube.com/watch?v=4uyqCADqwPo&t=116s",
@@ -505,11 +505,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -521,49 +521,49 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": false,
-      "earlierEffect": "Repeated blows escalate anti-undead sunlight damage."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W545": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": false,
-      "earlierEffect": "Power attacks unleash sunlight damage."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W546": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -575,11 +575,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -591,11 +591,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -607,11 +607,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -623,11 +623,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -639,11 +639,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -655,11 +655,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -671,11 +671,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -687,11 +687,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -703,11 +703,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -719,11 +719,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -735,11 +735,11 @@
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -748,30 +748,33 @@
     },
     "W627": {
       "origin": "Changed vanilla / DLC unique",
-      "status": "Expected from documentation",
+      "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is later than Praedy's Staves #51–55. Artificer's Staff of Magnus mechanics are the expected record outcome, but Praedy's model is not guaranteed because published Praedy/Artificer compatibility patches exist and none is present in this load order.",
+      "chain": "#51 Praedy's Staves → #52 Apocalypse patch → #53 Mysticism patch → #54 Odin patch → #55 USSEP patch → #57 Artificer. No Artificer–Praedy patch appears in the current order.",
+      "appearance": "Praedy documents that staves edited by other mods can need compatibility patches, and its patch hub includes Artificer. Treat the Staff of Magnus appearance as unresolved while retaining Artificer's documented mechanics.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
+        "https://www.nexusmods.com/skyrimspecialedition/mods/65481",
+        "https://www.nexusmods.com/skyrimspecialedition/mods/65660",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
-      "new": true
+      "new": true,
+      "earlierEffect": "Praedy's Staff of Magnus model is installed earlier; without the missing Artificer compatibility patch it is not promised to survive the later item edit."
     },
     "W628": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Expected from documentation",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Artificer #61 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
-      "chain": "#61 Artificer; #62 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 is the documented effect source. No later item-specific edit has been established by the reviewed descriptions for this entry. This is not proof that the rest of the load order contains no override.",
+      "chain": "#57 Artificer; #58 Artificer–USSEP patch is present, but its per-item forwarding has not been inspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
@@ -783,126 +786,125 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": true,
-      "earlierEffect": "Artificer also documents this item; its effect is not promoted to the final in-game result."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W630": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": true,
-      "earlierEffect": "Artificer also documents this item; its effect is not promoted to the final in-game result."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W631": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": true,
-      "earlierEffect": "Artificer also documents this item; its effect is not promoted to the final in-game result."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W632": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": true,
-      "earlierEffect": "Artificer also documents this item; its effect is not promoted to the final in-game result."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W633": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Artificer #57 loads after ArteFakes #56. If both PS5 ports override the same base-item record, Artificer is the later documented record candidate, so its mechanics are the expected version. ArteFakes' model assignment is not guaranteed to survive without a compatibility patch.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected. No separately listed Artificer–ArteFakes reconciliation patch is present in the current load order.",
+      "appearance": "A public Artificer–ArteFakes compatibility patch exists specifically to carry ArteFakes models into Artificer. It is not installed here, so the site does not promise ArteFakes visuals on these overlapping items.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "This is load-order precedence from documented overlap, not an inspected PS5 plugin record. The exact port payload and any asset-only wins remain unverified.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": true,
-      "earlierEffect": "Artificer also documents this item; its effect is not promoted to the final in-game result."
+      "earlierEffect": "ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record."
     },
     "W180": {
       "origin": "Changed vanilla / DLC unique",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Latest documented named-item editor: ArteFakes #91. If the recorded port overrides the same base-item record, that later record has priority. The resulting enchantment, linked effects and stats are NOT established from these descriptions.",
-      "chain": "#61 Artificer → #71 Fiery Souls – Truly Unique → #91 ArteFakes. #62 Artificer–USSEP is earlier than the competing edits; no separately listed matching reconciliation patch is present in the recorded list.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Steel Battleaxe of Fiery Souls – Truly Unique #67 is the latest documented item-specific editor after ArteFakes #56 and Artificer #57. Its Emberwisp / Flameclaim version is therefore the expected candidate, but the exact PS5 winning records remain uninspected.",
+      "chain": "#56 ArteFakes → #57 Artificer → #58 Artificer–USSEP scope uninspected → #67 Fiery Souls – Truly Unique.",
+      "appearance": "The dedicated #67 overhaul is also later than ArteFakes. Do not assume ArteFakes supplies the final model or that Artificer's Soulbrand fields are merged into #67.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Recorded ArteFakes menu v2.0.1 versus author-reference SE v2.0: matching payload not established. A lower model-oriented plugin can also replace other fields in the same item record. Do not combine all advertised enchantments or assume the final effect is vanilla.",
+      "verification": "Recorded PS5 menu versions establish order, not record contents. The dedicated axe is the latest documented same-item editor, so its mechanics are the expectation rather than a certified plugin scan.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/41254",
-        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/99684",
-        "https://www.nexusmods.com/skyrimspecialedition/mods/154943"
+        "https://www.nexusmods.com/skyrimspecialedition/mods/154943",
+        "https://tes5edit.github.io/docs/5-conflict-detection-and-resolution.html"
       ],
       "new": false,
-      "earlierEffect": "Emberwisps strengthen the axe; Flameclaim spends them."
+      "earlierEffect": "Artificer #57 separately renames and reworks this weapon as Soulbrand; those earlier fields are not assumed to survive #67."
     },
     "W039": {
       "origin": "Replacement thane reward",
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -916,11 +918,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -934,11 +936,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -952,11 +954,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -970,11 +972,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -988,11 +990,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -1006,11 +1008,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -1024,11 +1026,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -1042,11 +1044,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -1060,11 +1062,11 @@
       "status": "Documented overlap",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Unique Thane Weapons #72 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
-      "chain": "#61 Artificer → #72 Unique Thane Weapons; reward-selection and item records need separate verification.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer's or assume an already received reward is retroactively replaced.",
+      "chain": "#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
-      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. This is a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
+      "verification": "Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.",
       "sources": [
         "https://www.nexusmods.com/skyrimspecialedition/mods/99619",
         "https://www.nexusmods.com/skyrimspecialedition/mods/35497",
@@ -1078,9 +1080,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1094,9 +1096,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1110,9 +1112,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1126,9 +1128,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1142,9 +1144,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1158,9 +1160,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1174,9 +1176,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Knight of the North #159 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
-      "chain": "Divine Crusader Creation → #159 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "expected": "Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.",
+      "chain": "Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.",
       "sources": [
@@ -1190,9 +1192,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Both Artificer #61 and ArteFakes #91 name this restored or added item. Shared identity has not been established: they may target a shared restored record or introduce separate copies. The name alone does not prove #91 replaces this specific pickup.",
+      "expected": "Both Artificer #57 and ArteFakes #56 name this restored or added item. Shared identity has not been established: they may target a shared restored record or introduce separate copies. The name alone does not prove the two ports use the same record; if they do, #57 Artificer is later.",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1207,9 +1209,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Both Artificer #61 and ArteFakes #91 name this restored or added item. Shared identity has not been established: they may target a shared restored record or introduce separate copies. The name alone does not prove #91 replaces this specific pickup.",
+      "expected": "Both Artificer #57 and ArteFakes #56 name this restored or added item. Shared identity has not been established: they may target a shared restored record or introduce separate copies. The name alone does not prove the two ports use the same record; if they do, #57 Artificer is later.",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1224,9 +1226,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Volkihar Relic Sword #74 is documented as its own relic story. It is NOT established as a replacement for Harkon's Sword (W547).",
+      "expected": "Volkihar Relic Sword #70 is documented as its own relic story. It is NOT established as a replacement for Harkon's Sword (W547).",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1242,7 +1244,7 @@
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
       "expected": "Similar names, shared lore or the same pickup area do not establish a shared FormID. This entry must not be treated as an automatic replacement of another catalog item.",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1258,7 +1260,7 @@
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
       "expected": "Similar names, shared lore or the same pickup area do not establish a shared FormID. This entry must not be treated as an automatic replacement of another catalog item.",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1274,7 +1276,7 @@
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
       "expected": "Similar names, shared lore or the same pickup area do not establish a shared FormID. This entry must not be treated as an automatic replacement of another catalog item.",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1288,9 +1290,9 @@
       "status": "Identity / acquisition check",
       "reviewed": "2026-09-18",
       "basis": "Documentation + recorded 220-entry order; no plugin-record or gameplay verification",
-      "expected": "Halidil's shield is an alternative acquisition lead. An NPC carrying an Aetherial Shield does not prove Dwarven Power Armor #79 overwrites the original shield's ARMO record or Artificer effect (W311).",
+      "expected": "Halidil's shield is an alternative acquisition lead. An NPC carrying an Aetherial Shield does not prove Dwarven Power Armor #75 overwrites the original shield's ARMO record or Artificer effect (W311).",
       "chain": "Item identity / acquisition check, not an asserted override chain.",
-      "appearance": "Model and texture resolution is separate. #91 ArteFakes applies only to its documented item scope; #92–93 Xavbio may supply matching textures. Exact asset paths and the port payload are uninspected.",
+      "appearance": "Model and texture resolution is separate. #56 ArteFakes is earlier than Artificer; #87–88 Xavbio may supply matching textures. Exact asset paths and the PS5 port payload are uninspected.",
       "acquisition": "The documented acquisition route is listed separately from effects. Later quest, NPC, inventory and world-reference edits are not certified by this item review.",
       "verification": "Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.",
       "sources": [
@@ -1309,7 +1311,7 @@
     {
       "lo": 25,
       "name": "Thaumaturgy",
-      "scope": "Earlier enchanting dependency; not automatically the final artifact effect."
+      "scope": "Artificer dependency; Summermyst remains a separate installed enchanting overhaul whose broader compatibility is not resolved here."
     },
     {
       "lo": 26,
@@ -1317,177 +1319,177 @@
       "scope": "New enchantments/distribution. Same enchantment theme does not prove identical artifact records."
     },
     {
-      "lo": 38,
+      "lo": 33,
       "name": "Mysticism",
-      "scope": "Earlier magic dependency. Linked effects and spells require their own record checks."
+      "scope": "Artificer dependency. Linked effects and spells require their own record checks."
     },
     {
-      "lo": 44,
+      "lo": 36,
       "name": "Odin",
-      "scope": "Later than Mysticism; shared magic effects can matter independently of an item record."
+      "scope": "Magic overhaul; shared magic effects can matter independently of an item record."
     },
     {
-      "lo": 50,
+      "lo": 45,
       "name": "OWL",
       "scope": "Loot and level-list changes; do not equate distribution with an item enchantment."
     },
     {
-      "lo": 51,
+      "lo": 46,
       "name": "OWL randomized special loot",
       "scope": "Distribution/variant selection is separate from weapon stats."
     },
     {
-      "lo": 52,
+      "lo": 47,
       "name": "OWL Summermyst patch",
       "scope": "Named compatibility scope, not a catch-all artifact patch."
     },
     {
-      "lo": 55,
+      "lo": 50,
       "name": "Simply More Variety AE",
       "scope": "Creation loot integration; not proof every vanilla artifact is replaced."
     },
     {
+      "lo": 51,
+      "name": "Praedy staves and patches #52–55",
+      "scope": "Visual staff records and named magic integrations. Artificer loads later at #57; no Artificer–Praedy patch is in this load order."
+    },
+    {
       "lo": 56,
-      "name": "Praedy staves and patches #57–60",
-      "scope": "Models and named integrations; artifact pointer/asset coverage requires inspection."
+      "name": "ArteFakes",
+      "scope": "Unique-item model/record edits now intentionally placed above Artificer. If both edit the same item record, #57 Artificer is the later candidate; ArteFakes models are not assumed to survive without a patch."
+    },
+    {
+      "lo": 57,
+      "name": "Artificer",
+      "scope": "Documented artifact and unique-item changes; current priority is below ArteFakes and above the dedicated Fiery Souls / thane replacers."
+    },
+    {
+      "lo": 58,
+      "name": "Artificer–USSEP patch",
+      "scope": "Named fix integration. No evidence that it merges later #67 or #68 changes."
     },
     {
       "lo": 61,
-      "name": "Artificer",
-      "scope": "Documented artifact and unique-item changes; PS5 v1.00 is not an upstream version identity."
-    },
-    {
-      "lo": 62,
-      "name": "Artificer–USSEP patch",
-      "scope": "Named fix integration. No evidence that it merges later #71, #72 or #91 changes."
-    },
-    {
-      "lo": 65,
       "name": "Heavy Armory",
       "scope": "New weapon families and distribution; not a global artifact override inferred from its title."
     },
     {
-      "lo": 66,
-      "name": "More Unique weapons #66–68",
+      "lo": 62,
+      "name": "More Unique weapons #62–64",
       "scope": "Hand-placed additions are not automatically replacements for similarly themed vanilla artifacts."
     },
     {
-      "lo": 69,
+      "lo": 65,
       "name": "Artifact of Might",
       "scope": "Eight added weapons. Not another name for Artificer."
     },
     {
-      "lo": 70,
+      "lo": 66,
       "name": "Eidolon sword",
       "scope": "Standalone port; no Harkon/Daedric artifact identity inferred."
     },
     {
-      "lo": 71,
+      "lo": 67,
       "name": "Fiery Souls Truly Unique",
-      "scope": "Direct named axe overlap, but #91 loads later."
+      "scope": "Direct named axe overlap and now the latest of ArteFakes #56, Artificer #57 and the dedicated axe."
     },
     {
-      "lo": 72,
+      "lo": 68,
       "name": "Unique Thane Weapons",
-      "scope": "Later documented thane-reward replacement; quest award and item effects need separate checks."
+      "scope": "Later than Artificer; documented thane-reward replacement remains the expected reward candidate."
     },
     {
-      "lo": 73,
+      "lo": 69,
       "name": "Minecraft Weapon Pack",
       "scope": "Recorded PS5 description says craftable. Do not import the source PC replacer behavior."
     },
     {
-      "lo": 74,
+      "lo": 70,
       "name": "Volkihar Relic Sword",
       "scope": "A standalone relic story; not established as replacing Harkon's Sword."
     },
     {
-      "lo": 75,
-      "name": "Infinity Sword / Occiglacies #75–76",
+      "lo": 71,
+      "name": "Infinity Sword / Occiglacies #71–72",
       "scope": "Separate pickups; matching dungeon or theme is not a shared FormID."
     },
     {
-      "lo": 78,
+      "lo": 74,
       "name": "Psyche artifacts",
       "scope": "Port book and exact item identities remain incomplete; no guessed vanilla collisions."
     },
     {
-      "lo": 79,
+      "lo": 75,
       "name": "Dwarven Power Armor",
       "scope": "Halidil offers an Aetherial Shield acquisition route; giving an NPC an item is not proof its ARMO record is overwritten."
     },
     {
-      "lo": 80,
-      "name": "Race Armor / outfits / cloaks #80–86",
+      "lo": 76,
+      "name": "Race Armor / outfits / cloaks #76–82",
       "scope": "NPC outfit, appearance and new gear roles are not automatically artifact enchantment edits."
     },
     {
-      "lo": 87,
+      "lo": 83,
       "name": "Deadly Dragons Armory",
       "scope": "Additional dragon loot; not assumed to overwrite every existing artifact."
     },
     {
-      "lo": 91,
-      "name": "ArteFakes",
-      "scope": "Named unique-item edits below Artificer and the dedicated axe. Not safe to treat as textures-only."
-    },
-    {
-      "lo": 92,
-      "name": "Xavbio #92–93",
+      "lo": 87,
+      "name": "Xavbio #87–88",
       "scope": "Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected."
     },
     {
-      "lo": 110,
+      "lo": 105,
       "name": "Wear Multiple Rings",
-      "scope": "Later equipment/quest-item edits. Per-ring record membership and enchantment forwarding are unknown."
+      "scope": "Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified."
     },
     {
-      "lo": 112,
-      "name": "Animated Armoury / patch #113",
+      "lo": 107,
+      "name": "Animated Armoury / patch #108",
       "scope": "Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred."
     },
     {
-      "lo": 145,
-      "name": "JaySerpa quest bundle / #146–147 patches",
-      "scope": "Quest choices and award routes can change separately from the artifact object."
+      "lo": 140,
+      "name": "JaySerpa quest bundle / #141–142 patches",
+      "scope": "Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched."
     },
     {
-      "lo": 155,
+      "lo": 150,
       "name": "Forbidden Goods",
       "scope": "Merchant acquisition is not the same thing as changing the base item."
     },
     {
-      "lo": 159,
+      "lo": 154,
       "name": "Knight of the North",
       "scope": "Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques."
     },
     {
-      "lo": 162,
-      "name": "Lucien / patches #163–164",
+      "lo": 157,
+      "name": "Lucien / patches #158–159",
       "scope": "Follower and Creation integration; not presumed to repair artifact conflicts."
     },
     {
-      "lo": 168,
-      "name": "Cities / world edits #168 onward",
+      "lo": 163,
+      "name": "Cities / world edits #163 onward",
       "scope": "Interior, reference, access and placement conflicts may remain even when an item effect is expected."
     },
     {
-      "lo": 213,
+      "lo": 208,
       "name": "Bedlam",
       "scope": "Dungeon encounters are not automatically unique-item records."
     },
     {
-      "lo": 215,
-      "name": "High King location patches #215–216",
+      "lo": 210,
+      "name": "High King location patches #210–211",
       "scope": "Specific world integrations, not a generic artifact conflict resolver."
     },
     {
-      "lo": 217,
-      "name": "AFT / addon #218",
+      "lo": 212,
+      "name": "AFT / addon #213",
       "scope": "Follower inventory behavior is separate from a documented base-weapon override."
     },
     {
-      "lo": 219,
+      "lo": 214,
       "name": "Lux",
       "scope": "Late interior/reference changes must not be mistaken for a blanket final enchantment provider."
     }

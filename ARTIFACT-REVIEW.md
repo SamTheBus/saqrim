@@ -10,15 +10,17 @@ Use the Item origin and Artifact review checkbox groups. The separate New famili
 
 ## What follows the load order
 
-This reviews the recorded 220-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
+This reviews Sam's current 220-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
 
-- **Fiery Souls:** #61 Artificer, #71 Truly Unique, then #91 ArteFakes. ArteFakes is the latest documented named-item editor. The final enchantment is unresolved, not automatically the #71 Emberwisp version or a guaranteed vanilla reversion.
-- **Other #91 overlaps:** Bow of the Stag Prince, Dawnguard Rune Axe and Hammer, Dragonbane, Ghostblade, Soulrender, Bloodscythe and Shield of Solitude. Earlier Artificer effects are not displayed as certified final effects.
-- **Thane rewards:** #72 Unique Thane Weapons follows #61 Artificer. Quest assignment and item records are distinct. No combined enchantment or retroactive inventory replacement is assumed.
-- **Rings:** #110 Wear Multiple Rings is later; its individual ring-record membership and enchantment forwarding remain uninspected. This is a possible-overlap warning, not a proven winner.
-- **Identity:** #74 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
+- **ArteFakes / Artificer:** ArteFakes is now #56 and Artificer is #57. For documented shared item records, Artificer is therefore the later mechanics candidate. Without the separate compatibility patch, ArteFakes models are **not** promised to survive the later Artificer record.
+- **Fiery Souls:** #56 ArteFakes → #57 Artificer → #67 Truly Unique. The dedicated axe is now the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
+- **Thane rewards:** #68 Unique Thane Weapons follows #57 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
+- **Praedy's Staves:** #51–55 load before Artificer #57. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model is unresolved.
+- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #140 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #141 Wintersun and #142 USSEP patches are not that Artificer patch.
+- **Rings:** #105 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
+- **Identity:** #70 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
 
-No separately named Artificer–ArteFakes reconciliation patch appears in the recorded list. The existing #62 Artificer–USSEP patch is not assumed to forward later mods. A public third-party patch is cited only as compatibility evidence; it is NOT treated as installed.
+No separately named Artificer–ArteFakes reconciliation patch, Artificer–Praedy patch, or Destroy-the-Dark-Brotherhood–Artificer patch appears in the current list. The existing #58 Artificer–USSEP patch is not assumed to forward later #67 or #68 changes. Public third-party patches are cited only as compatibility evidence; they are **not** treated as installed.
 
 ## Versions and effects
 
@@ -33,43 +35,43 @@ These are review priorities and distinctions, not a complete record-conflict mat
 | Recorded order | Mod / group | Review scope |
 |---|---|---|
 | 1 | USSEP | Earlier fixes. Later copies of records can forward or replace fixes. |
-| 25 | Thaumaturgy | Earlier enchanting dependency; not automatically the final artifact effect. |
+| 25 | Thaumaturgy | Artificer dependency; Summermyst remains a separate installed enchanting overhaul whose broader compatibility is not resolved here. |
 | 26 | Summermyst | New enchantments/distribution. Same enchantment theme does not prove identical artifact records. |
-| 38 | Mysticism | Earlier magic dependency. Linked effects and spells require their own record checks. |
-| 44 | Odin | Later than Mysticism; shared magic effects can matter independently of an item record. |
-| 50 | OWL | Loot and level-list changes; do not equate distribution with an item enchantment. |
-| 51 | OWL randomized special loot | Distribution/variant selection is separate from weapon stats. |
-| 52 | OWL Summermyst patch | Named compatibility scope, not a catch-all artifact patch. |
-| 55 | Simply More Variety AE | Creation loot integration; not proof every vanilla artifact is replaced. |
-| 56 | Praedy staves and patches #57–60 | Models and named integrations; artifact pointer/asset coverage requires inspection. |
-| 61 | Artificer | Documented artifact and unique-item changes; PS5 v1.00 is not an upstream version identity. |
-| 62 | Artificer–USSEP patch | Named fix integration. No evidence that it merges later #71, #72 or #91 changes. |
-| 65 | Heavy Armory | New weapon families and distribution; not a global artifact override inferred from its title. |
-| 66 | More Unique weapons #66–68 | Hand-placed additions are not automatically replacements for similarly themed vanilla artifacts. |
-| 69 | Artifact of Might | Eight added weapons. Not another name for Artificer. |
-| 70 | Eidolon sword | Standalone port; no Harkon/Daedric artifact identity inferred. |
-| 71 | Fiery Souls Truly Unique | Direct named axe overlap, but #91 loads later. |
-| 72 | Unique Thane Weapons | Later documented thane-reward replacement; quest award and item effects need separate checks. |
-| 73 | Minecraft Weapon Pack | Recorded PS5 description says craftable. Do not import the source PC replacer behavior. |
-| 74 | Volkihar Relic Sword | A standalone relic story; not established as replacing Harkon's Sword. |
-| 75 | Infinity Sword / Occiglacies #75–76 | Separate pickups; matching dungeon or theme is not a shared FormID. |
-| 78 | Psyche artifacts | Port book and exact item identities remain incomplete; no guessed vanilla collisions. |
-| 79 | Dwarven Power Armor | Halidil offers an Aetherial Shield acquisition route; giving an NPC an item is not proof its ARMO record is overwritten. |
-| 80 | Race Armor / outfits / cloaks #80–86 | NPC outfit, appearance and new gear roles are not automatically artifact enchantment edits. |
-| 87 | Deadly Dragons Armory | Additional dragon loot; not assumed to overwrite every existing artifact. |
-| 91 | ArteFakes | Named unique-item edits below Artificer and the dedicated axe. Not safe to treat as textures-only. |
-| 92 | Xavbio #92–93 | Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected. |
-| 110 | Wear Multiple Rings | Later equipment/quest-item edits. Per-ring record membership and enchantment forwarding are unknown. |
-| 112 | Animated Armoury / patch #113 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
-| 145 | JaySerpa quest bundle / #146–147 patches | Quest choices and award routes can change separately from the artifact object. |
-| 155 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
-| 159 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
-| 162 | Lucien / patches #163–164 | Follower and Creation integration; not presumed to repair artifact conflicts. |
-| 168 | Cities / world edits #168 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
-| 213 | Bedlam | Dungeon encounters are not automatically unique-item records. |
-| 215 | High King location patches #215–216 | Specific world integrations, not a generic artifact conflict resolver. |
-| 217 | AFT / addon #218 | Follower inventory behavior is separate from a documented base-weapon override. |
-| 219 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
+| 33 | Mysticism | Artificer dependency. Linked effects and spells require their own record checks. |
+| 36 | Odin | Magic overhaul; shared magic effects can matter independently of an item record. |
+| 45 | OWL | Loot and level-list changes; do not equate distribution with an item enchantment. |
+| 46 | OWL randomized special loot | Distribution/variant selection is separate from weapon stats. |
+| 47 | OWL Summermyst patch | Named compatibility scope, not a catch-all artifact patch. |
+| 50 | Simply More Variety AE | Creation loot integration; not proof every vanilla artifact is replaced. |
+| 51 | Praedy staves and patches #52–55 | Visual staff records and named magic integrations. Artificer loads later at #57; no Artificer–Praedy patch is in this load order. |
+| 56 | ArteFakes | Unique-item model/record edits now intentionally placed above Artificer. If both edit the same item record, #57 Artificer is the later candidate; ArteFakes models are not assumed to survive without a patch. |
+| 57 | Artificer | Documented artifact and unique-item changes; current priority is below ArteFakes and above the dedicated Fiery Souls / thane replacers. |
+| 58 | Artificer–USSEP patch | Named fix integration. No evidence that it merges later #67 or #68 changes. |
+| 61 | Heavy Armory | New weapon families and distribution; not a global artifact override inferred from its title. |
+| 62 | More Unique weapons #62–64 | Hand-placed additions are not automatically replacements for similarly themed vanilla artifacts. |
+| 65 | Artifact of Might | Eight added weapons. Not another name for Artificer. |
+| 66 | Eidolon sword | Standalone port; no Harkon/Daedric artifact identity inferred. |
+| 67 | Fiery Souls Truly Unique | Direct named axe overlap and now the latest of ArteFakes #56, Artificer #57 and the dedicated axe. |
+| 68 | Unique Thane Weapons | Later than Artificer; documented thane-reward replacement remains the expected reward candidate. |
+| 69 | Minecraft Weapon Pack | Recorded PS5 description says craftable. Do not import the source PC replacer behavior. |
+| 70 | Volkihar Relic Sword | A standalone relic story; not established as replacing Harkon's Sword. |
+| 71 | Infinity Sword / Occiglacies #71–72 | Separate pickups; matching dungeon or theme is not a shared FormID. |
+| 74 | Psyche artifacts | Port book and exact item identities remain incomplete; no guessed vanilla collisions. |
+| 75 | Dwarven Power Armor | Halidil offers an Aetherial Shield acquisition route; giving an NPC an item is not proof its ARMO record is overwritten. |
+| 76 | Race Armor / outfits / cloaks #76–82 | NPC outfit, appearance and new gear roles are not automatically artifact enchantment edits. |
+| 83 | Deadly Dragons Armory | Additional dragon loot; not assumed to overwrite every existing artifact. |
+| 87 | Xavbio #87–88 | Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected. |
+| 105 | Wear Multiple Rings | Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified. |
+| 107 | Animated Armoury / patch #108 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
+| 140 | JaySerpa quest bundle / #141–142 patches | Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched. |
+| 150 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
+| 154 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
+| 157 | Lucien / patches #158–159 | Follower and Creation integration; not presumed to repair artifact conflicts. |
+| 163 | Cities / world edits #163 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
+| 208 | Bedlam | Dungeon encounters are not automatically unique-item records. |
+| 210 | High King location patches #210–211 | Specific world integrations, not a generic artifact conflict resolver. |
+| 212 | AFT / addon #213 | Follower inventory behavior is separate from a documented base-weapon override. |
+| 214 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
 
 ## Sources
 
@@ -87,7 +89,7 @@ Each new item carries its own original-author effects source and separately labe
 
 The catalog, mainland map, realm indexes and quest rewards read the same reviewed data. All existing 46 quest objects remain identical; six explicit quest reward links connect the newly indexed items to existing cards through separate metadata. No extra quests or geographic coordinates are invented.
 
-The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 220-entry TSV, console checklist, thumbnails, file sizes, faith/stone data and all browser storage keys are unchanged. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
+The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 220-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
 
 ## Validation scope
 
