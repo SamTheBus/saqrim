@@ -46,16 +46,15 @@ for ident in [f'W{i:03}' for i in range(39,49)]:
  check(ident+' thane chain renumbered','#57 Artificer' in audit[ident]['chain'] and '#68 Unique Thane Weapons' in audit[ident]['chain'])
 check('Staff of Magnus flags missing Praedy compatibility','#51 Praedy' in audit['W627']['chain'] and '#57 Artificer' in audit['W627']['chain'] and 'compatibility' in audit['W627']['expected'].lower())
 
-for target in ['Windshear',"Firiniel's End"]:
- r=next(x for x in rows if x['Target'].split(' (')[0].casefold()==target.casefold())
- a=audit[r['Catalog ID']]
- check(target+' flags JaySerpa acquisition conflict','#140 JaySerpa' in a['chain'] and 'not present' in a['expected'] and 'acquisition' in r['Effect / interest'].lower())
-
 oldq=json.loads(subprocess.check_output(['git','show',BASE+':quests-data.json'],cwd=ROOT))['quests']
 newq=json.loads((ROOT/'quests-data.json').read_text())['quests']
 check('quest IDs and count preserved',[q['id'] for q in newq]==[q['id'] for q in oldq])
-check('quest load-order numbers only are remapped',all(q['lo']==current_lo(o['lo']) and {k:v for k,v in q.items() if k!='lo'}=={k:v for k,v in o.items() if k!='lo'} for q,o in zip(newq,oldq)))
-check('Destroy Dark Brotherhood quest points to current #140',next(q for q in newq if q['id']=='Q030')['lo']==140)
+check('quest load-order numbers remapped',all(q['lo']==current_lo(o['lo']) for q,o in zip(newq,oldq)))
+check('all quest text preserved except explicit Q030 compatibility enrichment',all(({k:v for k,v in q.items() if k not in ['lo','notes','sources']}=={k:v for k,v in o.items() if k not in ['lo','notes','sources']} if q['id']=='Q030' else {k:v for k,v in q.items() if k!='lo'}=={k:v for k,v in o.items() if k!='lo'}) for q,o in zip(newq,oldq)))
+q30=next(q for q in newq if q['id']=='Q030')
+check('Destroy Dark Brotherhood quest points to current #140',q30['lo']==140)
+check('Destroy Dark Brotherhood surfaces Artificer acquisition conflict',any('Windshear' in n and "Firiniel's End" in n and 'unobtainable' in n for n in q30.get('notes',[])))
+check('Destroy Dark Brotherhood links compatibility source',any(s.get('url')=='https://www.nexusmods.com/skyrimspecialedition/mods/151173' for s in q30.get('sources',[])))
 
 class Quiet(http.server.SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
