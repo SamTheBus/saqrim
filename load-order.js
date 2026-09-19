@@ -1,19 +1,34 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  const key = 'saqrim-load-order-220-2026-09-17';
+  const key = 'saqrim-load-order-220-2026-09-18-v2';
+  const oldKey = 'saqrim-load-order-220-2026-09-17';
+  const oldToNew = n => {
+    if (n <= 32) return n;
+    if (n >= 33 && n <= 37) return n + 183;
+    const fixed = {38:33,39:35,40:34,41:39,42:40,43:41,44:36,45:38,46:37,47:42,48:43,91:56};
+    if (fixed[n]) return fixed[n];
+    if (n >= 49 && n <= 60) return n - 5;
+    if (n >= 61 && n <= 90) return n - 4;
+    if (n >= 92 && n <= 220) return n - 5;
+    return n;
+  };
   const notes = {
-    17: 'The recorded Part 2 description says it belongs below ESM/master files. Its recorded position is preserved here; this page does not silently reorder it.',
-    115: 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
-    136: 'Inn-Tegrated NPCs patch: variant identified by Sam. The current recorded description is sparse; this is not a second copy of the main Echoes of Oblivion pack.',
-    170: 'Identified as Cities of the North AIO from the filename and companion patch description. The visible title is COTN AIO.ESP; the exact web listing is not matched.',
-    172: 'The recorded port description warns against Lux / Lux Orbis. Lux remains at recorded position #219. This page preserves that warning without changing the order.',
-    215: 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
+    'Beyond Reach Part 2 (PS)': 'The original recording description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
+    'Comprehensive First Person Animation Overhaul - alternative Lite port': 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
+    'Echoes of Oblivion - Inn-Tegrated NPCs Patch': 'Inn-Tegrated NPCs patch: variant identified by Sam. The recorded description is sparse; this is not a second copy of the main Echoes of Oblivion pack.',
+    'Cities of the North AIO (COTN AIO.ESP)': 'Identified as Cities of the North AIO from the filename and companion patch description. The visible title is COTN AIO.ESP; the exact web listing is not matched.',
+    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux is now at current position #214. This page preserves that warning without changing the order.',
+    'Become High King of Skyrim TNG - Great Cities / minor cities patch': 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
   };
   let data = [], rows = [], added = new Set(), canSave = true;
   try {
-    const stored = JSON.parse(localStorage.getItem(key) || '[]');
-    if (Array.isArray(stored)) added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220));
+    const existing = localStorage.getItem(key);
+    const stored = JSON.parse(existing || localStorage.getItem(oldKey) || '[]');
+    if (Array.isArray(stored)) {
+      const clean = stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220);
+      added = new Set(existing ? clean : clean.map(oldToNew));
+    }
     localStorage.setItem(key, JSON.stringify([...added]));
   } catch (_) { canSave = false; }
   function say(text) { $('feedback').textContent = text; $('feedback').hidden = false; }
@@ -38,7 +53,7 @@
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
-    $('count').textContent = `${shown} / 220 shown · original numbers retained`;
+    $('count').textContent = `${shown} / 220 shown · current numbers retained`;
     $('empty').hidden = shown !== 0;
     $('progress').value = added.size;
     $('added-count').textContent = `${added.size} / 220 added`;
@@ -75,10 +90,10 @@
     check.addEventListener('change', () => { if (check.checked) added.add(item.n); else added.delete(item.n); save(); filter(); });
     label.append(check, document.createTextNode('Added on my console'));
     const copy = el('button', '', 'Copy name'); copy.type = 'button'; copy.addEventListener('click', () => copyName(item.name)); actions.append(label, copy);
-    const details = document.createElement('details'); details.append(el('summary', '', notes[item.n] ? 'Console title, source & identification note' : 'Console title & recording source'));
+    const details = document.createElement('details'); details.append(el('summary', '', notes[item.name] ? 'Console title, source & identification note' : 'Console title & recording source'));
     details.append(el('p', '', 'Visible console title (may be clipped): ' + item.title));
     details.append(el('p', '', 'Recorded file size: ' + item.size + ' · Menu version: ' + item.version + ' · Enabled in the video.'));
-    if (notes[item.n]) details.append(el('p', 'warning', notes[item.n]));
+    if (notes[item.name]) details.append(el('p', 'warning', notes[item.name]));
     const parts = item.time.split(':'); const seconds = Number(parts[0]) * 60 + Number(parts[1]);
     const source = el('a', '', 'View in the recording · ' + item.time); source.href = 'https://www.youtube.com/watch?v=4uyqCADqwPo&t=' + Math.floor(seconds) + 's'; source.target = '_blank'; source.rel = 'noopener noreferrer'; details.append(source);
     details.append(el('p', '', 'Image: thumbnail cropped from this recorded Creations entry, not a newly verified Bethesda web listing. Sizes can change with updates.'));
