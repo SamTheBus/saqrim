@@ -21,7 +21,7 @@
     "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux is now at current position #214. This page preserves that warning without changing the order.',
     'Become High King of Skyrim TNG - Great Cities / minor cities patch': 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
   };
-  let data = [], rows = [], added = new Set(), canSave = true;
+  let data = [], rows = [], added = new Set(), canSave = true, bethesdaMeta = {};
   try {
     const existing = localStorage.getItem(key);
     const stored = JSON.parse(existing || localStorage.getItem(oldKey) || '[]');
@@ -74,6 +74,61 @@
       $('copy-panel').hidden = false; $('copy-name').value = name; $('copy-name').focus(); $('copy-name').select();
     }
   }
+  function listBlock(label, values) {
+    if (!Array.isArray(values) || !values.length) return null;
+    const wrap = el('div', 'listing-block');
+    wrap.append(el('h4', '', label));
+    const list = el('ul');
+    values.forEach(value => list.append(el('li', '', value)));
+    wrap.append(list);
+    return wrap;
+  }
+  function bethesdaPanel(item) {
+    const meta = item.bethesda;
+    const box = el('section', 'bethesda-info');
+    box.append(el('h3', '', 'Bethesda / Creations listing'));
+    if (!meta) {
+      box.classList.add('listing-pending');
+      box.append(el('p', 'listing-status', 'Official Bethesda listing not yet matched'));
+      box.append(el('p', '', 'No Nexus or other third-party description is substituted here. The recorded console information below is still preserved.'));
+      return box;
+    }
+    box.append(el('p', 'listing-status', meta.sourceStatus || 'Official Bethesda listing matched'));
+    if (meta.bethesdaTitle) {
+      const title = el('p');
+      const strong = el('strong', '', meta.bethesdaTitle);
+      title.append(strong);
+      if (meta.author) title.append(document.createTextNode(' · by ' + meta.author));
+      box.append(title);
+    }
+    if (meta.overview) box.append(el('p', 'listing-overview', meta.overview));
+    for (const [label, keyName] of [['What the listing says it does','features'],['Requirements','requirements'],['Compatibility / load-order notes','compatibility'],['Credits / porter notes','credits']]) {
+      const block = listBlock(label, meta[keyName]);
+      if (block) box.append(block);
+    }
+    if (meta.bethesdaVersion || meta.bethesdaInstallSize) {
+      const current = [meta.bethesdaVersion && 'version ' + meta.bethesdaVersion, meta.bethesdaInstallSize && meta.bethesdaInstallSize].filter(Boolean).join(' · ');
+      const recorded = [item.version && 'version ' + item.version, item.size].filter(Boolean).join(' · ');
+      const compare = el('div', 'listing-compare');
+      compare.append(el('h4', '', 'Listing vs. your recording'));
+      compare.append(el('p', '', 'Current Bethesda listing: ' + current + '.'));
+      compare.append(el('p', '', 'Recorded on your console: ' + recorded + '.'));
+      if ((meta.bethesdaVersion && meta.bethesdaVersion !== item.version) || (meta.bethesdaInstallSize && meta.bethesdaInstallSize !== item.size)) {
+        compare.append(el('p', 'warning', 'The current listing metadata differs from the recorded menu. Both are kept because the listing can change after your recording.'));
+      }
+      box.append(compare);
+    }
+    if (!meta.overview) {
+      box.append(el('p', 'listing-pending-note', 'The official listing URL is matched, but its description text has not been verified yet. No alternate description is being substituted.'));
+    }
+    if (meta.source) {
+      const source = el('a', 'bethesda-link', 'Open official Bethesda listing');
+      source.href = meta.source; source.target = '_blank'; source.rel = 'noopener noreferrer';
+      box.append(source);
+    }
+    if (meta.checked) box.append(el('p', 'listing-checked', 'Bethesda listing checked ' + meta.checked + '.'));
+    return box;
+  }
   function makeRow(item) {
     const node = el('li', 'row'); node.id = 'mod-' + String(item.n).padStart(3, '0'); node.value = item.n; node.tabIndex = -1;
     const top = el('div', 'row-top');
@@ -90,7 +145,10 @@
     check.addEventListener('change', () => { if (check.checked) added.add(item.n); else added.delete(item.n); save(); filter(); });
     label.append(check, document.createTextNode('Added on my console'));
     const copy = el('button', '', 'Copy name'); copy.type = 'button'; copy.addEventListener('click', () => copyName(item.name)); actions.append(label, copy);
-    const details = document.createElement('details'); details.append(el('summary', '', notes[item.name] ? 'Console title, source & identification note' : 'Console title & recording source'));
+    const details = document.createElement('details');
+    details.append(el('summary', '', item.bethesda ? 'Bethesda listing, console source & notes' : 'Bethesda listing status & console source'));
+    details.append(bethesdaPanel(item));
+    details.append(el('h3', 'recording-heading', 'Your recorded Creations entry'));
     details.append(el('p', '', 'Visible console title (may be clipped): ' + item.title));
     details.append(el('p', '', 'Recorded file size: ' + item.size + ' · Menu version: ' + item.version + ' · Enabled in the video.'));
     if (notes[item.name]) details.append(el('p', 'warning', notes[item.name]));
@@ -98,13 +156,23 @@
     const source = el('a', '', 'View in the recording · ' + item.time); source.href = 'https://www.youtube.com/watch?v=4uyqCADqwPo&t=' + Math.floor(seconds) + 's'; source.target = '_blank'; source.rel = 'noopener noreferrer'; details.append(source);
     details.append(el('p', '', 'Image: thumbnail cropped from this recorded Creations entry, not a newly verified Bethesda web listing. Sizes can change with updates.'));
     node.append(top, actions, details);
-    return {node, item, searchable: [item.name, item.title, item.size, item.version, item.category].join(' ').toLowerCase()};
+    return {node, item, searchable: [item.name, item.title, item.size, item.version, item.category, JSON.stringify(item.bethesda || {})].join(' ').toLowerCase()};
   }
   async function start() {
     try {
       const response = await fetch('load-order.tsv'); if (!response.ok) throw new Error('Load-order request failed');
       const text = await response.text();
-      data = text.trim().split(/\r?\n/).map(line => { const [n,name,size,version,time,category,title,thumb] = line.split('\t'); return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb)}; });
+      try {
+        const listingResponse = await fetch('load-order-bethesda.json?v=1');
+        if (listingResponse.ok) {
+          const pack = await listingResponse.json();
+          bethesdaMeta = pack.entries || {};
+        }
+      } catch (_) { bethesdaMeta = {}; }
+      data = text.trim().split(/\r?\n/).map(line => {
+        const [n,name,size,version,time,category,title,thumb] = line.split('\t');
+        return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
+      });
       if (data.length !== 220 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
