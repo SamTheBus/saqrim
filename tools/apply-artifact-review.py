@@ -78,6 +78,11 @@ for name in ['catalog.js','map.js','worlds.js','quests.js']:
 pack=json.loads(old('quests-data.json'))
 for q in pack['quests']:
     if isinstance(q.get('lo'),int):q['lo']=spec['current_lo'](q['lo'])
+    if q.get('id')=='Q030':
+        warning="Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 220-mod order; the exact PS5 bundle behavior remains untested."
+        if warning not in q.setdefault('notes',[]):q['notes'].append(warning)
+        compat={'url':spec['JAY_ART'],'label':'Artificer compatibility patch for Destroy the Dark Brotherhood - Quest Expansion','scope':'Patch-author documentation; establishes the upstream acquisition conflict, not the exact PS5 bundle payload.'}
+        if compat not in q.setdefault('sources',[]):q['sources'].append(compat)
 pack['catalogLinks']=spec['QUEST_LINKS'];pack['catalogLinksScope']='Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam\'s current arrangement.'
 put('quests-data.json',json.dumps(pack,ensure_ascii=False,indent=1)+'\n')
 t=old('site-quests.js').replace('quests-data.json?v=2','quests-data.json?v=3')
