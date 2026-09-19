@@ -6,6 +6,7 @@ on:
       - 'tools/artifact-review-data.py'
       - 'tools/apply-artifact-review.py'
       - 'tests/artifact-review-browser.py'
+      - 'tests/artifact-current-order.py'
       - '.github/workflows/artifact-review-checks.yml'
 permissions:
   contents: write
