@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "updated": "2026-09-19",
+  "scope": "Official Bethesda Creations listings only. Entries without a verified Bethesda listing description are left explicitly unmatched; Nexus or other upstream prose is not substituted here.",
+  "entries": {
+    "Unofficial Skyrim Special Edition Patch (USSEP)": {
+      "bethesdaTitle": "Unofficial Skyrim Special Edition Patch (USSEP)",
+      "source": "https://creations.bethesda.net/en/skyrim/details/fe05e888-47cb-445d-a070-bb3aa5765c99/Unofficial_Skyrim_Special_Edition_Patch__USSEP_",
+      "sourceStatus": "Official Bethesda listing URL matched; description text not yet verified",
+      "checked": "2026-09-19"
+    },
+    "Simple Workaround Framework": {
+      "bethesdaTitle": "Simple Workaround Framework",
+      "source": "https://creations.bethesda.net/en/skyrim/details/d32b3566-b46e-48c7-82c8-3deaa1edd4e9/Simple_Workaround_Framework",
+      "sourceStatus": "Official Bethesda listing URL matched; description text not yet verified",
+      "checked": "2026-09-19"
+    },
+    "Summermyst - Enchantments of Skyrim": {
+      "bethesdaTitle": "[PS5] Summermyst - Enchantments of Skyrim",
+      "author": "CegoPortsPSN",
+      "overview": "Adds 109 new enchantments and integrates them into Skyrim's normal enchanted-item system while also revising many vanilla enchantments.",
+      "features": [
+        "65 new armor enchantments and 44 new weapon enchantments.",
+        "New enchantments can appear in merchant stock and normal loot, including equipment used by enemies.",
+        "The new effects can be disenchanted and applied to player equipment.",
+        "The listing also describes improvements and balance changes to existing vanilla enchantments."
+      ],
+      "bethesdaVersion": "4.0.7",
+      "bethesdaInstallSize": "11.03 MB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/0650580d-035e-4b40-9e48-76968dfaced9/_PS5__Summermyst___Enchantments_of_Skyrim",
+      "sourceStatus": "Verified official PS5 Bethesda listing",
+      "checked": "2026-09-19"
+    },
+    "Odin - Skyrim Magic Overhaul": {
+      "bethesdaTitle": "[PS5] Odin - Skyrim Magic Overhaul",
+      "author": "CegoPortsPSN",
+      "overview": "Rebalances and fixes vanilla magic, improves the usefulness of scrolls and staves, and adds 125 new lore-friendly spells with matching scrolls and staves.",
+      "features": [
+        "Rebalances, fixes and improves vanilla spells.",
+        "Adds 125 new spells inspired by Elder Scrolls lore.",
+        "Adds corresponding scrolls and staves.",
+        "Integrates the added magic into normal loot and vendor inventories.",
+        "The listing says it is designed to work with popular magic-scaling mods and perk overhauls."
+      ],
+      "bethesdaVersion": "3.1.5",
+      "bethesdaInstallSize": "22.71 MB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/4788379c-9593-456a-8e39-a6570bef3a7a/_PS5__Odin___Skyrim_Magic_Overhaul",
+      "sourceStatus": "Verified official PS5 Bethesda listing",
+      "checked": "2026-09-19"
+    },
+    "Mjolnir - Leviathan Axe - Blades of Chaos": {
+      "bethesdaTitle": "Mjolnir - Leviathan Axe - Blades of Chaos ps5",
+      "author": "Mors-Umbra",
+      "overview": "Adds PlayStation versions of Mjolnir, the Leviathan Axe and the Blades of Chaos, using the weapon assets credited by the listing and a custom blazing recolor for the Blades.",
+      "features": [
+        "The listing describes the weapons as high-quality God of War replicas with 4K textures.",
+        "Their weapon stats are set to the corresponding ebony mace, war axe and dagger tiers.",
+        "The PlayStation porter's note says the weapons must be crafted at a forge."
+      ],
+      "credits": [
+        "Barraganchik is credited by the Bethesda listing for the original weapon assets."
+      ],
+      "bethesdaVersion": "1.00",
+      "bethesdaInstallSize": "12.95 MB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/bb05f4ba-618d-45f7-a331-dae4f48a95aa/Mjolnir___Leviathan_Axe___Blades_of_Chaos_ps5",
+      "sourceStatus": "Verified official PlayStation Bethesda listing",
+      "checked": "2026-09-19"
+    },
+    "Extended Encounters (SWF)": {
+      "bethesdaTitle": "Extended Encounters (SWF)",
+      "author": "FM07_2",
+      "overview": "Adds additional random encounters to Skyrim's roads, wilderness and locations, including traveling NPCs, faction activity and events around dangerous places.",
+      "features": [
+        "Adds road and wilderness encounters plus encounters tied to specific locations.",
+        "Adds traveling NPCs, adventurers and mercenaries, faction raids and other world events.",
+        "Includes a Mod Options Menu for enabling or disabling features.",
+        "The listing describes the implementation as lightweight and says it makes no vanilla reference changes."
+      ],
+      "requirements": [
+        "Simple Workaround Framework is required for the Mod Options Menu described by the listing."
+      ],
+      "bethesdaVersion": "1.00",
+      "bethesdaInstallSize": "1.74 MB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/d0219fa4-65c9-43d2-a882-f8ddb306b92e/Extended_Encounters__SWF_",
+      "sourceStatus": "Verified official PlayStation Bethesda listing",
+      "checked": "2026-09-19"
+    }
+  }
+}
