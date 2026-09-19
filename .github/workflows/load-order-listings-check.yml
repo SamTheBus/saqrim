@@ -1,0 +1,40 @@
+name: Load-order listing checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'load-order.tsv'
+      - 'load-order.html'
+      - 'load-order.css'
+      - 'load-order.js'
+      - 'load-order-bethesda.json'
+      - '.github/workflows/load-order-listings-check.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript
+        run: node --check load-order.js
+      - name: Validate listing metadata
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('.')
+          rows=[line.split('\t') for line in (root/'load-order.tsv').read_text().splitlines() if line.strip()]
+          assert len(rows)==220
+          assert [int(r[0]) for r in rows]==list(range(1,221))
+          names={r[1] for r in rows}
+          pack=json.loads((root/'load-order-bethesda.json').read_text())
+          assert pack['version']>=1
+          assert set(pack['entries']) <= names
+          for name,entry in pack['entries'].items():
+              assert entry.get('source','').startswith('https://creations.bethesda.net/')
+              assert entry.get('sourceStatus')
+              if entry.get('overview'):
+                  assert entry['sourceStatus'].lower().startswith('verified official')
+          print(f"PASS: 220 load-order rows; {len(pack['entries'])} Bethesda matches; {sum(bool(e.get('overview')) for e in pack['entries'].values())} descriptions verified.")
+          PY
