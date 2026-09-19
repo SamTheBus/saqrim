@@ -65,7 +65,7 @@ with sync_playwright() as p:
  page.evaluate('localStorage.clear();localStorage.setItem("saqrim-load-order-220-2026-09-17","[61,71,91]")');page.reload();page.wait_for_selector('#mod-056');check('old checklist migrates by mod identity positions',page.is_checked('#mod-056 input[type=checkbox]') and page.is_checked('#mod-057 input[type=checkbox]') and page.is_checked('#mod-067 input[type=checkbox]'))
  page.goto(URL+'index.html#W180');page.wait_for_function('window.SaqrimCatalog');page.wait_for_selector('#W180[open]');check('axe visible summary uses dedicated mechanics','Emberwisp' in page.locator('#W180>summary').inner_text())
  page.goto(URL+'index.html#W629');page.wait_for_function('window.SaqrimCatalog');page.wait_for_selector('#W629[open]');check('Dragonbane summary shows Artificer expected','Expected Artificer reference' in page.locator('#W629>summary').inner_text())
- page.goto(URL+'index.html#W627');page.wait_for_function('window.SaqrimCatalog');page.wait_for_selector('#W627[open]');check('Staff Magnus audit visible','Praedy' in page.locator('#W627 .artifact-audit').inner_text())
+ page.goto(URL+'index.html#W627');page.wait_for_function('window.SaqrimCatalog');page.wait_for_selector('#W627[open]');page.locator('#W627 .artifact-audit').evaluate('(n)=>n.open=true');check('Staff Magnus audit visible','Praedy' in page.locator('#W627 .artifact-audit').inner_text())
  page.goto(URL+'quests.html#Q030');page.wait_for_function('window.SaqrimQuests');page.wait_for_selector('#Q030[open]');check('quest links current load order #140',page.locator('#Q030 a[href="load-order.html#mod-140"]').count()==1)
  check('mobile pages fit',page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'))
  check('no JavaScript errors',not errors)
