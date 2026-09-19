@@ -84,6 +84,24 @@
       "source": "https://creations.bethesda.net/en/skyrim/details/d0219fa4-65c9-43d2-a882-f8ddb306b92e/Extended_Encounters__SWF_",
       "sourceStatus": "Verified official PlayStation Bethesda listing",
       "checked": "2026-09-19"
+    },
+    "Vokriinator [EN]": {
+      "bethesdaTitle": "Vokriinator [EN]",
+      "author": "Morken_TV",
+      "overview": "Combines selected Vokrii perks into Ordinator's larger perk trees to expand build options while retaining Ordinator's broad perk framework.",
+      "features": [
+        "Adds selected Vokrii perks to Ordinator's perk trees.",
+        "Designed to increase build and playstyle variety without replacing Ordinator's larger trees.",
+        "The Bethesda listing describes a more extensive Vokriinator Black setup separately; this entry is the standard Vokriinator [EN] listing."
+      ],
+      "requirements": [
+        "The Bethesda listing requires the English versions of Vokrii and Ordinator."
+      ],
+      "bethesdaVersion": "6.13.0",
+      "bethesdaInstallSize": "217.77 KB",
+      "source": "https://creations.bethesda.net/en/skyrim/details/06e4a408-3a4f-489b-b04c-fd847f1ef918/Vokriinator__EN__",
+      "sourceStatus": "Verified official PlayStation Bethesda listing",
+      "checked": "2026-09-19"
     }
   }
 }
