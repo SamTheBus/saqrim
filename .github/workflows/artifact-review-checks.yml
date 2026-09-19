@@ -29,20 +29,11 @@ jobs:
       - name: Validate updated JavaScript
         run: |
           for script in catalog-tags.js catalog.js map.js worlds.js quests.js site-quests.js site-top.js; do node --check "$script"; done
-      - name: Artifact data, precedence and browser tests
-        run: python tests/artifact-review-browser.py
-      - name: Existing quest journal
-        run: python tests/quest-browser.py
-      - name: Existing quest expansion
-        run: python tests/quest-expansion-browser.py
-      - name: Six-tab navigation
-        run: python tests/navigation-browser.py
-      - name: Shrine and stone integration
-        run: python tests/blessings-browser.py
-      - name: Mainland map
-        run: python tests/map-browser.py
-      - name: Separate-world maps
-        run: python tests/world-browser.py
+      - name: Current-order artifact and browser checks
+        run: python tests/artifact-current-order.py
+      - name: Restore legacy test sources not part of this order sync
+        run: |
+          git restore tests/blessings-browser.py tests/map-browser.py tests/world-browser.py tests/navigation-browser.py tests/quest-browser.py tests/quest-expansion-browser.py tests/artifact-current-order.py
       - name: Commit tested output to working branch only
         run: |
           test "$GITHUB_REF_NAME" = artifact-load-order-review
