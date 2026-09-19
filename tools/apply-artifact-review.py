@@ -20,7 +20,7 @@ rows,audits=spec['build'](original)
 for r in rows:
     if r['Catalog ID'] in audits:r['Artifact audit']=audits[r['Catalog ID']]
 
-AUDIT_FIELDS=[('basis','Evidence level'),('expected','Expected version / unresolved winner'),('chain','Recorded order / scope'),('earlierEffect','Earlier documented benefit — not a final effect'),('appearance','Appearance / assets'),('acquisition','Acquisition / distribution'),('verification','What is not verified')]
+AUDIT_FIELDS=[('basis','Evidence level'),('expected','Expected version / unresolved winner'),('chain','Recorded order / scope'),('earlierEffect','Other documented version / caveat'),('appearance','Appearance / assets'),('acquisition','Acquisition / distribution'),('verification','What is not verified')]
 def audit_html(a):
     fields=''.join('<h4>'+esc(label)+'</h4><p>'+esc(a[key])+'</p>' for key,label in AUDIT_FIELDS if a.get(key))
     links=''.join('<p><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">Review source '+str(n)+'</a></p>' for n,u in enumerate(a['sources'],1))
@@ -36,7 +36,7 @@ nav=counts(nav)
 # Static cards and JSON share the same source, while the original file remains byte-for-byte intact.
 page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Saqrim · Current catalog reading view</title><link rel="stylesheet" href="catalog.css?v=4"><script defer src="site-top.js?v=9"></script></head><body id="top">'+nav+'<header class="hero"><div class="eyebrow">CURRENT REFERENCE · DOCUMENTED EXPECTATIONS, NOT A PLUGIN SCAN</div><h1>633 things to discover.</h1><p>16 familiar unique items added. Relevant existing entries now separate documented effects, later-editor risks, appearance and acquisition. No item is certified as the final PS5 record by this review.</p><p><a href="./?batch=Familiar%20uniques%201">Browse the new familiar uniques</a> · <a href="ARTIFACT-REVIEW.md">Review scope</a> · <a href="catalog-source.html">Unmodified 617-entry research archive</a></p></header><main class="layout" style="display:block"><div id="catalog" class="grid">'+''.join(card(r) for r in rows)+'</div></main><script id="dataset" type="application/json">'+js(rows)+'</script><footer>Current catalog reading view. Use the interactive catalog to save choices. Original item IDs and your existing browser progress are retained.</footer></body></html>'
 put('catalog-current.html',page)
-put('artifact-review.json',json.dumps({'version':1,'date':'2026-09-18','baseline':BASE,'catalogCount':633,'added':16,'recordVerified':0,'scope':'Recorded-order and public-documentation review; NOT an xEdit or PS5 plugin scan.','reviews':audits,'screenedRoles':[{'lo':lo,'name':name,'scope':scope} for lo,name,scope in spec['ROLES']]},ensure_ascii=False,indent=2)+'\n')
+put('artifact-review.json',json.dumps({'version':1,'date':'2026-09-18','baseline':BASE,'catalogCount':633,'added':16,'recordVerified':0,'scope':'Current 18 September load-order and public-documentation review; NOT an xEdit or PS5 plugin scan.','reviews':audits,'screenedRoles':[{'lo':lo,'name':name,'scope':scope} for lo,name,scope in spec['ROLES']]},ensure_ascii=False,indent=2)+'\n')
 
 # Shared tags and a safe DOM renderer work in the catalog, maps and quest reward cards.
 t=old('catalog-tags.js')
@@ -74,8 +74,11 @@ for name in ['catalog.js','map.js','worlds.js','quests.js']:
     t=t.replace(r".split(/\s*\|\s*/)",r".split(/\s*[|\n]\s*/)")
     put(name,t)
 
-# Keep every original quest object identical; add explicit, quest-scoped item links separately.
-pack=json.loads(old('quests-data.json'));pack['catalogLinks']=spec['QUEST_LINKS'];pack['catalogLinksScope']='Links to current artifact review; original quest records and reward roles are unchanged.'
+# Preserve quest IDs, text and reward roles while updating only the load-order number to Sam's current arrangement.
+pack=json.loads(old('quests-data.json'))
+for q in pack['quests']:
+    if isinstance(q.get('lo'),int):q['lo']=spec['current_lo'](q['lo'])
+pack['catalogLinks']=spec['QUEST_LINKS'];pack['catalogLinksScope']='Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam\'s current arrangement.'
 put('quests-data.json',json.dumps(pack,ensure_ascii=False,indent=1)+'\n')
 t=old('site-quests.js').replace('quests-data.json?v=2','quests-data.json?v=3')
 t=replace(t,"const rewards=[...(q.rewards||[])];", "const rewards=(q.rewards||[]).map(r=>({...r,...(pack.catalogLinks?.[q.id]?.[r.label]||{})}));")
@@ -86,7 +89,8 @@ t=t.replace("'catalog-source.html']","'catalog-source.html','catalog-current.htm
 put('site-top.js',t)
 
 for name in ['index.html','load-order.html','map.html','worlds.html','quests.html','shrines.html','standing-stones.html','blessings.html']:
-    t=counts(old(name))
+    source=(ROOT/name).read_text(encoding='utf-8') if name=='load-order.html' else old(name)
+    t=counts(source)
     for file,version in [('catalog-tags.js',4),('catalog.js',4),('site-top.js',9),('map.js',2),('worlds.js',2),('quests.js',3),('catalog.css',4)]:
         t=re.sub(re.escape(file)+r'\?v=\d+',file+'?v='+str(version),t)
     if name=='index.html':
@@ -134,15 +138,17 @@ Use the Item origin and Artifact review checkbox groups. The separate New famili
 
 ## What follows the load order
 
-This reviews the recorded 220-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
+This reviews Sam's current 220-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
 
-- **Fiery Souls:** #61 Artificer, #71 Truly Unique, then #91 ArteFakes. ArteFakes is the latest documented named-item editor. The final enchantment is unresolved, not automatically the #71 Emberwisp version or a guaranteed vanilla reversion.
-- **Other #91 overlaps:** Bow of the Stag Prince, Dawnguard Rune Axe and Hammer, Dragonbane, Ghostblade, Soulrender, Bloodscythe and Shield of Solitude. Earlier Artificer effects are not displayed as certified final effects.
-- **Thane rewards:** #72 Unique Thane Weapons follows #61 Artificer. Quest assignment and item records are distinct. No combined enchantment or retroactive inventory replacement is assumed.
-- **Rings:** #110 Wear Multiple Rings is later; its individual ring-record membership and enchantment forwarding remain uninspected. This is a possible-overlap warning, not a proven winner.
-- **Identity:** #74 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
+- **ArteFakes / Artificer:** ArteFakes is now #56 and Artificer is #57. For documented shared item records, Artificer is therefore the later mechanics candidate. Without the separate compatibility patch, ArteFakes models are **not** promised to survive the later Artificer record.
+- **Fiery Souls:** #56 ArteFakes → #57 Artificer → #67 Truly Unique. The dedicated axe is now the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
+- **Thane rewards:** #68 Unique Thane Weapons follows #57 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
+- **Praedy's Staves:** #51–55 load before Artificer #57. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model is unresolved.
+- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #140 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #141 Wintersun and #142 USSEP patches are not that Artificer patch.
+- **Rings:** #105 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
+- **Identity:** #70 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
 
-No separately named Artificer–ArteFakes reconciliation patch appears in the recorded list. The existing #62 Artificer–USSEP patch is not assumed to forward later mods. A public third-party patch is cited only as compatibility evidence; it is NOT treated as installed.
+No separately named Artificer–ArteFakes reconciliation patch, Artificer–Praedy patch, or Destroy-the-Dark-Brotherhood–Artificer patch appears in the current list. The existing #58 Artificer–USSEP patch is not assumed to forward later #67 or #68 changes. Public third-party patches are cited only as compatibility evidence; they are **not** treated as installed.
 
 ## Versions and effects
 
@@ -174,7 +180,7 @@ Each new item carries its own original-author effects source and separately labe
 
 The catalog, mainland map, realm indexes and quest rewards read the same reviewed data. All existing 46 quest objects remain identical; six explicit quest reward links connect the newly indexed items to existing cards through separate metadata. No extra quests or geographic coordinates are invented.
 
-The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 220-entry TSV, console checklist, thumbnails, file sizes, faith/stone data and all browser storage keys are unchanged. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
+The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 220-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
 
 ## Validation scope
 
