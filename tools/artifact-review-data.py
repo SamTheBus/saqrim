@@ -12,17 +12,20 @@ PRAEDY_PATCH='https://www.nexusmods.com/skyrimspecialedition/mods/65660'
 JAY_ART='https://www.nexusmods.com/skyrimspecialedition/mods/151173'
 VIDEO='https://www.youtube.com/watch?v=4uyqCADqwPo'
 BASE='https://skyrim.fandom.com/wiki/'
-SCOPE='Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 18 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.'
+SCOPE='Author-reference Artificer 1.0.11; recorded PS5 menu v1.00 does not identify its upstream build. Current 21 September load-order priority is applied, but this is still a documentation-based expectation, not an inspected winning plugin record or an in-game measurement.'
 
 def current_lo(n):
- if n<=32:return n
- if 33<=n<=37:return n+183
- fixed={38:33,39:35,40:34,41:39,42:40,43:41,44:36,45:38,46:37,47:42,48:43,91:56}
- if n in fixed:return fixed[n]
- if 49<=n<=60:return n-5
- if 61<=n<=90:return n-4
- if 92<=n<=220:return n-5
- return n
+ if n<=32:m=n
+ elif 33<=n<=37:m=n+183
+ else:
+  fixed={38:33,39:35,40:34,41:39,42:40,43:41,44:36,45:38,46:37,47:42,48:43,91:56}
+  if n in fixed:m=fixed[n]
+  elif 49<=n<=60:m=n-5
+  elif 61<=n<=90:m=n-4
+  elif 92<=n<=220:m=n-5
+  else:m=n
+ if m==100:return None
+ return m-1 if m>100 else m
 
 # Names, effect facts and routes are deliberately short summaries, not copied readmes.
 # Later ArteFakes conflicts have no asserted final enchantment or borrowed vanilla stats.
@@ -87,22 +90,24 @@ ROLES=[
  (76,'Race Armor / outfits / cloaks #76–82','NPC outfit, appearance and new gear roles are not automatically artifact enchantment edits.'),
  (83,'Deadly Dragons Armory','Additional dragon loot; not assumed to overwrite every existing artifact.'),
  (87,'Xavbio #87–88','Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected.'),
- (105,'Wear Multiple Rings','Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified.'),
- (107,'Animated Armoury / patch #108','Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred.'),
- (140,'JaySerpa quest bundle / #141–142 patches','Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel\'s End unless specifically patched.'),
- (150,'Forbidden Goods','Merchant acquisition is not the same thing as changing the base item.'),
- (154,'Knight of the North','Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques.'),
- (157,'Lucien / patches #158–159','Follower and Creation integration; not presumed to repair artifact conflicts.'),
- (163,'Cities / world edits #163 onward','Interior, reference, access and placement conflicts may remain even when an item effect is expected.'),
- (208,'Bedlam','Dungeon encounters are not automatically unique-item records.'),
- (210,'High King location patches #210–211','Specific world integrations, not a generic artifact conflict resolver.'),
- (212,'AFT / addon #213','Follower inventory behavior is separate from a documented base-weapon override.'),
- (214,'Lux','Late interior/reference changes must not be mistaken for a blanket final enchantment provider.'),
+ (104,'Wear Multiple Rings','Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified.'),
+ (106,'Animated Armoury / patch #107','Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred.'),
+ (139,'JaySerpa quest bundle / #140–141 patches','Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel\'s End unless specifically patched.'),
+ (149,'Forbidden Goods','Merchant acquisition is not the same thing as changing the base item.'),
+ (153,'Knight of the North','Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques.'),
+ (156,'Lucien / patches #157–158','Follower and Creation integration; not presumed to repair artifact conflicts.'),
+ (162,'Cities / world edits #162 onward','Interior, reference, access and placement conflicts may remain even when an item effect is expected.'),
+ (207,'Bedlam','Dungeon encounters are not automatically unique-item records.'),
+ (209,'High King location patches #209–210','Specific world integrations, not a generic artifact conflict resolver.'),
+ (211,'AFT / addon #212','Follower inventory behavior is separate from a documented base-weapon override.'),
+ (213,'Lux','Late interior/reference changes must not be mistaken for a blanket final enchantment provider.'),
 ]
 def build(original):
  rows=copy.deepcopy(original)
  for r in rows:
-  try:r['LO #']=str(current_lo(int(r['LO #'])))
+  try:
+   mapped=current_lo(int(r['LO #']))
+   if mapped is not None:r['LO #']=str(mapped)
   except (ValueError,TypeError,KeyError):pass
  by={r['Catalog ID']:r for r in rows}; audits={}
  for n,(name,kind,effect,where,region,route,conflict) in enumerate(ADDITIONS,618):
@@ -126,14 +131,14 @@ def build(original):
    a['earlierEffect']='ArteFakes #56 is earlier and model-focused. Without the compatibility patch, its appearance is not assumed to survive the later Artificer item record.'
    r['Effect / interest']='Expected Artificer reference: '+r['Effect / interest']
  for ident in RINGS:
-  a=audits[ident];a.update(status='Possible later edit',expected='Artificer #57 documents this ring, but Wear Multiple Rings #105 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.',chain='#57 Artificer → #58 Artificer–USSEP scope uninspected → #105 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).',sources=[ART,VIDEO+'&t=116s',XEDIT])
-  a['earlierEffect']=by[ident]['Effect / interest'];by[ident]['Effect / interest']='Final ring effect unresolved · #105 Wear Multiple Rings may affect this item; the Artificer reference is retained below, not certified as the winning effect.'
+  a=audits[ident];a.update(status='Possible later edit',expected='Artificer #57 documents this ring, but Wear Multiple Rings #104 is a later equipment editor. The exact ring records it includes and whether it forwards the enchantment are unknown; no winner is certified.',chain='#57 Artificer → #58 Artificer–USSEP scope uninspected → #104 Wear Multiple Rings (possible ring-record overlap, NOT a proven same-record edit).',sources=[ART,VIDEO+'&t=116s',XEDIT])
+  a['earlierEffect']=by[ident]['Effect / interest'];by[ident]['Effect / interest']='Final ring effect unresolved · #104 Wear Multiple Rings may affect this item; the Artificer reference is retained below, not certified as the winning effect.'
  for i in range(39,49):
   ident=f'W{i:03}';a=audit(ident,'Replacement thane reward','Documented overlap')
   a.update(expected='Unique Thane Weapons #68 is the later documented thane-reward overhaul. Expect its reward assignment only if its quest/award records win. Do not stack its enchantment with Artificer\'s or assume an already received reward is retroactively replaced.',chain='#57 Artificer → #68 Unique Thane Weapons; reward-selection and item records need separate verification.',sources=[ART,THANE,XEDIT],earlierEffect=by[ident]['Effect / interest'])
   by[ident]['Effect / interest']='Expected #68 thane-reward candidate; final quest assignment and enchantment remain unverified. See the load-order review.'
  for ident in [f'W{i:03}' for i in range(358,365)]:
-  a=audit(ident,'Creation relic','Identity / acquisition check');a.update(expected='Knight of the North #154 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.',chain='Divine Crusader Creation → #154 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.',sources=['https://www.nexusmods.com/skyrimspecialedition/articles/3005',XEDIT],verification='Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.')
+  a=audit(ident,'Creation relic','Identity / acquisition check');a.update(expected='Knight of the North #153 documents the relic hunt and access conditions. It is the acquisition reference here, not proof of a final artifact-stat winner.',chain='Divine Crusader Creation → #153 Knight of the North acquisition overhaul; intervening equipment and later references remain uninspected.',sources=['https://www.nexusmods.com/skyrimspecialedition/articles/3005',XEDIT],verification='Creation Club relic, not a vanilla Skyrim/DLC unique. Recorded PS5 v1.00 does not establish an exact PC branch.')
  for ident in ['W050','W052','W177','W178','W179','W181','W187']:
   a=audit(ident,'Mod-added / other','Identity / acquisition check')
   a.update(expected='Similar names, shared lore or the same pickup area do not establish a shared FormID. This entry must not be treated as an automatic replacement of another catalog item.',chain='Item identity / acquisition check, not an asserted override chain.',verification='Exact base-item identity remains uninspected; standalone copies, restored cut records and NPC inventory references must be distinguished.',sources=[u for u in by[ident]['Source URL'].splitlines() if u.startswith('http')]+[XEDIT])
@@ -149,7 +154,7 @@ def build(original):
   r=next((x for x in rows if x['Target'].split(' (')[0].casefold()==target.casefold()),None)
   if not r:continue
   ident=r['Catalog ID'];a=audit(ident,'Changed vanilla / DLC unique','Documented overlap')
-  a.update(expected='JaySerpa\'s Quest Expansion Bundle #140 loads after Artificer #57. A published compatibility patch states that Destroy the Dark Brotherhood – Quest Expansion can prevent this Artificer artifact from being obtainable. The specific Artificer compatibility patch is not present in the current 220-mod order.',chain='#57 Artificer → #140 JaySerpa Quest Expansion Bundle. #141 Wintersun and #142 USSEP are bundle patches, not the separate Artificer compatibility patch.',acquisition='Acquisition is the conflict here: the later quest expansion can remove the NPC/item handoff used by Artificer. Do not promise this pickup until the PS5 bundle is checked or a matching compatibility patch is added.',verification='The incompatibility is documented for the upstream mods. The exact PS5 bundle/port contents have not been inspected, so the site labels the pickup at risk rather than certifying it absent.',sources=[ART,JAY_ART,XEDIT],earlierEffect=r['Effect / interest'])
+  a.update(expected='JaySerpa\'s Quest Expansion Bundle #140 loads after Artificer #57. A published compatibility patch states that Destroy the Dark Brotherhood – Quest Expansion can prevent this Artificer artifact from being obtainable. The specific Artificer compatibility patch is not present in the current 220-mod order.',chain='#57 Artificer → #139 JaySerpa Quest Expansion Bundle. #140 Wintersun and #141 USSEP are bundle patches, not the separate Artificer compatibility patch.',acquisition='Acquisition is the conflict here: the later quest expansion can remove the NPC/item handoff used by Artificer. Do not promise this pickup until the PS5 bundle is checked or a matching compatibility patch is added.',verification='The incompatibility is documented for the upstream mods. The exact PS5 bundle/port contents have not been inspected, so the site labels the pickup at risk rather than certifying it absent.',sources=[ART,JAY_ART,XEDIT],earlierEffect=r['Effect / interest'])
   r['Effect / interest']='Artificer effect documented; acquisition is at risk because the later Destroy the Dark Brotherhood quest expansion has a documented incompatibility without its specific Artificer patch.'
  for ident,a in audits.items():
   r=by[ident];r['Artifact origin']=a['origin'];r['Artifact review status']=a['status'];r['Load-order review']=a['expected'];r['Override chain']=a['chain'];r['Evidence status']=a['status']+' · PS5 winning records uninspected';r['Qualifications']+=' '+a['expected'];r['Checked on']='2026-09-18'
