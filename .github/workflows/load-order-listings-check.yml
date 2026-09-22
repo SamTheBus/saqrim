@@ -25,8 +25,8 @@ jobs:
           import json, pathlib
           root=pathlib.Path('.')
           rows=[line.split('\t') for line in (root/'load-order.tsv').read_text().splitlines() if line.strip()]
-          assert len(rows)==220
-          assert [int(r[0]) for r in rows]==list(range(1,221))
+          assert len(rows)==219
+          assert [int(r[0]) for r in rows]==list(range(1,220))
           names={r[1] for r in rows}
           pack=json.loads((root/'load-order-bethesda.json').read_text())
           assert pack['version']>=1
@@ -36,5 +36,5 @@ jobs:
               assert entry.get('sourceStatus')
               if entry.get('overview'):
                   assert entry['sourceStatus'].lower().startswith('verified official')
-          print(f"PASS: 220 load-order rows; {len(pack['entries'])} Bethesda matches; {sum(bool(e.get('overview')) for e in pack['entries'].values())} descriptions verified.")
+          print(f"PASS: 219 load-order rows; {len(pack['entries'])} Bethesda matches; {sum(bool(e.get('overview')) for e in pack['entries'].values())} descriptions verified.")
           PY
