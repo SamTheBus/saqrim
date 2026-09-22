@@ -1,7 +1,8 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  const key = 'saqrim-load-order-220-2026-09-18-v2';
+  const key = 'saqrim-load-order-219-2026-09-21-v3';
+  const priorKey = 'saqrim-load-order-220-2026-09-18-v2';
   const oldKey = 'saqrim-load-order-220-2026-09-17';
   const oldToNew = n => {
     if (n <= 32) return n;
@@ -13,6 +14,7 @@
     if (n >= 92 && n <= 220) return n - 5;
     return n;
   };
+  const currentFromSept18 = n => n === 100 ? null : n > 100 ? n - 1 : n;
   const notes = {
     'Beyond Reach Part 2 (PS)': 'The original recording description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
     'Comprehensive First Person Animation Overhaul - alternative Lite port': 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
@@ -24,10 +26,17 @@
   let data = [], rows = [], added = new Set(), canSave = true, bethesdaMeta = {};
   try {
     const existing = localStorage.getItem(key);
-    const stored = JSON.parse(existing || localStorage.getItem(oldKey) || '[]');
+    const prior = localStorage.getItem(priorKey);
+    const legacy = localStorage.getItem(oldKey);
+    const stored = JSON.parse(existing || prior || legacy || '[]');
     if (Array.isArray(stored)) {
-      const clean = stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220);
-      added = new Set(existing ? clean : clean.map(oldToNew));
+      if (existing) {
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 219));
+      } else if (prior) {
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(currentFromSept18).filter(Number.isInteger));
+      } else {
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(oldToNew).map(currentFromSept18).filter(Number.isInteger));
+      }
     }
     localStorage.setItem(key, JSON.stringify([...added]));
   } catch (_) { canSave = false; }
@@ -53,14 +62,14 @@
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
-    $('count').textContent = `${shown} / 220 shown · current numbers retained`;
+    $('count').textContent = `${shown} / 219 shown · current numbers retained`;
     $('empty').hidden = shown !== 0;
     $('progress').value = added.size;
-    $('added-count').textContent = `${added.size} / 220 added`;
+    $('added-count').textContent = `${added.size} / 219 added`;
   }
   function resetFilters() { $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
   function go(n, updateHash = true) {
-    if (!Number.isInteger(n) || n < 1 || n > 220) { say('Choose a load-order number from 1 to 220.'); return; }
+    if (!Number.isInteger(n) || n < 1 || n > 219) { say('Choose a load-order number from 1 to 219.'); return; }
     resetFilters();
     const id = 'mod-' + String(n).padStart(3, '0');
     if (updateHash) history.replaceState(null, '', '#' + id);
@@ -173,13 +182,13 @@
         const [n,name,size,version,time,category,title,thumb] = line.split('\t');
         return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
       });
-      if (data.length !== 220 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
+      if (data.length !== 219 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
       document.querySelectorAll('.tools [disabled]').forEach(n => { n.disabled = false; });
       $('search').addEventListener('input', filter); $('category').addEventListener('change', filter); $('hide-added').addEventListener('change', filter);
       $('show-all').addEventListener('click', resetFilters);
-      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 220 mods are checked off in this browser.'); });
+      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 219 mods are checked off in this browser.'); });
       $('jump-form').addEventListener('submit', e => { e.preventDefault(); go(Number($('jump-number').value)); });
       $('copy-close').addEventListener('click', () => { $('copy-panel').hidden = true; });
       const followHash = () => { const match = /^#mod-(\d{1,3})$/.exec(location.hash); if (match) go(Number(match[1]), false); };
