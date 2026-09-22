@@ -10,14 +10,14 @@ Use the Item origin and Artifact review checkbox groups. The separate New famili
 
 ## What follows the load order
 
-This reviews Sam's current 220-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
+This reviews Sam's current 219-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
 
 - **ArteFakes / Artificer:** ArteFakes is now #56 and Artificer is #57. For documented shared item records, Artificer is therefore the later mechanics candidate. Without the separate compatibility patch, ArteFakes models are **not** promised to survive the later Artificer record.
 - **Fiery Souls:** #56 ArteFakes → #57 Artificer → #67 Truly Unique. The dedicated axe is now the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
 - **Thane rewards:** #68 Unique Thane Weapons follows #57 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
 - **Praedy's Staves:** #51–55 load before Artificer #57. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model is unresolved.
-- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #140 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #141 Wintersun and #142 USSEP patches are not that Artificer patch.
-- **Rings:** #105 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
+- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #139 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #140 Wintersun and #141 USSEP patches are not that Artificer patch.
+- **Rings:** #104 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
 - **Identity:** #70 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
 
 No separately named Artificer–ArteFakes reconciliation patch, Artificer–Praedy patch, or Destroy-the-Dark-Brotherhood–Artificer patch appears in the current list. The existing #58 Artificer–USSEP patch is not assumed to forward later #67 or #68 changes. Public third-party patches are cited only as compatibility evidence; they are **not** treated as installed.
@@ -61,17 +61,17 @@ These are review priorities and distinctions, not a complete record-conflict mat
 | 76 | Race Armor / outfits / cloaks #76–82 | NPC outfit, appearance and new gear roles are not automatically artifact enchantment edits. |
 | 83 | Deadly Dragons Armory | Additional dragon loot; not assumed to overwrite every existing artifact. |
 | 87 | Xavbio #87–88 | Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected. |
-| 105 | Wear Multiple Rings | Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified. |
-| 107 | Animated Armoury / patch #108 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
-| 140 | JaySerpa quest bundle / #141–142 patches | Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched. |
-| 150 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
-| 154 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
-| 157 | Lucien / patches #158–159 | Follower and Creation integration; not presumed to repair artifact conflicts. |
-| 163 | Cities / world edits #163 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
-| 208 | Bedlam | Dungeon encounters are not automatically unique-item records. |
-| 210 | High King location patches #210–211 | Specific world integrations, not a generic artifact conflict resolver. |
-| 212 | AFT / addon #213 | Follower inventory behavior is separate from a documented base-weapon override. |
-| 214 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
+| 104 | Wear Multiple Rings | Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified. |
+| 106 | Animated Armoury / patch #107 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
+| 139 | JaySerpa quest bundle / #140–141 patches | Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched. |
+| 149 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
+| 153 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
+| 156 | Lucien / patches #157–158 | Follower and Creation integration; not presumed to repair artifact conflicts. |
+| 162 | Cities / world edits #162 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
+| 207 | Bedlam | Dungeon encounters are not automatically unique-item records. |
+| 209 | High King location patches #209–210 | Specific world integrations, not a generic artifact conflict resolver. |
+| 211 | AFT / addon #212 | Follower inventory behavior is separate from a documented base-weapon override. |
+| 213 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
 
 ## Sources
 
@@ -89,7 +89,7 @@ Each new item carries its own original-author effects source and separately labe
 
 The catalog, mainland map, realm indexes and quest rewards read the same reviewed data. All existing 46 quest objects remain identical; six explicit quest reward links connect the newly indexed items to existing cards through separate metadata. No extra quests or geographic coordinates are invented.
 
-The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 220-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
+The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 219-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
 
 ## Validation scope
 
