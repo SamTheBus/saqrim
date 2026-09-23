@@ -81,7 +81,7 @@ for q in pack['quests']:
         mapped=spec['current_lo'](q['lo'])
         if mapped is not None:q['lo']=mapped
     if q.get('id')=='Q030':
-        warning="Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 220-mod order; the exact PS5 bundle behavior remains untested."
+        warning="Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 211-mod order; the exact PS5 bundle behavior remains untested."
         if warning not in q.setdefault('notes',[]):q['notes'].append(warning)
         compat={'url':spec['JAY_ART'],'label':'Artificer compatibility patch for Destroy the Dark Brotherhood - Quest Expansion','scope':'Patch-author documentation; establishes the upstream acquisition conflict, not the exact PS5 bundle payload.'}
         if compat not in q.setdefault('sources',[]):q['sources'].append(compat)
