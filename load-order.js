@@ -1,8 +1,9 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  const key = 'saqrim-load-order-214-2026-09-23-v4';
-  const priorKey = 'saqrim-load-order-219-2026-09-21-v3';
+  const key = 'saqrim-load-order-211-2026-09-23-v5';
+  const priorKey = 'saqrim-load-order-214-2026-09-23-v4';
+  const sept21Key = 'saqrim-load-order-219-2026-09-21-v3';
   const olderKey = 'saqrim-load-order-220-2026-09-18-v2';
   const oldKey = 'saqrim-load-order-220-2026-09-17';
   const oldToNew = n => {
@@ -21,30 +22,42 @@
     if (removed.includes(n)) return null;
     return n - removed.filter(x => x < n).length;
   };
+  const currentFrom214 = (() => {
+    const order = Array.from({length:214},(_,i)=>i+1).filter(n=>![15,80,83,86,87].includes(n));
+    const praedy = order.indexOf(55);
+    order.splice(praedy+1,0,87,86);
+    return n => {
+      const i = order.indexOf(n);
+      return i < 0 ? null : i + 1;
+    };
+  })();
   const notes = {
     'Beyond Reach Part 2 (PS)': 'The original recording description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
     'Comprehensive First Person Animation Overhaul - alternative Lite port': 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
     'Echoes of Oblivion - Inn-Tegrated NPCs Patch': 'Inn-Tegrated NPCs patch: variant identified by Sam. The recorded description is sparse; this is not a second copy of the main Echoes of Oblivion pack.',
     'Cities of the North AIO (COTN AIO.ESP)': 'Identified as Cities of the North AIO from the filename and companion patch description. The visible title is COTN AIO.ESP; the exact web listing is not matched.',
-    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux is now at current position #208. This page preserves that warning without changing the order.',
+    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux is now at current position #205. This page preserves that warning without changing the order.',
     'Become High King of Skyrim TNG - Great Cities / minor cities patch': 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
   };
   let data = [], rows = [], added = new Set(), canSave = true, bethesdaMeta = {};
   try {
     const existing = localStorage.getItem(key);
     const prior = localStorage.getItem(priorKey);
+    const sept21 = localStorage.getItem(sept21Key);
     const older = localStorage.getItem(olderKey);
     const legacy = localStorage.getItem(oldKey);
-    const stored = JSON.parse(existing || prior || older || legacy || '[]');
+    const stored = JSON.parse(existing || prior || sept21 || older || legacy || '[]');
     if (Array.isArray(stored)) {
       if (existing) {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 214));
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 211));
       } else if (prior) {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 219).map(currentFromSept21).filter(Number.isInteger));
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 214).map(currentFrom214).filter(Number.isInteger));
+      } else if (sept21) {
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 219).map(currentFromSept21).map(currentFrom214).filter(Number.isInteger));
       } else if (older) {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(currentFromSept18).map(currentFromSept21).filter(Number.isInteger));
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(currentFromSept18).map(currentFromSept21).map(currentFrom214).filter(Number.isInteger));
       } else {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(oldToNew).map(currentFromSept18).map(currentFromSept21).filter(Number.isInteger));
+        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(oldToNew).map(currentFromSept18).map(currentFromSept21).map(currentFrom214).filter(Number.isInteger));
       }
     }
     localStorage.setItem(key, JSON.stringify([...added]));
@@ -71,14 +84,14 @@
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
-    $('count').textContent = `${shown} / 214 shown · current numbers retained`;
+    $('count').textContent = `${shown} / 211 shown · current numbers retained`;
     $('empty').hidden = shown !== 0;
     $('progress').value = added.size;
-    $('added-count').textContent = `${added.size} / 214 added`;
+    $('added-count').textContent = `${added.size} / 211 added`;
   }
   function resetFilters() { $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
   function go(n, updateHash = true) {
-    if (!Number.isInteger(n) || n < 1 || n > 214) { say('Choose a load-order number from 1 to 214.'); return; }
+    if (!Number.isInteger(n) || n < 1 || n > 211) { say('Choose a load-order number from 1 to 211.'); return; }
     resetFilters();
     const id = 'mod-' + String(n).padStart(3, '0');
     if (updateHash) history.replaceState(null, '', '#' + id);
@@ -192,13 +205,13 @@
         const [n,name,size,version,time,category,title,thumb] = line.split('\t');
         return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
       });
-      if (data.length !== 214 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
+      if (data.length !== 211 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
       document.querySelectorAll('.tools [disabled]').forEach(n => { n.disabled = false; });
       $('search').addEventListener('input', filter); $('category').addEventListener('change', filter); $('hide-added').addEventListener('change', filter);
       $('show-all').addEventListener('click', resetFilters);
-      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 214 mods are checked off in this browser.'); });
+      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 211 mods are checked off in this browser.'); });
       $('jump-form').addEventListener('submit', e => { e.preventDefault(); go(Number($('jump-number').value)); });
       $('copy-close').addEventListener('click', () => { $('copy-panel').hidden = true; });
       const followHash = () => { const match = /^#mod-(\d{1,3})$/.exec(location.hash); if (match) go(Number(match[1]), false); };
