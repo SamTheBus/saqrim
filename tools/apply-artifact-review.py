@@ -32,11 +32,11 @@ def card(r):
     sources=''.join('<li><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">Source '+str(i)+'</a></li>' for i,u in enumerate(re.split(r'\s*[|\n]\s*',r.get('Source URL','')),1) if u.startswith('https://'))
     return '<details class="card" id="'+ident+'" data-id="'+ident+'" data-choice="'+esc(r['My choice'])+'" open><summary><div class="card-meta"><span class="id">'+ident+'</span><span class="saved-choice" id="badge_'+ident+'"></span></div><h3>'+esc(r['Target'])+'</h3>'+badge+'<p class="hook">'+esc(r['Effect / interest'])+'</p><p class="mod-name">Documented source · #'+esc(r['LO #'])+' · '+esc(r['Installed mod'])+'</p><span class="expand-label">Open location, load-order review & sources</span></summary><div class="card-body"><h4>Where / how</h4><p class="location">'+esc(r['Where / unlock'])+'</p><p class="tier">'+esc(r['Type'])+' · '+esc(r['When to look'])+'</p><div class="choice-tools js-only" hidden><label for="pick_'+ident+'">My choice</label><select id="pick_'+ident+'" class="pick-select" data-pick-id="'+ident+'" disabled>'+''.join('<option>'+x+'</option>' for x in ['Undecided','Want','Maybe','Skip'])+'</select></div>'+audit+fields+'<p><b>Acquisition:</b> '+esc(r['Acquisition'])+'<br><b>Region:</b> '+esc(r['Region / route'])+'</p><ul class="sources">'+sources+'</ul><p class="record-status">Found: '+esc(r['Found?'])+' · Source check: '+esc(r['Checked on'])+'</p><a class="back-link" href="#top">Back to top</a></div></details>'
 nav=re.search(r'<nav class="nav".*?</nav>',old('index.html'),re.S).group(0)
-nav=counts(nav).replace('Load order · 220','Load order · 219')
+nav=counts(nav).replace('Load order · 220','Load order · 211')
 # Static cards and JSON share the same source, while the original file remains byte-for-byte intact.
 page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Saqrim · Current catalog reading view</title><link rel="stylesheet" href="catalog.css?v=4"><script defer src="site-top.js?v=9"></script></head><body id="top">'+nav+'<header class="hero"><div class="eyebrow">CURRENT REFERENCE · DOCUMENTED EXPECTATIONS, NOT A PLUGIN SCAN</div><h1>633 things to discover.</h1><p>16 familiar unique items added. Relevant existing entries now separate documented effects, later-editor risks, appearance and acquisition. No item is certified as the final PS5 record by this review.</p><p><a href="./?batch=Familiar%20uniques%201">Browse the new familiar uniques</a> · <a href="ARTIFACT-REVIEW.md">Review scope</a> · <a href="catalog-source.html">Unmodified 617-entry research archive</a></p></header><main class="layout" style="display:block"><div id="catalog" class="grid">'+''.join(card(r) for r in rows)+'</div></main><script id="dataset" type="application/json">'+js(rows)+'</script><footer>Current catalog reading view. Use the interactive catalog to save choices. Original item IDs and your existing browser progress are retained.</footer></body></html>'
 put('catalog-current.html',page)
-put('artifact-review.json',json.dumps({'version':1,'date':'2026-09-18','baseline':BASE,'catalogCount':633,'added':16,'recordVerified':0,'scope':'Current 21 September load-order and public-documentation review; NOT an xEdit or PS5 plugin scan.','reviews':audits,'screenedRoles':[{'lo':lo,'name':name,'scope':scope} for lo,name,scope in spec['ROLES']]},ensure_ascii=False,indent=2)+'\n')
+put('artifact-review.json',json.dumps({'version':1,'date':'2026-09-18','baseline':BASE,'catalogCount':633,'added':16,'recordVerified':0,'scope':'Current 23 September load-order and public-documentation review; NOT an xEdit or PS5 plugin scan.','reviews':audits,'screenedRoles':[{'lo':lo,'name':name,'scope':scope} for lo,name,scope in spec['ROLES']]},ensure_ascii=False,indent=2)+'\n')
 
 # Shared tags and a safe DOM renderer work in the catalog, maps and quest reward cards.
 t=old('catalog-tags.js')
@@ -90,14 +90,14 @@ put('quests-data.json',json.dumps(pack,ensure_ascii=False,indent=1)+'\n')
 t=old('site-quests.js').replace('quests-data.json?v=2','quests-data.json?v=3')
 t=replace(t,"const rewards=[...(q.rewards||[])];", "const rewards=(q.rewards||[]).map(r=>({...r,...(pack.catalogLinks?.[q.id]?.[r.label]||{})}));")
 put('site-quests.js',t)
-t=old('site-top.js').replace('Loot catalog · 617','Loot catalog · 633').replace('Load order · 220','Load order · 219').replace('site-quests.js?v=2','site-quests.js?v=3')
+t=old('site-top.js').replace('Loot catalog · 617','Loot catalog · 633').replace('Load order · 220','Load order · 211').replace('site-quests.js?v=2','site-quests.js?v=3')
 # The current reading view is still a Loot catalog destination.
 t=t.replace("'catalog-source.html']","'catalog-source.html','catalog-current.html']")
 put('site-top.js',t)
 
 for name in ['index.html','load-order.html','map.html','worlds.html','quests.html','shrines.html','standing-stones.html','blessings.html']:
     source=(ROOT/name).read_text(encoding='utf-8') if name=='load-order.html' else old(name)
-    t=counts(source).replace('Load order · 220','Load order · 219')
+    t=counts(source).replace('Load order · 220','Load order · 211')
     for file,version in [('catalog-tags.js',4),('catalog.js',4),('site-top.js',9),('map.js',2),('worlds.js',2),('quests.js',3),('catalog.css',4)]:
         t=re.sub(re.escape(file)+r'\?v=\d+',file+'?v='+str(version),t)
     if name=='index.html':
@@ -145,17 +145,17 @@ Use the Item origin and Artifact review checkbox groups. The separate New famili
 
 ## What follows the load order
 
-This reviews Sam's current 219-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
+This reviews Sam's current 211-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
 
-- **ArteFakes / Artificer:** ArteFakes is now #56 and Artificer is #57. For documented shared item records, Artificer is therefore the later mechanics candidate. Without the separate compatibility patch, ArteFakes models are **not** promised to survive the later Artificer record.
-- **Fiery Souls:** #56 ArteFakes → #57 Artificer → #67 Truly Unique. The dedicated axe is now the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
-- **Thane rewards:** #68 Unique Thane Weapons follows #57 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
-- **Praedy's Staves:** #51–55 load before Artificer #57. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model is unresolved.
-- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #139 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #140 Wintersun and #141 USSEP patches are not that Artificer patch.
-- **Rings:** #104 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
-- **Identity:** #70 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
+- **Xavbio / ArteFakes / Artificer:** #55 Xavbio Base + DLC and #56 Xavbio AE/CC now load above #57 ArteFakes and #58 Artificer. Broad Xavbio textures therefore yield to later unique-item assets where paths overlap; Artificer remains the later documented item-record candidate after ArteFakes.
+- **Fiery Souls:** #57 ArteFakes → #58 Artificer → #68 Truly Unique. The dedicated axe is the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
+- **Thane rewards:** #69 Unique Thane Weapons follows #58 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
+- **Praedy's Staves:** #50–54 load before Xavbio, ArteFakes and Artificer #58. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model remains unresolved.
+- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #131 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #132 Wintersun and #133 USSEP patches are not that Artificer patch.
+- **Rings:** #96 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
+- **Identity:** #71 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
 
-No separately named Artificer–ArteFakes reconciliation patch, Artificer–Praedy patch, or Destroy-the-Dark-Brotherhood–Artificer patch appears in the current list. The existing #58 Artificer–USSEP patch is not assumed to forward later #67 or #68 changes. Public third-party patches are cited only as compatibility evidence; they are **not** treated as installed.
+No separately named Artificer–ArteFakes reconciliation patch, Artificer–Praedy patch, or Destroy-the-Dark-Brotherhood–Artificer patch appears in the current list. The existing #59 Artificer–USSEP patch is not assumed to forward later #68 or #69 changes. Public third-party patches are cited only as compatibility evidence; they are **not** treated as installed.
 
 ## Versions and effects
 
@@ -187,7 +187,7 @@ Each new item carries its own original-author effects source and separately labe
 
 The catalog, mainland map, realm indexes and quest rewards read the same reviewed data. All existing 46 quest objects remain identical; six explicit quest reward links connect the newly indexed items to existing cards through separate metadata. No extra quests or geographic coordinates are invented.
 
-The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 219-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
+The six navigation destinations remain unchanged, with the current loot count updated everywhere. The 211-entry mod set, thumbnails, file sizes, faith/stone data and browser storage keys are preserved; current load-order numbering and checklist migration are retained. The archive preserves all old source wording. Opening a page does not migrate or overwrite item choices, personal ratings or quest progress.
 
 ## Validation scope
 
