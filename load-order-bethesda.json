@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-19",
+  "updated": "2026-09-23",
   "scope": "Official Bethesda Creations listings only. Entries without a verified Bethesda listing description are left explicitly unmatched; Nexus or other upstream prose is not substituted here.",
   "entries": {
     "Unofficial Skyrim Special Edition Patch (USSEP)": {
@@ -118,6 +118,41 @@
       "source": "https://creations.bethesda.net/en/skyrim/details/65488/Jayserpa_Lines_Expansion_Bundle",
       "sourceStatus": "Verified official PlayStation Bethesda listing",
       "checked": "2026-09-19"
+    },
+    "Xavbio 1K Base + DLC": {
+      "bethesdaTitle": "XAVBIO 1K BASE + DLC",
+      "author": "Ysmirs__Beard",
+      "overview": "Complete armors and weapons from the base game and DLC, plus clothing and unique armors and weapons, in full 1K–1K resolution. AE/CC content is a separate upload.",
+      "features": [
+        "Covers base-game and DLC armors and weapons.",
+        "Includes clothing and unique armors and weapons.",
+        "Uses full 1K–1K resolution.",
+        "Anniversary Edition / Creation Club content is handled by the separate XAVBIO 1K AE/CC upload."
+      ],
+      "credits": [
+        "The PlayStation Creations listing credits xavbio.",
+        "Permission is listed as Open."
+      ],
+      "capture": "Official PlayStation Creations screenshot supplied by Sam on 23 September 2026",
+      "sourceStatus": "Verified from official PlayStation Creations listing screenshot",
+      "checked": "2026-09-23"
+    },
+    "Xavbio 1K AE/CC": {
+      "bethesdaTitle": "XAVBIO 1K AE/CC",
+      "author": "Ysmirs__Beard",
+      "overview": "Complete armors and weapons from the Anniversary Upgrade content in 1K–1K resolution.",
+      "features": [
+        "Covers armors and weapons from Anniversary Upgrade content.",
+        "Uses 1K–1K resolution.",
+        "This is the separate AE/CC companion upload to XAVBIO 1K BASE + DLC."
+      ],
+      "credits": [
+        "The PlayStation Creations listing credits xavbio.",
+        "Permission is listed as Open."
+      ],
+      "capture": "Official PlayStation Creations screenshot supplied by Sam on 23 September 2026",
+      "sourceStatus": "Verified from official PlayStation Creations listing screenshot",
+      "checked": "2026-09-23"
     }
   }
 }
