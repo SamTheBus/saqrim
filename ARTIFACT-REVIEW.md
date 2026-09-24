@@ -10,13 +10,13 @@ Use the Item origin and Artifact review checkbox groups. The separate New famili
 
 ## What follows the load order
 
-This reviews Sam's current 211-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
+This reviews Sam's current 210-entry order and cited public descriptions, not the actual ESP/ESM records or a save. For two plugins overriding the same FormID, the later whole record normally wins; arbitrary fields are not automatically combined. Referenced enchantments, effects, scripts, quest rewards, placed references and texture/mesh assets require their own checks. An item name or visual purpose alone does not establish record identity.
 
 - **ArteFakes / Artificer:** ArteFakes is now #56 and Artificer is #57. For documented shared item records, Artificer is therefore the later mechanics candidate. Without the separate compatibility patch, ArteFakes models are **not** promised to survive the later Artificer record.
 - **Fiery Souls:** #56 ArteFakes → #57 Artificer → #67 Truly Unique. The dedicated axe is now the latest documented same-item editor, so its Emberwisp / Flameclaim version is the expected candidate rather than ArteFakes or Soulbrand.
 - **Thane rewards:** #68 Unique Thane Weapons follows #57 Artificer. Quest assignment and item records are distinct; the dedicated thane overhaul remains the expected reward candidate.
 - **Praedy's Staves:** #47–53 load before Artificer #57. Published Praedy/Artificer patches exist; none is in this load order, so Staff of Magnus mechanics are expected from Artificer while the Praedy model is unresolved.
-- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #132 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #134 Wintersun and #133 USSEP patches are not that Artificer patch.
+- **Destroy the Dark Brotherhood:** JaySerpa's Quest Expansion Bundle #131 is later than Artificer. A published compatibility patch states the unpatched combination can prevent **Windshear** and **Firiniel's End** from being obtainable. The current #133 Wintersun and #132 USSEP patches are not that Artificer patch.
 - **Rings:** #96 Wear Multiple Rings is later; exact unique-ring coverage in the PS5 port remains uninspected. This stays a possible-overlap warning, not a proven winner.
 - **Identity:** #70 Volkihar Relic Sword is not assumed to replace Harkon's Sword. Shared names for restored/added Prelate's Mace and Briarheart Geis still need identity checks. Halidil carrying an Aetherial Shield is not proof of an ARMO override.
 
@@ -62,16 +62,16 @@ These are review priorities and distinctions, not a complete record-conflict mat
 | 82 | Deadly Dragons Armory | Additional dragon loot; not assumed to overwrite every existing artifact. |
 | 55 | Xavbio #52–55 | Later texture assets. Do not infer a final enchantment from texture priority; exact asset paths/bundled plugins are uninspected. |
 | 96 | Wear Multiple Rings | Later equipment editor. Unique-ring coverage in this exact PS5 port remains unverified, so ring-record conflicts stay possible rather than certified. |
-| 98 | Animated Armoury / patch #99 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
-| 132 | JaySerpa quest bundle / #127–134 patches | Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched. |
-| 142 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
-| 146 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
-| 149 | Lucien / patches #143–151 | Follower and Creation integration; not presumed to repair artifact conflicts. |
-| 155 | Cities / world edits #155 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
-| 199 | Bedlam | Dungeon encounters are not automatically unique-item records. |
-| 200 | High King location patches #192–201 | Specific world integrations, not a generic artifact conflict resolver. |
-| 202 | AFT / addon #203 | Follower inventory behavior is separate from a documented base-weapon override. |
-| 204 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
+| 97 | Animated Armoury / patch #98 | Weapon families, animations and list integration; no blanket overwrite of named vanilla artifacts inferred. |
+| 131 | JaySerpa quest bundle / #125–133 patches | Later quest edits. Destroy the Dark Brotherhood has a documented Artificer incompatibility affecting Windshear and Firiniel's End unless specifically patched. |
+| 141 | Forbidden Goods | Merchant acquisition is not the same thing as changing the base item. |
+| 145 | Knight of the North | Creation relic hunt and access rules. Keep Creation gear separate from vanilla/DLC uniques. |
+| 148 | Lucien / patches #141–150 | Follower and Creation integration; not presumed to repair artifact conflicts. |
+| 154 | Cities / world edits #154 onward | Interior, reference, access and placement conflicts may remain even when an item effect is expected. |
+| 198 | Bedlam | Dungeon encounters are not automatically unique-item records. |
+| 199 | High King location patches #190–200 | Specific world integrations, not a generic artifact conflict resolver. |
+| 201 | AFT / addon #202 | Follower inventory behavior is separate from a documented base-weapon override. |
+| 203 | Lux | Late interior/reference changes must not be mistaken for a blanket final enchantment provider. |
 
 ## Sources
 
