@@ -77,7 +77,7 @@
       "id": "Q002",
       "title": "It's Just Business",
       "mod": "Granite Hill",
-      "lo": 141,
+      "lo": 140,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -117,7 +117,7 @@
       "id": "Q003",
       "title": "The Truth but not the Whole Truth",
       "mod": "Granite Hill",
-      "lo": 141,
+      "lo": 140,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -149,7 +149,7 @@
       "id": "Q004",
       "title": "Beneath a Hill of Granite",
       "mod": "Granite Hill",
-      "lo": 141,
+      "lo": 140,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -196,7 +196,7 @@
       "id": "Q005",
       "title": "Black Book: Stars Beyond the Void",
       "mod": "Granite Hill",
-      "lo": 141,
+      "lo": 140,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -362,7 +362,7 @@
       "id": "Q008",
       "title": "It Came from Akavir",
       "mod": "It Came from Akavir (PS5)",
-      "lo": 148,
+      "lo": 147,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -413,7 +413,7 @@
       "id": "Q009",
       "title": "A Dizzying Fall",
       "mod": "A Dizzying Fall (PS5)",
-      "lo": 143,
+      "lo": 142,
       "kind": "Mod encounter",
       "start": {
         "world": "skyrim",
@@ -441,7 +441,7 @@
       "id": "Q010",
       "title": "The Serpent's Covenant",
       "mod": "The Serpent's Covenant (PS5)",
-      "lo": 144,
+      "lo": 143,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -473,7 +473,7 @@
       "id": "Q011",
       "title": "Mysteries of the Dwemer",
       "mod": "Mysteries of the Dwemer (PS5)",
-      "lo": 145,
+      "lo": 144,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -507,7 +507,7 @@
       "id": "Q012",
       "title": "The Hunt for the Spectre",
       "mod": "The Hunt for the Spectre (PS5)",
-      "lo": 147,
+      "lo": 146,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -1130,7 +1130,7 @@
       "id": "Q023",
       "title": "The Breathing Abyss",
       "mod": "The Breathing Abyss",
-      "lo": 135,
+      "lo": 134,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -1161,7 +1161,7 @@
         },
         {
           "url": "load-order.html#mod-148",
-          "label": "Recorded entry #141",
+          "label": "Recorded entry #140",
           "scope": "The recording supplies the Manias / Yngvild starting clue."
         }
       ],
@@ -1215,7 +1215,7 @@
       "id": "Q025",
       "title": "Moonpath to Elsweyr — adventure overview",
       "mod": "Moonpath to Elsweyr [PS5]",
-      "lo": 140,
+      "lo": 139,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -1256,7 +1256,7 @@
       "id": "Q026",
       "title": "The Oblivion Engine",
       "mod": "Lucien - Fully Voiced Follower",
-      "lo": 149,
+      "lo": 148,
       "kind": "Mod companion quest",
       "start": {
         "world": "variable",
@@ -1303,7 +1303,7 @@
       "id": "Q027",
       "title": "Intruders",
       "mod": "Lucien - Fully Voiced Follower",
-      "lo": 149,
+      "lo": 148,
       "kind": "Mod companion quest",
       "start": {
         "world": "variable",
@@ -1355,7 +1355,7 @@
       "id": "Q028",
       "title": "The Heart of Dibella — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 132,
+      "lo": 131,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1415,7 +1415,7 @@
       "id": "Q029",
       "title": "Innocence Lost — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 132,
+      "lo": 131,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1480,7 +1480,7 @@
       "id": "Q030",
       "title": "Destroy the Dark Brotherhood! — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 132,
+      "lo": 131,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1562,7 +1562,7 @@
       "id": "Q031",
       "title": "Infiltration — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 132,
+      "lo": 131,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1617,7 +1617,7 @@
       "id": "Q032",
       "title": "Knight of the North — Crusader relic hunt",
       "mod": "Knight of the North - Divine Crusader Reworked (PS5)",
-      "lo": 146,
+      "lo": 145,
       "kind": "Adventure guide",
       "start": {
         "world": "skyrim",
@@ -2388,7 +2388,7 @@
       "id": "Q042",
       "title": "The Wolf Queen Awakened",
       "mod": "Artificer / Knight of the North",
-      "lo": 146,
+      "lo": 145,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
