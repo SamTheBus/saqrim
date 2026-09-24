@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "batch": "01 · Foundations, lighting & animation",
+  "reviewed": "2026-09-24",
+  "scope": "Ten description reviews, not a compatibility certification of the 210-mod setup. Recorded PS5 descriptions, upstream documentation, indexed official listing matches and user-reported testing are kept separate.",
+  "recording": {"file": "Skyrim_LO.mp4", "supplied": "2026-09-23", "durationSeconds": 685.94068, "sha256": "219dd3f5f83f13570d9bcebfabb4652b9e8bcf31a74b29a3e7b4a259cba89fcf", "note": "Description panels were visually reviewed at the cited timestamps. The video is a private conversation upload, not hosted on this site. Its 211-entry order predates the 210-entry cleanup; timestamps remain source locators, not current positions."},
+  "sources": {
+    "r-ussep": {"kind": "recorded", "label": "PS5 USSEP description", "locator": "Skyrim_LO.mp4 · 00:00.80–00:06.50"},
+    "r-swf": {"kind": "recorded", "label": "PS5 SWF description and placement instructions", "locator": "Skyrim_LO.mp4 · 00:07.70–00:12.70"},
+    "r-lux-resources": {"kind": "recorded", "label": "Lux Resources PS5 description", "locator": "Skyrim_LO.mp4 · 00:50.40–00:51.50"},
+    "r-lux-master": {"kind": "recorded", "label": "Lux Master requirements and contradictory placement wording", "locator": "Skyrim_LO.mp4 · 00:52.30–00:53.50"},
+    "r-lux": {"kind": "recorded", "label": "Lux PS5 interior module description", "locator": "Skyrim_LO.mp4 · 11:05.90"},
+    "r-xpmsse": {"kind": "recorded", "label": "XPMSSE Custom Placed Weapons contents and GDB instruction", "locator": "Skyrim_LO.mp4 · 07:25.30–07:29.90; placement instruction at 07:26.00; weapon features at 07:27.70"},
+    "r-armoury": {"kind": "recorded", "label": "Animated Armoury porter warning and weapon descriptions", "locator": "Skyrim_LO.mp4 · 07:30.60–07:40.80; incompatibilities at 07:30.60–07:31.00"},
+    "r-armoury-patch": {"kind": "recorded", "label": "Heavy Armory / Animated Armoury patch description", "locator": "Skyrim_LO.mp4 · 07:41.70"},
+    "r-gdb": {"kind": "recorded", "label": "GDB Lite removed components, included systems and compatibility", "locator": "Skyrim_LO.mp4 · 07:42.95–07:50.90; incompatibilities and load order at 07:50.90"},
+    "r-cfpao": {"kind": "recorded", "label": "Alternative CFPAO Lite port notes, credits and source links", "locator": "Skyrim_LO.mp4 · 07:51.80–07:52.50"},
+    "w-vex": {"kind": "upstream", "label": "PlayStation USSEP maintainer notes", "url": "https://vexmodding.com/ussep-ps4-notes/", "note": "Maintainer's PlayStation-specific documentation, checked 24 September 2026. It is not a newly inspected copy of the installed plugin."},
+    "w-swf": {"kind": "upstream", "label": "SWF Xbox-only modders resource", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/90598", "note": "The author page explicitly identifies this resource as Xbox-only. Do not substitute its version, menus or scripts for the recorded PS5 v1.1 build."},
+    "w-armoury": {"kind": "upstream", "label": "NickaNak's Animated Armoury DAR version", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/35978", "note": "The URL is visible in the PS5 recording. PC documentation was checked, but DAR requirements and PC patches are not automatically PS5 requirements or installed fixes."},
+    "w-lux": {"kind": "upstream", "label": "GGUNIT's Lux author documentation", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/43158", "note": "Original PC lighting documentation. The PS5 menu version does not establish the corresponding upstream release or patch inventory."},
+    "w-lux-via": {"kind": "upstream", "label": "GGUNIT's Lux Via author documentation", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/63588", "note": "This is the upstream URL shown by the PS5 resources entry, not evidence that the Lux Via gameplay plugin is installed."},
+    "w-cfpao": {"kind": "upstream", "label": "PolarRobotFrog's CFPAO author documentation", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/87169", "note": "PC author documentation and changelog. The alternative 962.9 KB PS5 Lite port is not assumed to contain every animation, option or dependency described here."},
+    "w-sigma": {"kind": "upstream", "label": "SIGMA · Magic animations · 1st person", "url": "https://www.nexusmods.com/skyrimspecialedition/mods/166987", "note": "The secondary Nexus URL visible in the CFPAO port resolves to SIGMA. Exact included PS5 animations remain unenumerated."},
+    "o-gdb": {"kind": "official", "label": "GDB's Elden Beast Lite · official listing match", "url": "https://creations.bethesda.net/en/skyrim/details/2e9ce135-046a-4827-ad83-7d0ea98a6c64/GDB_S__Elden_Beast_Lite_Edition", "note": "Official search-index title and compatibility excerpt matched on 24 September 2026. The directly opened page did not expose a readable full body; the recorded description is the source of the detailed manifest below."},
+    "o-xpmsse": {"kind": "official", "label": "[PS5] XPMSSE Plus · Custom Placed Weapons listing match", "url": "https://creations.bethesda.net/en/skyrim/details/ddb73141-fe6d-4e93-9c8f-eb5c49c5e633/_PS5__XPMSSE_Plus___Custom_Placed_Weapons_Edition", "note": "PS5 title and indexed description matched on 24 September 2026. Full live listing body was not readable; the recording supplies the detailed features and ordering instruction."},
+    "u-draw": {"kind": "user", "label": "Sam's same-day draw/sheath test report", "locator": "Conversation · 23 September 2026 · after moving XPMSSE below GDB and removing Simple Visible Favorited Gear", "note": "Sam reported success after both changes. This was not an isolated one-variable test, a recording of the repaired animation, or a full compatibility test."}
+  },
+  "entries": {
+    "Unofficial Skyrim Special Edition Patch (USSEP)": {
+      "id": "ussep-ps5", "attention": false,
+      "summary": {"text": "The recorded PlayStation bug-fix patch has its own maintainer notes and platform-specific workarounds.", "refs": ["r-ussep"]},
+      "sections": [
+        {"title": "Recorded role & contents", "claims": [{"text": "The description identifies this edition as maintained by Vexona(r). It follows the main USSEP patch history except where script or mesh changes need a PlayStation workaround.", "refs": ["r-ussep"]}, {"text": "The recorded notes list changes through 4.3.6a and describe a Markarth banner correction using the Jorrvaskr banner mesh with a different texture. Those notes are not a promise of PC asset parity.", "refs": ["r-ussep"]}]},
+        {"title": "Requirements & placement", "claims": [{"text": "Keep the currently recorded foundation placement. SWF's own PS5 description explicitly tells USSEP users to place SWF after USSEP.", "refs": ["r-swf"], "kind": "assessment"}]},
+        {"title": "Author / platform identity", "claims": [{"text": "The recording credits Arthmoor and the USSEP team while directing PlayStation-specific issues and workarounds to Vex. The linked maintainer page provides platform-specific notes rather than treating every upstream script change as available on PlayStation.", "refs": ["r-ussep", "w-vex"]}]},
+        {"title": "Still unresolved", "claims": [{"text": "The installed menu reads v4.3.6B and 18.50 MB. A similarly named web listing or newer PC version must not silently replace those recorded values. The older site's Bethesda URL match was not a verified description of this exact port.", "refs": ["r-ussep"], "kind": "assessment"}]}
+      ],
+      "related": ["Simple Workaround Framework", "Artificer - USSEP Patch"]
+    },
+    "Simple Workaround Framework": {
+      "id": "swf-ps5", "attention": false,
+      "summary": {"text": "A shared PlayStation framework for other mods, not a guaranteed package of Xbox configuration features.", "refs": ["r-swf"]},
+      "sections": [
+        {"title": "Recorded role & contents", "claims": [{"text": "The v1.1 test-update description presents convenience functions and a cloak framework for modders and porters. For players, it says to install it when another mod requires it; by itself it offers only a small tweaking menu.", "refs": ["r-swf"]}]},
+        {"title": "Requirements & placement", "claims": [{"text": "The PS5 instructions place SWF first after Skyrim, DLC and Creation Club content, except that USSEP goes ahead of it. The current USSEP → SWF order follows that instruction.", "refs": ["r-swf"], "kind": "assessment"}]},
+        {"title": "Platform warning", "claims": [{"text": "The recording explicitly says the PS version has different scripts and plugin contents, and warns porters not to use the Xbox build to make PS mods.", "refs": ["r-swf"]}, {"text": "The current Nexus modders resource is still titled Xbox-only. Its documentation is useful for identifying the project, not for assuming that its v7.0 features exist in the recorded PS5 v1.1 build.", "refs": ["w-swf"]}]},
+        {"title": "Still unresolved", "claims": [{"text": "No AllGUD or equivalent all-favorited-weapons toggle was established by the reviewed PS5 description. The earlier suggestion that SWF automatically replaces Simple Visible Favorited Gear is not verified for this build.", "refs": ["r-swf", "w-swf"], "kind": "assessment"}]}
+      ],
+      "related": ["Unofficial Skyrim Special Edition Patch (USSEP)", "Crowded Streets (SWF) [PS5]", "Extended Encounters (SWF)"]
+    },
+    "Lux - Resources - PS5": {
+      "id": "lux-resources", "attention": false,
+      "summary": {"text": "Shared Lux resources, distinct from the master and the interior-lighting module.", "refs": ["r-lux-resources"]},
+      "sections": [
+        {"title": "Recorded role & requirements", "claims": [{"text": "The listing says other Lux modules need this resources file. It names Lux Via, Lux Orbis and Lux, and says the resources file automatically loads near the top of the order.", "refs": ["r-lux-resources"]}]},
+        {"title": "Author / source identity", "claims": [{"text": "Credits name GGUNIT. The recording links Nexus 63588, which resolves to Lux Via; that URL is preserved as upstream context rather than relabeling this installed resources entry as Lux Via.", "refs": ["r-lux-resources", "w-lux-via"], "kind": "assessment"}]},
+        {"title": "What the dependency does not prove", "claims": [{"text": "Having shared resources does not establish that the separate Lux Via or Lux Orbis main modules are installed. The site's related links distinguish the actual resources, master and Lux PS5 entries.", "refs": ["r-lux-resources"], "kind": "assessment"}]}
+      ],
+      "related": ["Lux - Master", "Lux - PS5"]
+    },
+    "Lux - Master": {
+      "id": "lux-master", "attention": true,
+      "summary": {"text": "The interior-lighting master has a dependency and placement ambiguity worth preserving rather than guessing away.", "refs": ["r-lux-master"]},
+      "sections": [
+        {"title": "Recorded role & requirements", "claims": [{"text": "The description calls this the interior-lighting master and lists Lux Resources plus Lux Via Master as requirements. It credits GGUNIT and links the original Lux page.", "refs": ["r-lux-master"]}]},
+        {"title": "Recorded ambiguity", "claims": [{"text": "The same panel says to load at the bottom, then says the master addon automatically loads at the top. Its example order names Resources, Via Master, Orbis Master and Lux Master. Those conflicting sentences are not a safe basis for silently rearranging masters.", "refs": ["r-lux-master"], "kind": "assessment"}, {"text": "No separately named Lux Via Master appears in the current checklist. Whether this PS5 package actually requires it, bundles the needed data, or carries copied wording remains unresolved; the plugin's master list has not been inspected.", "refs": ["r-lux-master"], "kind": "assessment"}]},
+        {"title": "Scope", "claims": [{"text": "The master is not interchangeable with the late-loading Lux PS5 interior module. The site's order remains unchanged while this port-specific dependency question is open.", "refs": ["r-lux-master", "r-lux"], "kind": "assessment"}]}
+      ],
+      "related": ["Lux - Resources - PS5", "Lux - PS5"]
+    },
+    "Animated Armoury": {
+      "id": "animated-armoury", "attention": true,
+      "summary": {"text": "New weapon families and animations, with an explicit recorded conflict warning for GDB and Ultimate Dodge.", "refs": ["r-armoury"]},
+      "sections": [
+        {"title": "Recorded role & contents", "claims": [{"text": "The description covers rapiers, pikes, halberds, quarterstaves, claws, chain whips and katanas. It says weapons are used by players and NPCs, distributed through leveled lists, craftable and upgradeable.", "refs": ["r-armoury"]}, {"text": "Claws are described as dual-wield-oriented weapons with a stacking debuff and no parry. Katanas use a two-handed-looking style when the other hand is empty and one-handed handling when another weapon is equipped. These are listed features, not newly tested results.", "refs": ["r-armoury"]}]},
+        {"title": "Recorded compatibility warning", "claims": [{"text": "The PS5 porter explicitly lists The Ultimate Dodge Mod and GDB's Elden Beast as conflicts. Both Animated Armoury and GDB Lite remain in this setup; the warning is retained rather than declaring them compatible because the draw animation now works.", "refs": ["r-armoury", "r-gdb"], "kind": "assessment"}, {"text": "NickaNak's upstream DAR page also warns about SkySA compatibility. GDB Lite's recorded description names SkySA. This supports investigating behavior overlap, but does not identify a failing PS5 file or prove the cause of the left-hand unarmed block.", "refs": ["w-armoury", "r-gdb"], "kind": "assessment"}]},
+        {"title": "Acquisition & port identity", "claims": [{"text": "The recording credits NickNak and directly links Nexus 35978. Its special dual-whip variants are described as absent from leveled lists. No new guaranteed pickup locations or complete item count have been inferred.", "refs": ["r-armoury"]}]}
+      ],
+      "related": ["Heavy Armory - Animated Armoury Patch", "PrivateEye's Heavy Armory", "GDB's Elden Beast Lite Edition"],
+      "guides": [{"label": "Browse documented weapon targets · not a complete Armoury roster", "url": "./?category=Weapons%20%2F%20ammunition"}]
+    },
+    "Heavy Armory - Animated Armoury Patch": {
+      "id": "heavy-armory-aa-patch", "attention": false,
+      "summary": {"text": "A distribution patch so Heavy Armory and Animated Armoury weapons can both appear in leveled lists.", "refs": ["r-armoury-patch"]},
+      "sections": [
+        {"title": "Recorded purpose", "claims": [{"text": "The short recorded description identifies one purpose: include weapons from both AA and HA in the leveled list. It does not describe a new weapon family, a combat behavior rebuild or a GDB fix.", "refs": ["r-armoury-patch"]}]},
+        {"title": "Relevant parents & limits", "claims": [{"text": "The two relevant parent entries are PrivateEye's Heavy Armory and Animated Armoury. The patch is already later than both in the current order. Its exact plugin master list and all edited lists remain uninspected.", "refs": ["r-armoury-patch"], "kind": "assessment"}, {"text": "Do not treat a leveled-list integration patch as proof that Animated Armoury's documented GDB animation conflict is solved.", "refs": ["r-armoury-patch", "r-armoury"], "kind": "assessment"}]},
+        {"title": "Still unresolved", "claims": [{"text": "The reviewed panel does not identify a porter, upstream patch URL or full record inventory. Those fields remain unknown instead of borrowing a different PC patch's description.", "refs": ["r-armoury-patch"], "kind": "assessment"}]}
+      ],
+      "related": ["PrivateEye's Heavy Armory", "Animated Armoury", "GDB's Elden Beast Lite Edition"]
+    },
+    "GDB's Elden Beast Lite Edition": {
+      "id": "gdb-elden-beast-lite", "attention": true,
+      "summary": {"text": "The recording exposes the Lite bundle's own component list, removals, requirements and incompatibilities.", "refs": ["r-gdb"]},
+      "sections": [
+        {"title": "Recorded Lite removals", "claims": [{"text": "The Lite notes say Immersive Animations; Animated Poisons, Food, Idles and Ingredients; Magic Animations; and Animated Armoury were removed to reduce size. The separate installed Animated Armoury entry should not be mistaken for a component still bundled here.", "refs": ["r-gdb"]}]},
+        {"title": "Recorded included systems", "claims": [{"text": "The manifest names SkySA Combat Behavior Compulsion; weapon stance and attack sets; and three unarmed variations. Weapon entries include sword/shield, dual swords, sword and dagger, mace/shield, warhammer, greatsword, katana/dual katana, dagger/dual dagger, axe/shield/dual axe and mace.", "refs": ["r-gdb"]}, {"text": "It also lists Wildcat combat and injury animations, Dynamic Random Animations, Ultimate Dodge, Movement Behavior Overhaul, Jump Behavior Overhaul, Animated Potions, Vanguard bash overhaul, Impactful Blocking, EVG Conditional Idles, tool animations, and drunk or drugged animations.", "refs": ["r-gdb"]}, {"text": "Animated Potions remains in the inclusion list despite the broader removal wording above. The text is preserved as written in substance; the actual bundled files have not been inventoried.", "refs": ["r-gdb"], "kind": "assessment"}]},
+        {"title": "Requirements & recorded warnings", "claims": [{"text": "The description requires XPMSSE, recommends a new save for all features, and explicitly lists Visible Favorited Gear and Wear Multiple Rings as incompatible. Wear Multiple Rings is still present in this setup; Simple Visible Favorited Gear was removed after the recording.", "refs": ["r-gdb"], "kind": "assessment"}, {"text": "GDB's generic instructions show XPMSSE → GDB, while the installed Custom Placed Weapons variant specifically says to put itself below GDB. Both instructions are shown; the current setup follows the variant-specific instruction.", "refs": ["r-gdb", "r-xpmsse"], "kind": "assessment"}]},
+        {"title": "User-reported test · narrow scope", "claims": [{"text": "Sam reported the back-sheath draw problem fixed after moving XPMSSE below GDB and removing Simple Visible Favorited Gear together. That result does not isolate which change caused the fix or certify all remaining animations.", "refs": ["u-draw"]}]},
+        {"title": "Still unresolved", "claims": [{"text": "The precise reason L2 blocks when unarmed is still unproven. The manifest names unarmed variations and blocking systems, but does not identify the responsible behavior file, an unarmed-block toggle, or an installed repair patch. No configuration power has been verified for this Lite port.", "refs": ["r-gdb"], "kind": "assessment"}]}
+      ],
+      "extraSources": ["o-gdb"],
+      "related": ["XPMSSE Plus - Custom Skeleton / bundle (PS5)", "Animated Armoury", "Wear Multiple Rings", "Comprehensive First Person Animation Overhaul - alternative Lite port"]
+    },
+    "XPMSSE Plus - Custom Skeleton / bundle (PS5)": {
+      "id": "xpmsse-custom-placed", "attention": false,
+      "summary": {"text": "The Custom Placed Weapons bundle supplies back-sword placement and matching equip animations, not just a bare skeleton.", "refs": ["r-xpmsse"]},
+      "sections": [
+        {"title": "Recorded bundle contents", "claims": [{"text": "The panel names XP32 Maximum Skeleton Special Extended, Realistic Ragdolls & Force, Enhanced Ragdoll Accuracy, TBBP support and cloak/cape adaptability. It credits RogueGamer, Groovtama, dDefinder, Chesko and lautasantenni.", "refs": ["r-xpmsse"]}, {"text": "One-handed swords move to the back; two-handed weapons move right and lower; bows are angled; sheath handles are removed. The bundle includes one-handed sword equip and bow-draw animations. The v2.2 notes mention a male skeletonbeast fix and removal of a spinning-death animation.", "refs": ["r-xpmsse"]}]},
+        {"title": "Explicit variant-specific placement", "claims": [{"text": "The recorded description directly instructs users of GDB mods to put this XPMSSE variant BELOW GDB. The current GDB → XPMSSE ordering follows that instruction, despite the opposite generic sequence in GDB's panel.", "refs": ["r-xpmsse", "r-gdb"], "kind": "assessment"}]},
+        {"title": "Crafting & display limits", "claims": [{"text": "The notes describe craftable two-handed katanas and a special left-hand katana with its own slot. They warn that the left-hand version is invisible when equipped in the right hand.", "refs": ["r-xpmsse"]}, {"text": "Showing every favorited weapon is a separate feature: the description calls for another mod such as Visible Favorited Gear for that purpose. This does not override GDB's incompatibility warning or establish that SWF offers an equivalent feature on PS5.", "refs": ["r-xpmsse", "r-gdb", "r-swf"], "kind": "assessment"}]},
+        {"title": "User-reported test · narrow scope", "claims": [{"text": "The back-draw fix was reported after two simultaneous changes: moving XPMSSE and removing Simple Visible Favorited Gear. Retain that combined outcome without promoting it to a universal animation compatibility claim.", "refs": ["u-draw"]}]}
+      ],
+      "extraSources": ["o-xpmsse"],
+      "related": ["GDB's Elden Beast Lite Edition", "Comprehensive First Person Animation Overhaul - alternative Lite port"]
+    },
+    "Comprehensive First Person Animation Overhaul - alternative Lite port": {
+      "id": "cfpao-alternative-lite", "attention": false,
+      "summary": {"text": "An alternative first-person animation port whose credits and secondary source link distinguish it from full PC CFPAO.", "refs": ["r-cfpao"]},
+      "sections": [
+        {"title": "Recorded identity & role", "claims": [{"text": "The panel credits PolarRobotFrog and Sigerious, links CFPAO's Nexus page, and describes this as a Lite version with alternative animations compared with the porter's other CFPAO release. The recorded size is 962.9 KB; the full console title is clipped.", "refs": ["r-cfpao"]}, {"text": "The porter's reason for the Lite variant is that DAR and OAR are not available for the PS implementation described. Do not import the PC installer's options or requirements as if they were console instructions.", "refs": ["r-cfpao"], "kind": "assessment"}]},
+        {"title": "Newly matched source clue", "claims": [{"text": "The additional Nexus URL visible in the recording, 166987, resolves to SIGMA: Magic animations — 1st person. Its author describes school-specific magic animations. This identifies a source clue; it does not enumerate the SIGMA animations included in this PS5 port.", "refs": ["r-cfpao", "w-sigma"], "kind": "assessment"}]},
+        {"title": "Upstream context · not PS5 parity", "claims": [{"text": "CFPAO's PC changelog describes support animations for dual-wield blocking mods and optional sword back-draw/sheath animations. Support animations are not evidence that this PS5 port remaps L2, nor that those PC installer choices exist here.", "refs": ["w-cfpao"], "kind": "assessment"}]},
+        {"title": "Still unresolved", "claims": [{"text": "The exact alternative animation roster, first-person weapon coverage and a verified full live Bethesda description remain open. The existing placement after GDB and XPMSSE is preserved, not re-certified.", "refs": ["r-cfpao"], "kind": "assessment"}]}
+      ],
+      "related": ["GDB's Elden Beast Lite Edition", "XPMSSE Plus - Custom Skeleton / bundle (PS5)"]
+    },
+    "Lux - PS5": {
+      "id": "lux-interiors-ps5", "attention": false,
+      "summary": {"text": "The late-loading interior-lighting module, separate from the shared resources and master near the top.", "refs": ["r-lux"]},
+      "sections": [
+        {"title": "Recorded role & requirements", "claims": [{"text": "The description calls this the interior module, requires Lux Resources and Lux Master, credits GGUNIT, and instructs it to load near the bottom. Its example main-module order is Via → Orbis → Lux when those modules are present.", "refs": ["r-lux"]}]},
+        {"title": "Upstream context · not a patch inventory", "claims": [{"text": "GGUNIT's PC documentation describes a substantial interior-lighting and visual-effects rework and warns against competing lighting changes in the same cells. Its many PC compatibility patches must not be treated as automatically included in this PS5 package.", "refs": ["w-lux"], "kind": "assessment"}]},
+        {"title": "Still unresolved", "claims": [{"text": "The recorded v1.00 does not identify the upstream Lux release or establish which city/interior patches are present. The earlier site's city-overlap cautions remain in place; this description review does not resolve them.", "refs": ["r-lux", "w-lux"], "kind": "assessment"}]}
+      ],
+      "related": ["Lux - Resources - PS5", "Lux - Master", "The Great Cities of JK's North - COTN AIO port"],
+      "guides": [{"label": "Open the existing map / location index", "url": "map.html"}]
+    }
+  }
+}

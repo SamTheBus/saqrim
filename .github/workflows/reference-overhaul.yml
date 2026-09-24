@@ -1,0 +1,50 @@
+name: Reference overhaul checks
+on:
+  push:
+    branches: [main, reference-overhaul-20260924]
+    paths:
+      - 'load-order-reference.*'
+      - 'load-order.js'
+      - 'load-order.html'
+      - 'load-order.tsv'
+      - 'tools/apply-reference-overhaul.py'
+      - 'tests/reference-overhaul.py'
+      - 'REFERENCE-OVERHAUL.md'
+      - '.github/workflows/reference-overhaul.yml'
+permissions:
+  contents: write
+concurrency:
+  group: reference-overhaul-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Integrate the optional reference layer
+        run: python tools/apply-reference-overhaul.py
+      - name: Install browser test tools
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Validate data, preserved files and browser behavior
+        run: python tests/reference-overhaul.py
+      - name: Commit tested integration on review branch only
+        if: github.ref_name == 'reference-overhaul-20260924'
+        run: |
+          git add load-order.js load-order.html README.md
+          if ! git diff --cached --quiet; then
+            git config user.name 'Saqrim reference builder'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Integrate tested Batch 01 reference cards'
+            git push origin HEAD:reference-overhaul-20260924
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reference-overhaul-results
+          path: test-results/
+          retention-days: 7
