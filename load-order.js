@@ -1,19 +1,19 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  const key = 'saqrim-load-order-211-2026-09-23-v1';
+  const key = 'saqrim-load-order-210-2026-09-23-v2';
   const notes = {
     'Beyond Reach Part 2 (PS)': 'The recorded description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
     'Comprehensive First Person Animation Overhaul - alternative Lite port': 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
     'Echoes of Oblivion - Inn-Tegrated NPCs Patch': 'Inn-Tegrated NPCs patch: variant identified by Sam. The recorded description is sparse; this is not a second copy of the main Echoes of Oblivion pack.',
     'Cities of the North AIO (COTN AIO.ESP)': 'Identified as Cities of the North AIO from the filename and companion patch description. The visible title is COTN AIO.ESP; the exact web listing is not matched.',
-    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux - PS5 is now at current position #204. This page preserves that warning without changing the order.',
+    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux - PS5 is now at current position #203. This page preserves that warning without changing the order.',
     'Become High King of Skyrim TNG - Great Cities / minor cities patch': 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
   };
   let data = [], rows = [], added = new Set(), canSave = true, bethesdaMeta = {};
   try {
     const stored = JSON.parse(localStorage.getItem(key) || '[]');
-    if (Array.isArray(stored)) added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 211));
+    if (Array.isArray(stored)) added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 210));
     localStorage.setItem(key, JSON.stringify([...added]));
   } catch (_) { canSave = false; }
   function say(text) { $('feedback').textContent = text; $('feedback').hidden = false; }
@@ -38,14 +38,14 @@
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
-    $('count').textContent = `${shown} / 211 shown · current numbers retained`;
+    $('count').textContent = `${shown} / 210 shown · current numbers retained`;
     $('empty').hidden = shown !== 0;
     $('progress').value = added.size;
-    $('added-count').textContent = `${added.size} / 211 added`;
+    $('added-count').textContent = `${added.size} / 210 added`;
   }
   function resetFilters() { $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
   function go(n, updateHash = true) {
-    if (!Number.isInteger(n) || n < 1 || n > 211) { say('Choose a load-order number from 1 to 211.'); return; }
+    if (!Number.isInteger(n) || n < 1 || n > 210) { say('Choose a load-order number from 1 to 210.'); return; }
     resetFilters();
     const id = 'mod-' + String(n).padStart(3, '0');
     if (updateHash) history.replaceState(null, '', '#' + id);
@@ -150,10 +150,10 @@
   }
   async function start() {
     try {
-      const response = await fetch('load-order.tsv?v=20260923'); if (!response.ok) throw new Error('Load-order request failed');
+      const response = await fetch('load-order.tsv?v=20260923b'); if (!response.ok) throw new Error('Load-order request failed');
       const text = await response.text();
       try {
-        const listingResponse = await fetch('load-order-bethesda.json?v=2');
+        const listingResponse = await fetch('load-order-bethesda.json?v=3');
         if (listingResponse.ok) {
           const pack = await listingResponse.json();
           bethesdaMeta = pack.entries || {};
@@ -163,13 +163,13 @@
         const [n,name,size,version,time,category,title,thumb] = line.split('\t');
         return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
       });
-      if (data.length !== 211 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 188)) throw new Error('Invalid recorded load-order data');
+      if (data.length !== 210 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 188)) throw new Error('Invalid recorded load-order data');
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
       document.querySelectorAll('.tools [disabled]').forEach(n => { n.disabled = false; });
       $('search').addEventListener('input', filter); $('category').addEventListener('change', filter); $('hide-added').addEventListener('change', filter);
       $('show-all').addEventListener('click', resetFilters);
-      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 211 mods are checked off in this browser.'); });
+      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 210 mods are checked off in this browser.'); });
       $('jump-form').addEventListener('submit', e => { e.preventDefault(); go(Number($('jump-number').value)); });
       $('copy-close').addEventListener('click', () => { $('copy-panel').hidden = true; });
       const followHash = () => { const match = /^#mod-(\d{1,3})$/.exec(location.hash); if (match) go(Number(match[1]), false); };
