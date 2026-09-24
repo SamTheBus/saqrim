@@ -34,7 +34,7 @@
     let shown = 0;
     rows.forEach(({node, item, searchable}) => {
       const matches = number ? item.n === Number(number[1]) : terms.every(t => searchable.includes(t));
-      node.hidden = !matches || ($('category').value && item.category !== $('category').value) || ($('hide-added').checked && added.has(item.n));
+      node.hidden = !matches || (window.SaqrimReference && !window.SaqrimReference.matches(item.name, $('reference-view')?.value || '')) || ($('category').value && item.category !== $('category').value) || ($('hide-added').checked && added.has(item.n));
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
@@ -43,7 +43,7 @@
     $('progress').value = added.size;
     $('added-count').textContent = `${added.size} / 210 added`;
   }
-  function resetFilters() { $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
+  function resetFilters() { if ($('reference-view')) $('reference-view').value = ''; $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
   function go(n, updateHash = true) {
     if (!Number.isInteger(n) || n < 1 || n > 210) { say('Choose a load-order number from 1 to 210.'); return; }
     resetFilters();
@@ -96,10 +96,10 @@
       const recorded = [item.version && 'version ' + item.version, item.size].filter(Boolean).join(' · ');
       const compare = el('div', 'listing-compare');
       compare.append(el('h4', '', 'Listing vs. your recording'));
-      compare.append(el('p', '', 'Current Bethesda listing: ' + current + '.'));
+      compare.append(el('p', '', 'Stored Bethesda listing snapshot: ' + current + '.'));
       compare.append(el('p', '', 'Recorded on your console: ' + recorded + '.'));
       if ((meta.bethesdaVersion && meta.bethesdaVersion !== item.version) || (meta.bethesdaInstallSize && meta.bethesdaInstallSize !== item.size)) {
-        compare.append(el('p', 'warning', 'The current listing metadata differs from the recorded menu. Both are kept because the listing can change after your recording.'));
+        compare.append(el('p', 'warning', 'The stored listing metadata differs from the recorded menu. Both are kept because the listing can change after your recording.'));
       }
       box.append(compare);
     }
@@ -137,7 +137,7 @@
     label.append(check, document.createTextNode('Added on my console'));
     const copy = el('button', '', 'Copy name'); copy.type = 'button'; copy.addEventListener('click', () => copyName(item.name)); actions.append(label, copy);
     const details = document.createElement('details');
-    details.append(el('summary', '', item.bethesda ? 'Bethesda listing, console source & notes' : 'Bethesda listing status & console source'));
+    details.append(el('summary', '', item.bethesda ? 'Earlier listing snapshot & console metadata' : 'Listing match status & console metadata'));
     details.append(bethesdaPanel(item));
     details.append(el('h3', 'recording-heading', 'Your recorded Creations entry'));
     details.append(el('p', '', 'Visible console title (may be clipped): ' + item.title));
@@ -145,8 +145,10 @@
     if (notes[item.name]) details.append(el('p', 'warning', notes[item.name]));
     details.append(el('p', '', 'Latest recording timestamp · ' + item.time + ' · source: Skyrim_LO.mp4 supplied 23 September 2026.'));
     details.append(el('p', '', 'Image: matching recorded Creations artwork. Existing entries retain their prior menu crop; the two newly added entries use crops from the 23 September recording. Sizes can change with updates.'));
-    node.append(top, actions, details);
-    return {node, item, searchable: [item.name, item.title, item.size, item.version, item.category, JSON.stringify(item.bethesda || {})].join(' ').toLowerCase()};
+    node.append(top, actions);
+    if (window.SaqrimReference) window.SaqrimReference.decorate(item, node);
+    node.append(details);
+    return {node, item, searchable: [item.name, item.title, item.size, item.version, item.category, JSON.stringify(item.bethesda || {}), window.SaqrimReference?.searchText(item.name) || ''].join(' ').toLowerCase()};
   }
   async function start() {
     try {
@@ -164,8 +166,10 @@
         return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
       });
       if (data.length !== 210 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 188)) throw new Error('Invalid recorded load-order data');
+      if (window.SaqrimReference) { await window.SaqrimReference.ready; window.SaqrimReference.setOrder(data); }
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
+      if (window.SaqrimReference) window.SaqrimReference.mountControls(filter, data.length);
       document.querySelectorAll('.tools [disabled]').forEach(n => { n.disabled = false; });
       $('search').addEventListener('input', filter); $('category').addEventListener('change', filter); $('hide-added').addEventListener('change', filter);
       $('show-all').addEventListener('click', resetFilters);
@@ -180,3 +184,5 @@
   }
   start();
 })();
+
+// Saqrim reference layer v1

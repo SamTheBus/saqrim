@@ -17,7 +17,7 @@ Armor-rating and weapon-damage sorts support ascending and descending order, kee
 
 ## Load-order provenance
 
-The current 210-entry order is the 23 September 2026 recording with one same-day tested adjustment: Simple Visible Favorited Gear was removed, and XPMSSE Plus was moved below GDB's Elden Beast Lite. That change restored the correct back-sheathed one-handed draw animation in game. The source recording itself shows 211 of 211 Creations enabled and 14.94 GB used; the removed mod was only 6.8 KB. This is not a compatibility-certified setup.
+The current 210-entry order is the 23 September 2026 recording with one same-day tested adjustment: Simple Visible Favorited Gear was removed, and XPMSSE Plus was moved below GDB's Elden Beast Lite. Sam reported the back-sheathed draw fixed after both changes together; neither change was isolated in that test. The source recording itself shows 211 of 211 Creations enabled and 14.94 GB used; the removed mod was only 6.8 KB. This is not a compatibility-certified setup.
 
 Thumbnails come from the user's recorded Creations menu, not newly fetched Bethesda listing art. Four AVIF sheets retain 186 prior menu tiles for entries that remain installed; `assets/load-order-new-2026-09-23.jpg` adds the two current-only thumbnails for Mihail High Fantasy Monsters and Skytone: Compendium of Beasts. Generic menu placeholders are retained rather than replaced with guessed pictures. Artwork belongs to its respective creators.
 
@@ -36,3 +36,10 @@ The current load-order checklist uses localStorage key `saqrim-load-order-210-20
 32 local browser checks passed using the actual catalog data and a test-only localStorage/fetch fixture, including all 617 records, legacy choices, checkbox OR/AND behavior, rings versus amulets, weapon handling, numeric sorting in both directions, null handling, observed ratings, backup compatibility, mobile layout, deep links and instant Top behavior. Local rendering checks are not a claim of a live-site browser test.
 
 Static HTML/CSS/JavaScript only; no build step, package dependencies or external analytics.
+
+
+## Reference overhaul · Batch 01
+
+The Load Order page now adds ten sourced description cards, a research-coverage filter, description/requirement search, source locators and current-number cross-links. `load-order-reference.json` stores claims and evidence independently of recorded TSV rows and historical Bethesda snapshots. `load-order-reference.js` is optional: a failed research request must not break the checklist. The current 210-row order, catalog, quest data, IDs and localStorage keys are preserved.
+
+The source recording exposes Animated Armoury/GDB and GDB/Wear Multiple Rings warnings, the explicit Custom Placed Weapons instruction to load below GDB, and ambiguous Lux Master wording. The reported draw fix followed two simultaneous changes; it is not a complete compatibility certification. See `REFERENCE-OVERHAUL.md` for scope and open questions.
