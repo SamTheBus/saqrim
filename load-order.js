@@ -1,43 +1,19 @@
 'use strict';
 (() => {
   const $ = id => document.getElementById(id);
-  const key = 'saqrim-load-order-219-2026-09-21-v3';
-  const priorKey = 'saqrim-load-order-220-2026-09-18-v2';
-  const oldKey = 'saqrim-load-order-220-2026-09-17';
-  const oldToNew = n => {
-    if (n <= 32) return n;
-    if (n >= 33 && n <= 37) return n + 183;
-    const fixed = {38:33,39:35,40:34,41:39,42:40,43:41,44:36,45:38,46:37,47:42,48:43,91:56};
-    if (fixed[n]) return fixed[n];
-    if (n >= 49 && n <= 60) return n - 5;
-    if (n >= 61 && n <= 90) return n - 4;
-    if (n >= 92 && n <= 220) return n - 5;
-    return n;
-  };
-  const currentFromSept18 = n => n === 100 ? null : n > 100 ? n - 1 : n;
+  const key = 'saqrim-load-order-211-2026-09-23-v1';
   const notes = {
-    'Beyond Reach Part 2 (PS)': 'The original recording description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
+    'Beyond Reach Part 2 (PS)': 'The recorded description says it belongs below ESM/master files. Its current position is preserved here; this page does not silently reorder it.',
     'Comprehensive First Person Animation Overhaul - alternative Lite port': 'Alternative Lite port, 962.9 KB. Full menu title is clipped. Do not substitute the earlier full-size animation package just because the names resemble each other.',
     'Echoes of Oblivion - Inn-Tegrated NPCs Patch': 'Inn-Tegrated NPCs patch: variant identified by Sam. The recorded description is sparse; this is not a second copy of the main Echoes of Oblivion pack.',
     'Cities of the North AIO (COTN AIO.ESP)': 'Identified as Cities of the North AIO from the filename and companion patch description. The visible title is COTN AIO.ESP; the exact web listing is not matched.',
-    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux is now at current position #214. This page preserves that warning without changing the order.',
+    "The Great Cities of JK's North - COTN AIO port": 'The recorded port description warns against Lux / Lux Orbis. Lux - PS5 is now at current position #204. This page preserves that warning without changing the order.',
     'Become High King of Skyrim TNG - Great Cities / minor cities patch': 'Great Cities / minor cities compatibility role is described in the recording, but the full published title is clipped. Match the patch carefully; no web-listing verification is claimed.'
   };
   let data = [], rows = [], added = new Set(), canSave = true, bethesdaMeta = {};
   try {
-    const existing = localStorage.getItem(key);
-    const prior = localStorage.getItem(priorKey);
-    const legacy = localStorage.getItem(oldKey);
-    const stored = JSON.parse(existing || prior || legacy || '[]');
-    if (Array.isArray(stored)) {
-      if (existing) {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 219));
-      } else if (prior) {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(currentFromSept18).filter(Number.isInteger));
-      } else {
-        added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 220).map(oldToNew).map(currentFromSept18).filter(Number.isInteger));
-      }
-    }
+    const stored = JSON.parse(localStorage.getItem(key) || '[]');
+    if (Array.isArray(stored)) added = new Set(stored.filter(v => Number.isInteger(v) && v >= 1 && v <= 211));
     localStorage.setItem(key, JSON.stringify([...added]));
   } catch (_) { canSave = false; }
   function say(text) { $('feedback').textContent = text; $('feedback').hidden = false; }
@@ -62,14 +38,14 @@
       node.classList.toggle('is-added', added.has(item.n));
       if (!node.hidden) shown++;
     });
-    $('count').textContent = `${shown} / 219 shown · current numbers retained`;
+    $('count').textContent = `${shown} / 211 shown · current numbers retained`;
     $('empty').hidden = shown !== 0;
     $('progress').value = added.size;
-    $('added-count').textContent = `${added.size} / 219 added`;
+    $('added-count').textContent = `${added.size} / 211 added`;
   }
   function resetFilters() { $('search').value = ''; $('category').value = ''; $('hide-added').checked = false; filter(); }
   function go(n, updateHash = true) {
-    if (!Number.isInteger(n) || n < 1 || n > 219) { say('Choose a load-order number from 1 to 219.'); return; }
+    if (!Number.isInteger(n) || n < 1 || n > 211) { say('Choose a load-order number from 1 to 211.'); return; }
     resetFilters();
     const id = 'mod-' + String(n).padStart(3, '0');
     if (updateHash) history.replaceState(null, '', '#' + id);
@@ -143,9 +119,15 @@
     const top = el('div', 'row-top');
     const number = el('a', 'num', String(item.n).padStart(3, '0')); number.href = '#' + node.id; number.setAttribute('aria-label', 'Link to mod ' + item.n);
     const thumb = el('div', 'thumb'); thumb.setAttribute('role', 'img'); thumb.setAttribute('aria-label', 'Recorded Creations thumbnail for ' + item.name);
-    const tile = item.thumb % 48;
-    thumb.style.backgroundImage = `url("assets/thumbs-${Math.floor(item.thumb / 48)}.avif")`;
-    thumb.style.backgroundPosition = `${-(tile % 8) * 96}px ${-Math.floor(tile / 8) * 54}px`;
+    if (item.thumb >= 186) {
+      const tile = item.thumb - 186;
+      thumb.style.backgroundImage = 'url("assets/load-order-new-2026-09-23.jpg")';
+      thumb.style.backgroundPosition = `${-tile * 96}px 0`;
+    } else {
+      const tile = item.thumb % 48;
+      thumb.style.backgroundImage = `url("assets/thumbs-${Math.floor(item.thumb / 48)}.avif")`;
+      thumb.style.backgroundPosition = `${-(tile % 8) * 96}px ${-Math.floor(tile / 8) * 54}px`;
+    }
     const body = el('div'); body.append(el('h2', '', item.name));
     const meta = el('div', 'metadata'); meta.append(el('span', 'size', item.size), el('span', '', item.version), el('span', '', item.category)); body.append(meta);
     top.append(number, thumb, body);
@@ -161,18 +143,17 @@
     details.append(el('p', '', 'Visible console title (may be clipped): ' + item.title));
     details.append(el('p', '', 'Recorded file size: ' + item.size + ' · Menu version: ' + item.version + ' · Enabled in the video.'));
     if (notes[item.name]) details.append(el('p', 'warning', notes[item.name]));
-    const parts = item.time.split(':'); const seconds = Number(parts[0]) * 60 + Number(parts[1]);
-    const source = el('a', '', 'View in the recording · ' + item.time); source.href = 'https://www.youtube.com/watch?v=4uyqCADqwPo&t=' + Math.floor(seconds) + 's'; source.target = '_blank'; source.rel = 'noopener noreferrer'; details.append(source);
-    details.append(el('p', '', 'Image: thumbnail cropped from this recorded Creations entry, not a newly verified Bethesda web listing. Sizes can change with updates.'));
+    details.append(el('p', '', 'Latest recording timestamp · ' + item.time + ' · source: Skyrim_LO.mp4 supplied 23 September 2026.'));
+    details.append(el('p', '', 'Image: matching recorded Creations artwork. Existing entries retain their prior menu crop; the two newly added entries use crops from the 23 September recording. Sizes can change with updates.'));
     node.append(top, actions, details);
     return {node, item, searchable: [item.name, item.title, item.size, item.version, item.category, JSON.stringify(item.bethesda || {})].join(' ').toLowerCase()};
   }
   async function start() {
     try {
-      const response = await fetch('load-order.tsv'); if (!response.ok) throw new Error('Load-order request failed');
+      const response = await fetch('load-order.tsv?v=20260923'); if (!response.ok) throw new Error('Load-order request failed');
       const text = await response.text();
       try {
-        const listingResponse = await fetch('load-order-bethesda.json?v=1');
+        const listingResponse = await fetch('load-order-bethesda.json?v=2');
         if (listingResponse.ok) {
           const pack = await listingResponse.json();
           bethesdaMeta = pack.entries || {};
@@ -182,13 +163,13 @@
         const [n,name,size,version,time,category,title,thumb] = line.split('\t');
         return {n:Number(n),name,size,version,time,category,title,thumb:Number(thumb),bethesda:bethesdaMeta[name] || null};
       });
-      if (data.length !== 219 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 186)) throw new Error('Invalid recorded load-order data');
+      if (data.length !== 211 || data.some((d,i) => d.n !== i + 1 || !d.name || !d.size || !d.title || !Number.isInteger(d.thumb) || d.thumb < 0 || d.thumb >= 188)) throw new Error('Invalid recorded load-order data');
       const fragment = document.createDocumentFragment(); rows = data.map(makeRow); rows.forEach(r => fragment.append(r.node)); $('mods').append(fragment);
       [...new Set(data.map(d => d.category))].sort().forEach(category => { const option = el('option', '', category); option.value = category; $('category').append(option); });
       document.querySelectorAll('.tools [disabled]').forEach(n => { n.disabled = false; });
       $('search').addEventListener('input', filter); $('category').addEventListener('change', filter); $('hide-added').addEventListener('change', filter);
       $('show-all').addEventListener('click', resetFilters);
-      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 219 mods are checked off in this browser.'); });
+      $('next').addEventListener('click', () => { const item = data.find(d => !added.has(d.n)); if (item) go(item.n); else say('All 211 mods are checked off in this browser.'); });
       $('jump-form').addEventListener('submit', e => { e.preventDefault(); go(Number($('jump-number').value)); });
       $('copy-close').addEventListener('click', () => { $('copy-panel').hidden = true; });
       const followHash = () => { const match = /^#mod-(\d{1,3})$/.exec(location.hash); if (match) go(Number(match[1]), false); };

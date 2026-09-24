@@ -1,2900 +1,2900 @@
 {
- "version": 2,
- "updated": "2026-09-18",
- "scope": "46 curated quest/adventure cards, not a complete census. Original Q001–Q022 retained; expansion Q023–Q046.",
- "quests": [
-  {
-   "id": "Q001",
-   "title": "Miasma",
-   "mod": "Miasma",
-   "lo": 14,
-   "kind": "Mod quest",
-   "start": {
-    "world": "solstheim",
-    "area": "Raven Rock",
-    "place": "The Retching Netch",
-    "trigger": "Speak to Haj-Xul.",
-    "mapPlace": "Raven Rock",
-    "precision": "hub"
-   },
-   "destinations": [
+  "version": 2,
+  "updated": "2026-09-18",
+  "scope": "46 curated quest/adventure cards, not a complete census. Original Q001–Q022 retained; expansion Q023–Q046.",
+  "quests": [
     {
-     "world": "solstheim",
-     "place": "Ashbound ruins"
-    }
-   ],
-   "hook": "Help an Argonian pursue a rogue Telvanni wizard.",
-   "rewards": [
-    {
-     "label": "An-Xileel bow and arrow crafting",
-     "kind": "unlock",
-     "note": "The author says the recipes become available at forges after completing the quest.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition",
-       "Books / powers / other"
+      "id": "Q001",
+      "title": "Miasma",
+      "mod": "Miasma",
+      "lo": null,
+      "kind": "Mod quest",
+      "start": {
+        "world": "solstheim",
+        "area": "Raven Rock",
+        "place": "The Retching Netch",
+        "trigger": "Speak to Haj-Xul.",
+        "mapPlace": "Raven Rock",
+        "precision": "hub"
+      },
+      "destinations": [
+        {
+          "world": "solstheim",
+          "place": "Ashbound ruins"
+        }
       ],
-      "weapon": [
-       "Bow",
-       "Ammunition"
+      "hook": "Help an Argonian pursue a rogue Telvanni wizard.",
+      "rewards": [
+        {
+          "label": "An-Xileel bow and arrow crafting",
+          "kind": "unlock",
+          "note": "The author says the recipes become available at forges after completing the quest.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition",
+              "Books / powers / other"
+            ],
+            "weapon": [
+              "Bow",
+              "Ammunition"
+            ],
+            "hand": [
+              "Ranged"
+            ]
+          }
+        },
+        {
+          "catalog": "W014",
+          "kind": "boss",
+          "note": "An NPC-looted tome during the adventure, not an automatic turn-in reward."
+        },
+        {
+          "catalog": "W015",
+          "kind": "optional",
+          "note": "A hand-placed tome in Ashbound Depths."
+        },
+        {
+          "catalog": "W013",
+          "kind": "lead",
+          "note": "Named bow associated with the quest; exact award step remains unverified."
+        }
       ],
-      "hand": [
-       "Ranged"
-      ]
-     }
-    },
-    {
-     "catalog": "W014",
-     "kind": "boss",
-     "note": "An NPC-looted tome during the adventure, not an automatic turn-in reward."
-    },
-    {
-     "catalog": "W015",
-     "kind": "optional",
-     "note": "A hand-placed tome in Ashbound Depths."
-    },
-    {
-     "catalog": "W013",
-     "kind": "lead",
-     "note": "Named bow associated with the quest; exact award step remains unverified."
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Recommendation",
-     "text": "Author recommends level 20 or above; this is not a documented hard level gate."
-    }
-   ],
-   "sources": [
-    {
-     "label": "Miasma: start, crafting and spell list",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/149879",
-     "scope": "Original author documentation; PS5 behavior not play-tested."
-    }
-   ]
-  },
-  {
-   "id": "Q002",
-   "title": "It's Just Business",
-   "mod": "Granite Hill",
-   "lo": 148,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Granite Hill",
-    "place": "Olgar's mill / Forester's Camp",
-    "trigger": "Speak to Olgar."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "The Waymeet"
-    }
-   ],
-   "hook": "Help Olgar recruit Shuk.",
-   "rewards": [
-    {
-     "label": "Follow-up quest access",
-     "kind": "unlock",
-     "note": "Leads to Beneath a Hill of Granite."
-    }
-   ],
-   "chain": [
-    "Q004"
-   ],
-   "notes": [
-    "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port. A specific gold payout is not indexed."
-   ],
-   "sources": [
-    {
-     "label": "Granite Hill quest list",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
-     "scope": "Original author documentation."
-    }
-   ]
-  },
-  {
-   "id": "Q003",
-   "title": "The Truth but not the Whole Truth",
-   "mod": "Granite Hill",
-   "lo": 148,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Granite Hill",
-    "place": "Nature's Bounty Farm",
-    "trigger": "Speak to Villdagny."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Nature's Bounty Farm"
-    }
-   ],
-   "hook": "Bring bone meal for Villdagny's farm.",
-   "rewards": [],
-   "notes": [
-    "No specific completion payout has been verified in this guide.",
-    "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
-   ],
-   "sources": [
-    {
-     "label": "Granite Hill quest list",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
-     "scope": "Original author documentation."
-    }
-   ]
-  },
-  {
-   "id": "Q004",
-   "title": "Beneath a Hill of Granite",
-   "mod": "Granite Hill",
-   "lo": 148,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Granite Hill",
-    "place": "Courier lead / The Errant Star Lodge",
-    "trigger": "After Olgar's quest, wait a day for the courier and follow the letter."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Granite Hill's Abandoned Mine"
-    }
-   ],
-   "hook": "Investigate what lies beneath the village.",
-   "rewards": [
-    {
-     "catalog": "W019",
-     "kind": "optional",
-     "note": "Discover the Black Book along this route. Its power comes from the separate Black Book adventure."
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Required quest",
-     "text": "Complete It's Just Business (Q002)."
-    }
-   ],
-   "chain": [
-    "Q002",
-    "Q005"
-   ],
-   "notes": [
-    "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
-   ],
-   "sources": [
-    {
-     "label": "Granite Hill quest list",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
-     "scope": "Author documentation and retained W019 acquisition research."
-    }
-   ]
-  },
-  {
-   "id": "Q005",
-   "title": "Black Book: Stars Beyond the Void",
-   "mod": "Granite Hill",
-   "lo": 148,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Granite Hill",
-    "place": "Black Book chamber",
-    "trigger": "Read the book discovered along the Granite Hill quest route."
-   },
-   "destinations": [
-    {
-     "world": "apocrypha",
-     "place": "Stars Beyond the Void"
-    }
-   ],
-   "hook": "Seek a Black Book power.",
-   "rewards": [
-    {
-     "catalog": "W020",
-     "kind": "choice",
-     "note": "One indexed power option; the remaining choices are not fully indexed here."
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Access",
-     "text": "Reach the Black Book through the preceding Granite Hill adventure."
-    }
-   ],
-   "chain": [
-    "Q004"
-   ],
-   "notes": [
-    "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
-   ],
-   "sources": [
-    {
-     "label": "Granite Hill Black Book",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
-     "scope": "Author documentation and retained W019/W020 research."
-    }
-   ]
-  },
-  {
-   "id": "Q006",
-   "title": "Dwarven Research",
-   "mod": "Tonal Architect",
-   "lo": 30,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Anywhere / spell use",
-    "place": "No fixed quest giver",
-    "trigger": "Use Tonal Architect spells to start the research."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Research targets selected by the quest"
-    }
-   ],
-   "hook": "Turn Dwemer experimentation into permanent upgrades.",
-   "rewards": [
-    {
-     "catalog": "W475",
-     "kind": "completion"
-    },
-    {
-     "catalog": "W476",
-     "kind": "completion"
-    },
-    {
-     "catalog": "W477",
-     "kind": "completion"
-    },
-    {
-     "label": "Master-spell crafting access",
-     "kind": "unlock",
-     "note": "Research completion is an additional requirement; the relevant school must also reach skill 100."
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Required world state",
-     "text": "The author requires three uncleared Dwemer dungeons for research to start."
-    }
-   ],
-   "sources": [
-    {
-     "label": "Tonal Architect: research and crafting",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/51199",
-     "scope": "Original author documentation; recorded PS5 behavior untested."
-    }
-   ]
-  },
-  {
-   "id": "Q007",
-   "title": "Siege at Icemoth",
-   "mod": "Siege at Icemoth",
-   "lo": 9,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Northwest coast / Haafingar",
-    "place": "Old Wooden Jetty, west of Northwatch Keep",
-    "trigger": "Read the dead mercenary's waterlogged journal to start the quest and enable the boat.",
-    "mapPlace": "Northwatch Keep",
-    "precision": "nearby"
-   },
-   "destinations": [
-    {
-     "world": "icemoth",
-     "place": "Fort Icemoth / Hjorkvild Isles"
-    }
-   ],
-   "hook": "Follow a mercenary expedition to a necromancer's island fort.",
-   "rewards": [
-    {
-     "catalog": "W169",
-     "kind": "boss",
-     "note": "On Silas Marceau; collect the ring rather than assume it appears automatically."
-    },
-    {
-     "catalog": "W170",
-     "kind": "optional",
-     "note": "Seafloor chest behind Eyndis' Folly, not the final quest payout."
-    },
-    {
-     "catalog": "W171",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W172",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W173",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W174",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W175",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W176",
-     "kind": "lead"
-    }
-   ],
-   "notes": [
-    "The complete final payout and several exact reward steps remain unverified. The item cards retain their original qualifications."
-   ],
-   "sources": [
-    {
-     "label": "Siege at Icemoth: start and exploration",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/109541",
-     "scope": "Original author documentation and recorded PS5 entry instructions."
-    }
-   ]
-  },
-  {
-   "id": "Q008",
-   "title": "It Came from Akavir",
-   "mod": "It Came from Akavir (PS5)",
-   "lo": 155,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Dawnstar–Winterhold coast",
-    "place": "Amelia's shoreline camp southwest of the Tower Stone",
-    "trigger": "Speak to Amelia.",
-    "mapPlace": "The Tower Stone",
-    "precision": "nearby"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Quest encounter area"
-    }
-   ],
-   "hook": "Investigate a mysterious arrival on Skyrim's shore.",
-   "rewards": [
-    {
-     "label": "Advertised armor and weapon",
-     "kind": "lead",
-     "note": "Player gear is advertised, but exact names, award step and stats remain unresolved.",
-     "tags": {
-      "category": [
-       "Armor / clothing",
-       "Weapons / ammunition"
-      ]
-     }
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Recommendation",
-     "text": "Author recommends level 15+. Not a hard gate."
-    }
-   ],
-   "notes": [
-    "Amelia's outfit (W617) is an NPC-recognition lead, not a confirmed player reward. It is deliberately excluded from reward filters."
-   ],
-   "sources": [
-    {
-     "label": "It Came from Akavir: author FAQ",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/155449",
-     "scope": "Author documentation and recorded PS5 camp directions."
-    }
-   ]
-  },
-  {
-   "id": "Q009",
-   "title": "A Dizzying Fall",
-   "mod": "A Dizzying Fall (PS5)",
-   "lo": 150,
-   "kind": "Mod encounter",
-   "start": {
-    "world": "skyrim",
-    "area": "Winterhold coast",
-    "place": "Cliff south of Winterhold, north of Fort Kastav",
-    "trigger": "Speak to the wounded Khajiit Turo.",
-    "mapPlace": "Fort Kastav",
-    "precision": "nearby"
-   },
-   "destinations": [],
-   "hook": "Hear the story behind Turo's ambitious journey.",
-   "rewards": [],
-   "notes": [
-    "No named equipment payout is established by the reviewed sources. Unknown does not mean no reward."
-   ],
-   "sources": [
-    {
-     "label": "A Dizzying Fall",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/130389",
-     "scope": "Author description and recorded PS5 start directions."
-    }
-   ]
-  },
-  {
-   "id": "Q010",
-   "title": "The Serpent's Covenant",
-   "mod": "The Serpent's Covenant (PS5)",
-   "lo": 151,
-   "kind": "Mod questline",
-   "start": {
-    "world": "skyrim",
-    "area": "Starting area pending",
-    "place": "Alexia's first encounter camp",
-    "trigger": "Speak to Alexia; consult the author's gallery for encounter locations."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Alexia and Alric's encounter sites"
-    }
-   ],
-   "hook": "Follow a traveling mercenary's story and decisions.",
-   "rewards": [],
-   "notes": [
-    "Credited NPC armor and weapons do not establish a player reward.",
-    "Author encounter instructions: exhaust Alexia's dialogue, speak to Alric, then speak to Alexia again before leaving."
-   ],
-   "sources": [
-    {
-     "label": "The Serpent's Covenant FAQ",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/111911",
-     "scope": "Original author documentation."
-    }
-   ]
-  },
-  {
-   "id": "Q011",
-   "title": "Mysteries of the Dwemer",
-   "mod": "Mysteries of the Dwemer (PS5)",
-   "lo": 152,
-   "kind": "Mod questline",
-   "start": {
-    "world": "skyrim",
-    "area": "Eastmarch",
-    "place": "Outside Mzulft, by a pillar on the stairs",
-    "trigger": "Speak to Maro on the way up.",
-    "mapPlace": "Mzulft",
-    "precision": "area"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Maro's later Dwemer encounter sites"
-    }
-   ],
-   "hook": "Discuss Dwemer history with a traveling researcher.",
-   "rewards": [],
-   "notes": [
-    "No named completion reward has been verified. NPC armor credits do not imply player acquisition.",
-    "The author says to wait a few hours after saying goodbye for encounters to progress."
-   ],
-   "sources": [
-    {
-     "label": "Mysteries of the Dwemer FAQ",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/114863",
-     "scope": "Author documentation and recorded first encounter."
-    }
-   ]
-  },
-  {
-   "id": "Q012",
-   "title": "The Hunt for the Spectre",
-   "mod": "The Hunt for the Spectre (PS5)",
-   "lo": 154,
-   "kind": "Mod questline",
-   "start": {
-    "world": "skyrim",
-    "area": "Starting area pending",
-    "place": "Ren's first encounter",
-    "trigger": "Approach Ren; the precise starting-area reference is pending."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Ren's hunt / multiple encounters"
-    }
-   ],
-   "hook": "Follow a hunter tracking a dangerous killer.",
-   "rewards": [
-    {
-     "label": "Custom-model quest reward",
-     "kind": "lead",
-     "note": "A custom reward is advertised; its name, effect and acquisition conditions remain unverified."
-    }
-   ],
-   "notes": [
-    "Retained research flags a vampire-player progression problem; applicability to the recorded PS5 port is untested.",
-    "Previewed NPC equipment is not automatically the final reward."
-   ],
-   "sources": [
-    {
-     "label": "The Hunt for the Spectre",
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/105044",
-     "scope": "Original author description; unresolved reward research retained."
-    }
-   ]
-  },
-  {
-   "id": "Q013",
-   "title": "Aberrations of the Dwemer",
-   "mod": "Aberrations of the Dwemer",
-   "lo": 6,
-   "kind": "Adventure guide",
-   "start": {
-    "world": "skyrim",
-    "area": "Starting area pending",
-    "place": "Entry route not yet indexed",
-    "trigger": "Consult the installed Creation's entry instructions."
-   },
-   "destinations": [
-    {
-     "world": "evergloam",
-     "place": "Plankside and the Dwemer realms"
-    }
-   ],
-   "hook": "Explore the realm through its places, bosses and hidden loot.",
-   "rewards": [],
-   "rewardMod": {
-    "lo": 6,
-    "kind": "optional",
-    "boss": [
-     "W554",
-     "W555",
-     "W560",
-     "W571"
-    ],
-    "note": "Creator-documented adventure loot, not a guaranteed final quest payout."
-   },
-   "requirements": [
-    {
-     "kind": "Optional-secret requirement",
-     "text": "Bring the Initiate's Ewer for the Altar of Lies door. This is not an entry requirement for the whole adventure."
-    }
-   ],
-   "notes": [
-    "An adventure-wide loot guide, not a single journal quest. All 22 existing records retain their source and PS5 caveats."
-   ],
-   "sources": [
-    {
-     "label": "Creator's reward and location roster",
-     "url": "https://www.reddit.com/r/SkyrimCreations/comments/1i3wvtw/comment/mvtrgap/",
-     "scope": "Original creator's documented placements, already preserved in the item catalog."
-    }
-   ]
-  },
-  {
-   "id": "Q014",
-   "title": "Beyond the Edge of Atmora",
-   "mod": "Beyond the Edge of Atmora",
-   "lo": 13,
-   "kind": "Adventure guide",
-   "start": {
-    "world": "skyrim",
-    "area": "Starting area pending",
-    "place": "Entry route not yet established",
-    "trigger": "Check the installed port's instructions; no guessed boat or quest giver is supplied."
-   },
-   "destinations": [
-    {
-     "world": "atmora",
-     "place": "Crucible island"
-    }
-   ],
-   "hook": "Keep the recorded island discoveries together.",
-   "rewards": [
-    {
-     "catalog": "W352",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W353",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W354",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W355",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W356",
-     "kind": "lead"
-    },
-    {
-     "catalog": "W357",
-     "kind": "lead"
-    }
-   ],
-   "notes": [
-    "This is Beyond the Edge of Atmora, not the separate Beyond Skyrim: Atmora project.",
-    "Six equipment leads do not establish a complete quest-reward roster or exact holders."
-   ],
-   "sources": [
-    {
-     "label": "Recorded PS5 installation and item research",
-     "url": "load-order.html#mod-013",
-     "scope": "Recorded entry #13 and original catalog records W352–W357."
-    }
-   ]
-  },
-  {
-   "id": "Q015",
-   "title": "Beyond Reach — adventure overview",
-   "mod": "Beyond Reach Part 1 (PS)",
-   "lo": 16,
-   "kind": "Adventure guide",
-   "start": {
-    "world": "skyrim",
-    "area": "Variable city encounter",
-    "place": "Priestess of Mara and her guard",
-    "trigger": "Community documentation describes an encounter in a major Skyrim city. Follow the merchant objective; the recorded port has not been tested."
-   },
-   "destinations": [
-    {
-     "world": "beyond-reach",
-     "place": "Western Reach / High Rock"
-    }
-   ],
-   "hook": "A starting lead and a home for the unresolved reward roster.",
-   "rewards": [],
-   "rewardMod": {
-    "lo": 16,
-    "kind": "lead",
-    "note": "Not yet tied to a verified quest step in the recorded PS5 4.8 port."
-   },
-   "requirements": [
-    {
-     "kind": "Recorded dependency",
-     "text": "Both recorded Beyond Reach parts are required."
-    },
-    {
-     "kind": "Unverified port gate",
-     "text": "Community documentation lists level 5. This is not confirmed for the recorded PS5 version and must not be confused with other modlists' level-25 delays."
-    }
-   ],
-   "notes": [
-    "An overview, not 50 confirmed end rewards. Historical spell routes retain their original caveats.",
-    "Tomes of Want is a historical source, NOT installed. Its vendors are not imported as Beyond Reach acquisition locations."
-   ],
-   "sources": [
-    {
-     "label": "Beyond Reach introductory quest",
-     "url": "https://tes-mods.fandom.com/wiki/Beyond_Reach%3A_Beyond_Reach_Quest",
-     "scope": "Community quest reference; recorded PS5 4.8 unverified."
-    },
-    {
-     "label": "Recorded parts #16–17",
-     "url": "load-order.html#mod-016",
-     "scope": "Installed baseline."
-    }
-   ]
-  },
-  {
-   "id": "Q016",
-   "title": "Arniel's Endeavor",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Speak to Arniel Gane about his research.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Research errands and final experiment",
-     "mapPlace": "College of Winterhold"
-    }
-   ],
-   "hook": "Help a College researcher with his experiment.",
-   "rewards": [
-    {
-     "catalog": "W536",
-     "kind": "completion",
-     "note": "Final-scene pickup: collect Keening, rather than assume it is automatically awarded."
-    },
-    {
-     "label": "Summon Arniel's Shade",
-     "kind": "completion",
-     "note": "Base-game quest reward, not a newly indexed mod spell.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ]
-     }
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Prerequisite",
-     "text": "The base-game reference lists Hitting the Books; later stages require additional College progression."
-    }
-   ],
-   "sources": [
-    {
-     "label": "Arniel's Endeavor",
-     "url": "https://elderscrolls.fandom.com/wiki/Arniel%27s_Endeavor",
-     "scope": "Base-game quest reference; modded effects remain qualified in W536."
-    }
-   ]
-  },
-  {
-   "id": "Q017",
-   "title": "Impatience of a Saint",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "soul-cairn",
-    "area": "Soul Cairn",
-    "place": "Jiub's location",
-    "trigger": "Speak to Jiub about his missing manuscript.",
-    "mapPlace": "Jiub",
-    "precision": "area"
-   },
-   "destinations": [
-    {
-     "world": "soul-cairn",
-     "place": "Scattered manuscript pages"
-    }
-   ],
-   "hook": "Recover ten pages and return them to their author.",
-   "rewards": [
-    {
-     "catalog": "W541",
-     "kind": "completion"
-    },
-    {
-     "label": "Saint Jiub's Opus",
-     "kind": "completion",
-     "note": "The completed book accompanies the amulet.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Access",
-     "text": "Requires access to the Soul Cairn."
-    }
-   ],
-   "sources": [
-    {
-     "label": "Impatience of a Saint",
-     "url": "https://www.gamebanshee.com/skyrim/dawnguard-walkthrough/impatienceofasaint.php",
-     "scope": "Base-game walkthrough; modded amulet effect remains in W541."
-    }
-   ]
-  },
-  {
-   "id": "Q018",
-   "title": "No One Escapes Cidhna Mine",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Markarth",
-    "place": "Markarth / Cidhna Mine",
-    "trigger": "Continue The Forsworn Conspiracy into the imprisonment sequence.",
-    "mapPlace": "Markarth",
-    "precision": "hub"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Cidhna Mine and Markarth Ruins",
-     "mapPlace": "Markarth"
-    }
-   ],
-   "hook": "Find a way out of Markarth's prison.",
-   "rewards": [
-    {
-     "catalog": "W542",
-     "kind": "choice",
-     "note": "Outcome-dependent ring."
-    },
-    {
-     "label": "Armor of the Old Gods",
-     "kind": "choice",
-     "note": "Alternative branch reward; a full set, not four separately indexed items.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
+      "requirements": [
+        {
+          "kind": "Recommendation",
+          "text": "Author recommends level 20 or above; this is not a documented hard level gate."
+        }
       ],
-      "armor": [
-       "Light armor"
-      ],
-      "slot": [
-       "Full set"
+      "sources": [
+        {
+          "label": "Miasma: start, crafting and spell list",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/149879",
+          "scope": "Original author documentation; PS5 behavior not play-tested."
+        }
       ]
-     }
-    }
-   ],
-   "requirements": [
+    },
     {
-     "kind": "Required quest",
-     "text": "The Forsworn Conspiracy."
-    }
-   ],
-   "notes": [
-    "Alternative reward branches; exploit-based double rewards are not assumed."
-   ],
-   "spoilers": "Killing Madanach and escaping leads to the Silver-Blood Family Ring from Thonar. Helping the Forsworn escape leads to Armor of the Old Gods.",
-   "sources": [
+      "id": "Q002",
+      "title": "It's Just Business",
+      "mod": "Granite Hill",
+      "lo": 141,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Granite Hill",
+        "place": "Olgar's mill / Forester's Camp",
+        "trigger": "Speak to Olgar."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "The Waymeet"
+        }
+      ],
+      "hook": "Help Olgar recruit Shuk.",
+      "rewards": [
+        {
+          "label": "Follow-up quest access",
+          "kind": "unlock",
+          "note": "Leads to Beneath a Hill of Granite."
+        }
+      ],
+      "chain": [
+        "Q004"
+      ],
+      "notes": [
+        "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port. A specific gold payout is not indexed."
+      ],
+      "sources": [
+        {
+          "label": "Granite Hill quest list",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
+          "scope": "Original author documentation."
+        }
+      ]
+    },
     {
-     "label": "No One Escapes Cidhna Mine",
-     "url": "https://elderscrolls.fandom.com/wiki/No_One_Escapes_Cidhna_Mine",
-     "scope": "Base-game quest and outcome reference; modified ring effect remains in W542."
+      "id": "Q003",
+      "title": "The Truth but not the Whole Truth",
+      "mod": "Granite Hill",
+      "lo": 141,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Granite Hill",
+        "place": "Nature's Bounty Farm",
+        "trigger": "Speak to Villdagny."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Nature's Bounty Farm"
+        }
+      ],
+      "hook": "Bring bone meal for Villdagny's farm.",
+      "rewards": [],
+      "notes": [
+        "No specific completion payout has been verified in this guide.",
+        "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
+      ],
+      "sources": [
+        {
+          "label": "Granite Hill quest list",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
+          "scope": "Original author documentation."
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "title": "Beneath a Hill of Granite",
+      "mod": "Granite Hill",
+      "lo": 141,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Granite Hill",
+        "place": "Courier lead / The Errant Star Lodge",
+        "trigger": "After Olgar's quest, wait a day for the courier and follow the letter."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Granite Hill's Abandoned Mine"
+        }
+      ],
+      "hook": "Investigate what lies beneath the village.",
+      "rewards": [
+        {
+          "catalog": "W019",
+          "kind": "optional",
+          "note": "Discover the Black Book along this route. Its power comes from the separate Black Book adventure."
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required quest",
+          "text": "Complete It's Just Business (Q002)."
+        }
+      ],
+      "chain": [
+        "Q002",
+        "Q005"
+      ],
+      "notes": [
+        "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
+      ],
+      "sources": [
+        {
+          "label": "Granite Hill quest list",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
+          "scope": "Author documentation and retained W019 acquisition research."
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "title": "Black Book: Stars Beyond the Void",
+      "mod": "Granite Hill",
+      "lo": 141,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Granite Hill",
+        "place": "Black Book chamber",
+        "trigger": "Read the book discovered along the Granite Hill quest route."
+      },
+      "destinations": [
+        {
+          "world": "apocrypha",
+          "place": "Stars Beyond the Void"
+        }
+      ],
+      "hook": "Seek a Black Book power.",
+      "rewards": [
+        {
+          "catalog": "W020",
+          "kind": "choice",
+          "note": "One indexed power option; the remaining choices are not fully indexed here."
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Access",
+          "text": "Reach the Black Book through the preceding Granite Hill adventure."
+        }
+      ],
+      "chain": [
+        "Q004"
+      ],
+      "notes": [
+        "Recorded Granite Hill version 1.6.3; later PC documentation does not certify the recorded PS5 port."
+      ],
+      "sources": [
+        {
+          "label": "Granite Hill Black Book",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/117585",
+          "scope": "Author documentation and retained W019/W020 research."
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "title": "Dwarven Research",
+      "mod": "Tonal Architect",
+      "lo": 28,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Anywhere / spell use",
+        "place": "No fixed quest giver",
+        "trigger": "Use Tonal Architect spells to start the research."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Research targets selected by the quest"
+        }
+      ],
+      "hook": "Turn Dwemer experimentation into permanent upgrades.",
+      "rewards": [
+        {
+          "catalog": "W475",
+          "kind": "completion"
+        },
+        {
+          "catalog": "W476",
+          "kind": "completion"
+        },
+        {
+          "catalog": "W477",
+          "kind": "completion"
+        },
+        {
+          "label": "Master-spell crafting access",
+          "kind": "unlock",
+          "note": "Research completion is an additional requirement; the relevant school must also reach skill 100."
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required world state",
+          "text": "The author requires three uncleared Dwemer dungeons for research to start."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tonal Architect: research and crafting",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/51199",
+          "scope": "Original author documentation; recorded PS5 behavior untested."
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "title": "Siege at Icemoth",
+      "mod": "Siege at Icemoth",
+      "lo": 9,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Northwest coast / Haafingar",
+        "place": "Old Wooden Jetty, west of Northwatch Keep",
+        "trigger": "Read the dead mercenary's waterlogged journal to start the quest and enable the boat.",
+        "mapPlace": "Northwatch Keep",
+        "precision": "nearby"
+      },
+      "destinations": [
+        {
+          "world": "icemoth",
+          "place": "Fort Icemoth / Hjorkvild Isles"
+        }
+      ],
+      "hook": "Follow a mercenary expedition to a necromancer's island fort.",
+      "rewards": [
+        {
+          "catalog": "W169",
+          "kind": "boss",
+          "note": "On Silas Marceau; collect the ring rather than assume it appears automatically."
+        },
+        {
+          "catalog": "W170",
+          "kind": "optional",
+          "note": "Seafloor chest behind Eyndis' Folly, not the final quest payout."
+        },
+        {
+          "catalog": "W171",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W172",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W173",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W174",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W175",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W176",
+          "kind": "lead"
+        }
+      ],
+      "notes": [
+        "The complete final payout and several exact reward steps remain unverified. The item cards retain their original qualifications."
+      ],
+      "sources": [
+        {
+          "label": "Siege at Icemoth: start and exploration",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/109541",
+          "scope": "Original author documentation and recorded PS5 entry instructions."
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "title": "It Came from Akavir",
+      "mod": "It Came from Akavir (PS5)",
+      "lo": 148,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Dawnstar–Winterhold coast",
+        "place": "Amelia's shoreline camp southwest of the Tower Stone",
+        "trigger": "Speak to Amelia.",
+        "mapPlace": "The Tower Stone",
+        "precision": "nearby"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Quest encounter area"
+        }
+      ],
+      "hook": "Investigate a mysterious arrival on Skyrim's shore.",
+      "rewards": [
+        {
+          "label": "Advertised armor and weapon",
+          "kind": "lead",
+          "note": "Player gear is advertised, but exact names, award step and stats remain unresolved.",
+          "tags": {
+            "category": [
+              "Armor / clothing",
+              "Weapons / ammunition"
+            ]
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Recommendation",
+          "text": "Author recommends level 15+. Not a hard gate."
+        }
+      ],
+      "notes": [
+        "Amelia's outfit (W617) is an NPC-recognition lead, not a confirmed player reward. It is deliberately excluded from reward filters."
+      ],
+      "sources": [
+        {
+          "label": "It Came from Akavir: author FAQ",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/155449",
+          "scope": "Author documentation and recorded PS5 camp directions."
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "title": "A Dizzying Fall",
+      "mod": "A Dizzying Fall (PS5)",
+      "lo": 143,
+      "kind": "Mod encounter",
+      "start": {
+        "world": "skyrim",
+        "area": "Winterhold coast",
+        "place": "Cliff south of Winterhold, north of Fort Kastav",
+        "trigger": "Speak to the wounded Khajiit Turo.",
+        "mapPlace": "Fort Kastav",
+        "precision": "nearby"
+      },
+      "destinations": [],
+      "hook": "Hear the story behind Turo's ambitious journey.",
+      "rewards": [],
+      "notes": [
+        "No named equipment payout is established by the reviewed sources. Unknown does not mean no reward."
+      ],
+      "sources": [
+        {
+          "label": "A Dizzying Fall",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/130389",
+          "scope": "Author description and recorded PS5 start directions."
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "title": "The Serpent's Covenant",
+      "mod": "The Serpent's Covenant (PS5)",
+      "lo": 144,
+      "kind": "Mod questline",
+      "start": {
+        "world": "skyrim",
+        "area": "Starting area pending",
+        "place": "Alexia's first encounter camp",
+        "trigger": "Speak to Alexia; consult the author's gallery for encounter locations."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Alexia and Alric's encounter sites"
+        }
+      ],
+      "hook": "Follow a traveling mercenary's story and decisions.",
+      "rewards": [],
+      "notes": [
+        "Credited NPC armor and weapons do not establish a player reward.",
+        "Author encounter instructions: exhaust Alexia's dialogue, speak to Alric, then speak to Alexia again before leaving."
+      ],
+      "sources": [
+        {
+          "label": "The Serpent's Covenant FAQ",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/111911",
+          "scope": "Original author documentation."
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "title": "Mysteries of the Dwemer",
+      "mod": "Mysteries of the Dwemer (PS5)",
+      "lo": 145,
+      "kind": "Mod questline",
+      "start": {
+        "world": "skyrim",
+        "area": "Eastmarch",
+        "place": "Outside Mzulft, by a pillar on the stairs",
+        "trigger": "Speak to Maro on the way up.",
+        "mapPlace": "Mzulft",
+        "precision": "area"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Maro's later Dwemer encounter sites"
+        }
+      ],
+      "hook": "Discuss Dwemer history with a traveling researcher.",
+      "rewards": [],
+      "notes": [
+        "No named completion reward has been verified. NPC armor credits do not imply player acquisition.",
+        "The author says to wait a few hours after saying goodbye for encounters to progress."
+      ],
+      "sources": [
+        {
+          "label": "Mysteries of the Dwemer FAQ",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/114863",
+          "scope": "Author documentation and recorded first encounter."
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "title": "The Hunt for the Spectre",
+      "mod": "The Hunt for the Spectre (PS5)",
+      "lo": 147,
+      "kind": "Mod questline",
+      "start": {
+        "world": "skyrim",
+        "area": "Starting area pending",
+        "place": "Ren's first encounter",
+        "trigger": "Approach Ren; the precise starting-area reference is pending."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Ren's hunt / multiple encounters"
+        }
+      ],
+      "hook": "Follow a hunter tracking a dangerous killer.",
+      "rewards": [
+        {
+          "label": "Custom-model quest reward",
+          "kind": "lead",
+          "note": "A custom reward is advertised; its name, effect and acquisition conditions remain unverified."
+        }
+      ],
+      "notes": [
+        "Retained research flags a vampire-player progression problem; applicability to the recorded PS5 port is untested.",
+        "Previewed NPC equipment is not automatically the final reward."
+      ],
+      "sources": [
+        {
+          "label": "The Hunt for the Spectre",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/105044",
+          "scope": "Original author description; unresolved reward research retained."
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "title": "Aberrations of the Dwemer",
+      "mod": "Aberrations of the Dwemer",
+      "lo": 6,
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Starting area pending",
+        "place": "Entry route not yet indexed",
+        "trigger": "Consult the installed Creation's entry instructions."
+      },
+      "destinations": [
+        {
+          "world": "evergloam",
+          "place": "Plankside and the Dwemer realms"
+        }
+      ],
+      "hook": "Explore the realm through its places, bosses and hidden loot.",
+      "rewards": [],
+      "rewardMod": {
+        "lo": 6,
+        "kind": "optional",
+        "boss": [
+          "W554",
+          "W555",
+          "W560",
+          "W571"
+        ],
+        "note": "Creator-documented adventure loot, not a guaranteed final quest payout."
+      },
+      "requirements": [
+        {
+          "kind": "Optional-secret requirement",
+          "text": "Bring the Initiate's Ewer for the Altar of Lies door. This is not an entry requirement for the whole adventure."
+        }
+      ],
+      "notes": [
+        "An adventure-wide loot guide, not a single journal quest. All 22 existing records retain their source and PS5 caveats."
+      ],
+      "sources": [
+        {
+          "label": "Creator's reward and location roster",
+          "url": "https://www.reddit.com/r/SkyrimCreations/comments/1i3wvtw/comment/mvtrgap/",
+          "scope": "Original creator's documented placements, already preserved in the item catalog."
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "title": "Beyond the Edge of Atmora",
+      "mod": "Beyond the Edge of Atmora",
+      "lo": 13,
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Starting area pending",
+        "place": "Entry route not yet established",
+        "trigger": "Check the installed port's instructions; no guessed boat or quest giver is supplied."
+      },
+      "destinations": [
+        {
+          "world": "atmora",
+          "place": "Crucible island"
+        }
+      ],
+      "hook": "Keep the recorded island discoveries together.",
+      "rewards": [
+        {
+          "catalog": "W352",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W353",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W354",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W355",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W356",
+          "kind": "lead"
+        },
+        {
+          "catalog": "W357",
+          "kind": "lead"
+        }
+      ],
+      "notes": [
+        "This is Beyond the Edge of Atmora, not the separate Beyond Skyrim: Atmora project.",
+        "Six equipment leads do not establish a complete quest-reward roster or exact holders."
+      ],
+      "sources": [
+        {
+          "label": "Recorded PS5 installation and item research",
+          "url": "load-order.html#mod-013",
+          "scope": "Recorded entry #13 and original catalog records W352–W357."
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "title": "Beyond Reach — adventure overview",
+      "mod": "Beyond Reach Part 1 (PS)",
+      "lo": 14,
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Variable city encounter",
+        "place": "Priestess of Mara and her guard",
+        "trigger": "Community documentation describes an encounter in a major Skyrim city. Follow the merchant objective; the recorded port has not been tested."
+      },
+      "destinations": [
+        {
+          "world": "beyond-reach",
+          "place": "Western Reach / High Rock"
+        }
+      ],
+      "hook": "A starting lead and a home for the unresolved reward roster.",
+      "rewards": [],
+      "rewardMod": {
+        "lo": 14,
+        "kind": "lead",
+        "note": "Not yet tied to a verified quest step in the recorded PS5 4.8 port."
+      },
+      "requirements": [
+        {
+          "kind": "Recorded dependency",
+          "text": "Both recorded Beyond Reach parts are required."
+        },
+        {
+          "kind": "Unverified port gate",
+          "text": "Community documentation lists level 5. This is not confirmed for the recorded PS5 version and must not be confused with other modlists' level-25 delays."
+        }
+      ],
+      "notes": [
+        "An overview, not 50 confirmed end rewards. Historical spell routes retain their original caveats.",
+        "Tomes of Want is a historical source, NOT installed. Its vendors are not imported as Beyond Reach acquisition locations."
+      ],
+      "sources": [
+        {
+          "label": "Beyond Reach introductory quest",
+          "url": "https://tes-mods.fandom.com/wiki/Beyond_Reach%3A_Beyond_Reach_Quest",
+          "scope": "Community quest reference; recorded PS5 4.8 unverified."
+        },
+        {
+          "label": "Recorded parts #14–15",
+          "url": "load-order.html#mod-016",
+          "scope": "Installed baseline."
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "title": "Arniel's Endeavor",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Speak to Arniel Gane about his research.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Research errands and final experiment",
+          "mapPlace": "College of Winterhold"
+        }
+      ],
+      "hook": "Help a College researcher with his experiment.",
+      "rewards": [
+        {
+          "catalog": "W536",
+          "kind": "completion",
+          "note": "Final-scene pickup: collect Keening, rather than assume it is automatically awarded."
+        },
+        {
+          "label": "Summon Arniel's Shade",
+          "kind": "completion",
+          "note": "Base-game quest reward, not a newly indexed mod spell.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ]
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Prerequisite",
+          "text": "The base-game reference lists Hitting the Books; later stages require additional College progression."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Arniel's Endeavor",
+          "url": "https://elderscrolls.fandom.com/wiki/Arniel%27s_Endeavor",
+          "scope": "Base-game quest reference; modded effects remain qualified in W536."
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "title": "Impatience of a Saint",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "soul-cairn",
+        "area": "Soul Cairn",
+        "place": "Jiub's location",
+        "trigger": "Speak to Jiub about his missing manuscript.",
+        "mapPlace": "Jiub",
+        "precision": "area"
+      },
+      "destinations": [
+        {
+          "world": "soul-cairn",
+          "place": "Scattered manuscript pages"
+        }
+      ],
+      "hook": "Recover ten pages and return them to their author.",
+      "rewards": [
+        {
+          "catalog": "W541",
+          "kind": "completion"
+        },
+        {
+          "label": "Saint Jiub's Opus",
+          "kind": "completion",
+          "note": "The completed book accompanies the amulet.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Access",
+          "text": "Requires access to the Soul Cairn."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Impatience of a Saint",
+          "url": "https://www.gamebanshee.com/skyrim/dawnguard-walkthrough/impatienceofasaint.php",
+          "scope": "Base-game walkthrough; modded amulet effect remains in W541."
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "title": "No One Escapes Cidhna Mine",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Markarth",
+        "place": "Markarth / Cidhna Mine",
+        "trigger": "Continue The Forsworn Conspiracy into the imprisonment sequence.",
+        "mapPlace": "Markarth",
+        "precision": "hub"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Cidhna Mine and Markarth Ruins",
+          "mapPlace": "Markarth"
+        }
+      ],
+      "hook": "Find a way out of Markarth's prison.",
+      "rewards": [
+        {
+          "catalog": "W542",
+          "kind": "choice",
+          "note": "Outcome-dependent ring."
+        },
+        {
+          "label": "Armor of the Old Gods",
+          "kind": "choice",
+          "note": "Alternative branch reward; a full set, not four separately indexed items.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Light armor"
+            ],
+            "slot": [
+              "Full set"
+            ]
+          }
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required quest",
+          "text": "The Forsworn Conspiracy."
+        }
+      ],
+      "notes": [
+        "Alternative reward branches; exploit-based double rewards are not assumed."
+      ],
+      "spoilers": "Killing Madanach and escaping leads to the Silver-Blood Family Ring from Thonar. Helping the Forsworn escape leads to Armor of the Old Gods.",
+      "sources": [
+        {
+          "label": "No One Escapes Cidhna Mine",
+          "url": "https://elderscrolls.fandom.com/wiki/No_One_Escapes_Cidhna_Mine",
+          "scope": "Base-game quest and outcome reference; modified ring effect remains in W542."
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "title": "Lost to the Ages",
+      "mod": "Artificer / The Infinity Sword",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "The Reach",
+        "place": "Arkngthamz",
+        "trigger": "Follow the Aetherium investigation and meet Katria.",
+        "mapPlace": "Arkngthamz",
+        "precision": "area"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Multiple Dwemer sites / Aetherium Forge"
+        }
+      ],
+      "hook": "Reassemble a lost key and reach an ancient forge.",
+      "rewards": [
+        {
+          "catalog": "W311",
+          "kind": "choice",
+          "note": "One of the three forge choices."
+        },
+        {
+          "catalog": "W380",
+          "kind": "choice",
+          "note": "One of the three forge choices."
+        },
+        {
+          "label": "Aetherial Crown",
+          "kind": "choice",
+          "note": "The remaining forge choice; current load-order effect not researched here.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "slot": [
+              "Circlet / crown"
+            ]
+          }
+        },
+        {
+          "catalog": "W178",
+          "kind": "optional",
+          "note": "A mod-added sword in the forge's magma, separate from the three forge choices."
+        }
+      ],
+      "notes": [
+        "Choose one standard forge reward. The optional Infinity Sword is a separate pickup."
+      ],
+      "sources": [
+        {
+          "label": "Lost to the Ages",
+          "url": "https://elderscrolls.fandom.com/wiki/Lost_to_the_Ages",
+          "scope": "Base-game start and reward choices; mod-added pickups retain their catalog sources."
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "title": "Touching the Sky",
+      "mod": "Artificer / Occiglacies / Guns of Skyrim",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Dawnguard progression",
+        "place": "Serana after Unseen Visions",
+        "trigger": "Continue with Serana. Darkfall Cave is the first destination, not an independent new quest giver."
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Darkfall Cave",
+          "mapPlace": "Darkfall Cave"
+        },
+        {
+          "world": "forgotten-vale",
+          "place": "Chantry of Auriel"
+        }
+      ],
+      "hook": "Follow the route to Auriel's Bow.",
+      "rewards": [
+        {
+          "label": "Auriel's Bow",
+          "kind": "completion",
+          "note": "Retrieve the bow at the end; the current modded effect is not expanded in this card.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Bow"
+            ],
+            "hand": [
+              "Ranged"
+            ]
+          }
+        },
+        {
+          "catalog": "W050",
+          "kind": "optional"
+        },
+        {
+          "catalog": "W054",
+          "kind": "boss"
+        },
+        {
+          "catalog": "W058",
+          "kind": "boss"
+        },
+        {
+          "catalog": "W179",
+          "kind": "optional"
+        },
+        {
+          "catalog": "W192",
+          "kind": "optional"
+        },
+        {
+          "catalog": "W195",
+          "kind": "optional"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required quest",
+          "text": "Unseen Visions."
+        }
+      ],
+      "chain": [
+        "Q013"
+      ],
+      "notes": [
+        "Keep the Initiate's Ewer in mind for the separate optional Altar of Lies secret in Aberrations (Q013).",
+        "Split-port firearm inclusion and exact cell caveats remain attached to the relevant W-number entries."
+      ],
+      "sources": [
+        {
+          "label": "Touching the Sky",
+          "url": "https://elderscrolls.fandom.com/wiki/Touching_the_Sky_%28Quest%29",
+          "scope": "Base-game quest route; additional gear from retained mod-item research."
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "title": "Lost Relic",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Fort Dawnguard / The Rift",
+        "place": "Fort Dawnguard",
+        "trigger": "Ask Florentius Baenius for work.",
+        "mapPlace": "Fort Dawnguard",
+        "precision": "area"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Radiant dungeon assigned by the quest"
+        }
+      ],
+      "hook": "Recover an old Dawnguard relic and keep it.",
+      "rewards": [
+        {
+          "catalog": "W544",
+          "kind": "choice",
+          "note": "One assigned relic per run, not all three from one chest."
+        },
+        {
+          "catalog": "W545",
+          "kind": "choice",
+          "note": "One assigned relic per run."
+        },
+        {
+          "catalog": "W546",
+          "kind": "choice",
+          "note": "One assigned relic per run."
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Faction access",
+          "text": "Dawnguard route; recruit Florentius. Side-quest progression affects availability."
+        }
+      ],
+      "notes": [
+        "The destination is radiant. Use your quest journal instead of a fixed dungeon pin."
+      ],
+      "sources": [
+        {
+          "label": "Lost Relic",
+          "url": "https://skyrim.fandom.com/wiki/Lost_Relic",
+          "scope": "Base-game starter and reward reference; modified relics retain original catalog evidence."
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "title": "Ill Met by Moonlight",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Falkreath",
+        "place": "Falkreath Jail",
+        "trigger": "Speak to Sinding.",
+        "mapPlace": "Falkreath",
+        "precision": "hub"
+      },
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Bloated Man's Grotto",
+          "mapPlace": "Bloated Man's Grotto"
+        }
+      ],
+      "hook": "Take part in Hircine's hunt and choose its outcome.",
+      "rewards": [
+        {
+          "catalog": "W367",
+          "kind": "choice",
+          "note": "Outcome-dependent ring; the Artificer effect remains qualified in its catalog entry."
+        },
+        {
+          "label": "Savior's Hide",
+          "kind": "choice",
+          "note": "Alternative light-armor reward; current modded effect not indexed here.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Light armor"
+            ],
+            "slot": [
+              "Body / robes"
+            ]
+          }
+        }
+      ],
+      "notes": [
+        "Alternative documented paths; exploit-based double rewards are not assumed."
+      ],
+      "spoilers": "Spare Sinding and defeat the hunters for the Ring of Hircine path. Kill and skin Sinding for the Savior's Hide path.",
+      "sources": [
+        {
+          "label": "Ill Met by Moonlight",
+          "url": "https://elderscrolls.fandom.com/wiki/Ill_Met_by_Moonlight",
+          "scope": "Base-game start and reward branches; modded ring effect from original catalog."
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "title": "The Breathing Abyss",
+      "mod": "The Breathing Abyss",
+      "lo": 135,
+      "kind": "Mod quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Dawnstar coast",
+        "place": "Manias on an island near Yngvild",
+        "trigger": "Speak to Manias; the recorded instructions put his island northeast of Dawnstar.",
+        "mapPlace": "Yngvild",
+        "precision": "nearby"
+      },
+      "hook": "Follow an investigation into an unsettling underwater cavern.",
+      "rewards": [
+        {
+          "label": "Permanent character buff",
+          "kind": "lead",
+          "note": "Added in the author's 1.0.6 changelog. Its name and numbers, and inclusion in the recorded v1.00 PS5 port, are not established.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/141216",
+          "label": "The Breathing Abyss remake: description and changelog",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "load-order.html#mod-148",
+          "label": "Recorded entry #141",
+          "scope": "The recording supplies the Manias / Yngvild starting clue."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Manias' investigation / underwater cavern"
+        }
+      ],
+      "notes": [
+        "When Manias runs out of dialogue, the recorded instructions say to wait several days.",
+        "This is the remake linked by the port, not the older Breathing Abyss release. Yngvild is only a nearby reference."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q024",
+      "title": "Skragmjor — dungeon adventure",
+      "mod": "Skragmjor",
+      "lo": 5,
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Whiterun outskirts",
+        "place": "New Nordic ruin west of Whiterun",
+        "trigger": "Find Skragmjor west of Whiterun; the exact approach is not calibrated in this atlas.",
+        "known": false
+      },
+      "hook": "Explore a newly exposed ruin and a missing-mercenary mystery.",
+      "rewards": [],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/139061",
+          "label": "Skragmjor: author description and version history",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Skragmjor"
+        }
+      ],
+      "notes": [
+        "The author documents a small flavor quest, not a verified quest title or named unique payout. This card covers the dungeon adventure.",
+        "The recorded title/version is Skragmjor v1.0.7. Older documentation calls it Forsaken Crypt."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q025",
+      "title": "Moonpath to Elsweyr — adventure overview",
+      "mod": "Moonpath to Elsweyr [PS5]",
+      "lo": 140,
+      "kind": "Mod questline",
+      "start": {
+        "world": "skyrim",
+        "area": "Falkreath",
+        "place": "Khajiit caravan by Falkreath's main gate",
+        "trigger": "Look for the caravan. The SSE author moved it outside Falkreath in 1.14b; older versions started inside the Dead Man's Drink. The recorded PS5 v1.00 label does not resolve that version difference.",
+        "mapPlace": "Falkreath",
+        "precision": "hub"
+      },
+      "hook": "Leave Skyrim with a caravan bound for Elsweyr.",
+      "rewards": [],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/4341",
+          "label": "Moonpath: SSE description and caravan-move changelog",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "load-order.html#mod-164",
+          "label": "Installed Lucien / Moonpath patch",
+          "scope": "Recorded compatibility addon, not proof of an extra player reward."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "elsweyr",
+          "place": "Moonpath's Elsweyr locations"
+        }
+      ],
+      "notes": [
+        "A questline overview, not a claim that every individual Moonpath quest is indexed. The complete ending payout remains undocumented here.",
+        "Elsweyr has no calibrated map layer on Saqrim yet. No unrelated realm map is substituted.",
+        "Your recorded setup includes the Lucien / Moonpath patch. This guide does not assume Legacy of the Dragonborn or its rewards."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q026",
+      "title": "The Oblivion Engine",
+      "mod": "Lucien - Fully Voiced Follower",
+      "lo": 149,
+      "kind": "Mod companion quest",
+      "start": {
+        "world": "variable",
+        "area": "Traveling with Lucien",
+        "place": "Lucien while adventuring together",
+        "trigger": "Recruit Lucien at the Dead Man's Drink in Falkreath, travel together, and ask where he wants to visit. His personal quest develops as his relationship with you grows."
+      },
+      "hook": "Investigate a Dwemer mystery with Lucien.",
+      "rewards": [
+        {
+          "label": "Lucien's research and follow-up quest access",
+          "kind": "unlock",
+          "note": "The later quest Intruders follows completion and re-recruitment; this is not the horse-riding reward.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/20035",
+          "label": "Lucien: personal-quest FAQ and Intruders / riding documentation",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "solstheim",
+          "place": "Dumzbthar"
+        }
+      ],
+      "chain": [
+        "Q027"
+      ],
+      "notes": [
+        "Falkreath is the recruitment location, not a guaranteed place where this quest triggers. Dumzbthar has no calibrated pin here.",
+        "Recorded Lucien menu: v1.7.2. Exact PS5 conditions and final override behavior remain untested."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q027",
+      "title": "Intruders",
+      "mod": "Lucien - Fully Voiced Follower",
+      "lo": 149,
+      "kind": "Mod companion quest",
+      "start": {
+        "world": "variable",
+        "area": "Traveling with Lucien",
+        "place": "Lucien after returning to the party",
+        "trigger": "After The Oblivion Engine, re-recruit Lucien and listen for his new idle dialogue roughly five in-game days later."
+      },
+      "hook": "Return to Lucien's unfinished research.",
+      "rewards": [
+        {
+          "label": "Horse riding for Lucien / Clive",
+          "kind": "unlock",
+          "note": "This unlocks riding for Lucien. Clive is his mount, not a new horse awarded to your character.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/20035",
+          "label": "Lucien: personal-quest FAQ and Intruders / riding documentation",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "solstheim",
+          "place": "Dumzbthar"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required quest",
+          "text": "The Oblivion Engine (Q026), then re-recruit Lucien."
+        }
+      ],
+      "chain": [
+        "Q026"
+      ],
+      "notes": [
+        "The location where the dialogue fires depends on your travels; no fixed quest-giver pin is invented."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q028",
+      "title": "The Heart of Dibella — expanded",
+      "mod": "JaySerpa's Quest Expansion Bundle",
+      "lo": 132,
+      "kind": "Expanded existing quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Markarth",
+        "place": "Hamal / Temple of Dibella",
+        "trigger": "The expansion offers a non-criminal invitation: become Thane of the Reach and sleep for a courier, or help five people in the Reach. The original inner-sanctum route remains available.",
+        "mapPlace": "Markarth",
+        "precision": "hub"
+      },
+      "hook": "Help the temple and choose how Dibella's favor suits your character.",
+      "rewards": [
+        {
+          "label": "Agent of Dibella",
+          "kind": "completion",
+          "note": "The author lets Hamal configure +10% damage against the opposite sex, +10% against the same sex, +5% against both, or no bonus.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "catalog": "W362",
+          "kind": "unlock",
+          "note": "Knight of the North documents legitimate ownership of the temple's Helm of the Crusader after this quest. It remains a separate pickup."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/94863",
+          "label": "JaySerpa: Heart of Dibella expansion",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
+          "label": "Knight of the North: relic ownership",
+          "scope": "Author quest guide, also retained in W362."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Fjotra rescue / The Reach"
+        }
+      ],
+      "chain": [
+        "Q018",
+        "Q032"
+      ],
+      "notes": [
+        "Helping Madanach during Q018 provides an additional peaceful-rescue option in the expansion.",
+        "Component confirmed in the recorded v2.6 bundle. Its upstream version and the installed Wintersun patch's final behavior remain untested."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q029",
+      "title": "Innocence Lost — expanded",
+      "mod": "JaySerpa's Quest Expansion Bundle",
+      "lo": 132,
+      "kind": "Expanded existing quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Windhelm",
+        "place": "Aventus Aretino's house",
+        "trigger": "Talk to Aventus. The expansion also allows investigating Grelod at Honorhall Orphanage in Riften before meeting him.",
+        "mapPlace": "Windhelm",
+        "precision": "hub"
+      },
+      "hook": "Resolve Aventus's plea, with an arrest alternative added by the mod.",
+      "rewards": [
+        {
+          "label": "Aretino Family Heirloom",
+          "kind": "completion",
+          "note": "The base-game return-to-Aventus reward; not an enchanted combat item. Alternate-route PS5 payout not separately verified.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "label": "Constance / orphanage follow-up",
+          "kind": "unlock",
+          "note": "The expansion adds a follow-up with Constance and an adoption route subject to its requirements.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/80974",
+          "label": "JaySerpa: Innocence Lost expansion",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Innocence_Lost",
+          "label": "Original quest starter and heirloom",
+          "scope": "Base-game reference; expansion differences are identified separately."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Honorhall Orphanage",
+          "mapPlace": "Riften"
+        }
+      ],
+      "chain": [
+        "Q030"
+      ],
+      "notes": [
+        "An arrest route does not automatically rule out the installed Destroy the Dark Brotherhood expansion; that component has its own kidnapping conditions.",
+        "Only confirmed bundle components are assumed; no other quest overhaul is silently added."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q030",
+      "title": "Destroy the Dark Brotherhood! — expanded",
+      "mod": "JaySerpa's Quest Expansion Bundle",
+      "lo": 132,
+      "kind": "Expanded existing quest",
+      "start": {
+        "world": "skyrim",
+        "area": "Hjaalmarch / Dragon Bridge",
+        "place": "Astrid's Abandoned Shack encounter",
+        "trigger": "Choose the anti-Brotherhood path during Astrid's encounter, then follow the report to Commander Maro in Dragon Bridge.",
+        "mapPlace": "Abandoned Shack",
+        "precision": "area"
+      },
+      "hook": "Hunt the assassins through the expanded investigation.",
+      "rewards": [
+        {
+          "label": "Commander Maro's gold",
+          "kind": "completion",
+          "note": "The original quest pays 3,000 gold. This amount is a base-game reference, not a measured result from the installed bundle.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "label": "Fultheim the Fearless as a potential follower",
+          "kind": "unlock",
+          "note": "Conditional: free him alive, then find him again through the expansion's later encounter.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "catalog": "W373",
+          "kind": "boss",
+          "note": "Astrid's Blade of Woe is loot from her, not Maro's final payment."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/118229",
+          "label": "JaySerpa: Destroy the Dark Brotherhood expansion",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "https://www.gamebanshee.com/skyrim/walkthrough/destroythedarkbrotherhood.php",
+          "label": "Original quest payout",
+          "scope": "Base-game walkthrough, not the expansion's complete route."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/151173",
+          "label": "Artificer compatibility patch for Destroy the Dark Brotherhood - Quest Expansion",
+          "scope": "Patch-author documentation; establishes the upstream acquisition conflict, not the exact PS5 bundle payload."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Commander Maro",
+          "mapPlace": "Dragon Bridge"
+        },
+        {
+          "world": "skyrim",
+          "place": "Assassins / Falkreath Sanctuary",
+          "mapPlace": "Dark Brotherhood Sanctuary"
+        }
+      ],
+      "chain": [
+        "Q029"
+      ],
+      "notes": [
+        "The expansion replaces the simple password handoff with an investigation. Do not follow an unmodified walkthrough for that step.",
+        "After an Innocence Lost arrest, the expansion's alternate kidnapping route also requires the Constance follow-up and killing a vanilla Brotherhood contract target.",
+        "Rejecting the Brotherhood is a branching choice, not an additional route through its full membership storyline.",
+        "Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 220-mod order; the exact PS5 bundle behavior remains untested."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q031",
+      "title": "Infiltration — expanded",
+      "mod": "JaySerpa's Quest Expansion Bundle",
+      "lo": 132,
+      "kind": "Expanded existing quest",
+      "start": {
+        "world": "skyrim",
+        "area": "The Rift / Treva's Watch",
+        "place": "Stalleo's camp east of Treva's Watch",
+        "trigger": "Speak to Stalleo outside the fort.",
+        "mapPlace": "Treva's Watch",
+        "precision": "nearby"
+      },
+      "hook": "Decide how to resolve the dispute over Treva's Watch.",
+      "rewards": [
+        {
+          "label": "Detect Life spell tome",
+          "kind": "choice",
+          "note": "The original Stalleo success reward. The expansion adds other outcomes; this is not promised for every branch.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Alteration"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/114054",
+          "label": "JaySerpa: Infiltration expansion",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        },
+        {
+          "url": "https://www.gamebanshee.com/skyrim/walkthrough/infiltration.php",
+          "label": "Stalleo camp and original tome reward",
+          "scope": "Base-game reference; expanded paths differ."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Treva's Watch and escape tunnel",
+          "mapPlace": "Treva's Watch"
+        }
+      ],
+      "notes": [
+        "You can bring Stalleo's group along in the expansion. Enter through the escape tunnel rather than rely on the old front-gate shortcut.",
+        "The author documents a lasting cleared fort on Stalleo's success path. No unrelated Cutting Room Floor patch is assumed."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q032",
+      "title": "Knight of the North — Crusader relic hunt",
+      "mod": "Knight of the North - Divine Crusader Reworked (PS5)",
+      "lo": 146,
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Winterhold coast / Tower Stone",
+        "place": "Iceberg Explorer site near the Tower Stone",
+        "trigger": "Read the knight's journal and related Thalmor orders. The author recommends this starting point, but the relic hunt can begin with clues at another relic.",
+        "mapPlace": "The Tower Stone",
+        "precision": "nearby"
+      },
+      "hook": "Follow scattered clues to the Divine Crusader's equipment.",
+      "rewards": [
+        {
+          "catalog": "W358",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W359",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W360",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W361",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W362",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W363",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W364",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        },
+        {
+          "catalog": "W365",
+          "kind": "optional",
+          "note": "A separately placed relic or clue; not a single final turn-in payout."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
+          "label": "Knight of the North: author quest guide",
+          "scope": "Original author documentation; recorded PS5 behavior not independently tested."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Relic sites across Skyrim"
+        }
+      ],
+      "chain": [
+        "Q028",
+        "Q042"
+      ],
+      "notes": [
+        "The base Creation's Four Skull Lookout shortcut is not this overhaul's acquisition route.",
+        "The author guide contains conflicting cuirass clues (Northwatch Keep versus a Rorikstead shrine); those remain visible in W364 rather than being silently reconciled.",
+        "Heart of Dibella and Wolf Queen Awakened remove ownership restrictions on two separate relics; follow the linked cards."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q033",
+      "title": "Illusion Ritual Spell",
+      "mod": "Apocalypse - Magic of Skyrim",
+      "lo": 37,
+      "kind": "Existing quest · magic unlock",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Ask Drevis Neloren about further Illusion training.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "hook": "Use Vision of the Tenth Eye to find the four hidden College texts.",
+      "rewards": [
+        {
+          "label": "Hysteria spell tome",
+          "kind": "completion",
+          "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Illusion"
+            ]
+          }
+        },
+        {
+          "label": "Call to Arms, Harmony and Mayhem purchases",
+          "kind": "unlock",
+          "note": "Purchasing is unlocked; these are not all awarded free.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Illusion"
+            ]
+          }
+        },
+        {
+          "catalog": "W099",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W444",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W445",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://primagames.com/eguides/elder-scrolls-v-skyrim-eguide/quests/quests/ritual-spell-radiant-quests",
+          "label": "Illusion ritual: original quest route and rewards",
+          "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
+          "label": "Apocalypse: master-school ritual requirements",
+          "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
+        },
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Illusion_%28Skyrim%29",
+          "label": "Illusion skill reference",
+          "scope": "Documents the standard 100-skill master quest; references differ on the 90/100 gate."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Arcanaeum, College halls and Midden",
+          "mapPlace": "College of Winterhold"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "School / quest gate",
+          "text": "100 in standard unpatched references; some guides and patches use 90. The final installed gate is not verified."
+        }
+      ],
+      "notes": [
+        "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q034",
+      "title": "Conjuration Ritual Spell",
+      "mod": "Apocalypse - Magic of Skyrim",
+      "lo": 37,
+      "kind": "Existing quest · magic unlock",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Ask Phinis Gestor about further Conjuration training.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "hook": "Complete Phinis's unbound-Dremora task and return its Sigil Stone.",
+      "rewards": [
+        {
+          "label": "Flame Thrall spell tome",
+          "kind": "completion",
+          "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Conjuration"
+            ]
+          }
+        },
+        {
+          "label": "Other master Conjuration tome purchases",
+          "kind": "unlock",
+          "note": "Purchasing is unlocked; these are not all awarded free.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Conjuration"
+            ]
+          }
+        },
+        {
+          "label": "Sigil Stone returned",
+          "kind": "completion",
+          "note": "Retain the quest's returned stone for the Atronach Forge.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "catalog": "W213",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W214",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W215",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W216",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W217",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W218",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W435",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W436",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Conjuration_Ritual_Spell",
+          "label": "Conjuration ritual: original quest route and rewards",
+          "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
+          "label": "Apocalypse: master-school ritual requirements",
+          "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "College rooftop ritual",
+          "mapPlace": "College of Winterhold"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "School / quest gate",
+          "text": "90 Conjuration in the base-game reference."
+        }
+      ],
+      "notes": [
+        "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q035",
+      "title": "Destruction Ritual Spell",
+      "mod": "Apocalypse - Magic of Skyrim",
+      "lo": 37,
+      "kind": "Existing quest · magic unlock",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Ask Faralda about further Destruction training.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "hook": "Solve the Power of the Elements book's three elemental trials.",
+      "rewards": [
+        {
+          "label": "Fire Storm learned from the completed book",
+          "kind": "completion",
+          "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Destruction"
+            ]
+          }
+        },
+        {
+          "label": "Blizzard and Lightning Storm purchases",
+          "kind": "unlock",
+          "note": "Purchasing is unlocked; these are not all awarded free.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Destruction"
+            ]
+          }
+        },
+        {
+          "catalog": "W224",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W225",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W440",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://skyrim.fandom.com/wiki/Destruction_Ritual_Spell",
+          "label": "Destruction ritual: original quest route and rewards",
+          "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
+          "label": "Apocalypse: master-school ritual requirements",
+          "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Windward Ruins",
+          "mapPlace": "Windward Ruins"
+        },
+        {
+          "world": "skyrim",
+          "place": "North Skybound Watch",
+          "mapPlace": "North Skybound Watch"
+        },
+        {
+          "world": "skyrim",
+          "place": "Four Skull Lookout",
+          "mapPlace": "Four Skull Lookout"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "School / quest gate",
+          "text": "100 in standard unpatched references; 90 is reported for patched variants. The final installed gate is not verified."
+        }
+      ],
+      "notes": [
+        "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q036",
+      "title": "Alteration Ritual Spell",
+      "mod": "Apocalypse - Magic of Skyrim",
+      "lo": 37,
+      "kind": "Existing quest · magic unlock",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Ask Tolfdir about further Alteration training.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "hook": "Find Kahvozein's Fang and use it to recover Dragon Heartscales.",
+      "rewards": [
+        {
+          "label": "Dragonhide spell tome",
+          "kind": "completion",
+          "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Alteration"
+            ]
+          }
+        },
+        {
+          "label": "Mass Paralysis purchases",
+          "kind": "unlock",
+          "note": "Purchasing is unlocked; these are not all awarded free.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Alteration"
+            ]
+          }
+        },
+        {
+          "catalog": "W094",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W527",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        },
+        {
+          "catalog": "W532",
+          "kind": "unlock",
+          "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://skyrim.fandom.com/wiki/Alteration_Ritual_Spell",
+          "label": "Alteration ritual: original quest route and rewards",
+          "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
+          "label": "Apocalypse: master-school ritual requirements",
+          "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Assigned dagger dungeon / a dragon corpse"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "School / quest gate",
+          "text": "90 Alteration in the base-game reference."
+        }
+      ],
+      "notes": [
+        "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q037",
+      "title": "Restoration Ritual Spell",
+      "mod": "Apocalypse - Magic of Skyrim",
+      "lo": 37,
+      "kind": "Existing quest · magic unlock",
+      "start": {
+        "world": "skyrim",
+        "area": "College of Winterhold",
+        "place": "College of Winterhold",
+        "trigger": "Ask Colette Marence about further Restoration training.",
+        "mapPlace": "College of Winterhold",
+        "precision": "hub"
+      },
+      "hook": "Meet the Augur of Dunlain and survive his Restoration test.",
+      "rewards": [
+        {
+          "label": "Bane of the Undead learned from the Augur",
+          "kind": "completion",
+          "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Restoration"
+            ]
+          }
+        },
+        {
+          "label": "Guardian Circle purchases",
+          "kind": "unlock",
+          "note": "Purchasing is unlocked; these are not all awarded free.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Restoration"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://skyrim.fandom.com/wiki/Restoration_Ritual_Spell",
+          "label": "Restoration ritual: original quest route and rewards",
+          "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
+          "label": "Apocalypse: master-school ritual requirements",
+          "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
+        },
+        {
+          "url": "https://www.gamerguides.com/the-elder-scrolls-v-skyrim-anniversary-edition/guide/college-of-winterhold/college-of-winterhold-misc-quests/restoration-ritual-spell",
+          "label": "Guardian Circle purchase unlock",
+          "scope": "Base-game walkthrough."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "The Midden Dark",
+          "mapPlace": "College of Winterhold"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "School / quest gate",
+          "text": "90 Restoration and completion of Good Intentions in the base-game reference."
+        }
+      ],
+      "notes": [
+        "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q038",
+      "title": "The Cursed Tribe",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "The Rift / Largashbur",
+        "place": "Atub at Largashbur",
+        "trigger": "Help with the giant attack and speak to Atub.",
+        "mapPlace": "Largashbur",
+        "precision": "area"
+      },
+      "hook": "Help an Orc stronghold seek Malacath's judgment.",
+      "rewards": [
+        {
+          "catalog": "W372",
+          "kind": "completion",
+          "note": "Take Volendrung from the shrine at the conclusion; it is not just a journal notification."
+        },
+        {
+          "label": "Surviving stronghold followers",
+          "kind": "unlock",
+          "note": "Ogol, Ugor and Lob may become recruitable if they survive.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/The_Cursed_Tribe",
+          "label": "The Cursed Tribe: start, requirements and rewards",
+          "scope": "Base-game acquisition; Artificer's effect remains in W372."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Fallowstone Cave / Giant's Grove",
+          "mapPlace": "Fallowstone Cave"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Base-game level gate",
+          "text": "Level 9."
+        },
+        {
+          "kind": "Bring",
+          "text": "Troll Fat and a Daedra Heart for Atub's ritual."
+        }
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q039",
+      "title": "Waking Nightmare",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Dawnstar",
+        "place": "Erandur at the Windpeak Inn",
+        "trigger": "Speak to Erandur about the town's nightmares.",
+        "mapPlace": "Dawnstar",
+        "precision": "hub"
+      },
+      "hook": "Investigate the dreams haunting Dawnstar.",
+      "rewards": [
+        {
+          "catalog": "W370",
+          "kind": "choice",
+          "note": "The artifact and follower outcomes are alternatives."
+        },
+        {
+          "label": "Erandur as a follower",
+          "kind": "choice",
+          "note": "Available on the outcome that preserves him; not awarded alongside the staff by default.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Waking_Nightmare",
+          "label": "Waking Nightmare: branch rewards",
+          "scope": "Base-game quest reference; modded staff effect remains in W370."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Nightcaller Temple",
+          "mapPlace": "Nightcaller Temple"
+        }
+      ],
+      "spoilers": "Let Erandur finish the ritual to preserve him as a potential follower, or kill him during it to claim the Skull of Corruption.",
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q040",
+      "title": "A Night to Remember",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Variable inn encounter",
+        "place": "Sam Guevenne in an inn",
+        "trigger": "At level 14 or above, look for Sam and accept his drinking contest. His inn is not fixed across playthroughs."
+      },
+      "hook": "Piece together an ill-advised night out.",
+      "rewards": [
+        {
+          "catalog": "W369",
+          "kind": "completion",
+          "note": ""
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/A_Night_to_Remember_%28Skyrim%29",
+          "label": "A Night to Remember: starter and reward",
+          "scope": "Base-game route; Artificer's staff effect remains in W369."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "The trail eventually reaches Morvunskar",
+          "mapPlace": "Morvunskar"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Base-game level gate",
+          "text": "Level 14."
+        }
+      ],
+      "notes": [
+        "No single tavern is pinned as a guaranteed Sam spawn."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q041",
+      "title": "The Taste of Death",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Markarth",
+        "place": "Brother Verulus / Hall of the Dead",
+        "trigger": "Ask Verulus about the closed Hall of the Dead, then investigate and meet Eola.",
+        "mapPlace": "Markarth",
+        "precision": "hub"
+      },
+      "hook": "Investigate a disturbing secret beneath Markarth.",
+      "rewards": [
+        {
+          "catalog": "W368",
+          "kind": "choice",
+          "note": "Conditional on following Namira's full reward route."
+        },
+        {
+          "label": "Eola as a follower",
+          "kind": "choice",
+          "note": "Unlocked through the Namira route.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "label": "Gold for rescuing Verulus",
+          "kind": "choice",
+          "note": "An alternative outcome; it fails the original Daedric quest and does not also grant the ring.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/The_Taste_of_Death",
+          "label": "The Taste of Death: reward branches",
+          "scope": "Base-game paths; no separate Namira-alternative mod is assumed."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Reachcliff Cave",
+          "mapPlace": "Reachcliff Cave"
+        }
+      ],
+      "spoilers": "Namira's ring requires sacrificing and feeding on Verulus. Rescuing him instead prevents that ring reward; it is not an exploit-based double-reward route.",
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q042",
+      "title": "The Wolf Queen Awakened",
+      "mod": "Artificer / Knight of the North",
+      "lo": 146,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Solitude",
+        "place": "Falk Firebeard in the Blue Palace",
+        "trigger": "Follow Falk's courier summons after The Man Who Cried Wolf.",
+        "mapPlace": "Solitude",
+        "precision": "hub"
+      },
+      "hook": "Return to the unresolved danger beneath Solitude.",
+      "rewards": [
+        {
+          "label": "Shield of Solitude",
+          "kind": "completion",
+          "note": "The original completion shield; its current load-order enchantment is not expanded here.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Light armor"
+            ],
+            "slot": [
+              "Shield"
+            ]
+          }
+        },
+        {
+          "label": "Leveled gold",
+          "kind": "completion",
+          "note": "No fixed amount is promised.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "catalog": "W363",
+          "kind": "unlock",
+          "note": "Knight of the North clears ownership restrictions on the separately placed Sword of the Crusader in the Hall of the Dead. Collect it yourself."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/The_Wolf_Queen_Awakened",
+          "label": "Wolf Queen: starter and rewards",
+          "scope": "Base-game quest reference."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
+          "label": "Knight of the North: sword ownership",
+          "scope": "Author-documented extra access, not an automatic sword award."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Solitude catacombs / Potema's Sanctum",
+          "mapPlace": "Solitude"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Required quest",
+          "text": "The Man Who Cried Wolf; the base-game courier also depends on further level progression."
+        }
+      ],
+      "chain": [
+        "Q032"
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q043",
+      "title": "Forbidden Legend",
+      "mod": "Skyrim / Artificer setup",
+      "lo": 57,
+      "kind": "Existing quest · artifact hunt",
+      "start": {
+        "world": "skyrim",
+        "area": "Multiple starting routes",
+        "place": "Lost Legends book / a Gauldur clue",
+        "trigger": "Read Lost Legends or discover a Gauldur fragment or writ; these provide leads into the legend."
+      },
+      "hook": "Reunite three fragments of a lost amulet.",
+      "rewards": [
+        {
+          "label": "Gauldur Amulet",
+          "kind": "completion",
+          "note": "Reforge and collect it at Reachwater Rock. Its final modded effect is not recorded in this quest card.",
+          "tags": {
+            "category": [
+              "Jewelry"
+            ],
+            "slot": [
+              "Amulet / necklace"
+            ]
+          }
+        },
+        {
+          "label": "Gauldur Blackblade",
+          "kind": "boss",
+          "note": "Loot from the Folgunthur route, not a final turn-in gift.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Sword"
+            ],
+            "hand": [
+              "One-handed"
+            ]
+          }
+        },
+        {
+          "label": "Gauldur Blackbow",
+          "kind": "boss",
+          "note": "Loot from the Geirmund's Hall route, not a final turn-in gift.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Bow"
+            ],
+            "hand": [
+              "Ranged"
+            ]
+          }
+        },
+        {
+          "label": "Staff of Jyrik Gauldurson",
+          "kind": "optional",
+          "note": "A Saarthal route pickup, not the final amulet reward.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Staff"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Forbidden_Legend",
+          "label": "Forbidden Legend: routes and artifacts",
+          "scope": "Base-game acquisition; no unverified modded magnitudes are assigned."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Folgunthur",
+          "mapPlace": "Folgunthur"
+        },
+        {
+          "world": "skyrim",
+          "place": "Geirmund's Hall",
+          "mapPlace": "Geirmund's Hall"
+        },
+        {
+          "world": "skyrim",
+          "place": "Saarthal",
+          "mapPlace": "Saarthal"
+        },
+        {
+          "world": "skyrim",
+          "place": "Reachwater Rock",
+          "mapPlace": "Reachwater Rock"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Access",
+          "text": "The Saarthal portion requires College access through Under Saarthal."
+        }
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q044",
+      "title": "The Black Star",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "skyrim",
+        "area": "Winterhold / Shrine of Azura",
+        "place": "Aranea Ienith at the Shrine of Azura",
+        "trigger": "Speak to Aranea to begin the search.",
+        "mapPlace": "Shrine of Azura",
+        "precision": "area"
+      },
+      "hook": "Restore a Daedric artifact—or choose a different use for it.",
+      "rewards": [
+        {
+          "catalog": "W366",
+          "kind": "choice",
+          "note": "The Azura outcome; see its catalog entry for the qualified Artificer effect."
+        },
+        {
+          "label": "The Black Star",
+          "kind": "choice",
+          "note": "Alternative reusable soul-gem artifact; its exact modded soul restrictions are not certified here.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "label": "Aranea as a follower",
+          "kind": "choice",
+          "note": "Available through the Azura outcome, not the Nelacar outcome.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/The_Black_Star_%28Quest%29",
+          "label": "The Black Star: starter and choices",
+          "scope": "Base-game quest reference, with modded item scope preserved."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Ilinalta's Deep",
+          "mapPlace": "Ilinalta's Deep"
+        },
+        {
+          "world": "skyrim",
+          "place": "Aranea or Nelacar in Winterhold",
+          "mapPlace": "Winterhold"
+        }
+      ],
+      "spoilers": "Return the broken star to Aranea for Azura's Star and her follower route; use Nelacar for the Black Star. These are alternative outcomes.",
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q045",
+      "title": "Unearthed",
+      "mod": "Artificer - An Artifact Overhaul",
+      "lo": 57,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "solstheim",
+        "area": "Kolbjorn Barrow",
+        "place": "Ralis Sedarys's excavation camp",
+        "trigger": "Speak to Ralis outside Kolbjorn Barrow and fund the excavation.",
+        "mapPlace": "Kolbjorn Barrow",
+        "precision": "area"
+      },
+      "hook": "Sponsor a dig that uncovers increasingly dangerous relics.",
+      "rewards": [
+        {
+          "label": "Ralis as a follower",
+          "kind": "choice",
+          "note": "Recruitable if spared after the finale.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "catalog": "W310",
+          "kind": "optional",
+          "note": "Ahzidal's Ring of Necromancy is found during the excavation; it is not automatically awarded by Ralis."
+        },
+        {
+          "label": "Ahzidal armor relics",
+          "kind": "optional",
+          "note": "Separate pickups during the excavation, not a turn-in set.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Heavy armor"
+            ],
+            "slot": [
+              "Full set"
+            ]
+          }
+        },
+        {
+          "label": "Ahzidal's Ring of Arcana",
+          "kind": "optional",
+          "note": "A separate excavation find; do not infer its final spell balance from the base-game name.",
+          "tags": {
+            "category": [
+              "Jewelry"
+            ],
+            "slot": [
+              "Ring"
+            ]
+          }
+        },
+        {
+          "label": "Ahzidal mask",
+          "kind": "boss",
+          "note": "Loot Ahzidal at the finale.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Heavy armor"
+            ],
+            "slot": [
+              "Helmet / headwear"
+            ]
+          }
+        },
+        {
+          "label": "Black Book: Filament and Filigree",
+          "kind": "optional",
+          "note": "The book opens its own Apocrypha power selection, separate from finishing Unearthed.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Unearthed_%28Dragonborn%29",
+          "label": "Unearthed: relics, costs and outcome",
+          "scope": "Base-game acquisition; W310 retains Artificer's qualification."
+        },
+        {
+          "url": "https://primagames.com/eguides/elder-scrolls-v-skyrim-eguide/quests/dragonborn-quests/solstheim-side-quests",
+          "label": "Kolbjorn Black Book access",
+          "scope": "Official guide: Filament and Filigree, not The Sallow Regent."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "solstheim",
+          "place": "Kolbjorn Barrow",
+          "mapPlace": "Kolbjorn Barrow"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Funding",
+          "text": "The base-game excavation requires 11,000 gold across four payments and waiting for later stages."
+        }
+      ],
+      "notes": [
+        "Optional exploration loot is separated from the outcome-dependent follower unlock."
+      ],
+      "batch": "Expansion 2"
+    },
+    {
+      "id": "Q046",
+      "title": "Deathbrand",
+      "mod": "Artifact of Might - My Version",
+      "lo": 65,
+      "kind": "Existing quest · modded loot",
+      "start": {
+        "world": "solstheim",
+        "area": "Haknir's Shoal / book lead",
+        "place": "Deathbrand book or the pirates at Haknir's Shoal",
+        "trigger": "At level 36+, read Deathbrand or investigate the ancient chest and pirates at Haknir's Shoal.",
+        "mapPlace": "Haknir’s Shoal",
+        "precision": "area"
+      },
+      "hook": "Hunt a pirate king's scattered armor and sealed treasure.",
+      "rewards": [
+        {
+          "label": "Soulrender",
+          "kind": "completion",
+          "note": "Loot Haknir after the final fight; not an automatic inventory grant.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Sword"
+            ],
+            "hand": [
+              "One-handed"
+            ]
+          }
+        },
+        {
+          "label": "Bloodscythe",
+          "kind": "optional",
+          "note": "Pick up the sword in the final chamber before the boss fight.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ],
+            "weapon": [
+              "Sword"
+            ],
+            "hand": [
+              "One-handed"
+            ]
+          }
+        },
+        {
+          "label": "Deathbrand armor set",
+          "kind": "optional",
+          "note": "Four separate ancient chests across Solstheim; collect them along the route.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ],
+            "armor": [
+              "Light armor"
+            ],
+            "slot": [
+              "Full set"
+            ]
+          }
+        },
+        {
+          "catalog": "W008",
+          "kind": "optional",
+          "note": "Artifact of Might also places Raider's Axe in Gyldenhul Barrow; its original PS5 caveats remain."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://elderscrolls.fandom.com/wiki/Deathbrand_%28Quest%29",
+          "label": "Deathbrand: entry, armor hunt and swords",
+          "scope": "Base-game acquisition; W008 is separate mod-added loot."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "solstheim",
+          "place": "Solstheim treasure chests"
+        },
+        {
+          "world": "solstheim",
+          "place": "Gyldenhul Barrow",
+          "mapPlace": "Gyldenhul Barrow"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "Base-game level gate",
+          "text": "Level 36."
+        },
+        {
+          "kind": "Bring",
+          "text": "An Ancient Nordic Pickaxe for the stalhrim blocking access in Gyldenhul Barrow."
+        }
+      ],
+      "batch": "Expansion 2"
     }
-   ]
+  ],
+  "catalogLinks": {
+    "Q020": {
+      "Auriel's Bow": {
+        "catalog": "W624",
+        "note": "Collect at the end of the quest. The linked item separates its expected Artificer effect from PS5 verification.",
+        "tags": {}
+      }
+    },
+    "Q022": {
+      "Savior's Hide": {
+        "catalog": "W623",
+        "note": "Alternative branch reward. Do not assume both outcomes from one normal completion.",
+        "tags": {}
+      }
+    },
+    "Q042": {
+      "Shield of Solitude": {
+        "catalog": "W633",
+        "note": "Completion shield; Artificer is now below ArteFakes in the current order, so its mechanics are the expected item-record outcome. ArteFakes appearance is not guaranteed without a compatibility patch.",
+        "tags": {}
+      }
+    },
+    "Q043": {
+      "Gauldur Amulet": {
+        "catalog": "W626",
+        "note": "Reforge and collect at Reachwater Rock. See the item for its qualified modded effect.",
+        "tags": {}
+      }
+    },
+    "Q046": {
+      "Soulrender": {
+        "catalog": "W631",
+        "note": "Loot Haknir after the fight; not an automatic inventory grant.",
+        "tags": {}
+      },
+      "Bloodscythe": {
+        "catalog": "W632",
+        "note": "Pick up in the final chamber before the fight; route loot, not the final payout.",
+        "tags": {}
+      }
+    }
   },
-  {
-   "id": "Q019",
-   "title": "Lost to the Ages",
-   "mod": "Artificer / The Infinity Sword",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "The Reach",
-    "place": "Arkngthamz",
-    "trigger": "Follow the Aetherium investigation and meet Katria.",
-    "mapPlace": "Arkngthamz",
-    "precision": "area"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Multiple Dwemer sites / Aetherium Forge"
-    }
-   ],
-   "hook": "Reassemble a lost key and reach an ancient forge.",
-   "rewards": [
-    {
-     "catalog": "W311",
-     "kind": "choice",
-     "note": "One of the three forge choices."
-    },
-    {
-     "catalog": "W380",
-     "kind": "choice",
-     "note": "One of the three forge choices."
-    },
-    {
-     "label": "Aetherial Crown",
-     "kind": "choice",
-     "note": "The remaining forge choice; current load-order effect not researched here.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "slot": [
-       "Circlet / crown"
-      ]
-     }
-    },
-    {
-     "catalog": "W178",
-     "kind": "optional",
-     "note": "A mod-added sword in the forge's magma, separate from the three forge choices."
-    }
-   ],
-   "notes": [
-    "Choose one standard forge reward. The optional Infinity Sword is a separate pickup."
-   ],
-   "sources": [
-    {
-     "label": "Lost to the Ages",
-     "url": "https://elderscrolls.fandom.com/wiki/Lost_to_the_Ages",
-     "scope": "Base-game start and reward choices; mod-added pickups retain their catalog sources."
-    }
-   ]
-  },
-  {
-   "id": "Q020",
-   "title": "Touching the Sky",
-   "mod": "Artificer / Occiglacies / Guns of Skyrim",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Dawnguard progression",
-    "place": "Serana after Unseen Visions",
-    "trigger": "Continue with Serana. Darkfall Cave is the first destination, not an independent new quest giver."
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Darkfall Cave",
-     "mapPlace": "Darkfall Cave"
-    },
-    {
-     "world": "forgotten-vale",
-     "place": "Chantry of Auriel"
-    }
-   ],
-   "hook": "Follow the route to Auriel's Bow.",
-   "rewards": [
-    {
-     "label": "Auriel's Bow",
-     "kind": "completion",
-     "note": "Retrieve the bow at the end; the current modded effect is not expanded in this card.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Bow"
-      ],
-      "hand": [
-       "Ranged"
-      ]
-     }
-    },
-    {
-     "catalog": "W050",
-     "kind": "optional"
-    },
-    {
-     "catalog": "W054",
-     "kind": "boss"
-    },
-    {
-     "catalog": "W058",
-     "kind": "boss"
-    },
-    {
-     "catalog": "W179",
-     "kind": "optional"
-    },
-    {
-     "catalog": "W192",
-     "kind": "optional"
-    },
-    {
-     "catalog": "W195",
-     "kind": "optional"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Required quest",
-     "text": "Unseen Visions."
-    }
-   ],
-   "chain": [
-    "Q013"
-   ],
-   "notes": [
-    "Keep the Initiate's Ewer in mind for the separate optional Altar of Lies secret in Aberrations (Q013).",
-    "Split-port firearm inclusion and exact cell caveats remain attached to the relevant W-number entries."
-   ],
-   "sources": [
-    {
-     "label": "Touching the Sky",
-     "url": "https://elderscrolls.fandom.com/wiki/Touching_the_Sky_%28Quest%29",
-     "scope": "Base-game quest route; additional gear from retained mod-item research."
-    }
-   ]
-  },
-  {
-   "id": "Q021",
-   "title": "Lost Relic",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Fort Dawnguard / The Rift",
-    "place": "Fort Dawnguard",
-    "trigger": "Ask Florentius Baenius for work.",
-    "mapPlace": "Fort Dawnguard",
-    "precision": "area"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Radiant dungeon assigned by the quest"
-    }
-   ],
-   "hook": "Recover an old Dawnguard relic and keep it.",
-   "rewards": [
-    {
-     "catalog": "W544",
-     "kind": "choice",
-     "note": "One assigned relic per run, not all three from one chest."
-    },
-    {
-     "catalog": "W545",
-     "kind": "choice",
-     "note": "One assigned relic per run."
-    },
-    {
-     "catalog": "W546",
-     "kind": "choice",
-     "note": "One assigned relic per run."
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Faction access",
-     "text": "Dawnguard route; recruit Florentius. Side-quest progression affects availability."
-    }
-   ],
-   "notes": [
-    "The destination is radiant. Use your quest journal instead of a fixed dungeon pin."
-   ],
-   "sources": [
-    {
-     "label": "Lost Relic",
-     "url": "https://skyrim.fandom.com/wiki/Lost_Relic",
-     "scope": "Base-game starter and reward reference; modified relics retain original catalog evidence."
-    }
-   ]
-  },
-  {
-   "id": "Q022",
-   "title": "Ill Met by Moonlight",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Falkreath",
-    "place": "Falkreath Jail",
-    "trigger": "Speak to Sinding.",
-    "mapPlace": "Falkreath",
-    "precision": "hub"
-   },
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Bloated Man's Grotto",
-     "mapPlace": "Bloated Man's Grotto"
-    }
-   ],
-   "hook": "Take part in Hircine's hunt and choose its outcome.",
-   "rewards": [
-    {
-     "catalog": "W367",
-     "kind": "choice",
-     "note": "Outcome-dependent ring; the Artificer effect remains qualified in its catalog entry."
-    },
-    {
-     "label": "Savior's Hide",
-     "kind": "choice",
-     "note": "Alternative light-armor reward; current modded effect not indexed here.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "armor": [
-       "Light armor"
-      ],
-      "slot": [
-       "Body / robes"
-      ]
-     }
-    }
-   ],
-   "notes": [
-    "Alternative documented paths; exploit-based double rewards are not assumed."
-   ],
-   "spoilers": "Spare Sinding and defeat the hunters for the Ring of Hircine path. Kill and skin Sinding for the Savior's Hide path.",
-   "sources": [
-    {
-     "label": "Ill Met by Moonlight",
-     "url": "https://elderscrolls.fandom.com/wiki/Ill_Met_by_Moonlight",
-     "scope": "Base-game start and reward branches; modded ring effect from original catalog."
-    }
-   ]
-  },
-  {
-   "id": "Q023",
-   "title": "The Breathing Abyss",
-   "mod": "The Breathing Abyss",
-   "lo": 142,
-   "kind": "Mod quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Dawnstar coast",
-    "place": "Manias on an island near Yngvild",
-    "trigger": "Speak to Manias; the recorded instructions put his island northeast of Dawnstar.",
-    "mapPlace": "Yngvild",
-    "precision": "nearby"
-   },
-   "hook": "Follow an investigation into an unsettling underwater cavern.",
-   "rewards": [
-    {
-     "label": "Permanent character buff",
-     "kind": "lead",
-     "note": "Added in the author's 1.0.6 changelog. Its name and numbers, and inclusion in the recorded v1.00 PS5 port, are not established.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/141216",
-     "label": "The Breathing Abyss remake: description and changelog",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "load-order.html#mod-148",
-     "label": "Recorded entry #148",
-     "scope": "The recording supplies the Manias / Yngvild starting clue."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Manias' investigation / underwater cavern"
-    }
-   ],
-   "notes": [
-    "When Manias runs out of dialogue, the recorded instructions say to wait several days.",
-    "This is the remake linked by the port, not the older Breathing Abyss release. Yngvild is only a nearby reference."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q024",
-   "title": "Skragmjor — dungeon adventure",
-   "mod": "Skragmjor",
-   "lo": 5,
-   "kind": "Adventure guide",
-   "start": {
-    "world": "skyrim",
-    "area": "Whiterun outskirts",
-    "place": "New Nordic ruin west of Whiterun",
-    "trigger": "Find Skragmjor west of Whiterun; the exact approach is not calibrated in this atlas.",
-    "known": false
-   },
-   "hook": "Explore a newly exposed ruin and a missing-mercenary mystery.",
-   "rewards": [],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/139061",
-     "label": "Skragmjor: author description and version history",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Skragmjor"
-    }
-   ],
-   "notes": [
-    "The author documents a small flavor quest, not a verified quest title or named unique payout. This card covers the dungeon adventure.",
-    "The recorded title/version is Skragmjor v1.0.7. Older documentation calls it Forsaken Crypt."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q025",
-   "title": "Moonpath to Elsweyr — adventure overview",
-   "mod": "Moonpath to Elsweyr [PS5]",
-   "lo": 147,
-   "kind": "Mod questline",
-   "start": {
-    "world": "skyrim",
-    "area": "Falkreath",
-    "place": "Khajiit caravan by Falkreath's main gate",
-    "trigger": "Look for the caravan. The SSE author moved it outside Falkreath in 1.14b; older versions started inside the Dead Man's Drink. The recorded PS5 v1.00 label does not resolve that version difference.",
-    "mapPlace": "Falkreath",
-    "precision": "hub"
-   },
-   "hook": "Leave Skyrim with a caravan bound for Elsweyr.",
-   "rewards": [],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/4341",
-     "label": "Moonpath: SSE description and caravan-move changelog",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "load-order.html#mod-164",
-     "label": "Installed Lucien / Moonpath patch",
-     "scope": "Recorded compatibility addon, not proof of an extra player reward."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "elsweyr",
-     "place": "Moonpath's Elsweyr locations"
-    }
-   ],
-   "notes": [
-    "A questline overview, not a claim that every individual Moonpath quest is indexed. The complete ending payout remains undocumented here.",
-    "Elsweyr has no calibrated map layer on Saqrim yet. No unrelated realm map is substituted.",
-    "Your recorded setup includes the Lucien / Moonpath patch. This guide does not assume Legacy of the Dragonborn or its rewards."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q026",
-   "title": "The Oblivion Engine",
-   "mod": "Lucien - Fully Voiced Follower",
-   "lo": 156,
-   "kind": "Mod companion quest",
-   "start": {
-    "world": "variable",
-    "area": "Traveling with Lucien",
-    "place": "Lucien while adventuring together",
-    "trigger": "Recruit Lucien at the Dead Man's Drink in Falkreath, travel together, and ask where he wants to visit. His personal quest develops as his relationship with you grows."
-   },
-   "hook": "Investigate a Dwemer mystery with Lucien.",
-   "rewards": [
-    {
-     "label": "Lucien's research and follow-up quest access",
-     "kind": "unlock",
-     "note": "The later quest Intruders follows completion and re-recruitment; this is not the horse-riding reward.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/20035",
-     "label": "Lucien: personal-quest FAQ and Intruders / riding documentation",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "solstheim",
-     "place": "Dumzbthar"
-    }
-   ],
-   "chain": [
-    "Q027"
-   ],
-   "notes": [
-    "Falkreath is the recruitment location, not a guaranteed place where this quest triggers. Dumzbthar has no calibrated pin here.",
-    "Recorded Lucien menu: v1.7.2. Exact PS5 conditions and final override behavior remain untested."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q027",
-   "title": "Intruders",
-   "mod": "Lucien - Fully Voiced Follower",
-   "lo": 156,
-   "kind": "Mod companion quest",
-   "start": {
-    "world": "variable",
-    "area": "Traveling with Lucien",
-    "place": "Lucien after returning to the party",
-    "trigger": "After The Oblivion Engine, re-recruit Lucien and listen for his new idle dialogue roughly five in-game days later."
-   },
-   "hook": "Return to Lucien's unfinished research.",
-   "rewards": [
-    {
-     "label": "Horse riding for Lucien / Clive",
-     "kind": "unlock",
-     "note": "This unlocks riding for Lucien. Clive is his mount, not a new horse awarded to your character.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/20035",
-     "label": "Lucien: personal-quest FAQ and Intruders / riding documentation",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "solstheim",
-     "place": "Dumzbthar"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Required quest",
-     "text": "The Oblivion Engine (Q026), then re-recruit Lucien."
-    }
-   ],
-   "chain": [
-    "Q026"
-   ],
-   "notes": [
-    "The location where the dialogue fires depends on your travels; no fixed quest-giver pin is invented."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q028",
-   "title": "The Heart of Dibella — expanded",
-   "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 139,
-   "kind": "Expanded existing quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Markarth",
-    "place": "Hamal / Temple of Dibella",
-    "trigger": "The expansion offers a non-criminal invitation: become Thane of the Reach and sleep for a courier, or help five people in the Reach. The original inner-sanctum route remains available.",
-    "mapPlace": "Markarth",
-    "precision": "hub"
-   },
-   "hook": "Help the temple and choose how Dibella's favor suits your character.",
-   "rewards": [
-    {
-     "label": "Agent of Dibella",
-     "kind": "completion",
-     "note": "The author lets Hamal configure +10% damage against the opposite sex, +10% against the same sex, +5% against both, or no bonus.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "catalog": "W362",
-     "kind": "unlock",
-     "note": "Knight of the North documents legitimate ownership of the temple's Helm of the Crusader after this quest. It remains a separate pickup."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/94863",
-     "label": "JaySerpa: Heart of Dibella expansion",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
-     "label": "Knight of the North: relic ownership",
-     "scope": "Author quest guide, also retained in W362."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Fjotra rescue / The Reach"
-    }
-   ],
-   "chain": [
-    "Q018",
-    "Q032"
-   ],
-   "notes": [
-    "Helping Madanach during Q018 provides an additional peaceful-rescue option in the expansion.",
-    "Component confirmed in the recorded v2.6 bundle. Its upstream version and the installed Wintersun patch's final behavior remain untested."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q029",
-   "title": "Innocence Lost — expanded",
-   "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 139,
-   "kind": "Expanded existing quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Windhelm",
-    "place": "Aventus Aretino's house",
-    "trigger": "Talk to Aventus. The expansion also allows investigating Grelod at Honorhall Orphanage in Riften before meeting him.",
-    "mapPlace": "Windhelm",
-    "precision": "hub"
-   },
-   "hook": "Resolve Aventus's plea, with an arrest alternative added by the mod.",
-   "rewards": [
-    {
-     "label": "Aretino Family Heirloom",
-     "kind": "completion",
-     "note": "The base-game return-to-Aventus reward; not an enchanted combat item. Alternate-route PS5 payout not separately verified.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "label": "Constance / orphanage follow-up",
-     "kind": "unlock",
-     "note": "The expansion adds a follow-up with Constance and an adoption route subject to its requirements.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/80974",
-     "label": "JaySerpa: Innocence Lost expansion",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Innocence_Lost",
-     "label": "Original quest starter and heirloom",
-     "scope": "Base-game reference; expansion differences are identified separately."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Honorhall Orphanage",
-     "mapPlace": "Riften"
-    }
-   ],
-   "chain": [
-    "Q030"
-   ],
-   "notes": [
-    "An arrest route does not automatically rule out the installed Destroy the Dark Brotherhood expansion; that component has its own kidnapping conditions.",
-    "Only confirmed bundle components are assumed; no other quest overhaul is silently added."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q030",
-   "title": "Destroy the Dark Brotherhood! — expanded",
-   "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 139,
-   "kind": "Expanded existing quest",
-   "start": {
-    "world": "skyrim",
-    "area": "Hjaalmarch / Dragon Bridge",
-    "place": "Astrid's Abandoned Shack encounter",
-    "trigger": "Choose the anti-Brotherhood path during Astrid's encounter, then follow the report to Commander Maro in Dragon Bridge.",
-    "mapPlace": "Abandoned Shack",
-    "precision": "area"
-   },
-   "hook": "Hunt the assassins through the expanded investigation.",
-   "rewards": [
-    {
-     "label": "Commander Maro's gold",
-     "kind": "completion",
-     "note": "The original quest pays 3,000 gold. This amount is a base-game reference, not a measured result from the installed bundle.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "label": "Fultheim the Fearless as a potential follower",
-     "kind": "unlock",
-     "note": "Conditional: free him alive, then find him again through the expansion's later encounter.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "catalog": "W373",
-     "kind": "boss",
-     "note": "Astrid's Blade of Woe is loot from her, not Maro's final payment."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/118229",
-     "label": "JaySerpa: Destroy the Dark Brotherhood expansion",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "https://www.gamebanshee.com/skyrim/walkthrough/destroythedarkbrotherhood.php",
-     "label": "Original quest payout",
-     "scope": "Base-game walkthrough, not the expansion's complete route."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/151173",
-     "label": "Artificer compatibility patch for Destroy the Dark Brotherhood - Quest Expansion",
-     "scope": "Patch-author documentation; establishes the upstream acquisition conflict, not the exact PS5 bundle payload."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Commander Maro",
-     "mapPlace": "Dragon Bridge"
-    },
-    {
-     "world": "skyrim",
-     "place": "Assassins / Falkreath Sanctuary",
-     "mapPlace": "Dark Brotherhood Sanctuary"
-    }
-   ],
-   "chain": [
-    "Q029"
-   ],
-   "notes": [
-    "The expansion replaces the simple password handoff with an investigation. Do not follow an unmodified walkthrough for that step.",
-    "After an Innocence Lost arrest, the expansion's alternate kidnapping route also requires the Constance follow-up and killing a vanilla Brotherhood contract target.",
-    "Rejecting the Brotherhood is a branching choice, not an additional route through its full membership storyline.",
-    "Compatibility warning: Artificer's Windshear and Firiniel's End can become unobtainable with Destroy the Dark Brotherhood - Quest Expansion unless its specific Artificer compatibility patch is used. That patch is not listed in this 220-mod order; the exact PS5 bundle behavior remains untested."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q031",
-   "title": "Infiltration — expanded",
-   "mod": "JaySerpa's Quest Expansion Bundle",
-   "lo": 139,
-   "kind": "Expanded existing quest",
-   "start": {
-    "world": "skyrim",
-    "area": "The Rift / Treva's Watch",
-    "place": "Stalleo's camp east of Treva's Watch",
-    "trigger": "Speak to Stalleo outside the fort.",
-    "mapPlace": "Treva's Watch",
-    "precision": "nearby"
-   },
-   "hook": "Decide how to resolve the dispute over Treva's Watch.",
-   "rewards": [
-    {
-     "label": "Detect Life spell tome",
-     "kind": "choice",
-     "note": "The original Stalleo success reward. The expansion adds other outcomes; this is not promised for every branch.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Alteration"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/114054",
-     "label": "JaySerpa: Infiltration expansion",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    },
-    {
-     "url": "https://www.gamebanshee.com/skyrim/walkthrough/infiltration.php",
-     "label": "Stalleo camp and original tome reward",
-     "scope": "Base-game reference; expanded paths differ."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Treva's Watch and escape tunnel",
-     "mapPlace": "Treva's Watch"
-    }
-   ],
-   "notes": [
-    "You can bring Stalleo's group along in the expansion. Enter through the escape tunnel rather than rely on the old front-gate shortcut.",
-    "The author documents a lasting cleared fort on Stalleo's success path. No unrelated Cutting Room Floor patch is assumed."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q032",
-   "title": "Knight of the North — Crusader relic hunt",
-   "mod": "Knight of the North - Divine Crusader Reworked (PS5)",
-   "lo": 153,
-   "kind": "Adventure guide",
-   "start": {
-    "world": "skyrim",
-    "area": "Winterhold coast / Tower Stone",
-    "place": "Iceberg Explorer site near the Tower Stone",
-    "trigger": "Read the knight's journal and related Thalmor orders. The author recommends this starting point, but the relic hunt can begin with clues at another relic.",
-    "mapPlace": "The Tower Stone",
-    "precision": "nearby"
-   },
-   "hook": "Follow scattered clues to the Divine Crusader's equipment.",
-   "rewards": [
-    {
-     "catalog": "W358",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W359",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W360",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W361",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W362",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W363",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W364",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    },
-    {
-     "catalog": "W365",
-     "kind": "optional",
-     "note": "A separately placed relic or clue; not a single final turn-in payout."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
-     "label": "Knight of the North: author quest guide",
-     "scope": "Original author documentation; recorded PS5 behavior not independently tested."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Relic sites across Skyrim"
-    }
-   ],
-   "chain": [
-    "Q028",
-    "Q042"
-   ],
-   "notes": [
-    "The base Creation's Four Skull Lookout shortcut is not this overhaul's acquisition route.",
-    "The author guide contains conflicting cuirass clues (Northwatch Keep versus a Rorikstead shrine); those remain visible in W364 rather than being silently reconciled.",
-    "Heart of Dibella and Wolf Queen Awakened remove ownership restrictions on two separate relics; follow the linked cards."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q033",
-   "title": "Illusion Ritual Spell",
-   "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 39,
-   "kind": "Existing quest · magic unlock",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Ask Drevis Neloren about further Illusion training.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "hook": "Use Vision of the Tenth Eye to find the four hidden College texts.",
-   "rewards": [
-    {
-     "label": "Hysteria spell tome",
-     "kind": "completion",
-     "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Illusion"
-      ]
-     }
-    },
-    {
-     "label": "Call to Arms, Harmony and Mayhem purchases",
-     "kind": "unlock",
-     "note": "Purchasing is unlocked; these are not all awarded free.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Illusion"
-      ]
-     }
-    },
-    {
-     "catalog": "W099",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W444",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W445",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://primagames.com/eguides/elder-scrolls-v-skyrim-eguide/quests/quests/ritual-spell-radiant-quests",
-     "label": "Illusion ritual: original quest route and rewards",
-     "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
-     "label": "Apocalypse: master-school ritual requirements",
-     "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
-    },
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Illusion_%28Skyrim%29",
-     "label": "Illusion skill reference",
-     "scope": "Documents the standard 100-skill master quest; references differ on the 90/100 gate."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Arcanaeum, College halls and Midden",
-     "mapPlace": "College of Winterhold"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "School / quest gate",
-     "text": "100 in standard unpatched references; some guides and patches use 90. The final installed gate is not verified."
-    }
-   ],
-   "notes": [
-    "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q034",
-   "title": "Conjuration Ritual Spell",
-   "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 39,
-   "kind": "Existing quest · magic unlock",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Ask Phinis Gestor about further Conjuration training.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "hook": "Complete Phinis's unbound-Dremora task and return its Sigil Stone.",
-   "rewards": [
-    {
-     "label": "Flame Thrall spell tome",
-     "kind": "completion",
-     "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Conjuration"
-      ]
-     }
-    },
-    {
-     "label": "Other master Conjuration tome purchases",
-     "kind": "unlock",
-     "note": "Purchasing is unlocked; these are not all awarded free.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Conjuration"
-      ]
-     }
-    },
-    {
-     "label": "Sigil Stone returned",
-     "kind": "completion",
-     "note": "Retain the quest's returned stone for the Atronach Forge.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "catalog": "W213",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W214",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W215",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W216",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W217",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W218",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W435",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W436",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Conjuration_Ritual_Spell",
-     "label": "Conjuration ritual: original quest route and rewards",
-     "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
-     "label": "Apocalypse: master-school ritual requirements",
-     "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "College rooftop ritual",
-     "mapPlace": "College of Winterhold"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "School / quest gate",
-     "text": "90 Conjuration in the base-game reference."
-    }
-   ],
-   "notes": [
-    "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q035",
-   "title": "Destruction Ritual Spell",
-   "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 39,
-   "kind": "Existing quest · magic unlock",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Ask Faralda about further Destruction training.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "hook": "Solve the Power of the Elements book's three elemental trials.",
-   "rewards": [
-    {
-     "label": "Fire Storm learned from the completed book",
-     "kind": "completion",
-     "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Destruction"
-      ]
-     }
-    },
-    {
-     "label": "Blizzard and Lightning Storm purchases",
-     "kind": "unlock",
-     "note": "Purchasing is unlocked; these are not all awarded free.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Destruction"
-      ]
-     }
-    },
-    {
-     "catalog": "W224",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W225",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W440",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://skyrim.fandom.com/wiki/Destruction_Ritual_Spell",
-     "label": "Destruction ritual: original quest route and rewards",
-     "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
-     "label": "Apocalypse: master-school ritual requirements",
-     "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Windward Ruins",
-     "mapPlace": "Windward Ruins"
-    },
-    {
-     "world": "skyrim",
-     "place": "North Skybound Watch",
-     "mapPlace": "North Skybound Watch"
-    },
-    {
-     "world": "skyrim",
-     "place": "Four Skull Lookout",
-     "mapPlace": "Four Skull Lookout"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "School / quest gate",
-     "text": "100 in standard unpatched references; 90 is reported for patched variants. The final installed gate is not verified."
-    }
-   ],
-   "notes": [
-    "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q036",
-   "title": "Alteration Ritual Spell",
-   "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 39,
-   "kind": "Existing quest · magic unlock",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Ask Tolfdir about further Alteration training.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "hook": "Find Kahvozein's Fang and use it to recover Dragon Heartscales.",
-   "rewards": [
-    {
-     "label": "Dragonhide spell tome",
-     "kind": "completion",
-     "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Alteration"
-      ]
-     }
-    },
-    {
-     "label": "Mass Paralysis purchases",
-     "kind": "unlock",
-     "note": "Purchasing is unlocked; these are not all awarded free.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Alteration"
-      ]
-     }
-    },
-    {
-     "catalog": "W094",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W527",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    },
-    {
-     "catalog": "W532",
-     "kind": "unlock",
-     "note": "Purchase unlock only; see the linked item's skill and PS5 version notes."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://skyrim.fandom.com/wiki/Alteration_Ritual_Spell",
-     "label": "Alteration ritual: original quest route and rewards",
-     "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
-     "label": "Apocalypse: master-school ritual requirements",
-     "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Assigned dagger dungeon / a dragon corpse"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "School / quest gate",
-     "text": "90 Alteration in the base-game reference."
-    }
-   ],
-   "notes": [
-    "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q037",
-   "title": "Restoration Ritual Spell",
-   "mod": "Apocalypse - Magic of Skyrim",
-   "lo": 39,
-   "kind": "Existing quest · magic unlock",
-   "start": {
-    "world": "skyrim",
-    "area": "College of Winterhold",
-    "place": "College of Winterhold",
-    "trigger": "Ask Colette Marence about further Restoration training.",
-    "mapPlace": "College of Winterhold",
-    "precision": "hub"
-   },
-   "hook": "Meet the Augur of Dunlain and survive his Restoration test.",
-   "rewards": [
-    {
-     "label": "Bane of the Undead learned from the Augur",
-     "kind": "completion",
-     "note": "Base-game quest reward; spell balance and presentation can differ in the installed magic stack.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Restoration"
-      ]
-     }
-    },
-    {
-     "label": "Guardian Circle purchases",
-     "kind": "unlock",
-     "note": "Purchasing is unlocked; these are not all awarded free.",
-     "tags": {
-      "category": [
-       "Spells / summons"
-      ],
-      "school": [
-       "Restoration"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://skyrim.fandom.com/wiki/Restoration_Ritual_Spell",
-     "label": "Restoration ritual: original quest route and rewards",
-     "scope": "Base-game reference, not certification of modded skill gates or spell statistics."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/mods/1090",
-     "label": "Apocalypse: master-school ritual requirements",
-     "scope": "Original author gates; recorded v10.2.2 versus current author v10.3.0 remains a version qualification."
-    },
-    {
-     "url": "https://www.gamerguides.com/the-elder-scrolls-v-skyrim-anniversary-edition/guide/college-of-winterhold/college-of-winterhold-misc-quests/restoration-ritual-spell",
-     "label": "Guardian Circle purchase unlock",
-     "scope": "Base-game walkthrough."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "The Midden Dark",
-     "mapPlace": "College of Winterhold"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "School / quest gate",
-     "text": "90 Restoration and completion of Good Intentions in the base-game reference."
-    }
-   ],
-   "notes": [
-    "Base quest route and vanilla reward names are separated from Apocalypse's documented master-tome unlocks. The installed Mysticism / Odin / Apocalypse stack may alter individual spells or gates."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q038",
-   "title": "The Cursed Tribe",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "The Rift / Largashbur",
-    "place": "Atub at Largashbur",
-    "trigger": "Help with the giant attack and speak to Atub.",
-    "mapPlace": "Largashbur",
-    "precision": "area"
-   },
-   "hook": "Help an Orc stronghold seek Malacath's judgment.",
-   "rewards": [
-    {
-     "catalog": "W372",
-     "kind": "completion",
-     "note": "Take Volendrung from the shrine at the conclusion; it is not just a journal notification."
-    },
-    {
-     "label": "Surviving stronghold followers",
-     "kind": "unlock",
-     "note": "Ogol, Ugor and Lob may become recruitable if they survive.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/The_Cursed_Tribe",
-     "label": "The Cursed Tribe: start, requirements and rewards",
-     "scope": "Base-game acquisition; Artificer's effect remains in W372."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Fallowstone Cave / Giant's Grove",
-     "mapPlace": "Fallowstone Cave"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Base-game level gate",
-     "text": "Level 9."
-    },
-    {
-     "kind": "Bring",
-     "text": "Troll Fat and a Daedra Heart for Atub's ritual."
-    }
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q039",
-   "title": "Waking Nightmare",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Dawnstar",
-    "place": "Erandur at the Windpeak Inn",
-    "trigger": "Speak to Erandur about the town's nightmares.",
-    "mapPlace": "Dawnstar",
-    "precision": "hub"
-   },
-   "hook": "Investigate the dreams haunting Dawnstar.",
-   "rewards": [
-    {
-     "catalog": "W370",
-     "kind": "choice",
-     "note": "The artifact and follower outcomes are alternatives."
-    },
-    {
-     "label": "Erandur as a follower",
-     "kind": "choice",
-     "note": "Available on the outcome that preserves him; not awarded alongside the staff by default.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Waking_Nightmare",
-     "label": "Waking Nightmare: branch rewards",
-     "scope": "Base-game quest reference; modded staff effect remains in W370."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Nightcaller Temple",
-     "mapPlace": "Nightcaller Temple"
-    }
-   ],
-   "spoilers": "Let Erandur finish the ritual to preserve him as a potential follower, or kill him during it to claim the Skull of Corruption.",
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q040",
-   "title": "A Night to Remember",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Variable inn encounter",
-    "place": "Sam Guevenne in an inn",
-    "trigger": "At level 14 or above, look for Sam and accept his drinking contest. His inn is not fixed across playthroughs."
-   },
-   "hook": "Piece together an ill-advised night out.",
-   "rewards": [
-    {
-     "catalog": "W369",
-     "kind": "completion",
-     "note": ""
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/A_Night_to_Remember_%28Skyrim%29",
-     "label": "A Night to Remember: starter and reward",
-     "scope": "Base-game route; Artificer's staff effect remains in W369."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "The trail eventually reaches Morvunskar",
-     "mapPlace": "Morvunskar"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Base-game level gate",
-     "text": "Level 14."
-    }
-   ],
-   "notes": [
-    "No single tavern is pinned as a guaranteed Sam spawn."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q041",
-   "title": "The Taste of Death",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Markarth",
-    "place": "Brother Verulus / Hall of the Dead",
-    "trigger": "Ask Verulus about the closed Hall of the Dead, then investigate and meet Eola.",
-    "mapPlace": "Markarth",
-    "precision": "hub"
-   },
-   "hook": "Investigate a disturbing secret beneath Markarth.",
-   "rewards": [
-    {
-     "catalog": "W368",
-     "kind": "choice",
-     "note": "Conditional on following Namira's full reward route."
-    },
-    {
-     "label": "Eola as a follower",
-     "kind": "choice",
-     "note": "Unlocked through the Namira route.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "label": "Gold for rescuing Verulus",
-     "kind": "choice",
-     "note": "An alternative outcome; it fails the original Daedric quest and does not also grant the ring.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/The_Taste_of_Death",
-     "label": "The Taste of Death: reward branches",
-     "scope": "Base-game paths; no separate Namira-alternative mod is assumed."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Reachcliff Cave",
-     "mapPlace": "Reachcliff Cave"
-    }
-   ],
-   "spoilers": "Namira's ring requires sacrificing and feeding on Verulus. Rescuing him instead prevents that ring reward; it is not an exploit-based double-reward route.",
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q042",
-   "title": "The Wolf Queen Awakened",
-   "mod": "Artificer / Knight of the North",
-   "lo": 153,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Solitude",
-    "place": "Falk Firebeard in the Blue Palace",
-    "trigger": "Follow Falk's courier summons after The Man Who Cried Wolf.",
-    "mapPlace": "Solitude",
-    "precision": "hub"
-   },
-   "hook": "Return to the unresolved danger beneath Solitude.",
-   "rewards": [
-    {
-     "label": "Shield of Solitude",
-     "kind": "completion",
-     "note": "The original completion shield; its current load-order enchantment is not expanded here.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "armor": [
-       "Light armor"
-      ],
-      "slot": [
-       "Shield"
-      ]
-     }
-    },
-    {
-     "label": "Leveled gold",
-     "kind": "completion",
-     "note": "No fixed amount is promised.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "catalog": "W363",
-     "kind": "unlock",
-     "note": "Knight of the North clears ownership restrictions on the separately placed Sword of the Crusader in the Hall of the Dead. Collect it yourself."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/The_Wolf_Queen_Awakened",
-     "label": "Wolf Queen: starter and rewards",
-     "scope": "Base-game quest reference."
-    },
-    {
-     "url": "https://www.nexusmods.com/skyrimspecialedition/articles/3005",
-     "label": "Knight of the North: sword ownership",
-     "scope": "Author-documented extra access, not an automatic sword award."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Solitude catacombs / Potema's Sanctum",
-     "mapPlace": "Solitude"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Required quest",
-     "text": "The Man Who Cried Wolf; the base-game courier also depends on further level progression."
-    }
-   ],
-   "chain": [
-    "Q032"
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q043",
-   "title": "Forbidden Legend",
-   "mod": "Skyrim / Artificer setup",
-   "lo": 57,
-   "kind": "Existing quest · artifact hunt",
-   "start": {
-    "world": "skyrim",
-    "area": "Multiple starting routes",
-    "place": "Lost Legends book / a Gauldur clue",
-    "trigger": "Read Lost Legends or discover a Gauldur fragment or writ; these provide leads into the legend."
-   },
-   "hook": "Reunite three fragments of a lost amulet.",
-   "rewards": [
-    {
-     "label": "Gauldur Amulet",
-     "kind": "completion",
-     "note": "Reforge and collect it at Reachwater Rock. Its final modded effect is not recorded in this quest card.",
-     "tags": {
-      "category": [
-       "Jewelry"
-      ],
-      "slot": [
-       "Amulet / necklace"
-      ]
-     }
-    },
-    {
-     "label": "Gauldur Blackblade",
-     "kind": "boss",
-     "note": "Loot from the Folgunthur route, not a final turn-in gift.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Sword"
-      ],
-      "hand": [
-       "One-handed"
-      ]
-     }
-    },
-    {
-     "label": "Gauldur Blackbow",
-     "kind": "boss",
-     "note": "Loot from the Geirmund's Hall route, not a final turn-in gift.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Bow"
-      ],
-      "hand": [
-       "Ranged"
-      ]
-     }
-    },
-    {
-     "label": "Staff of Jyrik Gauldurson",
-     "kind": "optional",
-     "note": "A Saarthal route pickup, not the final amulet reward.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Staff"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Forbidden_Legend",
-     "label": "Forbidden Legend: routes and artifacts",
-     "scope": "Base-game acquisition; no unverified modded magnitudes are assigned."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Folgunthur",
-     "mapPlace": "Folgunthur"
-    },
-    {
-     "world": "skyrim",
-     "place": "Geirmund's Hall",
-     "mapPlace": "Geirmund's Hall"
-    },
-    {
-     "world": "skyrim",
-     "place": "Saarthal",
-     "mapPlace": "Saarthal"
-    },
-    {
-     "world": "skyrim",
-     "place": "Reachwater Rock",
-     "mapPlace": "Reachwater Rock"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Access",
-     "text": "The Saarthal portion requires College access through Under Saarthal."
-    }
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q044",
-   "title": "The Black Star",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "skyrim",
-    "area": "Winterhold / Shrine of Azura",
-    "place": "Aranea Ienith at the Shrine of Azura",
-    "trigger": "Speak to Aranea to begin the search.",
-    "mapPlace": "Shrine of Azura",
-    "precision": "area"
-   },
-   "hook": "Restore a Daedric artifact—or choose a different use for it.",
-   "rewards": [
-    {
-     "catalog": "W366",
-     "kind": "choice",
-     "note": "The Azura outcome; see its catalog entry for the qualified Artificer effect."
-    },
-    {
-     "label": "The Black Star",
-     "kind": "choice",
-     "note": "Alternative reusable soul-gem artifact; its exact modded soul restrictions are not certified here.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "label": "Aranea as a follower",
-     "kind": "choice",
-     "note": "Available through the Azura outcome, not the Nelacar outcome.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/The_Black_Star_%28Quest%29",
-     "label": "The Black Star: starter and choices",
-     "scope": "Base-game quest reference, with modded item scope preserved."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "skyrim",
-     "place": "Ilinalta's Deep",
-     "mapPlace": "Ilinalta's Deep"
-    },
-    {
-     "world": "skyrim",
-     "place": "Aranea or Nelacar in Winterhold",
-     "mapPlace": "Winterhold"
-    }
-   ],
-   "spoilers": "Return the broken star to Aranea for Azura's Star and her follower route; use Nelacar for the Black Star. These are alternative outcomes.",
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q045",
-   "title": "Unearthed",
-   "mod": "Artificer - An Artifact Overhaul",
-   "lo": 57,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "solstheim",
-    "area": "Kolbjorn Barrow",
-    "place": "Ralis Sedarys's excavation camp",
-    "trigger": "Speak to Ralis outside Kolbjorn Barrow and fund the excavation.",
-    "mapPlace": "Kolbjorn Barrow",
-    "precision": "area"
-   },
-   "hook": "Sponsor a dig that uncovers increasingly dangerous relics.",
-   "rewards": [
-    {
-     "label": "Ralis as a follower",
-     "kind": "choice",
-     "note": "Recruitable if spared after the finale.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    },
-    {
-     "catalog": "W310",
-     "kind": "optional",
-     "note": "Ahzidal's Ring of Necromancy is found during the excavation; it is not automatically awarded by Ralis."
-    },
-    {
-     "label": "Ahzidal armor relics",
-     "kind": "optional",
-     "note": "Separate pickups during the excavation, not a turn-in set.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "armor": [
-       "Heavy armor"
-      ],
-      "slot": [
-       "Full set"
-      ]
-     }
-    },
-    {
-     "label": "Ahzidal's Ring of Arcana",
-     "kind": "optional",
-     "note": "A separate excavation find; do not infer its final spell balance from the base-game name.",
-     "tags": {
-      "category": [
-       "Jewelry"
-      ],
-      "slot": [
-       "Ring"
-      ]
-     }
-    },
-    {
-     "label": "Ahzidal mask",
-     "kind": "boss",
-     "note": "Loot Ahzidal at the finale.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "armor": [
-       "Heavy armor"
-      ],
-      "slot": [
-       "Helmet / headwear"
-      ]
-     }
-    },
-    {
-     "label": "Black Book: Filament and Filigree",
-     "kind": "optional",
-     "note": "The book opens its own Apocrypha power selection, separate from finishing Unearthed.",
-     "tags": {
-      "category": [
-       "Books / powers / other"
-      ]
-     }
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Unearthed_%28Dragonborn%29",
-     "label": "Unearthed: relics, costs and outcome",
-     "scope": "Base-game acquisition; W310 retains Artificer's qualification."
-    },
-    {
-     "url": "https://primagames.com/eguides/elder-scrolls-v-skyrim-eguide/quests/dragonborn-quests/solstheim-side-quests",
-     "label": "Kolbjorn Black Book access",
-     "scope": "Official guide: Filament and Filigree, not The Sallow Regent."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "solstheim",
-     "place": "Kolbjorn Barrow",
-     "mapPlace": "Kolbjorn Barrow"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Funding",
-     "text": "The base-game excavation requires 11,000 gold across four payments and waiting for later stages."
-    }
-   ],
-   "notes": [
-    "Optional exploration loot is separated from the outcome-dependent follower unlock."
-   ],
-   "batch": "Expansion 2"
-  },
-  {
-   "id": "Q046",
-   "title": "Deathbrand",
-   "mod": "Artifact of Might - My Version",
-   "lo": 65,
-   "kind": "Existing quest · modded loot",
-   "start": {
-    "world": "solstheim",
-    "area": "Haknir's Shoal / book lead",
-    "place": "Deathbrand book or the pirates at Haknir's Shoal",
-    "trigger": "At level 36+, read Deathbrand or investigate the ancient chest and pirates at Haknir's Shoal.",
-    "mapPlace": "Haknir’s Shoal",
-    "precision": "area"
-   },
-   "hook": "Hunt a pirate king's scattered armor and sealed treasure.",
-   "rewards": [
-    {
-     "label": "Soulrender",
-     "kind": "completion",
-     "note": "Loot Haknir after the final fight; not an automatic inventory grant.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Sword"
-      ],
-      "hand": [
-       "One-handed"
-      ]
-     }
-    },
-    {
-     "label": "Bloodscythe",
-     "kind": "optional",
-     "note": "Pick up the sword in the final chamber before the boss fight.",
-     "tags": {
-      "category": [
-       "Weapons / ammunition"
-      ],
-      "weapon": [
-       "Sword"
-      ],
-      "hand": [
-       "One-handed"
-      ]
-     }
-    },
-    {
-     "label": "Deathbrand armor set",
-     "kind": "optional",
-     "note": "Four separate ancient chests across Solstheim; collect them along the route.",
-     "tags": {
-      "category": [
-       "Armor / clothing"
-      ],
-      "armor": [
-       "Light armor"
-      ],
-      "slot": [
-       "Full set"
-      ]
-     }
-    },
-    {
-     "catalog": "W008",
-     "kind": "optional",
-     "note": "Artifact of Might also places Raider's Axe in Gyldenhul Barrow; its original PS5 caveats remain."
-    }
-   ],
-   "sources": [
-    {
-     "url": "https://elderscrolls.fandom.com/wiki/Deathbrand_%28Quest%29",
-     "label": "Deathbrand: entry, armor hunt and swords",
-     "scope": "Base-game acquisition; W008 is separate mod-added loot."
-    }
-   ],
-   "destinations": [
-    {
-     "world": "solstheim",
-     "place": "Solstheim treasure chests"
-    },
-    {
-     "world": "solstheim",
-     "place": "Gyldenhul Barrow",
-     "mapPlace": "Gyldenhul Barrow"
-    }
-   ],
-   "requirements": [
-    {
-     "kind": "Base-game level gate",
-     "text": "Level 36."
-    },
-    {
-     "kind": "Bring",
-     "text": "An Ancient Nordic Pickaxe for the stalhrim blocking access in Gyldenhul Barrow."
-    }
-   ],
-   "batch": "Expansion 2"
-  }
- ],
- "catalogLinks": {
-  "Q020": {
-   "Auriel's Bow": {
-    "catalog": "W624",
-    "note": "Collect at the end of the quest. The linked item separates its expected Artificer effect from PS5 verification.",
-    "tags": {}
-   }
-  },
-  "Q022": {
-   "Savior's Hide": {
-    "catalog": "W623",
-    "note": "Alternative branch reward. Do not assume both outcomes from one normal completion.",
-    "tags": {}
-   }
-  },
-  "Q042": {
-   "Shield of Solitude": {
-    "catalog": "W633",
-    "note": "Completion shield; Artificer is now below ArteFakes in the current order, so its mechanics are the expected item-record outcome. ArteFakes appearance is not guaranteed without a compatibility patch.",
-    "tags": {}
-   }
-  },
-  "Q043": {
-   "Gauldur Amulet": {
-    "catalog": "W626",
-    "note": "Reforge and collect at Reachwater Rock. See the item for its qualified modded effect.",
-    "tags": {}
-   }
-  },
-  "Q046": {
-   "Soulrender": {
-    "catalog": "W631",
-    "note": "Loot Haknir after the fight; not an automatic inventory grant.",
-    "tags": {}
-   },
-   "Bloodscythe": {
-    "catalog": "W632",
-    "note": "Pick up in the final chamber before the fight; route loot, not the final payout.",
-    "tags": {}
-   }
-  }
- },
- "catalogLinksScope": "Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam's current arrangement."
+  "catalogLinksScope": "Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam's current arrangement."
 }

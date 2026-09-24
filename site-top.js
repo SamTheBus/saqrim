@@ -1,7 +1,7 @@
 'use strict';
 // Shared site navigation is independent of the map, reference data and quest loaders.
 (() => {
- const entries=[['./','Loot catalog · 633'],['load-order.html','Load order · 219'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
+ const entries=[['./','Loot catalog · 633'],['load-order.html','Load order · 211'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
  function activePath(){
   const file=location.pathname.split('/').pop()||'index.html';
   if(['index.html','loot.html','catalog-source.html','catalog-current.html'].includes(file))return './';

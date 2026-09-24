@@ -37,7 +37,7 @@
    if(key){const av=value(a,key),bv=value(b,key),ak=validNumber(av),bk=validNumber(bv);if(ak!==bk)return ak?-1:1;if(ak&&av!==bv)return (sort.endsWith('desc')?-1:1)*(av-bv);}
    if(sort==='name')return a.r.Target.localeCompare(b.r.Target)||a.index-b.index;
    if(sort==='id')return Number(a.id.slice(1))-Number(b.id.slice(1));
-   if(sort==='mod')return Number(a.r['LO #'])-Number(b.r['LO #'])||a.index-b.index;
+   if(sort==='mod'){const av=String(a.r['LO #']??'').trim(),bv=String(b.r['LO #']??'').trim();if(Boolean(av)!==Boolean(bv))return av?-1:1;return (Number(av)||0)-(Number(bv)||0)||a.index-b.index;}
    return a.index-b.index;
   });
  }
@@ -86,13 +86,13 @@
   card.querySelector('.pick-select').addEventListener('change',e=>{choices[id]=e.target.value;updateChoice(item);write();render();say(id+' → '+pick(r)+(canSave?' · saved.':' · session only.'));});updateChoice(item);
  }
  try{
-  const res=await fetch('catalog-current.html?v=1');if(!res.ok)throw Error('Catalog data request failed.');
+  const res=await fetch('catalog-current.html?v=2');if(!res.ok)throw Error('Catalog data request failed.');
   const text=await res.text();const parsed=new DOMParser().parseFromString(text,'text/html');data=JSON.parse(parsed.getElementById('dataset').textContent);
   if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
   choices=sanitizeChoices(read(KEY));ratings=sanitizeRatings(read(RKEY));
   records=data.map((r,index)=>{const id=r['Catalog ID'];const original=parsed.getElementById(id);if(!original)throw Error('Missing card '+id);const meta=SaqrimTags.classify(r);return {id,r,index,meta,card:document.importNode(original,true),search:(Object.values(r).join(' ')+' '+Object.values(meta.tags).flat().join(' ')).toLowerCase()};});
   for(const [group,title,values]of SaqrimTags.groups){selected[group]=new Set();const block=node('details','facet');block.open=['category','school','armor','slot'].includes(group);block.append(node('summary','',title));const field=node('fieldset');field.append(node('legend','',title));for(const val of values){const label=node('label','tick');const input=node('input');input.type='checkbox';input.dataset.group=group;input.value=val;const count=node('span','', '0');count.setAttribute('aria-hidden','true');label.append(input,node('span','',val),count);field.append(label);inputs.push({group,val,input,label:count});input.addEventListener('change',()=>{if(input.checked)selected[group].add(val);else selected[group].delete(val);single=null;render();});}block.append(field);$('facets').append(block);}
-  const mods=new Map();for(const r of data)mods.set(String(r['LO #']),r['Installed mod']);[...mods].sort((a,b)=>Number(a[0])-Number(b[0])).forEach(([id,name])=>{const o=node('option','', '#'+id+' '+name);o.value=id;$('mod').append(o);});
+  const mods=new Map();for(const r of data){const id=String(r['LO #']??'').trim();if(id)mods.set(id,r['Installed mod']);}[...mods].sort((a,b)=>Number(a[0])-Number(b[0])).forEach(([id,name])=>{const o=node('option','', '#'+id+' '+name);o.value=id;$('mod').append(o);});
   records.forEach(enrichCard);
   document.querySelectorAll('[disabled]').forEach(n=>n.disabled=false);
   for(const id of ['search','mod','sort','only-new','only-artifact-batch','stat-source','known-only'])$(id).addEventListener(id==='search'?'input':'change',()=>{single=null;render();});
