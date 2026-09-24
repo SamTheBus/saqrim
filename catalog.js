@@ -86,7 +86,7 @@
   card.querySelector('.pick-select').addEventListener('change',e=>{choices[id]=e.target.value;updateChoice(item);write();render();say(id+' → '+pick(r)+(canSave?' · saved.':' · session only.'));});updateChoice(item);
  }
  try{
-  const res=await fetch('catalog-current.html?v=2');if(!res.ok)throw Error('Catalog data request failed.');
+  const res=await fetch('catalog-current.html?v=3');if(!res.ok)throw Error('Catalog data request failed.');
   const text=await res.text();const parsed=new DOMParser().parseFromString(text,'text/html');data=JSON.parse(parsed.getElementById('dataset').textContent);
   if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
   choices=sanitizeChoices(read(KEY));ratings=sanitizeRatings(read(RKEY));
