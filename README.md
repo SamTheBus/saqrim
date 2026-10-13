@@ -52,3 +52,7 @@ The source recording exposes Animated Armoury/GDB and GDB/Wear Multiple Rings wa
 ## October adventure content
 
 The current collection has 637 loot/power records, 56 quest/adventure guides, and 15 expanded mod descriptions. The 224-entry console order is unchanged. Content batch 02 covers Legacy of Orsinium, Undeath, The Final Cataclysm, Rotdyflissa and a qualified Dagoth recruitment profile. See [CONTENT-BATCH-02.md](CONTENT-BATCH-02.md). Earlier validation sections above describe historical batches.
+
+## Reward and trigger research
+
+[Partial findings and source scopes](REWARD-RESEARCH-01.md) expand six existing guides. The catalog and installation counts are unchanged; incomplete rosters and unverified PS5 build parity stay explicit. `tests/reward-research-01.py` checks preservation, lead-only filtering, sources, progress and mobile rendering.

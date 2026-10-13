@@ -168,6 +168,72 @@
       "label": "[PS] Dagoth Ur Follower by DerKernel — public content description",
       "url": "https://creations.bethesda.net/en/skyrim/details/1cd8ec53-d6c4-4631-ba2e-994d21a9ecfb/_PS__Dagoth_Ur_Follower_by_DerKernel",
       "note": "The public PS listing describes a voiced follower, custom items and a custom quest. It is a project-level lead, not confirmation of Sam's precise installed build."
+    },
+    "rr01-orsinium-index": {
+      "kind": "community",
+      "label": "UESP — Legacy of Orsinium equipment index",
+      "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+      "note": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+    },
+    "rr01-orsinium-mask": {
+      "kind": "community",
+      "label": "Players — Largashbur / Riften mask route",
+      "url": "https://www.reddit.com/r/skyrim/comments/1up5ev6/does_anyone_know_how_to_get_the_mask_on_the_right/",
+      "note": "ScottTJT and joksteryoyjoke describe the Argonian bargain and a chest key. The comments do not name the pictured mask; no identification as Firesong Mask or Malacath Mask is assumed. Platform parity remains untested."
+    },
+    "rr01-cataclysm-summon": {
+      "kind": "community",
+      "label": "VuldwiinThur — Ouroboros summon demonstration description",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=videos",
+      "note": "First-person video description, 18 November 2024: defeating Ouroboros gives a spell to summon him. The spell display name, school, duration, exact award mechanism and PS5 parity are not established."
+    },
+    "rr01-cataclysm-recipe": {
+      "kind": "community",
+      "label": "Xbox players — Incomplete Recipe",
+      "url": "https://www.reddit.com/r/skyrimmods/comments/1fh39do/the_final_cataclysm_recipe/",
+      "note": "Player discussion links a Chaos relic and an unnamed core to Orphis-style weapon upgrades. This is not a verified recipe, complete ingredient list, or tested PS5 route."
+    },
+    "rr01-cataclysm-button": {
+      "kind": "community",
+      "label": "Xbox players — Bone Button",
+      "url": "https://www.reddit.com/r/skyrimmods/comments/13iro2p/need_help_with_final_cataclysm/",
+      "note": "A player names Bone Button; a reply tentatively suggests Hollowed Dolls. No verified drop rate, crafting formula or PS5 location."
+    },
+    "rr01-cataclysm-infinity": {
+      "kind": "community",
+      "label": "PC player — Infinity progression item",
+      "url": "https://www.reddit.com/r/skyrimmods/comments/vgzw23/help_with_final_cataclysm_mod/",
+      "note": "A player reports receiving an item called Infinity during the adventure. The report does not establish item type, a final reward, or a connection to the separately installed Infinity Sword mod."
+    },
+    "rr01-cataclysm-blissfang": {
+      "kind": "community",
+      "label": "Nexus player peemapat72 — Blissfang record report",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=posts",
+      "note": "22 January 2026 comment: the player reports finding Blissfang in xEdit after initially not finding the weapon. Acquisition and correspondence to the PS5 build remain unverified; no PC console instructions are imported."
+    },
+    "rr01-cataclysm-translator": {
+      "kind": "upstream",
+      "label": "jihan02 — French v6.1 translation and playtest notes",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+      "note": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
+    },
+    "rr01-dagoth-trigger": {
+      "kind": "upstream",
+      "label": "Der_kernel — creator reply about the quest trigger",
+      "url": "https://www.reddit.com/r/skyrim/comments/1o51rag/dagoth_ur_mod_question/",
+      "note": "The creator explains that a random end-of-combat dialogue line triggers the quest. This establishes the upstream behavior, not the exact installed 1.37 GB PS5 build; no fixed kill count, level or timer is documented."
+    },
+    "rr01-dagoth-quest": {
+      "kind": "community",
+      "label": "PC players — Mazel Tov quest and cooking station",
+      "url": "https://www.reddit.com/r/skyrimmods/comments/1qgn2s2/dagoth_ur_mazel_tov_quest_help_does_anybody_have/",
+      "note": "The thread names Mazel Tov and horse, frost-troll and giant quest ingredients. Multiple replies specify a cooking station, not an alchemy table. Final potion name/effects and PS5 parity are unresolved."
+    },
+    "rr01-rotd-rebuild": {
+      "kind": "upstream",
+      "label": "FreestyleCrocodile — Rotdyflissa v3.0 description and changelog",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/94760",
+      "note": "The upstream page was rebuilt as v3.0 on 6 October 2026. A console menu version is a separate label. No complete named reward list or proven mapping from upstream v3.0 to the recorded PS5 v1.00 was established."
     }
   },
   "entries": {
@@ -871,7 +937,20 @@
           "b02-veelpoot"
         ]
       },
-      "sections": [],
+      "sections": [
+        {
+          "title": "Reward and quest research — partial coverage",
+          "claims": [
+            {
+              "text": "15 equipment names are now indexed as expansion-wide leads in Q047; an unnamed Riften mask route is recorded separately in Q050. Neither is presented as a complete reward roster.",
+              "refs": [
+                "rr01-orsinium-index",
+                "rr01-orsinium-mask"
+              ]
+            }
+          ]
+        }
+      ],
       "related": [],
       "guides": [
         {
@@ -931,7 +1010,20 @@
           "b02-cataclysm"
         ]
       },
-      "sections": [],
+      "sections": [
+        {
+          "title": "Reward and quest research — partial coverage",
+          "claims": [
+            {
+              "text": "Q053 now separates eight content leads, including a reported Ouroboros summon and travel magic, from verified final rewards. The exact PS5 first contact remains unresolved.",
+              "refs": [
+                "rr01-cataclysm-summon",
+                "rr01-cataclysm-translator"
+              ]
+            }
+          ]
+        }
+      ],
       "related": [],
       "guides": [
         {
@@ -955,7 +1047,19 @@
           "b02-rotd-video"
         ]
       },
-      "sections": [],
+      "sections": [
+        {
+          "title": "Reward and quest research — partial coverage",
+          "claims": [
+            {
+              "text": "The recorded Movarth’s Lair start remains unchanged. Upstream v3.0 was rebuilt; no complete named reward list or exact console-build mapping has been established.",
+              "refs": [
+                "rr01-rotd-rebuild"
+              ]
+            }
+          ]
+        }
+      ],
       "related": [],
       "guides": [
         {
@@ -976,11 +1080,24 @@
           "b02-dagoth-ps"
         ]
       },
-      "sections": [],
+      "sections": [
+        {
+          "title": "Reward and quest research — partial coverage",
+          "claims": [
+            {
+              "text": "The creator identifies a random post-combat line as the upstream quest trigger. Q056 also records the community-named Mazel Tov quest; exact PS5 build correspondence remains unconfirmed.",
+              "refs": [
+                "rr01-dagoth-trigger",
+                "rr01-dagoth-quest"
+              ]
+            }
+          ]
+        }
+      ],
       "related": [],
       "guides": [
         {
-          "label": "Dagoth Ur — companion and recruitment lead",
+          "label": "Dagoth Ur — recruitment and Mazel Tov research",
           "url": "quests.html#Q056"
         }
       ],
