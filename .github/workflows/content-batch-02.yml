@@ -1,0 +1,53 @@
+name: Build adventure content batch 02
+on:
+  push:
+    branches: [content-batch-02]
+    paths:
+      - 'data/content-batch-02.json'
+      - 'tools/add-content-batch-02.py'
+      - 'tests/content-batch-02.py'
+      - '.github/workflows/content-batch-02.yml'
+permissions:
+  contents: write
+concurrency:
+  group: content-batch-02-review
+  cancel-in-progress: true
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install content parsers and browser test tools
+        run: |
+          python -m pip install beautifulsoup4==4.13.5 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Add sourced adventure data and integration
+        run: python tools/add-content-batch-02.py
+      - name: Run load-order preservation and new content regressions
+        run: python tests/october-sync.py
+      - name: Commit tested website output to review branch
+        run: |
+          test "$GITHUB_REF_NAME" = content-batch-02
+          python - <<'PY'
+          import json, subprocess
+          paths=json.load(open('CONTENT-BATCH-02-REPORT.json'))['changedPaths']
+          assert all(not p.startswith('.github/') for p in paths)
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git config user.name 'Saqrim content builder'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Add tested October adventure and companion content'
+            git push origin HEAD:content-batch-02
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: adventure-content-batch-02-results
+          path: |
+            test-results/
+            CONTENT-BATCH-02-REPORT.json
+          retention-days: 7
