@@ -99,7 +99,7 @@ with sync_playwright() as pw:
     check('all 224 installation entries remain present',page.locator('#mods>.row').count()==224)
     check('224 checklist selection preserved',page.locator('#mods input[type=checkbox]:checked').count()==3)
     page.locator('#mod-142 .ref-card').evaluate('(d)=>d.open=true')
-    check('Rotdyflissa preview links to Q055',page.locator('#mod-142 .ref-card a[href="quests.html#Q055"]').count()==1)
+    check('Rotdyflissa preview links to Q055',page.locator('#mod-142 .ref-card a').evaluate_all('(links)=>links.filter(a=>{const u=new URL(a.href);return u.origin===location.origin&&u.pathname.endsWith("/quests.html")&&u.hash==="#Q055"}).length')==1)
     check('recorded source locator displayed','02:03.30' in page.locator('#mod-142 .ref-card').text_content())
     check('new preview review date visible','2026-10-12' in page.locator('#mod-142 .ref-card').inner_text())
     check('no new front-page warning block',page.locator('#reference-overview .ref-alert').count()==0)
