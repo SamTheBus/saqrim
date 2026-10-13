@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/content-batch-02.json'
       - 'tools/add-content-batch-02.py'
+      - 'tools/finalize-content-batch-02.py'
       - 'tests/content-batch-02.py'
       - '.github/workflows/content-batch-02.yml'
 permissions:
@@ -25,7 +26,9 @@ jobs:
           python -m pip install beautifulsoup4==4.13.5 playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Add sourced adventure data and integration
-        run: python tools/add-content-batch-02.py
+        run: |
+          python tools/add-content-batch-02.py
+          python tools/finalize-content-batch-02.py
       - name: Run load-order preservation and new content regressions
         run: python tests/october-sync.py
       - name: Commit tested website output to review branch
