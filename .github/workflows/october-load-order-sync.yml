@@ -40,9 +40,6 @@ jobs:
               if isinstance(q.get('rewardMod'), dict) and isinstance(q['rewardMod'].get('lo'), int):
                   out['rewardMod']['name'] = oldnums[q['rewardMod']['lo']]['name']
               qpack['quests'][i] = out"""
-              # The multiline replacement is indented in this workflow; normalize its Python block.
-              lines=replacement.splitlines()
-              replacement=lines[0]+'\n'+'\n'.join(line[10:] if line.startswith('          ') else line for line in lines[1:])
               assert needle in s
               s=s.replace(needle,replacement)
               needle='    c = baseline(path)'
@@ -52,8 +49,6 @@ jobs:
                   needle = "Number("+variable+"['LO #'])===q.rewardMod.lo"
                   assert needle in c, path
                   c = c.replace(needle, "(q.rewardMod.name ? "+variable+"['Installed mod']===q.rewardMod.name : "+needle+")")"""
-              lines=replacement.splitlines()
-              replacement=lines[0]+'\n'+'\n'.join(line[10:] if line.startswith('          ') else line for line in lines[1:])
               assert needle in s
               s=s.replace(needle,replacement)
               s=s.replace("return number_pattern.sub(change, text)", "return number_pattern.sub(change, text).replace('current 210-entry order', 'current 224-entry order').replace('recorded 210-entry current order', 'current 224-entry reference (research retained)')")
