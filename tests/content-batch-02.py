@@ -91,6 +91,8 @@ with sync_playwright() as pw:
     check('old item pick preserved',page.locator('#pick_W180').input_value()=='Want')
     page.wait_for_selector('#W635 .quest-catalog-links',state='attached')
     check('new catalog card links back to Undeath',page.locator('#W635 .quest-catalog-links a[href="quests.html#Q051"]').count()==1)
+    page.click('#filter-panel>summary')
+    check('mobile catalog filter disclosure opens',page.locator('#clear').is_visible())
     page.click('#clear');check('clear restores all 637 records',page.locator('#catalog>.card:visible').count()==637)
     page.goto(url+'load-order.html?reference=content');page.wait_for_selector('#mods>.row')
     check('content view shows five installed mods',page.locator('#mods>.row:visible').count()==5)
