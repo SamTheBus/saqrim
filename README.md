@@ -1,10 +1,10 @@
 # Saqrim
 
-Personal Skyrim PS5 reference: a 633-target loot catalog and a 210-entry current load-order checklist.
+Personal Skyrim PS5 reference: a 633-target loot catalog and a 224-entry current load-order checklist.
 
 - Website: https://samthebus.github.io/saqrim/
 - Console load order: https://samthebus.github.io/saqrim/load-order.html
-- Current load-order source: `Skyrim_LO.mp4`, supplied directly on 23 September 2026
+- Current load-order source: `1a12e7fc6d46-master_playlist.mp4` plus Sam’s final confirmed swaps and placements
 - Earlier public source recording: https://www.youtube.com/watch?v=4uyqCADqwPo
 
 ## Checkbox filters and sorting
@@ -17,11 +17,11 @@ Armor-rating and weapon-damage sorts support ascending and descending order, kee
 
 ## Load-order provenance
 
-The current 210-entry order is the 23 September 2026 recording with one same-day tested adjustment: Simple Visible Favorited Gear was removed, and XPMSSE Plus was moved below GDB's Elden Beast Lite. Sam reported the back-sheathed draw fixed after both changes together; neither change was isolated in that test. The source recording itself shows 211 of 211 Creations enabled and 14.94 GB used; the removed mod was only 6.8 KB. This is not a compatibility-certified setup.
+The current order has 224 entries, from the October load-order recording plus Sam's final confirmed corrections. Opening browse results are excluded. KALLAX and full SMIM are absent; SMIM Essentials occupies the former SMIM slot. Dagoth Ur is immediately above Alternate Start, followed by the 33.4 KB Legacy of Orsinium patch and the perk stack. Daedra Pack is immediately above Mihail High Fantasy Monsters. Lucien and both patches, Deadly Dragons Armory and The Restless Dead remain.
 
-Thumbnails come from the user's recorded Creations menu, not newly fetched Bethesda listing art. Four AVIF sheets retain 186 prior menu tiles for entries that remain installed; `assets/load-order-new-2026-09-23.jpg` adds the two current-only thumbnails for Mihail High Fantasy Monsters and Skytone: Compendium of Beasts. Generic menu placeholders are retained rather than replaced with guessed pictures. Artwork belongs to its respective creators.
+`data/load-order-october-confirmed.txt` is the readable current snapshot; `load-order.tsv` feeds the site. `load-order-snapshot.json` separates October size/position evidence, later user updates, and version/thumbnail information retained from September. New versions or exact identities not captured remain unknown. The 14.73 GB total is historical, before the final swaps, not a current free-space estimate.
 
-`load-order.tsv` has no header. Columns: order, identified name, displayed size, menu version, video timestamp, category, clipped console title, zero-based thumbnail tile. For tile indices 0–185, sheet=floor(i/48), column=i%8, row=floor((i%48)/8). Indices 186–187 use the two-tile supplemental JPEG handled by `load-order.js`.
+The TSV retains eight columns: position, name, displayed size, retained version label, locator, category, identification title, thumbnail index. Thumbnail -1 means no matching crop; existing indices still address the original sheets. No fake screenshot or guessed art is assigned to new mods.
 
 ## Preservation and local progress
 
@@ -29,7 +29,7 @@ Thumbnails come from the user's recorded Creations menu, not newly fetched Bethe
 
 Loot choices retain localStorage key `skyrimLootChoices_v202_20260917`. Optional observed ratings use `saqrimObservedStats_v1`. Backups include choices and observed ratings. Older choices-only backups remain supported and do not erase existing ratings. No cloud syncing or authentication was added.
 
-The current load-order checklist uses localStorage key `saqrim-load-order-210-2026-09-23-v2`; older checklist keys are left untouched. Checkmarks do not modify a console and do not sync between browsers. No mod download buttons are provided.
+The current load-order checklist uses localStorage key `saqrim-load-order-224-october-v1` (migrated by mod identity from `saqrim-load-order-210-2026-09-23-v2`); older checklist keys are left untouched. Checkmarks do not modify a console and do not sync between browsers. No mod download buttons are provided.
 
 ## Validation
 
@@ -43,3 +43,7 @@ Static HTML/CSS/JavaScript only; no build step, package dependencies or external
 The Load Order page now adds ten sourced description cards, a research-coverage filter, description/requirement search, source locators and current-number cross-links. `load-order-reference.json` stores claims and evidence independently of recorded TSV rows and historical Bethesda snapshots. `load-order-reference.js` is optional: a failed research request must not break the checklist. The current 210-row order, catalog, quest data, IDs and localStorage keys are preserved.
 
 The source recording exposes Animated Armoury/GDB and GDB/Wear Multiple Rings warnings, the explicit Custom Placed Weapons instruction to load below GDB, and ambiguous Lux Master wording. The reported draw fix followed two simultaneous changes; it is not a complete compatibility certification. See `REFERENCE-OVERHAUL.md` for scope and open questions.
+
+## October synchronization validation
+
+`tests/october-sync.py` validates the full 224-entry order, final eight entries, current cross-references, saved-state migration, reference cards, and desktop/mobile rendering. The earlier tests with fixed September baselines remain historical; current CI uses the October-aware regression checks. No changes to actual console installations are made.

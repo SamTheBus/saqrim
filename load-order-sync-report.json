@@ -1,0 +1,90 @@
+{
+  "baseline": "fdf1282fdb7a26596a64cf9aee1708005103af17",
+  "currentCount": 224,
+  "retainedFromPublished": 206,
+  "addedToPublished": [
+    "Legacy of Orsinium",
+    "LegacyOrsinium - Overhaul [clipped title]",
+    "Argonian Funerary Masks [clipped title]",
+    "SMIM Essentials",
+    "Pigs - Mihail Monsters and Animals",
+    "Troll Cubs - Mihail Monsters and Animals",
+    "The Killer Rabbit of [clipped title]",
+    "Vampire Lord Expansion [clipped title]",
+    "Daedra Pack - Mihail",
+    "The Restless Dead (A Draugr [clipped title])",
+    "Spider SE",
+    "Replaces Nirnroot Plant",
+    "Rotdyflissa",
+    "Undeath (PS5 version)",
+    "The Final Cataclysm 2020",
+    "Stuck Effects Cleaner (SWF)",
+    "Dagoth Ur",
+    "Legacy of Orsinium - [clipped title; v1.0.3.2 PS ONLY]"
+  ],
+  "removedFromPublished": [
+    "Beyond Reach Part 1 (PS)",
+    "Beyond Reach Part 2 (PS)",
+    "Beyond Reach Revoiced",
+    "SMIM - Static Mesh Improvement Mod"
+  ],
+  "sizeChanges": [
+    {
+      "name": "Morrowind's Bloodmoon Solstheim Content Restoration",
+      "before": "2.17 MB",
+      "after": "8.60 MB"
+    },
+    {
+      "name": "DAWN - Dramatic Atmospheres, Weathers & Nature",
+      "before": "64.28 MB",
+      "after": "98.47 MB"
+    },
+    {
+      "name": "JaySerpa's Lines Expansion Bundle",
+      "before": "136.86 MB",
+      "after": "163.01 MB"
+    }
+  ],
+  "catalogRecords": 633,
+  "questRecords": 46,
+  "descriptionCards": 10,
+  "positions": {
+    "SMIM Essentials": 84,
+    "Daedra Pack - Mihail": 96,
+    "Mihail High Fantasy Monsters": 97,
+    "Dagoth Ur": 217,
+    "Alternate Start - Live Another Life": 218,
+    "Lucien - Fully Voiced Follower": 159,
+    "Vokriinator [EN]": 224
+  },
+  "changedPaths": [
+    ".github/workflows/load-order-listings-check.yml",
+    ".github/workflows/reference-overhaul.yml",
+    "ARTIFACT-REVIEW.md",
+    "README.md",
+    "artifact-review.json",
+    "blessings.html",
+    "catalog-current.html",
+    "catalog.js",
+    "index.html",
+    "load-order-bethesda.json",
+    "load-order-reference.js",
+    "load-order-reference.json",
+    "load-order-snapshot.json",
+    "load-order.css",
+    "load-order.html",
+    "load-order.js",
+    "load-order.tsv",
+    "map.html",
+    "map.js",
+    "quests-data.json",
+    "quests.html",
+    "quests.js",
+    "shrines.html",
+    "site-quests.js",
+    "site-top.js",
+    "standing-stones.html",
+    "worlds.html",
+    "worlds.js"
+  ]
+}

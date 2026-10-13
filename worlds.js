@@ -136,7 +136,7 @@
   }
  }
  try{
-  const res=await fetch('catalog-current.html?v=1');if(!res.ok)throw Error('Catalog request failed.');const doc=new DOMParser().parseFromString(await res.text(),'text/html');const data=JSON.parse(doc.getElementById('dataset').textContent);
+  const res=await fetch('catalog-current.html?v=october-sync-1');if(!res.ok)throw Error('Catalog request failed.');const doc=new DOMParser().parseFromString(await res.text(),'text/html');const data=JSON.parse(doc.getElementById('dataset').textContent);
   if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
   places=SaqrimWorldData.places.map(p=>({...p,pin:Number.isFinite(p.x)&&Number.isFinite(p.y),items:[],matches:[]}));const lookup=new Map(places.map(p=>[pkey(p),p]));
   records=data.map(raw=>{const id=raw['Catalog ID'],meta=SaqrimTags.classify(raw);const links=(SaqrimWorldData.links[id]||[]).map(l=>{const location=lookup.get(l.world+'::'+l.place);if(!location)throw Error('Missing reference location: '+l.place);return {...l,location,pin:location.pin};});return {id,raw,meta,links,worlds:SaqrimWorldData.forRecord(raw),search:norm(Object.values(raw).join(' ')+' '+Object.values(meta.tags).flat().join(' '))};});

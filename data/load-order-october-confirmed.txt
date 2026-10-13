@@ -1,0 +1,233 @@
+# Saqrim current load order: October recording plus Sam's final confirmed edits.
+# Source: 1a12e7fc6d46-master_playlist.mp4, load-order section only (~00:47-02:59.8).
+# The opening browse results are excluded. The recording showed 224 entries / 14.73 GB.
+# Applied: remove KALLAX; replace full SMIM with SMIM Essentials (98.94 MB);
+# put Daedra Pack immediately above Mihail High Fantasy Monsters;
+# add Dagoth Ur (1.37 GB) immediately ABOVE Alternate Start, NOT above Vokrii.
+# Lucien and both patches, Deadly Dragons Armory and The Restless Dead remain.
+# The current count is also 224. This is not a fresh measurement of used/free storage.
+# Columns: current position | name | displayed size | October video locator or user update
+001 | Unofficial Skyrim Special Edition Patch (USSEP) | 18.50 MB | 00:47
+002 | Simple Workaround Framework | 1.53 MB | 00:47
+003 | Lovely Hair Colors [for Salt and Wind] | 1.3 KB | 00:47
+004 | TGCR Not a Crime (The Gray Cowl Returns) | 1.7 KB | 00:47
+005 | Skragmjor | 1.38 MB | 00:50
+006 | Aberrations of the Dwemer | 2.00 MB | 00:50
+007 | Vvardenfell Arrows and Bolts | 87.4 KB | 00:51
+008 | The Magic of Madness | 104.4 KB | 00:52
+009 | Siege at Icemoth | 121.52 MB | 00:53
+010 | Lux - Resources - PS5 | 62.65 MB | 00:53
+011 | Lux - Master | 28.6 KB | 00:54
+012 | Morrowind's Bloodmoon Solstheim Content Restoration | 8.60 MB | 00:54
+013 | Beyond the Edge of Atmora | 721.7 KB | 00:55
+014 | Legacy of Orsinium | 870.34 MB | 00:55
+015 | LegacyOrsinium - Overhaul [clipped title] | 33.3 KB | 00:56
+016 | [PS] Weightless Materials | 94.8 KB | 00:58
+017 | IA92's Zero Weight Crafting | 11.4 KB | 00:58
+018 | IA92's Zero Weight Potions | 91.5 KB | 00:58
+019 | Increased Carry Weight Level Up | 320 BYTES | 00:59
+020 | KILL FEED (PS/XBOX) | 11.1 KB | 01:00
+021 | Nordic UI (NORDIC UI.ESP) | 10.76 MB | 01:00
+022 | Thaumaturgy - An Enchanting Overhaul | 4.37 MB | 01:02
+023 | Summermyst - Enchantments of Skyrim | 7.80 MB | 01:02
+024 | Wintersun - Faiths of Skyrim | 25.12 MB | 01:02
+025 | Mannaz - Integrated Races of Skyrim | 2.54 MB | 01:03
+026 | Freyr - Integrated Standing Stones of Skyrim | 371.2 KB | 01:04
+027 | Tonal Architect | 7.36 MB | 01:04
+028 | Dukkha's Forbidden Death Magic | 15.63 MB | 01:04
+029 | Triumvirate - Mage Archetypes | 44.03 MB | 01:04
+030 | Mysticism - A Magic Overhaul | 7.97 MB | 01:05
+031 | Mysticism - Vokrii Patch | 87.6 KB | 01:05
+032 | Mysticism - Ordinator Patch | 7.2 KB | 01:06
+033 | Odin - Skyrim Magic Overhaul | 22.09 MB | 01:06
+034 | Odin - Vokrii Compatibility Patch | 78.3 KB | 01:07
+035 | Odin - Ordinator Compatibility Patch | 6.5 KB | 01:07
+036 | Apocalypse - Magic of Skyrim | 33.13 MB | 01:07
+037 | Apocalypse - Ordinator Compatibility Patch | 15.0 KB | 01:08
+038 | Apocalypse - Vokrii Compatibility Patch | 12.1 KB | 01:08
+039 | Ordinator - 50 Percent More Perk Points | 2.4 KB | 01:09
+040 | Kittytail's Spells AIO [PS5] | 41.38 MB | 01:09
+041 | Kittytail's VFX Edits AIO - V4? | 2.76 MB | 01:10
+042 | Open World Loot SE | 314.0 KB | 01:10
+043 | Open World Loot SE - Randomized Special Loot Addon | 50.9 KB | 01:11
+044 | OWL - Summermyst Patch | 9.9 KB | 01:11
+045 | Dad's Encounter Zones | 21.0 KB | 01:11
+046 | Dad's Map Markers | 128.8 KB | 01:12
+047 | Simply More Variety AE | 2.03 MB | 01:12
+048 | Praedy's Staves AIO [PS5] | 35.72 MB | 01:13
+049 | Praedy's Staves - Apocalypse Patch | 28.2 KB | 01:13
+050 | Praedy's Staves - Mysticism Patch | 75.6 KB | 01:14
+051 | Praedy's Staves - Odin Patch | 23.0 KB | 01:14
+052 | Praedy's Staves - USSEP Patch | 3.8 KB | 01:15
+053 | Xavbio 1K Base + DLC | 1.38 GB | 01:16
+054 | Xavbio 1K AE/CC | 821.44 MB | 01:16
+055 | ArteFakes - Unique Artifacts Replacer | 12.18 MB | 01:16
+056 | Artificer - An Artifact Overhaul | 6.42 MB | 01:17
+057 | Artificer - USSEP Patch | 11.1 KB | 01:17
+058 | Argonian Funerary Masks [clipped title] | 10.20 MB | 01:18
+059 | Guns of Skyrim (formerly Lore Friendly Rifles) | 2.27 MB | 01:18
+060 | Pistols of Skyrim (Guns of Skyrim addon) | 1.53 MB | 01:19
+061 | PrivateEye's Heavy Armory | 29.98 MB | 01:19
+062 | More Unique War Axes PS4/PS5 | 50.8 KB | 01:20
+063 | More Unique Swords PS4/PS5 | 8.5 KB | 01:20
+064 | More Unique Maces PS4/PS5 | 53.0 KB | 01:20
+065 | Artifact of Might - My Version (PS5) | 16.73 MB | 01:21
+066 | Favored Soul - Eidolon Sword / Eidolon's Edge | 2.19 MB | 01:21
+067 | Steel Battleaxe of Fiery Souls - Truly Unique (PS5) | 3.05 MB | 01:22
+068 | Unique Thane Weapons (PS5) | 12.60 MB | 01:22
+069 | Minecraft Weapon Pack | 1.25 MB | 01:23
+070 | Volkihar Relic Sword (PS5) | 8.68 MB | 01:24
+071 | The Infinity Sword [PS] | 16.17 MB | 01:24
+072 | Occiglacies - Ancient Falmer Blade | 2.78 MB | 01:25
+073 | Mjolnir - Leviathan Axe - Blades of Chaos | 12.93 MB | 01:26
+074 | Psyche's Artifacts of Oblivion and Morrowind | 100.9 KB | 01:26
+075 | Dwarven Power Armor - Mihail | 14.21 MB | 01:26
+076 | Race Armor Expansion (PS5) | 35.33 MB | 01:26
+077 | Cloaks and Capes - PS5 | 20.91 MB | 01:28
+078 | Daedric Cloaks - PS5 | 23.69 MB | 01:28
+079 | Divine Cloaks - PS5 | 13.94 MB | 01:28
+080 | Skull Commander Armor - My Version (PS5) | 25.34 MB | 01:28
+081 | Red Warrior Armor - My Version (PS5) | 13.38 MB | 01:29
+082 | Deadly Dragons Armory | 359.22 MB | 01:30
+083 | DAWN - Dramatic Atmospheres, Weathers & Nature | 98.47 MB | 01:30
+084 | SMIM Essentials | 98.94 MB | User update
+085 | Elemental Giants 1K (PS5) | 3.07 MB | 01:32
+086 | Mihail Crows and Ravens (PS5) | 5.13 MB | 01:32
+087 | Mihail Emperor Penguins (PS5) | 1.40 MB | 01:33
+088 | Mihail Frogs - Fixed (PS5) | 4.46 MB | 01:34
+089 | Mihail Roosters - Fixed (PS5) | 7.53 MB | 01:34
+090 | Pigs - Mihail Monsters and Animals | 4.53 MB | 01:34
+091 | Troll Cubs - Mihail Monsters and Animals | 4.62 MB | 01:35
+092 | The Killer Rabbit of [clipped title] | 5.33 MB | 01:35
+093 | Vampire Lord Expansion [clipped title] | 120.52 MB | 01:36
+094 | Dwarven Automatons Pack - Mihail | 176.55 MB | 01:36
+095 | Bone Colossus - Necromantic Grimoire Integration | 1.0 KB | 01:37
+096 | Daedra Pack - Mihail | 363.84 MB | 02:52
+097 | Mihail High Fantasy Monsters | 965.34 MB | 01:37
+098 | The Restless Dead (A Draugr [clipped title]) | 191.55 MB | 01:38
+099 | Vitruvia 2K (PS5) | 40.43 MB | 01:39
+100 | Reverie 2K (PS5) | 37.22 MB | 01:40
+101 | Vanilla Hair - Salt and Wind | 8.93 MB | 01:40
+102 | Wear Multiple Rings | 18.6 KB | 01:40
+103 | Animated Armoury | 57.78 MB | 01:41
+104 | Heavy Armory - Animated Armoury Patch | 59.5 KB | 01:42
+105 | GDB's Elden Beast Lite Edition | 64.61 MB | 01:42
+106 | XPMSSE Plus - Custom Skeleton / bundle (PS5) | 14.58 MB | 01:43
+107 | Comprehensive First Person Animation Overhaul - alternative Lite port | 962.9 KB | 01:44
+108 | Undead FX - PS5 | 24.62 MB | 01:44
+109 | Skytone - Compendium of Beasts | 249.54 MB | 01:44
+110 | Spider SE | 52.26 MB | 01:45
+111 | Dragons 2K - Port by Xtudo | 208.34 MB | 01:46
+112 | Dragon Roar Overhaul - King Ghidorah inspired | 19.18 MB | 01:46
+113 | Chattier Hunters and Fishermen | 14.79 MB | 01:47
+114 | Shouts of Stallholders | 4.96 MB | 01:48
+115 | Cheeky Kids | 3.64 MB | 01:49
+116 | Goodnight Skyrim | 1.31 MB | 01:49
+117 | Whistling in Skyrim | 3.60 MB | 01:50
+118 | Old People Sounds AIO | 757.4 KB | 01:50
+119 | Everybody Hates Nazeem | 10.83 MB | 01:50
+120 | Everybody Hates Nazeem - AI Overhaul / Immersive Citizens Patch | 487 BYTES | 01:51
+121 | Voiced Narrative - Farming | 3.07 MB | 01:52
+122 | Voiced Narrative - Ghosts of the Tribunal | 2.35 MB | 01:52
+123 | Voiced Narrative - Saints & Seducers | 777.4 KB | 01:53
+124 | Voiced Narrative - Fishing | 3.83 MB | 01:54
+125 | Voiced Narrative - The Cause | 6.11 MB | 01:54
+126 | JaySerpa's Lines Expansion Bundle | 163.01 MB | 01:54
+127 | JaySerpa's Lines Expansion - Creation Club patches/addon | 234.4 KB | 01:55
+128 | Inn-Tegrated NPCs - Oblivion Style Conversations | 151.95 MB | 01:56
+129 | Echoes of Oblivion | 224.92 MB | 01:57
+130 | Echoes of Oblivion - Inn-Tegrated NPCs Patch | 30.5 KB | 01:57
+131 | Replaces Nirnroot Plant | 1.16 MB | 01:58
+132 | AI Overhaul Lite | 963.9 KB | 01:58
+133 | Crowded Streets (SWF) [PS5] | 16.52 MB | 01:58
+134 | Extended Encounters (SWF) | 1.42 MB | 01:59
+135 | Tsun's Anvil - Hire Craftsmen | 86.3 KB | 02:00
+136 | Shoppers of Skyrim | 43.73 MB | 02:00
+137 | Adventure's Call - A Mercenary's Life | 530.3 KB | 02:01
+138 | JaySerpa's Misc Mod Bundle | 25.99 MB | 02:01
+139 | JaySerpa's Quest Expansion Bundle | 54.37 MB | 02:02
+140 | JaySerpa's Quest Expansion - USSEP Patch | 8.5 KB | 02:02
+141 | JaySerpa's Quest Expansion - Wintersun Patch | 168.3 KB | 02:03
+142 | Rotdyflissa | 6.43 MB | 02:04
+143 | Undeath (PS5 version) | 101.54 MB | 02:04
+144 | The Breathing Abyss | 132.50 MB | 02:05
+145 | Missives | 1.00 MB | 02:05
+146 | Headhunter - Bounties Redone | 6.65 MB | 02:06
+147 | The Paarthurnax Dilemma | 26.17 MB | 02:07
+148 | Become High King of Skyrim TNG - legacy 1.5.9 port | 915.28 MB | 02:07
+149 | Moonpath to Elsweyr [PS5] | 76.14 MB | 02:08
+150 | Granite Hill - Cut Content Restoration | 36.68 MB | 02:09
+151 | Age of Silence - Forbidden Goods (PS5) | 3.52 MB | 02:09
+152 | A Dizzying Fall (PS5) | 3.39 MB | 02:10
+153 | The Serpent's Covenant (PS5) | 33.66 MB | 02:10
+154 | Mysteries of the Dwemer (PS5) | 15.82 MB | 02:11
+155 | Knight of the North - Divine Crusader Reworked (PS5) | 588.2 KB | 02:12
+156 | The Hunt for the Spectre (PS5) | 24.27 MB | 02:12
+157 | It Came from Akavir (PS5) | 26.97 MB | 02:13
+158 | The Final Cataclysm 2020 | 195.51 MB | 02:13
+159 | Lucien - Fully Voiced Follower | 1.94 GB | 02:14
+160 | Lucien - Anniversary Edition All-in-One Patch | 371.66 MB | 02:14
+161 | Lucien - Moonpath to Elsweyr Patch | 59.86 MB | 02:15
+162 | Fabled Forests - Plugin Only | 4.55 MB | 02:16
+163 | LOD Addon for Fabled Forests | 13.98 MB | 02:17
+164 | A Ghibli Skyrim AIO 1K512 (PS) | 1.31 GB | 02:17
+165 | The Great Cities - Minor Cities and Towns | 6.82 MB | 02:18
+166 | JK's Skyrim PS5 AIO | 7.68 MB | 02:18
+167 | Cities of the North AIO (COTN AIO.ESP) | 65.28 MB | 02:19
+168 | The Great City of Winterhold | 172.96 MB | 02:20
+169 | The Great Cities of JK's North - COTN AIO port | 3.68 MB | 02:20
+170 | Ryn's Dragon Mound Collection | 666.9 KB | 02:21
+171 | Ryn's Standing Stones | 1.05 MB | 02:22
+172 | Ryn's Farms | 979.0 KB | 02:22
+173 | Ryn's Halted Stream Camp | 272.0 KB | 02:23
+174 | Ryn's Bleakwind Basin | 285.0 KB | 02:23
+175 | Ryn's Whiterun City Limits | 1.32 MB | 02:24
+176 | JK's Outskirts AIO [PS5] | 18.51 MB | 02:24
+177 | JK's Ryn's Whiterun Exteriors | 1.02 MB | 02:25
+178 | Ryn's Bleakfalls Recovered (Tower + Barrow) | 144.6 KB | 02:25
+179 | Ryn's Secunda's Kiss | 212.0 KB | 02:26
+180 | Ryn's Western Watchtower | 279.7 KB | 02:26
+181 | Ryn's Bleakwind Basin - Whiterun City Limits Patch | 278.5 KB | 02:27
+182 | Ryn's Halted Stream Camp - Whiterun City Limits Patch | 278.1 KB | 02:28
+183 | Ryn's White River Watch | 152.3 KB | 02:28
+184 | Ryn's Valtheim Keep / Towers | 284.9 KB | 02:29
+185 | Ryn's Lund's Hut | 172.5 KB | 02:30
+186 | Ryn's Anise's Cabin | 122.3 KB | 02:30
+187 | Ryn's Ustengrav | 184.2 KB | 02:31
+188 | Ryn's Broken Tower Redoubt | 225.4 KB | 02:31
+189 | Ryn's Goldenglow Estate | 255.3 KB | 02:32
+190 | Ryn's Robber's Gorge | 421.1 KB | 02:33
+191 | Ryn's Lumber Mills | 398.9 KB | 02:33
+192 | Winterfrost | 647.6 KB | 02:34
+193 | Sym's Solstheim AIO | 210.7 KB | 02:34
+194 | Echoes of the Vale | 4.34 MB | 02:35
+195 | Hendraheim - CrystalTower15 overhaul | 860.5 KB | 02:35
+196 | Autumnal Crest Cottage | 750.7 KB | 02:36
+197 | Highglow Attic | 407.5 KB | 02:37
+198 | Chartreusepod Reverie | 690.2 KB | 02:37
+199 | Chantry of the Knights | 1.38 MB | 02:38
+200 | Snowflake Manor | 308.2 KB | 02:39
+201 | Loverhill Homestead | 269.2 KB | 02:39
+202 | Pinegarden Lodge | 315.8 KB | 02:40
+203 | Sheogorad Caldera Estate | 3.00 MB | 02:41
+204 | Harbourside Manor (PS5) | 39.32 MB | 02:41
+205 | Ryn's Whiterun City Limits - Tundra Homestead CC Patch | 102.1 KB | 02:42
+206 | Raidho - Along the Roads | 1.00 MB | 02:42
+207 | Raidho - JK's Outskirts AIO Patch | 2.0 KB | 02:42
+208 | KOVAC's DAWN Waters V1 | 15.76 MB | 02:43
+209 | Bedlam - Dungeon Randomizer | 49.4 KB | 02:44
+210 | Become High King of Skyrim TNG - Great Cities / minor cities patch | 3.8 KB | 02:44
+211 | Become High King of Skyrim TNG - Highreach Castle Crash Fix | 634 BYTES | 02:45
+212 | Amazing Follower Tweaks (SE/AE) | 5.21 MB | 02:45
+213 | Amazing Follower Tweaks - UpgrayDD Addon | 1.17 MB | 02:46
+214 | Lux - PS5 | 113.98 MB | 02:46
+215 | Enhanced Blood Textures Lite | 3.51 MB | 02:47
+216 | Stuck Effects Cleaner (SWF) | 11.2 KB | 02:48
+217 | Dagoth Ur | 1.37 GB | User update
+218 | Alternate Start - Live Another Life | 14.54 MB | 02:48
+219 | Legacy of Orsinium - [clipped title; v1.0.3.2 PS ONLY] | 33.4 KB | 02:49
+220 | Vokrii - Minimalistic Perks of Skyrim | 1.42 MB | 02:50
+221 | Ordinator - Perks of Skyrim | 11.27 MB | 02:50
+222 | Ordinator - Fix - PS5 (textures) | 12.25 MB | 02:51
+223 | Ordinator - Bone Collector (Windhelm altar fix) | 1.3 KB | 02:52
+224 | Vokriinator [EN] | 157.7 KB | 02:52

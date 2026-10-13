@@ -17,3 +17,5 @@
 .bethesda-link{font-weight:700}
 .listing-checked{font-size:11px;color:var(--muted)!important}
 .recording-heading{margin-top:14px}
+
+.thumb-pending{display:flex;align-items:center;justify-content:center;font:600 13px system-ui;opacity:.65;background:none!important}.stats span{white-space:normal} .stats{flex-wrap:wrap}

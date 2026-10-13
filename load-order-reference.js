@@ -24,7 +24,7 @@
   }
   const ready = (async()=>{
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);
-    try {const r=await fetch('load-order-reference.json?v=1',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
+    try {const r=await fetch('load-order-reference.json?v=october-sync-1',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
     catch(_){state.failed=true;state.pack=null;}
     finally{clearTimeout(timer);}
   })();
@@ -80,7 +80,7 @@
   function mountControls(filter,total) {
     const header=document.querySelector('body>header');if(!header||document.getElementById('reference-overview'))return;
     const overview=node('section','ref-overview');overview.id='reference-overview';overview.setAttribute('aria-label','Description research coverage');
-    if(state.failed||!state.pack){overview.append(node('p','','Reference notes could not load. The 210-mod checklist and saved checkmarks still work. Reload to retry.'));header.append(overview);return;}
+    if(state.failed||!state.pack){overview.append(node('p','','Reference notes could not load. The 224-mod checklist and saved checkmarks still work. Reload to retry.'));header.append(overview);return;}
     const names=expandedNames(),flagged=names.filter(n=>get(n).attention);
     overview.append(node('p','ref-kicker','REFERENCE OVERHAUL · BATCH 01'),node('h2','',names.length+' / '+total+' descriptions expanded'));
     overview.append(node('p','','Foundations, Lux modules and the animation block now have sourced reference cards. The other '+(total-names.length)+' entries retain their existing metadata; they have not been marked reviewed.'));

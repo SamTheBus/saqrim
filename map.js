@@ -112,7 +112,7 @@
  function setExpanded(value){document.body.classList.toggle('map-expanded',value);$('large-map').setAttribute('aria-pressed',String(value));$('large-map').textContent=value?'Close larger map':'Larger map';requestAnimationFrame(()=>map?.invalidateSize());}
  function followHash(){let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch(_){return;}if(/^W\d{3}$/.test(hash))selectItem(hash,{hash:false});else if(hash.startsWith('place='))selectPlace(hash.slice(6),{hash:false});}
  try{
-  const responses=await Promise.all([fetch('catalog-current.html?v=1'),fetch('map-locations.json')]);if(responses.some(r=>!r.ok))throw Error('Map data request failed');
+  const responses=await Promise.all([fetch('catalog-current.html?v=october-sync-1'),fetch('map-locations.json')]);if(responses.some(r=>!r.ok))throw Error('Map data request failed');
   const [html,geo]=await Promise.all([responses[0].text(),responses[1].json()]);const parsed=new DOMParser().parseFromString(html,'text/html');const raw=JSON.parse(parsed.getElementById('dataset').textContent);
   if(raw.length!==633||new Set(raw.map(r=>r['Catalog ID'])).size!==633||geo.locations.length!==364||geo.coordinateOrigin!=='bottom-left')throw Error('Map/catalog integrity check failed');
   places=geo.locations.map(([name,x,y])=>{if(!name||!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>8192||y>6144)throw Error('Invalid map point');return {name,x,y,latlng:[y/8,x/8],type:SaqrimMapLinks.placeType(name),items:[],matched:[]};});

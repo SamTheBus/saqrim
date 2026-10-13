@@ -1,0 +1,104 @@
+name: October load-order sync
+on:
+  push:
+    branches: [load-order-october-sync]
+    paths:
+      - 'data/load-order-october-confirmed.txt'
+      - 'tools/sync-october-load-order.py'
+      - 'tests/october-sync.py'
+      - '.github/workflows/october-load-order-sync.yml'
+permissions:
+  contents: write
+concurrency:
+  group: october-load-order-sync
+  cancel-in-progress: true
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install parsers and browser checks
+        run: |
+          python -m pip install beautifulsoup4==4.13.5 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Complete archived-source handling
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('tools/sync-october-load-order.py')
+          s=p.read_text()
+          if '# ARCHIVE_SOURCE_FIX' not in s:
+              needle="    qpack['quests'][i] = out"
+              replacement="""    # ARCHIVE_SOURCE_FIX: source citations are historical, not current installation links.
+              for source in out.get('sources', []):
+                  if 'load-order.html#mod-' in source.get('url', ''):
+                      source['url'] = 'https://github.com/SamTheBus/saqrim/blob/'+BASE+'/load-order.tsv'
+                      source['scope'] = 'Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed.'
+              if isinstance(q.get('rewardMod'), dict) and isinstance(q['rewardMod'].get('lo'), int):
+                  out['rewardMod']['name'] = oldnums[q['rewardMod']['lo']]['name']
+              qpack['quests'][i] = out"""
+              assert needle in s
+              s=s.replace(needle,replacement)
+              needle='    c = baseline(path)'
+              replacement="""    c = baseline(path)
+              if path in ['quests.js', 'site-quests.js']:
+                  variable = 'r' if path == 'quests.js' else 'raw'
+                  needle = "Number("+variable+"['LO #'])===q.rewardMod.lo"
+                  assert needle in c, path
+                  c = c.replace(needle, "(q.rewardMod.name ? "+variable+"['Installed mod']===q.rewardMod.name : "+needle+")")"""
+              assert needle in s
+              s=s.replace(needle,replacement)
+              s=s.replace("return number_pattern.sub(change, text)", "return number_pattern.sub(change, text).replace('current 210-entry order', 'current 224-entry order').replace('recorded 210-entry current order', 'current 224-entry reference (research retained)')")
+              needle="readme = baseline('README.md')"
+              s=s.replace(needle,needle+"\nreadme = re.sub(r'^- Current load-order source:.*$', '- Current load-order source: `1a12e7fc6d46-master_playlist.mp4` plus Sam\u2019s final confirmed swaps and placements', readme, flags=re.M)")
+          if '# OCTOBER_DYNAMIC_CACHE' not in s:
+              needle="write('site-top.js',baseline('site-top.js').replace('Load order · 210','Load order · 224'))"
+              replacement="write('site-top.js',baseline('site-top.js').replace('Load order · 210','Load order · 224').replace('site-quests.js?v=3','site-quests.js?v=october-sync-1')) # OCTOBER_DYNAMIC_CACHE"
+              assert needle in s
+              s=s.replace(needle,replacement)
+          compile(s,str(p),'exec')
+          p.write_text(s)
+          p=Path('tests/october-sync.py')
+          s=p.read_text()
+          if 'archived reward expansion preserved' not in s:
+              needle="    retired_q = [q for q in qp['quests'] if q.get('lo') is None]"
+              replacement="    check('archived reward expansion preserved',page.evaluate('SaqrimQuests.quests.find(q=>q.id===\"Q015\").rewards.length')==sum(r['Installed mod']=='Beyond Reach Part 1 (PS)' for r in cat))\n"+needle
+              assert needle in s
+              s=s.replace(needle,replacement)
+          if 'dynamic quest loader cache refreshed' not in s:
+              s=s.replace("check('all live JavaScript parses',True)","check('all live JavaScript parses',True)\ncheck('dynamic quest loader cache refreshed','site-quests.js?v=october-sync-1' in read('site-top.js'))")
+          compile(s,str(p),'exec')
+          p.write_text(s)
+          PY
+      - name: Build current snapshot and cross-references
+        run: python tools/sync-october-load-order.py
+      - name: Validate data and browser behavior
+        run: python tests/october-sync.py
+      - name: Commit tested site output to review branch only
+        run: |
+          test "$GITHUB_REF_NAME" = load-order-october-sync
+          python - <<'PY'
+          import json, subprocess
+          # The Actions token publishes site content only. Workflow changes are
+          # reviewed and committed separately through the authorized connector.
+          paths=[p for p in json.load(open('load-order-sync-report.json'))['changedPaths'] if not p.startswith('.github/workflows/')]
+          paths+=['load-order-sync-report.json','tools/sync-october-load-order.py','tests/october-sync.py']
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git config user.name 'Saqrim site sync'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Sync 224-mod October setup with confirmed Dagoth and SMIM swaps'
+            git push origin HEAD:load-order-october-sync
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: october-load-order-results
+          path: |
+            test-results/
+            load-order-sync-report.json
+          retention-days: 7
