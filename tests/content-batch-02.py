@@ -1,6 +1,6 @@
 """Preservation, content, cross-link, progress and mobile tests for content batch 02."""
 from pathlib import Path
-import copy, functools, http.server, json, re, subprocess, threading
+import functools, http.server, json, subprocess, threading
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -31,7 +31,7 @@ check('new guides point at actual current mods',all(q['mod'] in lo and q['lo']==
 check('all new chains and reward links resolve',all(all(c in qby for c in q['chain']) and all(not r.get('catalog') or r['catalog'] in {x['Catalog ID'] for x in cat} for r in q['rewards']) for q in newq))
 check('each guide has sourced starting instructions',all(q['sources'] and q['start']['trigger'] and all(s['url'] and s['scope'] for s in q['sources']) for q in newq))
 check('original Cursed Tribe linked by identity',any('The Cursed Tribe' in qby[k]['title'] for k in qby['Q050']['chain']))
-check('Orsinium four named entry points',[(qby['Q'+str(n)]['start']['mapPlace']) for n in range(47,51)]==['Mor Khazgur','Dushnikh Yal','Narzulbur','Largashbur'])
+check('Orsinium four named entry points',[qby['Q'+str(n).zfill(3)]['start']['mapPlace'] for n in range(47,51)]==['Mor Khazgur','Dushnikh Yal','Narzulbur','Largashbur'])
 check('Rotdyflissa uses recorded Movarth route',qby['Q055']['start']['mapPlace']=="Movarth's Lair" and 'Rooted In Madness' in qby['Q055']['title'] and 'Whiterun' not in qby['Q055']['start']['trigger'])
 check('Dagoth exact-port uncertainty stays visible',qby['Q056']['start']['known'] is False and 'unconfirmed' in qby['Q056']['start']['trigger'])
 check('Cataclysm gates not fake starting pins',all('mapPlace' not in qby[q]['start'] and qby[q]['start']['known'] is False for q in ['Q053','Q054']))
@@ -66,6 +66,7 @@ with sync_playwright() as pw:
     page.goto(url+'quests.html?batch=October%20adventures');page.wait_for_function('window.SaqrimQuests')
     check('batch URL shows exactly ten guides',page.locator('.quest-card:visible').count()==10 and all(q['id'] in report['addedQuestIds'] for q in page.evaluate('SaqrimQuests.filtered.map(q=>({id:q.id}))')))
     check('old journal still has 56 total records',page.evaluate('SaqrimQuests.quests.length')==56)
+    page.locator('#quest-filters').evaluate('(d)=>d.open=true')
     page.check('#known-start')
     check('known-start filter excludes unresolved recruitment and contacts',page.locator('#Q056').is_hidden() and page.locator('#Q053').is_hidden() and page.locator('#Q054').is_hidden() and page.locator('#Q055').is_visible())
     page.goto(url+'quests.html#Q047');page.wait_for_function('window.SaqrimQuests')
@@ -97,7 +98,7 @@ with sync_playwright() as pw:
     check('224 checklist selection preserved',page.locator('#mods input[type=checkbox]:checked').count()==3)
     page.locator('#mod-142 .ref-card').evaluate('(d)=>d.open=true')
     check('Rotdyflissa preview links to Q055',page.locator('#mod-142 .ref-card a[href="quests.html#Q055"]').count()==1)
-    check('recorded source locator displayed', '02:03.30' in page.locator('#mod-142 .ref-card').text_content())
+    check('recorded source locator displayed','02:03.30' in page.locator('#mod-142 .ref-card').text_content())
     check('new preview review date visible','2026-10-12' in page.locator('#mod-142 .ref-card').inner_text())
     check('no new front-page warning block',page.locator('#reference-overview .ref-alert').count()==0)
     page.set_viewport_size({'width':320,'height':900})
@@ -106,11 +107,10 @@ with sync_playwright() as pw:
     candidates=page.evaluate('SaqrimQuestMap.candidates().map(q=>q.id)')
     check('all six new map-reference guides connected',all(qid in candidates for qid in ['Q047','Q048','Q049','Q050','Q055','Q056']))
     check('no fake Cataclysm start marker',not any(qid in candidates for qid in ['Q053','Q054']))
-    count=page.evaluate('SaqrimQuestMap.layer.getLayers().length')
-    check('quest-reference map layer has markers',count>0)
+    check('quest-reference map layer has markers',page.evaluate('SaqrimQuestMap.layer.getLayers().length')>0)
     for path,ready in [('worlds.html?world=apocrypha','window.SaqrimWorlds'),('shrines.html','window.SaqrimBlessingsPage')]:
         page.goto(url+path);page.wait_for_function(ready)
-        check('integration still loads '+path,page.locator('.nav').inner_text().find('637')>=0)
+        check('integration still loads '+path,'637' in page.locator('.nav').inner_text())
     check('personal ratings and install checklist not changed',page.evaluate('(s)=>["saqrimObservedStats_v1","saqrim-load-order-224-october-v1"].every(k=>localStorage.getItem(k)===s[k])',seed))
     page.goto(url+'quests.html?batch=October%20adventures');page.wait_for_function('window.SaqrimQuests')
     page.screenshot(path=str(OUT/'content-batch-02-mobile.png'),full_page=False)
