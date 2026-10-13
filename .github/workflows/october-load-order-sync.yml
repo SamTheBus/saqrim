@@ -1,0 +1,52 @@
+name: October load-order sync
+on:
+  push:
+    branches: [load-order-october-sync]
+    paths:
+      - 'data/load-order-october-confirmed.txt'
+      - 'tools/sync-october-load-order.py'
+      - 'tests/october-sync.py'
+      - '.github/workflows/october-load-order-sync.yml'
+permissions:
+  contents: write
+concurrency:
+  group: october-load-order-sync
+  cancel-in-progress: true
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install parsers and browser checks
+        run: |
+          python -m pip install beautifulsoup4==4.13.5 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Build current snapshot and cross-references
+        run: python tools/sync-october-load-order.py
+      - name: Validate data and browser behavior
+        run: python tests/october-sync.py
+      - name: Commit tested output to review branch only
+        run: |
+          test "$GITHUB_REF_NAME" = load-order-october-sync
+          python - <<'PY'
+          import json, subprocess
+          paths=json.load(open('load-order-sync-report.json'))['changedPaths']+['load-order-sync-report.json']
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          if ! git diff --cached --quiet; then
+            git config user.name 'Saqrim site sync'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Sync 224-mod October setup with confirmed Dagoth and SMIM swaps'
+            git push origin HEAD:load-order-october-sync
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: october-load-order-results
+          path: |
+            test-results/
+            load-order-sync-report.json
+          retention-days: 7
