@@ -2,7 +2,7 @@
 (async () => {
  const $=id=>document.getElementById(id), KEY='skyrimLootChoices_v202_20260917', RKEY='saqrimObservedStats_v1';
  const valid=['Undecided','Want','Maybe','Skip'];
- let data=[], records=[], choices={}, ratings={}, single=null, canSave=true, transferName='Saqrim_Backup.json', saveJSON=true;
+ let data=[], records=[], choices={}, ratings={}, single=null, contentBatch=false, canSave=true, transferName='Saqrim_Backup.json', saveJSON=true;
  const selected={},inputs=[];
  function node(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;}
  function say(s){$('feedback').textContent=s;$('feedback').hidden=false;}
@@ -19,6 +19,7 @@
   const r=item.r,q=$('search').value.toLowerCase().trim();
   if(q&&!q.split(/\s+/).every(t=>item.search.includes(t)))return false;
   if($('mod').value&&String(r['LO #'])!==$('mod').value)return false;
+  if(contentBatch&&r['Content batch']!=="October adventures")return false;
   if($('only-new').checked&&(Number(item.id.slice(1))<=551||Number(item.id.slice(1))>617))return false;
   if($('only-artifact-batch').checked&&r['Artifact batch']!=='Familiar uniques 1')return false;
   for(const [group,set] of Object.entries(selected)){
@@ -44,7 +45,7 @@
  function render(){
   const filtered=records.filter(i=>matches(i)),visible=single?filtered.filter(i=>i.id===single):filtered;
   const wanted=data.filter(r=>pick(r)==='Want').length;
-  $('count').textContent=`${visible.length} / 633 shown · ${wanted} wanted`;
+  $('count').textContent=`${visible.length} / 637 shown · ${wanted} wanted`;
   const ids=new Set(visible.map(i=>i.id));
   const frag=document.createDocumentFragment();sorted(records).forEach(i=>{i.card.hidden=!ids.has(i.id);frag.append(i.card);});$('catalog').append(frag);
   $('empty').hidden=visible.length!==0;
@@ -52,6 +53,7 @@
   for(const {group,val,label} of inputs)label.textContent=counts[group][val]||0;
   const active=$('active-filters');active.replaceChildren();let n=0;
   for(const [group,set] of Object.entries(selected))for(const val of set){n++;const b=node('button','chip',SaqrimTags.groups.find(g=>g[0]===group)[1]+': '+val+' ×');b.type='button';b.setAttribute('aria-label','Remove '+val+' filter');b.addEventListener('click',()=>{set.delete(val);inputs.find(i=>i.group===group&&i.val===val).input.checked=false;single=null;render();});active.append(b);}
+  if(contentBatch){const b=node('button','chip','October adventures ×');b.type='button';b.onclick=()=>{contentBatch=false;render();};active.append(b);}
   if(single){const b=node('button','chip','Show other matches ×');b.addEventListener('click',()=>{single=null;render();});active.append(b);}
   $('filter-total').textContent=n+' active';
   const key=statType();$('stat-tools').hidden=!key;
@@ -60,7 +62,7 @@
   }
   return visible;
  }
- function reset(){for(const set of Object.values(selected))set.clear();for(const x of inputs)x.input.checked=false;$('search').value='';$('mod').value='';$('only-new').checked=false;$('only-artifact-batch').checked=false;$('known-only').checked=false;$('sort').value='catalog';single=null;render();}
+ function reset(){for(const set of Object.values(selected))set.clear();for(const x of inputs)x.input.checked=false;$('search').value='';$('mod').value='';$('only-new').checked=false;$('only-artifact-batch').checked=false;$('known-only').checked=false;$('sort').value='catalog';single=null;contentBatch=false;render();}
  function scrollResults(){$('catalog').scrollIntoView({behavior:'instant',block:'start'});}
  function openHash(){let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch(_){return;}const i=records.find(i=>i.id===hash);if(i){reset();i.card.open=true;requestAnimationFrame(()=>i.card.scrollIntoView({block:'start',behavior:'instant'}));}else if(/^category-[1-6]$/.test(hash)){reset();const cat=SaqrimTags.groups[0][2][Number(hash.slice(-1))-1];selected.category.add(cat);inputs.find(i=>i.group==='category'&&i.val===cat).input.checked=true;render();scrollResults();}}
  function panel(title,text,name,importing=false){$('transfer-title').textContent=title;$('transfer-text').value=text;$('transfer-text').readOnly=!importing;$('transfer').hidden=false;$('apply-import').hidden=!importing;$('file-label').hidden=!importing;$('save-backup').hidden=importing;$('copy').hidden=importing;transferName=name;saveJSON=name.endsWith('.json');$('transfer').scrollIntoView({block:'start',behavior:'instant'});}
@@ -86,9 +88,9 @@
   card.querySelector('.pick-select').addEventListener('change',e=>{choices[id]=e.target.value;updateChoice(item);write();render();say(id+' → '+pick(r)+(canSave?' · saved.':' · session only.'));});updateChoice(item);
  }
  try{
-  const res=await fetch('catalog-current.html?v=october-sync-1');if(!res.ok)throw Error('Catalog data request failed.');
+  const res=await fetch('catalog-current.html?v=content-batch-02');if(!res.ok)throw Error('Catalog data request failed.');
   const text=await res.text();const parsed=new DOMParser().parseFromString(text,'text/html');data=JSON.parse(parsed.getElementById('dataset').textContent);
-  if(data.length!==633||new Set(data.map(r=>r['Catalog ID'])).size!==633)throw Error('Catalog integrity check failed.');
+  if(data.length!==637||new Set(data.map(r=>r['Catalog ID'])).size!==637)throw Error('Catalog integrity check failed.');
   choices=sanitizeChoices(read(KEY));ratings=sanitizeRatings(read(RKEY));
   records=data.map((r,index)=>{const id=r['Catalog ID'];const original=parsed.getElementById(id);if(!original)throw Error('Missing card '+id);const meta=SaqrimTags.classify(r);return {id,r,index,meta,card:document.importNode(original,true),search:(Object.values(r).join(' ')+' '+Object.values(meta.tags).flat().join(' ')).toLowerCase()};});
   for(const [group,title,values]of SaqrimTags.groups){selected[group]=new Set();const block=node('details','facet');block.open=['category','school','armor','slot'].includes(group);block.append(node('summary','',title));const field=node('fieldset');field.append(node('legend','',title));for(const val of values){const label=node('label','tick');const input=node('input');input.type='checkbox';input.dataset.group=group;input.value=val;const count=node('span','', '0');count.setAttribute('aria-hidden','true');label.append(input,node('span','',val),count);field.append(label);inputs.push({group,val,input,label:count});input.addEventListener('change',()=>{if(input.checked)selected[group].add(val);else selected[group].delete(val);single=null;render();});}block.append(field);$('facets').append(block);}
@@ -111,6 +113,7 @@
   // Do not overwrite storage on startup. Existing records remain intact.
   storageNote();
   const query=new URLSearchParams(location.search);for(const [group,,vals]of SaqrimTags.groups)for(const value of query.getAll(group))if(vals.includes(value)){selected[group].add(value);inputs.find(i=>i.group===group&&i.val===value).input.checked=true;}if(query.get('batch')==='Familiar uniques 1')$('only-artifact-batch').checked=true;
+  contentBatch=query.get('batch')==="October adventures";
   render();openHash();
   window.SaqrimCatalog={records,render,reset,selected,sorted,value,statType};
  }catch(e){$('error').hidden=false;$('count').textContent='Interactive catalog unavailable';console.error(e);}

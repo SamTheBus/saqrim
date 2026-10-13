@@ -2854,6 +2854,485 @@
         }
       ],
       "batch": "Expansion 2"
+    },
+    {
+      "id": "Q047",
+      "title": "Legacy of Orsinium — Mor Khazgur adventure",
+      "mod": "Legacy of Orsinium",
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Mor Khazgur",
+        "place": "Mor Khazgur stronghold",
+        "trigger": "Visit Mor Khazgur to begin the main adventure. Chief Larak and his son Olur must both be alive.",
+        "mapPlace": "Mor Khazgur",
+        "precision": "hub",
+        "known": true
+      },
+      "hook": "Explore the expanded mines and an Orcish tomb in a voiced storyline with multiple endings.",
+      "requirements": [
+        {
+          "kind": "Starting condition",
+          "text": "Both Chief Larak and Olur must survive until the story starts."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Mor Khazgur's expanded mines and the added Orcish tomb",
+          "mapPlace": "Mor Khazgur"
+        }
+      ],
+      "rewards": [
+        {
+          "label": "Orsinium-inspired armor and artifacts",
+          "kind": "lead",
+          "note": "Confirmed expansion-wide content; named items and branch-specific payouts are not yet cataloged.",
+          "tags": {
+            "category": [
+              "Armor / clothing",
+              "Weapons / ammunition"
+            ]
+          }
+        }
+      ],
+      "notes": [
+        "Use the linked stronghold guides for the other three starting contacts. These titles are Saqrim adventure labels, not invented journal quest names."
+      ],
+      "spoilers": "Multiple endings are documented. Their specific choices and rewards have not been verified here, so this guide does not present one route as the mandatory ending.",
+      "chain": [
+        "Q048",
+        "Q049",
+        "Q050"
+      ],
+      "lo": 14,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
+          "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
+          "scope": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+        },
+        {
+          "url": "https://veelpoot.com/",
+          "label": "Veelpoot — Legacy of Orsinium project description",
+          "scope": "Creator documentation of the four-stronghold scope, branching main story and equipment content."
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "title": "Legacy of Orsinium — Dushnikh Yal side adventure",
+      "mod": "Legacy of Orsinium",
+      "kind": "Stronghold adventure lead",
+      "start": {
+        "world": "skyrim",
+        "area": "Dushnikh Yal",
+        "place": "Chief Burguk at Dushnikh Yal",
+        "trigger": "Speak with Chief Burguk for this stronghold's added quest.",
+        "mapPlace": "Dushnikh Yal",
+        "precision": "hub",
+        "known": true
+      },
+      "hook": "A separate stronghold story to seek out alongside the Mor Khazgur adventure.",
+      "rewards": [],
+      "notes": [
+        "The starting contact is documented; a complete objective chain and specific final payout are not yet indexed."
+      ],
+      "chain": [
+        "Q047"
+      ],
+      "lo": 14,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
+          "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
+          "scope": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+        }
+      ],
+      "requirements": [],
+      "destinations": []
+    },
+    {
+      "id": "Q049",
+      "title": "Legacy of Orsinium — Narzulbur side adventure",
+      "mod": "Legacy of Orsinium",
+      "kind": "Stronghold adventure lead",
+      "start": {
+        "world": "skyrim",
+        "area": "Narzulbur",
+        "place": "Urog or Dushnamub at Narzulbur",
+        "trigger": "Speak with Urog or Dushnamub to pick up the added stronghold story.",
+        "mapPlace": "Narzulbur",
+        "precision": "hub",
+        "known": true
+      },
+      "hook": "Another Orc stronghold has its own added story, not just the main adventure's dungeon route.",
+      "rewards": [],
+      "notes": [
+        "The guide records the starting contacts without inventing quest stages or a reward list."
+      ],
+      "chain": [
+        "Q047"
+      ],
+      "lo": 14,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
+          "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
+          "scope": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+        }
+      ],
+      "requirements": [],
+      "destinations": []
+    },
+    {
+      "id": "Q050",
+      "title": "Legacy of Orsinium — Largashbur follow-up",
+      "mod": "Legacy of Orsinium",
+      "kind": "Stronghold adventure lead",
+      "start": {
+        "world": "skyrim",
+        "area": "Largashbur",
+        "place": "Gularzob at Largashbur",
+        "trigger": "Finish The Cursed Tribe, then speak with Gularzob.",
+        "mapPlace": "Largashbur",
+        "precision": "hub",
+        "known": true
+      },
+      "hook": "Return after the original Daedric quest for this expansion's added stronghold story.",
+      "requirements": [
+        {
+          "kind": "Prerequisite",
+          "text": "The Cursed Tribe completed."
+        }
+      ],
+      "rewards": [],
+      "chain": [
+        "Q047",
+        "Q038"
+      ],
+      "lo": 14,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
+          "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
+          "scope": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+        }
+      ],
+      "destinations": [],
+      "notes": []
+    },
+    {
+      "id": "Q051",
+      "title": "Undeath — the necromancer pursuit",
+      "mod": "Undeath (PS5 version)",
+      "kind": "Adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Automatic level-based start",
+        "place": "Your quest journal",
+        "trigger": "The author's FAQ says the first quest begins automatically at level 30 or above.",
+        "known": true
+      },
+      "hook": "Pursue Antioch and decide whether his search for immortality should end with him.",
+      "requirements": [
+        {
+          "kind": "Author-documented gate",
+          "text": "Level 30."
+        }
+      ],
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Solitude Sewers",
+          "mapPlace": "Solitude"
+        },
+        {
+          "world": "apocrypha",
+          "place": "Undeath's Apocrypha excursion"
+        },
+        {
+          "world": "variable",
+          "place": "Scourg Barrow, Dragontail Mountains — no calibrated Saqrim map"
+        }
+      ],
+      "rewards": [
+        {
+          "catalog": "W635",
+          "kind": "optional"
+        },
+        {
+          "catalog": "W636",
+          "kind": "optional"
+        },
+        {
+          "catalog": "W637",
+          "kind": "optional"
+        }
+      ],
+      "notes": [
+        "For a sewer entrance, check the basements of the Winking Skeever, Bards College or Castle Dour. The map link marks Solitude, not a basement door.",
+        "Two upgradeable necromancer lairs and the Broker's unusual supplies are additional content, not a single final payout."
+      ],
+      "chain": [
+        "Q052"
+      ],
+      "lo": 143,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/6180",
+          "label": "Antioch08 — Undeath Remastered features, changelog and FAQ",
+          "scope": "The installed PS5 description at 02:03.80–02:04.00 links this original project. Gameplay details below are author-documented, not a newly tested PS5 walkthrough."
+        }
+      ]
+    },
+    {
+      "id": "Q052",
+      "title": "Undeath — The Path of Transcendence",
+      "mod": "Undeath (PS5 version)",
+      "kind": "Optional transformation route",
+      "start": {
+        "world": "skyrim",
+        "area": "Any Skyrim city / quest progression",
+        "place": "Continue after the pursuit",
+        "trigger": "Once The Path of Transcendence starts, travel to a Skyrim city and watch for a message.",
+        "known": true
+      },
+      "hook": "An optional route to lichdom rather than an automatic reward for defeating a boss.",
+      "requirements": [
+        {
+          "kind": "Ritual skill",
+          "text": "Necromantic Altars require maximum Enchanting (100)."
+        }
+      ],
+      "rewards": [
+        {
+          "catalog": "W634",
+          "kind": "choice",
+          "note": "Requires pursuing and completing the ritual route."
+        }
+      ],
+      "spoilers": "Keep the ritual ingredients, read the Ritual Notes and follow their location and component instructions. Collected materials influence the final lich appearance.",
+      "chain": [
+        "Q051"
+      ],
+      "lo": 143,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/6180",
+          "label": "Antioch08 — Undeath Remastered features, changelog and FAQ",
+          "scope": "The installed PS5 description at 02:03.80–02:04.00 links this original project. Gameplay details below are author-documented, not a newly tested PS5 walkthrough."
+        }
+      ],
+      "destinations": [],
+      "notes": []
+    },
+    {
+      "id": "Q053",
+      "title": "The Final Cataclysm — main adventure",
+      "mod": "The Final Cataclysm 2020",
+      "kind": "Endgame adventure guide",
+      "start": {
+        "world": "skyrim",
+        "area": "Starting contact not yet verified",
+        "place": "Level- and story-gated adventure",
+        "trigger": "Reach level 50 and complete The Horn of Jurgen Windcaller. The exact initial contact for this PS5 port is not yet verified.",
+        "known": false
+      },
+      "hook": "A demanding dungeon adventure with custom bosses, combat and stealth sections, equipment and magic.",
+      "requirements": [
+        {
+          "kind": "Author-documented gates",
+          "text": "Level 50 and The Horn of Jurgen Windcaller completed."
+        }
+      ],
+      "rewards": [
+        {
+          "label": "Bonus adventure access",
+          "kind": "unlock",
+          "note": "Finish the main adventure and reach level 60; see the connected guide.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        },
+        {
+          "label": "Adventure equipment, weapons and spells",
+          "kind": "lead",
+          "note": "Content categories are confirmed; named pickups and final reward allocations remain unverified.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition",
+              "Armor / clothing",
+              "Spells / summons"
+            ]
+          }
+        }
+      ],
+      "notes": [
+        "The creator describes roughly eight hours, follower support and a remotely accessible hub. These are source features, not a timed test of Sam's installation.",
+        "No guessed quest-giver or portal pin has been added."
+      ],
+      "chain": [
+        "Q054"
+      ],
+      "lo": 158,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167",
+          "label": "Kittytail — The Final Cataclysm 2020 requirements and content",
+          "scope": "The installed PS5 description at 02:13.00 links this source. Level gates are distinguished from an unverified first-contact location."
+        }
+      ],
+      "destinations": []
+    },
+    {
+      "id": "Q054",
+      "title": "The Final Cataclysm — bonus adventure",
+      "mod": "The Final Cataclysm 2020",
+      "kind": "Post-adventure follow-up",
+      "start": {
+        "world": "skyrim",
+        "area": "After the main Cataclysm adventure",
+        "place": "Follow-up access",
+        "trigger": "Complete the main adventure and reach level 60. The precise PS5 handoff is not yet documented.",
+        "known": false
+      },
+      "hook": "A reason to return after finishing the main adventure.",
+      "requirements": [
+        {
+          "kind": "Author-documented gates",
+          "text": "Main Cataclysm adventure completed; level 60."
+        }
+      ],
+      "rewards": [],
+      "notes": [
+        "Nirn Monolith clues and the creator's color-capsule hunt are also worth checking during exploration; they are not asserted to be the bonus quest's final reward."
+      ],
+      "chain": [
+        "Q053"
+      ],
+      "lo": 158,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167",
+          "label": "Kittytail — The Final Cataclysm 2020 requirements and content",
+          "scope": "The installed PS5 description at 02:13.00 links this source. Level gates are distinguished from an unverified first-contact location."
+        }
+      ],
+      "destinations": []
+    },
+    {
+      "id": "Q055",
+      "title": "Rotdyflissa — Rooted In Madness",
+      "mod": "Rotdyflissa",
+      "kind": "Dungeon adventure",
+      "start": {
+        "world": "skyrim",
+        "area": "Hjaalmarch / Movarth's Lair",
+        "place": "Rotdyflissa's tree entrance near Movarth's Lair",
+        "trigger": "Enter Rotdyflissa near Movarth's Lair in Hjaalmarch. Your recorded PS5 description says this starts Rooted In Madness.",
+        "mapPlace": "Movarth's Lair",
+        "precision": "nearby",
+        "known": true
+      },
+      "hook": "Follow the root tunnels of a wandering magical tree and track down the spellsword who tried to reproduce Telvanni magic.",
+      "destinations": [
+        {
+          "world": "skyrim",
+          "place": "Rotdyflissa's root-tunnel dungeon"
+        }
+      ],
+      "rewards": [
+        {
+          "label": "Rotdyflissa's new items",
+          "kind": "lead",
+          "note": "The installed description confirms added items, but not their names, effects or exact pickup points.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "notes": [
+        "Use Movarth's Lair as a nearby landmark, not the dungeon entrance itself. Older indexed text places a previous edition near Whiterun; that is not the route in your recording.",
+        "No level requirement is visible in the reviewed installed description."
+      ],
+      "lo": 142,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "CONTENT-BATCH-02.md#recorded-description-evidence",
+          "label": "Rotdyflissa — installed PS5 description",
+          "scope": "1a12e7fc6d46-master_playlist.mp4 · 02:03.30–02:03.50 · Rotdyflissa selected, 6.43 MB, menu version 1.00 · The visible panel explicitly names Rooted In Madness and an entrance near Movarth's Lair in Hjaalmarch. It does not provide individual reward names or a level requirement."
+        },
+        {
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/94760",
+          "label": "Rotdyflissa — original author page",
+          "scope": "The live author page describes a rebuild near Morthal. Older indexed Creations text mentions Whiterun; the installed recording's explicit Movarth's Lair instruction controls this guide."
+        }
+      ],
+      "requirements": [],
+      "chain": []
+    },
+    {
+      "id": "Q056",
+      "title": "Dagoth Ur — companion and recruitment lead",
+      "mod": "Dagoth Ur",
+      "kind": "Companion profile",
+      "start": {
+        "world": "skyrim",
+        "area": "Riverwood / public listing lead",
+        "place": "Sleeping Giant Inn — alchemy table",
+        "trigger": "Public Dagoth Ur listing lead: check the alchemy table in Riverwood's Sleeping Giant Inn. Exact correspondence to your 1.37 GB port remains unconfirmed.",
+        "mapPlace": "Riverwood",
+        "precision": "hub",
+        "known": false
+      },
+      "hook": "A voiced travelling companion with a custom quest and items described by the public PS listing.",
+      "rewards": [
+        {
+          "label": "Dagoth's custom quest and items",
+          "kind": "lead",
+          "note": "Public PS listing content; no verified quest trigger, named payout or exact installed-build match yet.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          }
+        }
+      ],
+      "notes": [
+        "This is a practical place to check, not a verified recruitment result in Sam's save. The guide does not invent his stats, a loyalty threshold or a quest timer.",
+        "His addition and load-order position are user-confirmed; the recorded video predates his installation."
+      ],
+      "lo": 217,
+      "batch": "October adventures",
+      "sources": [
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/1ec0b78d-e5a4-488e-8d0a-0dc516929770/Dagoth_Ur",
+          "label": "Dagoth Ur — public Creations recruitment location",
+          "scope": "Indexed listing identifies the alchemy table in the Sleeping Giant Inn. Exact identity of Sam's 1.37 GB post-recording port has not been established; this remains a public recruitment lead."
+        },
+        {
+          "url": "https://creations.bethesda.net/en/skyrim/details/1cd8ec53-d6c4-4631-ba2e-994d21a9ecfb/_PS__Dagoth_Ur_Follower_by_DerKernel",
+          "label": "[PS] Dagoth Ur Follower by DerKernel — public content description",
+          "scope": "The public PS listing describes a voiced follower, custom items and a custom quest. It is a project-level lead, not confirmation of Sam's precise installed build."
+        }
+      ],
+      "requirements": [],
+      "destinations": [],
+      "chain": []
     }
   ],
   "catalogLinks": {

@@ -54,7 +54,7 @@ for path in ['catalog-source.html','map-locations.json','world-data.js','faith-d
 new_soup = BeautifulSoup(read('catalog-current.html'),'html.parser')
 cat = json.loads(new_soup.select_one('#dataset').string)
 oldcat = json.loads(BeautifulSoup(old('catalog-current.html').decode(),'html.parser').select_one('#dataset').string)
-check('633 catalog IDs retained',[r['Catalog ID'] for r in cat]==[r['Catalog ID'] for r in oldcat] and len(cat)==633)
+check('633 catalog IDs retained',[r['Catalog ID'] for r in cat[:633]]==[r['Catalog ID'] for r in oldcat] and len(cat)==637)
 mapping = {r['n']:by.get(r['name'],{}).get('n') for r in prior}
 for r,o in zip(cat,oldcat):
     value = str(o.get('LO #','')).strip()
@@ -70,7 +70,7 @@ retired = [r for r in cat if r['Installed mod'].startswith('Beyond Reach')]
 check('Beyond Reach research kept but not labeled installed',bool(retired) and all(not r['LO #'] for r in retired))
 qp = json.loads(read('quests-data.json'))
 op = json.loads(old('quests-data.json'))
-check('quest IDs and count retained',[q['id'] for q in qp['quests']]==[q['id'] for q in op['quests']])
+check('quest IDs and count retained',[q['id'] for q in qp['quests'][:46]]==[q['id'] for q in op['quests']])
 for q,o in zip(qp['quests'],op['quests']):
     if isinstance(o.get('lo'),int):
         assert q['lo']==mapping.get(o['lo']),(q['id'],q['lo'],o['lo'])
@@ -80,8 +80,8 @@ check('quest and reward-mod positions remapped once',True)
 check('Q030 correct source bundle',next(q for q in qp['quests'] if q['id']=='Q030')['lo']==139)
 ref = json.loads(read('load-order-reference.json'))
 oref = json.loads(old('load-order-reference.json'))
-check('ten existing content descriptions retained',set(ref['entries'])==set(oref['entries']) and len(ref['entries'])==10)
-check('research sources and video locators unchanged',ref['sources']==oref['sources'] and ref['recording']==oref['recording'] and ref['reviewed']==oref['reviewed'])
+check('original ten content descriptions retained',set(oref['entries'])<=set(ref['entries']) and len(ref['entries'])==15)
+check('research sources and video locators unchanged',all(ref['sources'].get(k)==v for k,v in oref['sources'].items()) and ref['recording']==oref['recording'] and ref['reviewed']==oref['reviewed'])
 check('related references resolve',all(n in by for e in ref['entries'].values() for n in e.get('related',[])))
 check('every reference claim sourced',all(c.get('refs') and all(s in ref['sources'] for s in c['refs']) for e in ref['entries'].values() for c in [e['summary']]+[c for s in e['sections'] for c in s.get('claims',[])]))
 check('artifact review IDs retained',set(json.loads(read('artifact-review.json'))['reviews'])==set(json.loads(old('artifact-review.json'))['reviews']))
@@ -90,7 +90,7 @@ check('Bethesda matches are current or removed explicitly',set(listing['entries'
 for path in ROOT.glob('*.js'):
     subprocess.run(['node','--check',str(path)],check=True,capture_output=True)
 check('all live JavaScript parses',True)
-check('dynamic quest loader cache refreshed','site-quests.js?v=october-sync-1' in read('site-top.js'))
+check('dynamic quest loader cache refreshed','site-quests.js?v=content-batch-02' in read('site-top.js'))
 for path in ['index.html','load-order.html','map.html','quests.html','shrines.html','standing-stones.html','worlds.html','blessings.html']:
     soup = BeautifulSoup(read(path),'html.parser')
     check('current navigation '+path,soup.select_one('.nav a[href="load-order.html"]').text=='Load order · 224')
@@ -120,9 +120,9 @@ with sync_playwright() as p:
     page.click('#show-all');page.fill('#search','SMIM')
     check('SMIM search only Essentials',page.locator('#mods>.row:visible').count()==1 and 'Essentials' in page.locator('#mod-084 h2').inner_text())
     page.click('#show-all')
-    check('ten expanded references still render',page.locator('.ref-card').count()==10)
+    check('fifteen expanded references render',page.locator('.ref-card').count()==15)
     page.select_option('#reference-view','expanded')
-    check('expanded filter stays functional',page.locator('#mods>.row:visible').count()==10)
+    check('expanded filter stays functional',page.locator('#mods>.row:visible').count()==15)
     page.fill('#jump-number','217');page.click('#jump-form button')
     check('jump clears description filter',page.locator('#mod-217').is_visible() and page.locator('#reference-view').input_value()=='')
     page.locator('#mod-217>details').last.evaluate('(d)=>d.open=true')
@@ -149,7 +149,7 @@ with sync_playwright() as p:
     page.check('#hide-added')
     check('hide-added works',page.locator('#mod-217').is_hidden())
     page.goto(url+'index.html');page.wait_for_function('window.SaqrimCatalog',timeout=25000)
-    check('catalog still loads all records',page.locator('#catalog>.card').count()==633)
+    check('catalog still loads all records',page.locator('#catalog>.card').count()==637)
     check('catalog uses current Artificer position','#56' in page.locator('#W629 .mod-name').inner_text())
     check('item choice remains saved',page.locator('#pick_W180').input_value()=='Want')
     page.goto(url+'quests.html#Q030');page.wait_for_function('window.SaqrimQuests',timeout=25000)
@@ -173,6 +173,10 @@ with sync_playwright() as p:
     check('no browser JavaScript errors',not errors)
     browser.close()
 server.shutdown()
-report = {'checks':len(checks),'errors':errors,'currentEntries':224,'catalogEntries':633,'referenceCards':10,'baseline':BASE,'passed':checks}
+report = {'checks':len(checks),'errors':errors,'currentEntries':224,'catalogEntries':len(cat),'referenceCards':len(ref['entries']),'baseline':BASE,'passed':checks}
 (OUT/'october-sync-results.json').write_text(json.dumps(report,indent=2))
 print('OCTOBER_SYNC_RESULT',json.dumps({k:v for k,v in report.items() if k!='passed'}),flush=True)
+
+# The accepted content extension is also exercised by the existing main-branch CI.
+import sys
+subprocess.run([sys.executable,str(ROOT/"tests/content-batch-02.py")],cwd=ROOT,check=True)

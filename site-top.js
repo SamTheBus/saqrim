@@ -1,7 +1,7 @@
 'use strict';
 // Shared site navigation is independent of the map, reference data and quest loaders.
 (() => {
- const entries=[['./','Loot catalog · 633'],['load-order.html','Load order · 224'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
+ const entries=[['./','Loot catalog · 637'],['load-order.html','Load order · 224'],['map.html','Map'],['quests.html','Quests & rewards'],['shrines.html','Shrines & Gods'],['standing-stones.html','Standing Stones']];
  function activePath(){
   const file=location.pathname.split('/').pop()||'index.html';
   if(['index.html','loot.html','catalog-source.html','catalog-current.html'].includes(file))return './';
@@ -46,4 +46,4 @@
  const update=()=>{button.hidden=window.scrollY<300;};window.addEventListener('scroll',update,{passive:true});update();
 })();
 // Separate optional module; existing Top button and map links remain independent.
-(()=>{if(document.querySelector('script[data-saqrim-quests]'))return;const script=document.createElement('script');script.src='site-quests.js?v=october-sync-1';script.dataset.saqrimQuests='true';script.async=true;document.head.append(script);})();
+(()=>{if(document.querySelector('script[data-saqrim-quests]'))return;const script=document.createElement('script');script.src='site-quests.js?v=content-batch-02';script.dataset.saqrimQuests='true';script.async=true;document.head.append(script);})();

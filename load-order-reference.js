@@ -24,7 +24,7 @@
   }
   const ready = (async()=>{
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);
-    try {const r=await fetch('load-order-reference.json?v=october-sync-1',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
+    try {const r=await fetch('load-order-reference.json?v=content-batch-02',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
     catch(_){state.failed=true;state.pack=null;}
     finally{clearTimeout(timer);}
   })();
@@ -64,36 +64,35 @@
     const body=row.querySelector('.row-top h2')?.parentElement;
     if(body){body.append(node('p','ref-teaser',e.summary.text));const badges=node('div','ref-row-badges');badges.append(node('span','ref-badge','Description expanded'));if(e.attention)badges.append(node('span','ref-badge ref-attention','Recorded warning / open question'));body.append(badges);}
     const details=node('details','ref-card');details.id='reference-'+e.id;
-    details.append(node('summary','','Read mod reference · requirements, compatibility & sources'));
+    details.append(node('summary','','Read mod content & sources'));
     const inner=node('div','ref-body');inner.append(claim(e.summary,e));
     e.sections.forEach(s=>{const section=node('section','ref-section');section.append(node('h3','',s.title));(s.claims||[]).forEach(c=>section.append(claim(c,e)));inner.append(section);});
     const related=(e.related||[]).filter(name=>state.order.has(name));
     if(related.length){const section=node('section','ref-section');section.append(node('h3','','Related entries · current positions'));const links=node('div','ref-related');related.forEach(name=>{const n=state.order.get(name),a=node('a','','#'+n+' · '+name);a.href='load-order.html#mod-'+String(n).padStart(3,'0');links.append(a);});section.append(links);inner.append(section);}
     if(e.guides?.length){const links=node('div','ref-related');e.guides.forEach(g=>{const url=safeURL(g.url);if(url){const a=node('a','',g.label);a.href=url;links.append(a);}});inner.append(links);}
-    inner.append(sourceList(e),node('p','ref-source-note','Description reviewed '+state.pack.reviewed+' · '+state.pack.batch+'. Recorded mod versions are preserved in the console metadata panel below.'));
+    inner.append(sourceList(e),node('p','ref-source-note','Description reviewed '+(e.reviewed||state.pack.reviewed)+' · '+(e.batch||state.pack.batch)+'. Recorded mod versions are preserved in the console metadata panel below.'));
     details.append(inner);row.append(details);
   }
   function setOrder(data){state.order=new Map(data.map(d=>[d.name,d.n]));}
   function expandedNames(){return state.pack?Object.keys(state.pack.entries).filter(n=>state.order.has(n)):[];}
   function searchText(name){const e=get(name);return e?JSON.stringify(e):'';}
-  function matches(name,view){const e=get(name);return !state.pack||!view||(view==='expanded'?Boolean(e):view==='attention'?Boolean(e?.attention):true);}
+  function matches(name,view){const e=get(name);return !state.pack||!view||(view==='expanded'?Boolean(e):view==='attention'?Boolean(e?.attention):view==='content'?e?.batch==='October adventures':true);}
   function mountControls(filter,total) {
     const header=document.querySelector('body>header');if(!header||document.getElementById('reference-overview'))return;
     const overview=node('section','ref-overview');overview.id='reference-overview';overview.setAttribute('aria-label','Description research coverage');
     if(state.failed||!state.pack){overview.append(node('p','','Reference notes could not load. The 224-mod checklist and saved checkmarks still work. Reload to retry.'));header.append(overview);return;}
     const names=expandedNames(),flagged=names.filter(n=>get(n).attention);
-    overview.append(node('p','ref-kicker','REFERENCE OVERHAUL · BATCH 01'),node('h2','',names.length+' / '+total+' descriptions expanded'));
-    overview.append(node('p','','Foundations, Lux modules and the animation block now have sourced reference cards. The other '+(total-names.length)+' entries retain their existing metadata; they have not been marked reviewed.'));
-    overview.append(node('p','ref-alert',flagged.length+' expanded cards contain recorded compatibility warnings or unresolved requirements. A successful back-draw test does not certify the rest of the setup.'));
-    const select=document.createElement('select');select.id='reference-view';select.append(new Option('All '+total+' entries',''),new Option('Expanded descriptions · '+names.length,'expanded'),new Option('Warnings / open questions · '+flagged.length,'attention'));select.addEventListener('change',filter);
+    overview.append(node('p','ref-kicker','ADVENTURES & MOD CONTENT'),node('h2','',names.length+' / '+total+' descriptions expanded'));
+    overview.append(node('p','','New adventure and companion guides join the existing descriptions. The other '+(total-names.length)+' entries retain their existing metadata; they have not been marked reviewed.'));
+    const select=document.createElement('select');select.id='reference-view';select.append(new Option('All '+total+' entries',''),new Option('New adventures · 5','content'),new Option('Expanded descriptions · '+names.length,'expanded'),new Option('Warnings / open questions · '+flagged.length,'attention'));select.addEventListener('change',filter);
     const label=node('label','reference-filter','Description research');label.htmlFor=select.id;label.append(select);document.querySelector('.tools .filters')?.append(label);
     const actions=node('div','ref-actions');
-    for(const [text,value] of [['Browse this batch','expanded'],['Review flagged cards','attention']]){const b=node('button','',text);b.type='button';b.addEventListener('click',()=>{document.getElementById('show-all')?.click();select.value=value;filter();document.getElementById('mods')?.scrollIntoView({block:'start',behavior:'auto'});});actions.append(b);}
+    for(const [text,value] of [['Browse new adventures','content'],['All expanded entries','expanded']]){const b=node('button','',text);b.type='button';b.addEventListener('click',()=>{document.getElementById('show-all')?.click();select.value=value;filter();document.getElementById('mods')?.scrollIntoView({block:'start',behavior:'auto'});});actions.append(b);}
     const a=node('a','','Research notes & scope');a.href='REFERENCE-OVERHAUL.md';actions.append(a);overview.append(actions);
     const legend=node('details','ref-legend');legend.append(node('summary','','What the evidence labels mean'));
     legend.append(node('p','','Recorded PS5: visible in your uploaded menu. Official listing match: identity or indexed excerpt only, with limitations shown. Upstream docs: original author information, not guaranteed PS5 parity. User-reported test: your observation, not an independent plugin inspection. Assessment: an interpretation or unresolved question tied to its sources.'));
     overview.append(legend);header.append(overview);
-    const requested=new URLSearchParams(location.search).get('reference');if(['expanded','attention'].includes(requested))select.value=requested;
+    const requested=new URLSearchParams(location.search).get('reference');if(['expanded','attention','content'].includes(requested))select.value=requested;
   }
   window.SaqrimReference={ready,decorate,setOrder,searchText,matches,mountControls,expandedNames,get failed(){return state.failed;}};
 })();

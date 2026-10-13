@@ -2,7 +2,7 @@
   "version": 1,
   "batch": "01 · Foundations, lighting & animation",
   "reviewed": "2026-09-24",
-  "scope": "Existing September description research retained; current links follow the October 224-entry setup. New additions are not marked description-reviewed.",
+  "scope": "Ten earlier foundation/animation reviews plus five October adventure/companion previews. Linked quest guides carry starting instructions and content details. Exact unknown reward rosters are not fabricated.",
   "recording": {
     "file": "Skyrim_LO.mp4",
     "supplied": "2026-09-23",
@@ -120,6 +120,54 @@
       "label": "Sam's same-day draw/sheath test report",
       "locator": "Conversation · 23 September 2026 · after moving XPMSSE below GDB and removing Simple Visible Favorited Gear",
       "note": "Sam reported success after both changes. This was not an isolated one-variable test, a recording of the repaired animation, or a full compatibility test."
+    },
+    "b02-orsinium": {
+      "kind": "official",
+      "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
+      "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
+      "note": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+    },
+    "b02-veelpoot": {
+      "kind": "upstream",
+      "label": "Veelpoot — Legacy of Orsinium project description",
+      "url": "https://veelpoot.com/",
+      "note": "Creator documentation of the four-stronghold scope, branching main story and equipment content."
+    },
+    "b02-undeath": {
+      "kind": "upstream",
+      "label": "Antioch08 — Undeath Remastered features, changelog and FAQ",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/6180",
+      "note": "The installed PS5 description at 02:03.80–02:04.00 links this original project. Gameplay details below are author-documented, not a newly tested PS5 walkthrough."
+    },
+    "b02-cataclysm": {
+      "kind": "upstream",
+      "label": "Kittytail — The Final Cataclysm 2020 requirements and content",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167",
+      "note": "The installed PS5 description at 02:13.00 links this source. Level gates are distinguished from an unverified first-contact location."
+    },
+    "b02-rotd-video": {
+      "kind": "recorded",
+      "label": "Rotdyflissa — installed PS5 description",
+      "locator": "1a12e7fc6d46-master_playlist.mp4 · 02:03.30–02:03.50 · Rotdyflissa selected, 6.43 MB, menu version 1.00",
+      "note": "The visible panel explicitly names Rooted In Madness and an entrance near Movarth's Lair in Hjaalmarch. It does not provide individual reward names or a level requirement."
+    },
+    "b02-rotd-author": {
+      "kind": "upstream",
+      "label": "Rotdyflissa — original author page",
+      "url": "https://www.nexusmods.com/skyrimspecialedition/mods/94760",
+      "note": "The live author page describes a rebuild near Morthal. Older indexed Creations text mentions Whiterun; the installed recording's explicit Movarth's Lair instruction controls this guide."
+    },
+    "b02-dagoth-location": {
+      "kind": "official",
+      "label": "Dagoth Ur — public Creations recruitment location",
+      "url": "https://creations.bethesda.net/en/skyrim/details/1ec0b78d-e5a4-488e-8d0a-0dc516929770/Dagoth_Ur",
+      "note": "Indexed listing identifies the alchemy table in the Sleeping Giant Inn. Exact identity of Sam's 1.37 GB post-recording port has not been established; this remains a public recruitment lead."
+    },
+    "b02-dagoth-ps": {
+      "kind": "official",
+      "label": "[PS] Dagoth Ur Follower by DerKernel — public content description",
+      "url": "https://creations.bethesda.net/en/skyrim/details/1cd8ec53-d6c4-4631-ba2e-994d21a9ecfb/_PS__Dagoth_Ur_Follower_by_DerKernel",
+      "note": "The public PS listing describes a voiced follower, custom items and a custom quest. It is a project-level lead, not confirmation of Sam's precise installed build."
     }
   },
   "entries": {
@@ -813,6 +861,139 @@
           "url": "map.html"
         }
       ]
+    },
+    "Legacy of Orsinium": {
+      "id": "legacy-orsinium-content",
+      "attention": false,
+      "summary": {
+        "text": "Four Orc strongholds offer adventures, with Mor Khazgur at the center.",
+        "refs": [
+          "b02-veelpoot"
+        ]
+      },
+      "sections": [],
+      "related": [],
+      "guides": [
+        {
+          "label": "Legacy of Orsinium — Mor Khazgur adventure",
+          "url": "quests.html#Q047"
+        },
+        {
+          "label": "Legacy of Orsinium — Dushnikh Yal side adventure",
+          "url": "quests.html#Q048"
+        },
+        {
+          "label": "Legacy of Orsinium — Narzulbur side adventure",
+          "url": "quests.html#Q049"
+        },
+        {
+          "label": "Legacy of Orsinium — Largashbur follow-up",
+          "url": "quests.html#Q050"
+        }
+      ],
+      "reviewed": "2026-10-12",
+      "batch": "October adventures"
+    },
+    "Undeath (PS5 version)": {
+      "id": "undeath-content",
+      "attention": false,
+      "summary": {
+        "text": "A necromancer pursuit with optional lichdom, altar powers and unusual services.",
+        "refs": [
+          "b02-undeath"
+        ]
+      },
+      "sections": [],
+      "related": [],
+      "guides": [
+        {
+          "label": "Undeath — the necromancer pursuit",
+          "url": "quests.html#Q051"
+        },
+        {
+          "label": "Undeath — The Path of Transcendence",
+          "url": "quests.html#Q052"
+        },
+        {
+          "label": "Browse the four new ritual / book records",
+          "url": "index.html?batch=October%20adventures"
+        }
+      ],
+      "reviewed": "2026-10-12",
+      "batch": "October adventures"
+    },
+    "The Final Cataclysm 2020": {
+      "id": "final-cataclysm-content",
+      "attention": false,
+      "summary": {
+        "text": "An endgame adventure and a higher-level follow-up, with bosses, equipment and magic.",
+        "refs": [
+          "b02-cataclysm"
+        ]
+      },
+      "sections": [],
+      "related": [],
+      "guides": [
+        {
+          "label": "The Final Cataclysm — main adventure",
+          "url": "quests.html#Q053"
+        },
+        {
+          "label": "The Final Cataclysm — bonus adventure",
+          "url": "quests.html#Q054"
+        }
+      ],
+      "reviewed": "2026-10-12",
+      "batch": "October adventures"
+    },
+    "Rotdyflissa": {
+      "id": "rotdyflissa-content",
+      "attention": false,
+      "summary": {
+        "text": "Rooted In Madness begins in the magical tree near Movarth's Lair.",
+        "refs": [
+          "b02-rotd-video"
+        ]
+      },
+      "sections": [],
+      "related": [],
+      "guides": [
+        {
+          "label": "Rotdyflissa — Rooted In Madness",
+          "url": "quests.html#Q055"
+        }
+      ],
+      "reviewed": "2026-10-12",
+      "batch": "October adventures"
+    },
+    "Dagoth Ur": {
+      "id": "dagoth-content",
+      "attention": false,
+      "summary": {
+        "text": "Companion profile with a public recruitment lead; exact PS5 build identity is still open.",
+        "refs": [
+          "b02-dagoth-location",
+          "b02-dagoth-ps"
+        ]
+      },
+      "sections": [],
+      "related": [],
+      "guides": [
+        {
+          "label": "Dagoth Ur — companion and recruitment lead",
+          "url": "quests.html#Q056"
+        }
+      ],
+      "reviewed": "2026-10-12",
+      "batch": "October adventures"
     }
-  }
+  },
+  "contentBatches": [
+    {
+      "name": "October adventures",
+      "reviewed": "2026-10-12",
+      "questCount": 10,
+      "catalogCount": 4
+    }
+  ]
 }
