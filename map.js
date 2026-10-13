@@ -112,9 +112,9 @@
  function setExpanded(value){document.body.classList.toggle('map-expanded',value);$('large-map').setAttribute('aria-pressed',String(value));$('large-map').textContent=value?'Close larger map':'Larger map';requestAnimationFrame(()=>map?.invalidateSize());}
  function followHash(){let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch(_){return;}if(/^W\d{3}$/.test(hash))selectItem(hash,{hash:false});else if(hash.startsWith('place='))selectPlace(hash.slice(6),{hash:false});}
  try{
-  const responses=await Promise.all([fetch('catalog-current.html?v=october-sync-1'),fetch('map-locations.json')]);if(responses.some(r=>!r.ok))throw Error('Map data request failed');
+  const responses=await Promise.all([fetch('catalog-current.html?v=content-batch-02'),fetch('map-locations.json')]);if(responses.some(r=>!r.ok))throw Error('Map data request failed');
   const [html,geo]=await Promise.all([responses[0].text(),responses[1].json()]);const parsed=new DOMParser().parseFromString(html,'text/html');const raw=JSON.parse(parsed.getElementById('dataset').textContent);
-  if(raw.length!==633||new Set(raw.map(r=>r['Catalog ID'])).size!==633||geo.locations.length!==364||geo.coordinateOrigin!=='bottom-left')throw Error('Map/catalog integrity check failed');
+  if(raw.length!==637||new Set(raw.map(r=>r['Catalog ID'])).size!==637||geo.locations.length!==364||geo.coordinateOrigin!=='bottom-left')throw Error('Map/catalog integrity check failed');
   places=geo.locations.map(([name,x,y])=>{if(!name||!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<0||x>8192||y>6144)throw Error('Invalid map point');return {name,x,y,latlng:[y/8,x/8],type:SaqrimMapLinks.placeType(name),items:[],matched:[]};});
   const byName=new Map(places.map(p=>[p.name,p]));if(byName.size!==364)throw Error('Duplicate reference place');
   records=raw.map(r=>{const id=r['Catalog ID'],meta=SaqrimTags.classify(r),links=SaqrimMapLinks.links[id]||[];for(const a of links)if(!byName.has(a.place))throw Error('Unmatched reference place '+a.place);return {id,raw:r,meta,links,world:SaqrimMapLinks.world(r),reason:SaqrimMapLinks.reason(r),search:norm(Object.values(r).join(' ')+' '+Object.values(meta.tags).flat().join(' ')+' '+links.map(a=>a.place).join(' '))};});
@@ -123,7 +123,7 @@
   for(const [group,label,values]of groups){selected[group]=new Set();const section=el('details','facet');section.append(el('summary','',label));const field=el('fieldset');field.append(el('legend','',label));for(const value of values){const label=el('label');const input=el('input');input.type='checkbox';input.dataset.group=group;input.value=value;label.append(input,document.createTextNode(value));field.append(label);controls.push(input);input.addEventListener('change',()=>{if(input.checked)selected[group].add(value);else selected[group].delete(value);render();});}section.append(field);$('map-facets').append(section);}
   [...new Set(records.map(r=>r.world))].sort().forEach(w=>{const o=el('option','',w);o.value=w;$('world').append(o);});
   const linked=records.filter(r=>r.links.length).length;const linkedPlaces=places.filter(p=>p.items.length).length;
-  $('coverage').textContent=places.length+' known places · '+linked+' catalog records linked to '+linkedPlaces+' reference areas · All 633 item-location notes searchable';
+  $('coverage').textContent=places.length+' known places · '+linked+' catalog records linked to '+linkedPlaces+' reference areas · All 637 item-location notes searchable';
   if(window.L){
    map=L.map('map',{crs:L.CRS.Simple,minZoom:-2,maxZoom:3,zoomSnap:0.25,zoomDelta:0.5,maxBounds:[[-180,-180],[948,1204]],maxBoundsViscosity:0.7});
    const image=L.imageOverlay('assets/map/skyrim.webp',bounds,{attribution:'Skyrim artwork © Bethesda · <a href="assets/map/SOURCES.txt" target="_blank" rel="noopener">Sources / approximate coordinates</a>'}).addTo(map);

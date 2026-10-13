@@ -1,6 +1,10 @@
 # Quests & Rewards
 
-`quests.html` contains **46 quest and adventure cards** for the recorded PS5 installation, not every quest in Skyrim or every installed mod. Cards Q001–Q015 cover mod-added quests, encounters and clearly labeled adventure-wide guides. Q016–Q022 cover existing quest routes with modded loot. Expansion 2 adds Q023–Q046; see [the expansion notes](QUESTS-EXPANSION.md).
+`quests.html` contains **56 quest and adventure cards** for the recorded PS5 installation, not every quest in Skyrim or every installed mod. Cards Q001–Q015 cover mod-added quests, encounters and clearly labeled adventure-wide guides. Q016–Q022 cover existing quest routes with modded loot. Expansion 2 adds Q023–Q046; see [the expansion notes](QUESTS-EXPANSION.md).
+
+## October adventure addition
+
+Q047–Q056 add four Orsinium stronghold entry points, two Undeath routes, two Cataclysm guides, Rooted In Madness and a qualified Dagoth companion profile. [Browse the batch](quests.html?batch=October%20adventures). Earlier collection and validation sections below describe their original releases.
 
 ## Starting points and destinations
 

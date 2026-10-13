@@ -1,6 +1,6 @@
 # Saqrim
 
-Personal Skyrim PS5 reference: a 633-target loot catalog and a 224-entry current load-order checklist.
+Personal Skyrim PS5 reference: a 637-target loot catalog and a 224-entry current load-order checklist.
 
 - Website: https://samthebus.github.io/saqrim/
 - Console load order: https://samthebus.github.io/saqrim/load-order.html
@@ -47,3 +47,8 @@ The source recording exposes Animated Armoury/GDB and GDB/Wear Multiple Rings wa
 ## October synchronization validation
 
 `tests/october-sync.py` validates the full 224-entry order, final eight entries, current cross-references, saved-state migration, reference cards, and desktop/mobile rendering. The earlier tests with fixed September baselines remain historical; current CI uses the October-aware regression checks. No changes to actual console installations are made.
+
+
+## October adventure content
+
+The current collection has 637 loot/power records, 56 quest/adventure guides, and 15 expanded mod descriptions. The 224-entry console order is unchanged. Content batch 02 covers Legacy of Orsinium, Undeath, The Final Cataclysm, Rotdyflissa and a qualified Dagoth recruitment profile. See [CONTENT-BATCH-02.md](CONTENT-BATCH-02.md). Earlier validation sections above describe historical batches.

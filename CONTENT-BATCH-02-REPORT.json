@@ -1,0 +1,72 @@
+{
+  "baseline": "92ef40a387cc8d4bf76b1ecb8e6192f8d9803813",
+  "batch": "October adventures",
+  "questCount": 56,
+  "addedQuestIds": [
+    "Q047",
+    "Q048",
+    "Q049",
+    "Q050",
+    "Q051",
+    "Q052",
+    "Q053",
+    "Q054",
+    "Q055",
+    "Q056"
+  ],
+  "catalogCount": 637,
+  "addedCatalogIds": [
+    "W634",
+    "W635",
+    "W636",
+    "W637"
+  ],
+  "referenceCount": 15,
+  "expandedMods": [
+    "Legacy of Orsinium",
+    "Undeath (PS5 version)",
+    "The Final Cataclysm 2020",
+    "Rotdyflissa",
+    "Dagoth Ur"
+  ],
+  "loadOrderCount": 224,
+  "loadOrderChanged": false,
+  "mapReferencePlaces": [
+    "Mor Khazgur",
+    "Dushnikh Yal",
+    "Narzulbur",
+    "Largashbur",
+    "Movarth's Lair",
+    "Riverwood"
+  ],
+  "unresolved": [
+    "Dagoth exact installed port and custom-quest trigger",
+    "Final Cataclysm initial PS5 contact",
+    "Individual reward rosters for Orsinium, Rotdyflissa, Cataclysm and Dagoth"
+  ],
+  "changedPaths": [
+    "CONTENT-BATCH-02-REPORT.json",
+    "CONTENT-BATCH-02.md",
+    "QUESTS.md",
+    "README.md",
+    "blessings.html",
+    "catalog-current.html",
+    "catalog.js",
+    "index.html",
+    "load-order-reference.js",
+    "load-order-reference.json",
+    "load-order.html",
+    "map.html",
+    "map.js",
+    "quests-data.json",
+    "quests.html",
+    "quests.js",
+    "shrines.html",
+    "site-quests.js",
+    "site-top.js",
+    "standing-stones.html",
+    "tests/october-sync.py",
+    "worlds.html",
+    "worlds.js"
+  ]
+}
