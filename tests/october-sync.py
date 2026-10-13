@@ -90,7 +90,7 @@ check('Bethesda matches are current or removed explicitly',set(listing['entries'
 for path in ROOT.glob('*.js'):
     subprocess.run(['node','--check',str(path)],check=True,capture_output=True)
 check('all live JavaScript parses',True)
-check('dynamic quest loader cache refreshed','site-quests.js?v=content-batch-02' in read('site-top.js'))
+check('dynamic quest loader cache refreshed','site-quests.js?v=reward-research-01' in read('site-top.js'))
 for path in ['index.html','load-order.html','map.html','quests.html','shrines.html','standing-stones.html','worlds.html','blessings.html']:
     soup = BeautifulSoup(read(path),'html.parser')
     check('current navigation '+path,soup.select_one('.nav a[href="load-order.html"]').text=='Load order · 224')

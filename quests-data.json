@@ -2885,19 +2885,265 @@
       ],
       "rewards": [
         {
-          "label": "Orsinium-inspired armor and artifacts",
+          "label": "Ancient Orcish Armor",
           "kind": "lead",
-          "note": "Confirmed expansion-wide content; named items and branch-specific payouts are not yet cataloged.",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
           "tags": {
             "category": [
-              "Armor / clothing",
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish Ring",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Jewelry"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish Shield",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Firesong Mask",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Malacath Mask",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Royal Ancient Orcish Armor",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Royal Trinimac Robes",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "The Vengeful Eye",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Trinimac Robes",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Uzdabikh's Helmet",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Abolisher",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
               "Weapons / ammunition"
             ]
-          }
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish Greatsword",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish Hammer",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish Sword",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
+        },
+        {
+          "label": "Ancient Orcish War Axe",
+          "kind": "lead",
+          "note": "Name indexed for the expansion. Exact acquisition, effects and PS5 inclusion are not yet established; not assigned to the Mor Khazgur ending.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ]
+          },
+          "sources": [
+            {
+              "label": "UESP — Legacy of Orsinium equipment index",
+              "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+              "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
+            }
+          ]
         }
       ],
       "notes": [
-        "Use the linked stronghold guides for the other three starting contacts. These titles are Saqrim adventure labels, not invented journal quest names."
+        "Use the linked stronghold guides for the other three starting contacts. These titles are Saqrim adventure labels, not invented journal quest names.",
+        "Named equipment research: 15 expansion-wide names are listed under Unverified leads. This is not a complete roster and does not assign all equipment to the Mor Khazgur quest. Categories are browsing aids; no ratings, enchantments, loot chances or quest branches have been inferred.",
+        "ESO has similarly named artifacts. Its Wrothgar acquisition routes and item effects are not imported into this Skyrim Creation."
       ],
       "spoilers": "Multiple endings are documented. Their specific choices and rewards have not been verified here, so this guide does not present one route as the mandatory ending.",
       "chain": [
@@ -2917,6 +3163,11 @@
           "url": "https://veelpoot.com/",
           "label": "Veelpoot — Legacy of Orsinium project description",
           "scope": "Creator documentation of the four-stronghold scope, branching main story and equipment content."
+        },
+        {
+          "label": "UESP — Legacy of Orsinium equipment index",
+          "url": "https://en.uesp.net/wiki/Skyrim_Mod%3ALegacy_of_Orsinium",
+          "scope": "Indexed equipment-name excerpts only. The full article could not be retrieved. These are expansion-wide name leads, not a complete roster, quest payouts, item statistics, or PS5 record verification."
         }
       ]
     },
@@ -3009,7 +3260,25 @@
           "text": "The Cursed Tribe completed."
         }
       ],
-      "rewards": [],
+      "rewards": [
+        {
+          "label": "Riften bargain mask — exact item name unresolved",
+          "kind": "lead",
+          "note": "Two players describe an optional mask obtained through an Argonian bargain during the Largashbur follow-up. Its precise name is not supplied; it is not matched to any named mask in Q047.",
+          "tags": {
+            "category": [
+              "Armor / clothing"
+            ]
+          },
+          "sources": [
+            {
+              "label": "Players — Largashbur / Riften mask route",
+              "url": "https://www.reddit.com/r/skyrim/comments/1up5ev6/does_anyone_know_how_to_get_the_mask_on_the_right/",
+              "scope": "ScottTJT and joksteryoyjoke describe the Argonian bargain and a chest key. The comments do not name the pictured mask; no identification as Firesong Mask or Malacath Mask is assumed. Platform parity remains untested."
+            }
+          ]
+        }
+      ],
       "chain": [
         "Q047",
         "Q038"
@@ -3021,10 +3290,16 @@
           "url": "https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium",
           "label": "Legacy of Orsinium — creator's Creations description and starting instructions",
           "scope": "Starting instructions are from indexed official description excerpts. No individual ending reward or inventory statistic is inferred."
+        },
+        {
+          "label": "Players — Largashbur / Riften mask route",
+          "url": "https://www.reddit.com/r/skyrim/comments/1up5ev6/does_anyone_know_how_to_get_the_mask_on_the_right/",
+          "scope": "ScottTJT and joksteryoyjoke describe the Argonian bargain and a chest key. The comments do not name the pictured mask; no identification as Firesong Mask or Malacath Mask is assumed. Platform parity remains untested."
         }
       ],
       "destinations": [],
-      "notes": []
+      "notes": [],
+      "spoilers": "Community-reported optional route: during the Largashbur follow-up, accept the Argonian debtor’s offer of a mask for a chest key. A second player places the chest on the Riften docks near Honeyside. One reports a fire-resistance enchantment, without a magnitude. Killing the debtor is not confirmed to preserve this route. These are player reports, not a PS5-tested walkthrough."
     },
     {
       "id": "Q051",
@@ -3164,21 +3439,153 @@
           }
         },
         {
-          "label": "Adventure equipment, weapons and spells",
+          "label": "Ouroboros summon — exact spell label unverified",
           "kind": "lead",
-          "note": "Content categories are confirmed; named pickups and final reward allocations remain unverified.",
+          "note": "A player-demonstration description reports unlocking a summon after defeating Ouroboros. Do not read this as a main-quest completion reward or a verified PS5 spell record.",
           "tags": {
             "category": [
-              "Weapons / ammunition",
-              "Armor / clothing",
               "Spells / summons"
             ]
-          }
+          },
+          "sources": [
+            {
+              "label": "VuldwiinThur — Ouroboros summon demonstration description",
+              "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=videos",
+              "scope": "First-person video description, 18 November 2024: defeating Ouroboros gives a spell to summon him. The spell display name, school, duration, exact award mechanism and PS5 parity are not established."
+            }
+          ]
+        },
+        {
+          "label": "Incomplete Recipe",
+          "kind": "lead",
+          "note": "An Xbox discussion associates it with improving Chaos weapons into Orphis-style versions. The core is not named, so a usable crafting recipe is still unverified.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          },
+          "sources": [
+            {
+              "label": "Xbox players — Incomplete Recipe",
+              "url": "https://www.reddit.com/r/skyrimmods/comments/1fh39do/the_final_cataclysm_recipe/",
+              "scope": "Player discussion links a Chaos relic and an unnamed core to Orphis-style weapon upgrades. This is not a verified recipe, complete ingredient list, or tested PS5 route."
+            }
+          ]
+        },
+        {
+          "label": "Bone Button",
+          "kind": "lead",
+          "note": "Named in an Xbox crafting question. Hollowed Dolls are a tentative player suggestion, not a guaranteed drop or fixed spawn.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          },
+          "sources": [
+            {
+              "label": "Xbox players — Bone Button",
+              "url": "https://www.reddit.com/r/skyrimmods/comments/13iro2p/need_help_with_final_cataclysm/",
+              "scope": "A player names Bone Button; a reply tentatively suggests Hollowed Dolls. No verified drop rate, crafting formula or PS5 location."
+            }
+          ]
+        },
+        {
+          "label": "Infinity — progression item",
+          "kind": "lead",
+          "note": "Named by a PC player during the adventure. Item type and effects are unresolved. This is not identified as the separately installed Infinity Sword.",
+          "tags": {
+            "category": [
+              "Books / powers / other"
+            ]
+          },
+          "sources": [
+            {
+              "label": "PC player — Infinity progression item",
+              "url": "https://www.reddit.com/r/skyrimmods/comments/vgzw23/help_with_final_cataclysm_mod/",
+              "scope": "A player reports receiving an item called Infinity during the adventure. The report does not establish item type, a final reward, or a connection to the separately installed Infinity Sword mod."
+            }
+          ]
+        },
+        {
+          "label": "Blissfang",
+          "kind": "lead",
+          "note": "A PC player reports finding its record in xEdit. This does not establish a player acquisition route or confirm that the PS5 port contains that record.",
+          "tags": {
+            "category": [
+              "Weapons / ammunition"
+            ]
+          },
+          "sources": [
+            {
+              "label": "Nexus player peemapat72 — Blissfang record report",
+              "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=posts",
+              "scope": "22 January 2026 comment: the player reports finding Blissfang in xEdit after initially not finding the weapon. Acquisition and correspondence to the PS5 build remain unverified; no PC console instructions are imported."
+            }
+          ]
+        },
+        {
+          "label": "Travel spell to Alterna Tower — translated label",
+          "kind": "lead",
+          "note": "The French translator mentions this travel spell in playtest notes. English display name, school and acquisition remain unverified.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ]
+          },
+          "sources": [
+            {
+              "label": "jihan02 — French v6.1 translation and playtest notes",
+              "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+              "scope": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
+            }
+          ]
+        },
+        {
+          "label": "Travel spell to Tamriel — translated label",
+          "kind": "lead",
+          "note": "The French playtest describes an Alteration travel spell returning to the Throat of the World summit. The English name and PS5 route remain unverified.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Alteration"
+            ]
+          },
+          "sources": [
+            {
+              "label": "jihan02 — French v6.1 translation and playtest notes",
+              "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+              "scope": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
+            }
+          ]
+        },
+        {
+          "label": "Travel spell to the Depths — translated label",
+          "kind": "lead",
+          "note": "The French playtest mentions an Alteration travel spell during the bonus adventure. Exact English name and PS5 inclusion remain unverified.",
+          "tags": {
+            "category": [
+              "Spells / summons"
+            ],
+            "school": [
+              "Alteration"
+            ]
+          },
+          "sources": [
+            {
+              "label": "jihan02 — French v6.1 translation and playtest notes",
+              "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+              "scope": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
+            }
+          ]
         }
       ],
       "notes": [
         "The creator describes roughly eight hours, follower support and a remotely accessible hub. These are source features, not a timed test of Sam's installation.",
-        "No guessed quest-giver or portal pin has been added."
+        "No guessed quest-giver or portal pin has been added.",
+        "Research now distinguishes eight named or identifiable content leads from confirmed final payouts. The list spans the adventure and its bonus content; none is assigned to a specific PS5 completion stage. The complete weapon, armor, spell and ending-reward rosters remain open.",
+        "The author’s level-50 and Horn of Jurgen Windcaller requirements are still the verified upstream entry gates. No retrieved source establishes the exact first PS5 NPC, note title, courier event or portal. Meeting the gates is not proof of a particular first contact."
       ],
       "chain": [
         "Q054"
@@ -3190,6 +3597,36 @@
           "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167",
           "label": "Kittytail — The Final Cataclysm 2020 requirements and content",
           "scope": "The installed PS5 description at 02:13.00 links this source. Level gates are distinguished from an unverified first-contact location."
+        },
+        {
+          "label": "VuldwiinThur — Ouroboros summon demonstration description",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=videos",
+          "scope": "First-person video description, 18 November 2024: defeating Ouroboros gives a spell to summon him. The spell display name, school, duration, exact award mechanism and PS5 parity are not established."
+        },
+        {
+          "label": "Xbox players — Incomplete Recipe",
+          "url": "https://www.reddit.com/r/skyrimmods/comments/1fh39do/the_final_cataclysm_recipe/",
+          "scope": "Player discussion links a Chaos relic and an unnamed core to Orphis-style weapon upgrades. This is not a verified recipe, complete ingredient list, or tested PS5 route."
+        },
+        {
+          "label": "Xbox players — Bone Button",
+          "url": "https://www.reddit.com/r/skyrimmods/comments/13iro2p/need_help_with_final_cataclysm/",
+          "scope": "A player names Bone Button; a reply tentatively suggests Hollowed Dolls. No verified drop rate, crafting formula or PS5 location."
+        },
+        {
+          "label": "PC player — Infinity progression item",
+          "url": "https://www.reddit.com/r/skyrimmods/comments/vgzw23/help_with_final_cataclysm_mod/",
+          "scope": "A player reports receiving an item called Infinity during the adventure. The report does not establish item type, a final reward, or a connection to the separately installed Infinity Sword mod."
+        },
+        {
+          "label": "Nexus player peemapat72 — Blissfang record report",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167?tab=posts",
+          "scope": "22 January 2026 comment: the player reports finding Blissfang in xEdit after initially not finding the weapon. Acquisition and correspondence to the PS5 build remain unverified; no PC console instructions are imported."
+        },
+        {
+          "label": "jihan02 — French v6.1 translation and playtest notes",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+          "scope": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
         }
       ],
       "destinations": []
@@ -3215,7 +3652,8 @@
       ],
       "rewards": [],
       "notes": [
-        "Nirn Monolith clues and the creator's color-capsule hunt are also worth checking during exploration; they are not asserted to be the bonus quest's final reward."
+        "Nirn Monolith clues and the creator's color-capsule hunt are also worth checking during exploration; they are not asserted to be the bonus quest's final reward.",
+        "See the eight expansion-wide content leads in the linked main-adventure guide (Q053), including the translator-reported Depths travel spell. They are not a verified list of this bonus quest’s completion rewards."
       ],
       "chain": [
         "Q053"
@@ -3227,6 +3665,11 @@
           "url": "https://www.nexusmods.com/skyrimspecialedition/mods/33167",
           "label": "Kittytail — The Final Cataclysm 2020 requirements and content",
           "scope": "The installed PS5 description at 02:13.00 links this source. Level gates are distinguished from an unverified first-contact location."
+        },
+        {
+          "label": "jihan02 — French v6.1 translation and playtest notes",
+          "url": "https://www.nexusmods.com/skyrimspecialedition/mods/75394",
+          "scope": "Translator-authored playtest notes, 15 September 2022. Three travel-spell labels are translated here for understanding, not certified English inventory names. PC troubleshooting is not a PS5 walkthrough."
         }
       ],
       "destinations": []
@@ -3266,7 +3709,9 @@
       ],
       "notes": [
         "Use Movarth's Lair as a nearby landmark, not the dungeon entrance itself. Older indexed text places a previous edition near Whiterun; that is not the route in your recording.",
-        "No level requirement is visible in the reviewed installed description."
+        "No level requirement is visible in the reviewed installed description.",
+        "Reward-roster review: the upstream page now describes a v3.0 rebuild dated 6 October 2026, while your recorded console menu labels this port v1.00. Those version numbers are not directly comparable. Your recorded Rooted In Madness start near Movarth’s Lair remains controlling evidence.",
+        "The available description confirms new items and enemies but does not name a complete reward roster. No old Whiterun item list or assumed v3.0 rewards have been inserted."
       ],
       "lo": 142,
       "batch": "October adventures",
@@ -3287,7 +3732,7 @@
     },
     {
       "id": "Q056",
-      "title": "Dagoth Ur — companion and recruitment lead",
+      "title": "Dagoth Ur — recruitment and Mazel Tov research",
       "mod": "Dagoth Ur",
       "kind": "Companion profile",
       "start": {
@@ -3302,19 +3747,28 @@
       "hook": "A voiced travelling companion with a custom quest and items described by the public PS listing.",
       "rewards": [
         {
-          "label": "Dagoth's custom quest and items",
+          "label": "Mazel Tov quest potion — exact item label unresolved",
           "kind": "lead",
-          "note": "Public PS listing content; no verified quest trigger, named payout or exact installed-build match yet.",
+          "note": "Players describe crafting the quest potion, not a fully documented final payout. Its name, effects and exact PS5 recipe are still unverified.",
           "tags": {
             "category": [
               "Books / powers / other"
             ]
-          }
+          },
+          "sources": [
+            {
+              "label": "PC players — Mazel Tov quest and cooking station",
+              "url": "https://www.reddit.com/r/skyrimmods/comments/1qgn2s2/dagoth_ur_mazel_tov_quest_help_does_anybody_have/",
+              "scope": "The thread names Mazel Tov and horse, frost-troll and giant quest ingredients. Multiple replies specify a cooking station, not an alchemy table. Final potion name/effects and PS5 parity are unresolved."
+            }
+          ]
         }
       ],
       "notes": [
         "This is a practical place to check, not a verified recruitment result in Sam's save. The guide does not invent his stats, a loyalty threshold or a quest timer.",
-        "His addition and load-order position are user-confirmed; the recorded video predates his installation."
+        "His addition and load-order position are user-confirmed; the recorded video predates his installation.",
+        "Quest trigger — creator-confirmed upstream behavior: Der_kernel says a random line after combat starts the quest. Travel and fight with Dagoth, then allow his post-combat dialogue to play; there is no sourced fixed level, kill count or waiting period.",
+        "Community reports name the collection quest Mazel Tov. Your exact 1.37 GB PS5 port still needs a matching author/porter and version, so this is not marked installed-build verified. Recruitment and the later quest trigger are separate steps."
       ],
       "lo": 217,
       "batch": "October adventures",
@@ -3328,11 +3782,22 @@
           "url": "https://creations.bethesda.net/en/skyrim/details/1cd8ec53-d6c4-4631-ba2e-994d21a9ecfb/_PS__Dagoth_Ur_Follower_by_DerKernel",
           "label": "[PS] Dagoth Ur Follower by DerKernel — public content description",
           "scope": "The public PS listing describes a voiced follower, custom items and a custom quest. It is a project-level lead, not confirmation of Sam's precise installed build."
+        },
+        {
+          "label": "Der_kernel — creator reply about the quest trigger",
+          "url": "https://www.reddit.com/r/skyrim/comments/1o51rag/dagoth_ur_mod_question/",
+          "scope": "The creator explains that a random end-of-combat dialogue line triggers the quest. This establishes the upstream behavior, not the exact installed 1.37 GB PS5 build; no fixed kill count, level or timer is documented."
+        },
+        {
+          "label": "PC players — Mazel Tov quest and cooking station",
+          "url": "https://www.reddit.com/r/skyrimmods/comments/1qgn2s2/dagoth_ur_mazel_tov_quest_help_does_anybody_have/",
+          "scope": "The thread names Mazel Tov and horse, frost-troll and giant quest ingredients. Multiple replies specify a cooking station, not an alchemy table. Final potion name/effects and PS5 parity are unresolved."
         }
       ],
       "requirements": [],
       "destinations": [],
-      "chain": []
+      "chain": [],
+      "spoilers": "Mazel Tov crafting tip (PC player reports): the quest uses ingredients from horses, frost trolls and giants, and the quest potion is made at a cooking station rather than an alchemy table. Reported ingredient drops differ between players; no guaranteed rate or fix is established. The final potion’s exact inventory name, effects and any extra completion gifts remain unresolved."
     }
   ],
   "catalogLinks": {
@@ -3377,5 +3842,18 @@
       }
     }
   },
-  "catalogLinksScope": "Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam's current arrangement."
+  "catalogLinksScope": "Links to current artifact review; quest IDs, text and reward roles are unchanged. Load-order numbers reflect Sam's current arrangement.",
+  "rewardResearch": {
+    "batch": "reward-research-01",
+    "reviewed": "2026-10-12",
+    "completeRosters": false,
+    "guideIds": [
+      "Q047",
+      "Q050",
+      "Q053",
+      "Q054",
+      "Q055",
+      "Q056"
+    ]
+  }
 }

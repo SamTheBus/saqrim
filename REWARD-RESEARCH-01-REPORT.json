@@ -1,0 +1,62 @@
+{
+  "baseline": "37c08fbf5033658490700f1ada2e808ea85d1edb",
+  "inputHash": "d842c5110edc44ca7c441baa3e22890bd57a33b10bbca79127c252a7ad21e9d3",
+  "completeRosters": false,
+  "changedGuides": [
+    "Q047",
+    "Q050",
+    "Q053",
+    "Q054",
+    "Q055",
+    "Q056"
+  ],
+  "orsiniumEquipmentNames": 15,
+  "cataclysmContentLeads": 8,
+  "catalogEntries": 637,
+  "questEntries": 56,
+  "loadOrderEntries": 224,
+  "referenceCards": 15,
+  "outstanding": [
+    "Complete named reward rosters and acquisition paths for all four mods",
+    "Cataclysm exact initial PS5 contact",
+    "Dagoth 1.37 GB installed-build match and trigger parity"
+  ],
+  "changedPaths": [
+    "README.md",
+    "REWARD-RESEARCH-01.md",
+    "blessings.html",
+    "index.html",
+    "load-order-reference.js",
+    "load-order-reference.json",
+    "load-order.html",
+    "map.html",
+    "quests-data.json",
+    "quests.html",
+    "quests.js",
+    "shrines.html",
+    "site-quests.js",
+    "site-top.js",
+    "standing-stones.html",
+    "tests/october-sync.py",
+    "worlds.html"
+  ],
+  "outputHashes": {
+    "quests-data.json": "6519a23441afedc598b84d5e19a88541604556b0b831ae8f6954ec3c96ec5fe9",
+    "load-order-reference.json": "44f87ad803dc9dca7fa0b41c59500203de7c5608967bc4bfbdbca9926776717e",
+    "quests.js": "41976dd2672c5d3cfc227ac312d686c6a7919fadc3009f25eb96dcabce0527cb",
+    "site-quests.js": "7e3e0aed8def81989d13e33b4551fe20ac25057046d34e76b980a9ece603ee21",
+    "site-top.js": "5c2407462a6bcac1fd2b3fc279d763b0b9ed0b3c7c22ed9a03ea6326b7af037e",
+    "tests/october-sync.py": "116bbcca1bb63fb9e59ac6024d602fabe3702265317308d192fef69d89e64ab8",
+    "load-order-reference.js": "431be11cd6e36dae66c70b8f59770680ac7b714fb3de9a6eadb4494d663f9d6e",
+    "quests.html": "0770856d5078ac6aec4418fe163606158d66ffee54214432a6d38bb42baa13c6",
+    "index.html": "016826f88b18fbfbefa5877279f26c3fab97f145e18ec515f8c60dae6f6dfd0f",
+    "load-order.html": "f4aa082bc1241912d650b24dae5db10f166e8ef65cc71b7710130455e2a4125f",
+    "map.html": "2f9b43675edba6575678b4e95d05192ea82c211707ed3c57f68a1d09b59a39f2",
+    "worlds.html": "512293c1d796fdd4752ad6ab48fbaa17c14a26a690c273281be0952c1c0bfafe",
+    "shrines.html": "6d3757f33fe7678be0950b6d002538b302f08f36805f5221bea55ec46b9c18c7",
+    "standing-stones.html": "dbf009c8aad070d0e558a9358b040385da395a318ff757c1ea50ab6050b9173b",
+    "blessings.html": "62b27d40f0188ac22c0331ab989286b85bb29f2fd1f58d6bf4110ea5094fae71",
+    "REWARD-RESEARCH-01.md": "4da8f73795cbb058573dd34836a6c63931a12d05d756594dd14043318f77ba1c",
+    "README.md": "a66c650165fac7eeb31d87844bd05c93a88604b4a15b324d540562778de65a9f"
+  }
+}

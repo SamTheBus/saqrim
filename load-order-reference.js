@@ -1,7 +1,7 @@
 'use strict';
 // Optional reference layer. No console, catalog, quest or checklist state is written here.
 (() => {
-  const labels = {recorded:'Recorded PS5', upstream:'Upstream docs', official:'Official listing match', user:'User-reported test'};
+  const labels = {recorded:'Recorded PS5', upstream:'Upstream docs', official:'Official listing match', user:'User-reported test', community:'Community reference'};
   const state = {pack:null, order:new Map(), failed:false};
   const node = (tag, cls, text) => { const n=document.createElement(tag); if(cls)n.className=cls; if(text!==undefined)n.textContent=text; return n; };
   function safeURL(value, external=false) {
@@ -24,7 +24,7 @@
   }
   const ready = (async()=>{
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);
-    try {const r=await fetch('load-order-reference.json?v=content-batch-02',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
+    try {const r=await fetch('load-order-reference.json?v=reward-research-01',{signal:controller.signal});if(!r.ok)throw Error('Reference request failed');state.pack=validate(await r.json());}
     catch(_){state.failed=true;state.pack=null;}
     finally{clearTimeout(timer);}
   })();
@@ -90,7 +90,7 @@
     for(const [text,value] of [['Browse new adventures','content'],['All expanded entries','expanded']]){const b=node('button','',text);b.type='button';b.addEventListener('click',()=>{document.getElementById('show-all')?.click();select.value=value;filter();document.getElementById('mods')?.scrollIntoView({block:'start',behavior:'auto'});});actions.append(b);}
     const a=node('a','','Research notes & scope');a.href='REFERENCE-OVERHAUL.md';actions.append(a);overview.append(actions);
     const legend=node('details','ref-legend');legend.append(node('summary','','What the evidence labels mean'));
-    legend.append(node('p','','Recorded PS5: visible in your uploaded menu. Official listing match: identity or indexed excerpt only, with limitations shown. Upstream docs: original author information, not guaranteed PS5 parity. User-reported test: your observation, not an independent plugin inspection. Assessment: an interpretation or unresolved question tied to its sources.'));
+    legend.append(node('p','','Recorded PS5: visible in your uploaded menu. Official listing match: identity or indexed excerpt only, with limitations shown. Upstream docs: original author information, not guaranteed PS5 parity. User-reported test: your observation, not an independent plugin inspection. Community reference: third-party documentation or player reports, with their limitations stated. Assessment: an interpretation or unresolved question tied to its sources.'));
     overview.append(legend);header.append(overview);
     const requested=new URLSearchParams(location.search).get('reference');if(['expanded','attention','content'].includes(requested))select.value=requested;
   }
