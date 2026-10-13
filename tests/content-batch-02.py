@@ -94,7 +94,7 @@ with sync_playwright() as pw:
     page.click('#filter-panel>summary')
     check('mobile catalog filter disclosure opens',page.locator('#clear').is_visible())
     page.click('#clear');check('clear restores all 637 records',page.locator('#catalog>.card:visible').count()==637)
-    page.goto(url+'load-order.html?reference=content');page.wait_for_selector('#mods>.row')
+    page.goto(url+'load-order.html?reference=content');page.wait_for_selector('#mods>.row:visible')
     check('content view shows five installed mods',page.locator('#mods>.row:visible').count()==5)
     check('all 224 installation entries remain present',page.locator('#mods>.row').count()==224)
     check('224 checklist selection preserved',page.locator('#mods input[type=checkbox]:checked').count()==3)
