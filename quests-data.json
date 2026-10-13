@@ -77,7 +77,7 @@
       "id": "Q002",
       "title": "It's Just Business",
       "mod": "Granite Hill",
-      "lo": 140,
+      "lo": 150,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -117,7 +117,7 @@
       "id": "Q003",
       "title": "The Truth but not the Whole Truth",
       "mod": "Granite Hill",
-      "lo": 140,
+      "lo": 150,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -149,7 +149,7 @@
       "id": "Q004",
       "title": "Beneath a Hill of Granite",
       "mod": "Granite Hill",
-      "lo": 140,
+      "lo": 150,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -196,7 +196,7 @@
       "id": "Q005",
       "title": "Black Book: Stars Beyond the Void",
       "mod": "Granite Hill",
-      "lo": 140,
+      "lo": 150,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -242,7 +242,7 @@
       "id": "Q006",
       "title": "Dwarven Research",
       "mod": "Tonal Architect",
-      "lo": 28,
+      "lo": 27,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -362,7 +362,7 @@
       "id": "Q008",
       "title": "It Came from Akavir",
       "mod": "It Came from Akavir (PS5)",
-      "lo": 147,
+      "lo": 157,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -413,7 +413,7 @@
       "id": "Q009",
       "title": "A Dizzying Fall",
       "mod": "A Dizzying Fall (PS5)",
-      "lo": 142,
+      "lo": 152,
       "kind": "Mod encounter",
       "start": {
         "world": "skyrim",
@@ -441,7 +441,7 @@
       "id": "Q010",
       "title": "The Serpent's Covenant",
       "mod": "The Serpent's Covenant (PS5)",
-      "lo": 143,
+      "lo": 153,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -473,7 +473,7 @@
       "id": "Q011",
       "title": "Mysteries of the Dwemer",
       "mod": "Mysteries of the Dwemer (PS5)",
-      "lo": 144,
+      "lo": 154,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -507,7 +507,7 @@
       "id": "Q012",
       "title": "The Hunt for the Spectre",
       "mod": "The Hunt for the Spectre (PS5)",
-      "lo": 146,
+      "lo": 156,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -570,7 +570,8 @@
           "W560",
           "W571"
         ],
-        "note": "Creator-documented adventure loot, not a guaranteed final quest payout."
+        "note": "Creator-documented adventure loot, not a guaranteed final quest payout.",
+        "name": "Aberrations of the Dwemer"
       },
       "requirements": [
         {
@@ -641,8 +642,8 @@
       "sources": [
         {
           "label": "Recorded PS5 installation and item research",
-          "url": "load-order.html#mod-013",
-          "scope": "Recorded entry #13 and original catalog records W352–W357."
+          "url": "https://github.com/SamTheBus/saqrim/blob/fdf1282fdb7a26596a64cf9aee1708005103af17/load-order.tsv",
+          "scope": "Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed."
         }
       ]
     },
@@ -650,7 +651,7 @@
       "id": "Q015",
       "title": "Beyond Reach — adventure overview",
       "mod": "Beyond Reach Part 1 (PS)",
-      "lo": 14,
+      "lo": null,
       "kind": "Adventure guide",
       "start": {
         "world": "skyrim",
@@ -667,9 +668,10 @@
       "hook": "A starting lead and a home for the unresolved reward roster.",
       "rewards": [],
       "rewardMod": {
-        "lo": 14,
+        "lo": null,
         "kind": "lead",
-        "note": "Not yet tied to a verified quest step in the recorded PS5 4.8 port."
+        "note": "Not yet tied to a verified quest step in the recorded PS5 4.8 port.",
+        "name": "Beyond Reach Part 1 (PS)"
       },
       "requirements": [
         {
@@ -693,8 +695,8 @@
         },
         {
           "label": "Recorded parts #14–15",
-          "url": "load-order.html#mod-016",
-          "scope": "Installed baseline."
+          "url": "https://github.com/SamTheBus/saqrim/blob/fdf1282fdb7a26596a64cf9aee1708005103af17/load-order.tsv",
+          "scope": "Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed."
         }
       ]
     },
@@ -702,7 +704,7 @@
       "id": "Q016",
       "title": "Arniel's Endeavor",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -755,7 +757,7 @@
       "id": "Q017",
       "title": "Impatience of a Saint",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "soul-cairn",
@@ -806,7 +808,7 @@
       "id": "Q018",
       "title": "No One Escapes Cidhna Mine",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -869,7 +871,7 @@
       "id": "Q019",
       "title": "Lost to the Ages",
       "mod": "Artificer / The Infinity Sword",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -931,7 +933,7 @@
       "id": "Q020",
       "title": "Touching the Sky",
       "mod": "Artificer / Occiglacies / Guns of Skyrim",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -1018,7 +1020,7 @@
       "id": "Q021",
       "title": "Lost Relic",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -1073,7 +1075,7 @@
       "id": "Q022",
       "title": "Ill Met by Moonlight",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -1130,7 +1132,7 @@
       "id": "Q023",
       "title": "The Breathing Abyss",
       "mod": "The Breathing Abyss",
-      "lo": 134,
+      "lo": 144,
       "kind": "Mod quest",
       "start": {
         "world": "skyrim",
@@ -1160,9 +1162,9 @@
           "scope": "Original author documentation; recorded PS5 behavior not independently tested."
         },
         {
-          "url": "load-order.html#mod-148",
+          "url": "https://github.com/SamTheBus/saqrim/blob/fdf1282fdb7a26596a64cf9aee1708005103af17/load-order.tsv",
           "label": "Recorded entry #140",
-          "scope": "The recording supplies the Manias / Yngvild starting clue."
+          "scope": "Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed."
         }
       ],
       "destinations": [
@@ -1215,7 +1217,7 @@
       "id": "Q025",
       "title": "Moonpath to Elsweyr — adventure overview",
       "mod": "Moonpath to Elsweyr [PS5]",
-      "lo": 139,
+      "lo": 149,
       "kind": "Mod questline",
       "start": {
         "world": "skyrim",
@@ -1234,9 +1236,9 @@
           "scope": "Original author documentation; recorded PS5 behavior not independently tested."
         },
         {
-          "url": "load-order.html#mod-164",
+          "url": "https://github.com/SamTheBus/saqrim/blob/fdf1282fdb7a26596a64cf9aee1708005103af17/load-order.tsv",
           "label": "Installed Lucien / Moonpath patch",
-          "scope": "Recorded compatibility addon, not proof of an extra player reward."
+          "scope": "Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed."
         }
       ],
       "destinations": [
@@ -1256,7 +1258,7 @@
       "id": "Q026",
       "title": "The Oblivion Engine",
       "mod": "Lucien - Fully Voiced Follower",
-      "lo": 148,
+      "lo": 159,
       "kind": "Mod companion quest",
       "start": {
         "world": "variable",
@@ -1303,7 +1305,7 @@
       "id": "Q027",
       "title": "Intruders",
       "mod": "Lucien - Fully Voiced Follower",
-      "lo": 148,
+      "lo": 159,
       "kind": "Mod companion quest",
       "start": {
         "world": "variable",
@@ -1355,7 +1357,7 @@
       "id": "Q028",
       "title": "The Heart of Dibella — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 131,
+      "lo": 139,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1415,7 +1417,7 @@
       "id": "Q029",
       "title": "Innocence Lost — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 131,
+      "lo": 139,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1480,7 +1482,7 @@
       "id": "Q030",
       "title": "Destroy the Dark Brotherhood! — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 131,
+      "lo": 139,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1562,7 +1564,7 @@
       "id": "Q031",
       "title": "Infiltration — expanded",
       "mod": "JaySerpa's Quest Expansion Bundle",
-      "lo": 131,
+      "lo": 139,
       "kind": "Expanded existing quest",
       "start": {
         "world": "skyrim",
@@ -1617,7 +1619,7 @@
       "id": "Q032",
       "title": "Knight of the North — Crusader relic hunt",
       "mod": "Knight of the North - Divine Crusader Reworked (PS5)",
-      "lo": 145,
+      "lo": 155,
       "kind": "Adventure guide",
       "start": {
         "world": "skyrim",
@@ -1698,7 +1700,7 @@
       "id": "Q033",
       "title": "Illusion Ritual Spell",
       "mod": "Apocalypse - Magic of Skyrim",
-      "lo": 37,
+      "lo": 36,
       "kind": "Existing quest · magic unlock",
       "start": {
         "world": "skyrim",
@@ -1791,7 +1793,7 @@
       "id": "Q034",
       "title": "Conjuration Ritual Spell",
       "mod": "Apocalypse - Magic of Skyrim",
-      "lo": 37,
+      "lo": 36,
       "kind": "Existing quest · magic unlock",
       "start": {
         "world": "skyrim",
@@ -1914,7 +1916,7 @@
       "id": "Q035",
       "title": "Destruction Ritual Spell",
       "mod": "Apocalypse - Magic of Skyrim",
-      "lo": 37,
+      "lo": 36,
       "kind": "Existing quest · magic unlock",
       "start": {
         "world": "skyrim",
@@ -2012,7 +2014,7 @@
       "id": "Q036",
       "title": "Alteration Ritual Spell",
       "mod": "Apocalypse - Magic of Skyrim",
-      "lo": 37,
+      "lo": 36,
       "kind": "Existing quest · magic unlock",
       "start": {
         "world": "skyrim",
@@ -2099,7 +2101,7 @@
       "id": "Q037",
       "title": "Restoration Ritual Spell",
       "mod": "Apocalypse - Magic of Skyrim",
-      "lo": 37,
+      "lo": 36,
       "kind": "Existing quest · magic unlock",
       "start": {
         "world": "skyrim",
@@ -2177,7 +2179,7 @@
       "id": "Q038",
       "title": "The Cursed Tribe",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2235,7 +2237,7 @@
       "id": "Q039",
       "title": "Waking Nightmare",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2284,7 +2286,7 @@
       "id": "Q040",
       "title": "A Night to Remember",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2329,7 +2331,7 @@
       "id": "Q041",
       "title": "The Taste of Death",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2388,7 +2390,7 @@
       "id": "Q042",
       "title": "The Wolf Queen Awakened",
       "mod": "Artificer / Knight of the North",
-      "lo": 145,
+      "lo": 155,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2466,7 +2468,7 @@
       "id": "Q043",
       "title": "Forbidden Legend",
       "mod": "Skyrim / Artificer setup",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · artifact hunt",
       "start": {
         "world": "skyrim",
@@ -2576,7 +2578,7 @@
       "id": "Q044",
       "title": "The Black Star",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "skyrim",
@@ -2640,7 +2642,7 @@
       "id": "Q045",
       "title": "Unearthed",
       "mod": "Artificer - An Artifact Overhaul",
-      "lo": 57,
+      "lo": 56,
       "kind": "Existing quest · modded loot",
       "start": {
         "world": "solstheim",

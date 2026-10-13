@@ -90,6 +90,7 @@ check('Bethesda matches are current or removed explicitly',set(listing['entries'
 for path in ROOT.glob('*.js'):
     subprocess.run(['node','--check',str(path)],check=True,capture_output=True)
 check('all live JavaScript parses',True)
+check('dynamic quest loader cache refreshed','site-quests.js?v=october-sync-1' in read('site-top.js'))
 for path in ['index.html','load-order.html','map.html','quests.html','shrines.html','standing-stones.html','worlds.html','blessings.html']:
     soup = BeautifulSoup(read(path),'html.parser')
     check('current navigation '+path,soup.select_one('.nav a[href="load-order.html"]').text=='Load order · 224')
@@ -153,6 +154,7 @@ with sync_playwright() as p:
     check('item choice remains saved',page.locator('#pick_W180').input_value()=='Want')
     page.goto(url+'quests.html#Q030');page.wait_for_function('window.SaqrimQuests',timeout=25000)
     check('quest link reaches current bundle',page.locator('#Q030 a[href="load-order.html#mod-139"]').count()==1)
+    check('archived reward expansion preserved',page.evaluate('SaqrimQuests.quests.find(q=>q.id==="Q015").rewards.length')==sum(r['Installed mod']=='Beyond Reach Part 1 (PS)' for r in cat))
     retired_q = [q for q in qp['quests'] if q.get('lo') is None]
     for q in retired_q:
         check('retired quest has no incorrect current link '+q['id'],page.locator('#'+q['id']+' a[href^="load-order.html#mod-"]').count()==0)

@@ -115,7 +115,7 @@ def remap_text(text):
         if b is None:
             return one(a)
         return one(a)+'–'+one(b).lstrip('#')
-    return number_pattern.sub(change, text)
+    return number_pattern.sub(change, text).replace('current 210-entry order', 'current 224-entry order').replace('recorded 210-entry current order', 'current 224-entry reference (research retained)')
 
 def walk(value):
     if isinstance(value,str):
@@ -185,6 +185,13 @@ for i,q in enumerate(qpack['quests']):
         out['lo'] = mapping.get(q['lo'])
     if isinstance(q.get('rewardMod'),dict) and isinstance(q['rewardMod'].get('lo'),int):
         out['rewardMod']['lo'] = mapping.get(q['rewardMod']['lo'])
+    # ARCHIVE_SOURCE_FIX: source citations are historical, not current installation links.
+    for source in out.get('sources', []):
+        if 'load-order.html#mod-' in source.get('url', ''):
+            source['url'] = 'https://github.com/SamTheBus/saqrim/blob/'+BASE+'/load-order.tsv'
+            source['scope'] = 'Historical September source snapshot. Use the separate current source-mod link only when the mod is still installed.'
+    if isinstance(q.get('rewardMod'), dict) and isinstance(q['rewardMod'].get('lo'), int):
+        out['rewardMod']['name'] = oldnums[q['rewardMod']['lo']]['name']
     qpack['quests'][i] = out
 write('quests-data.json',dump(qpack))
 
@@ -263,12 +270,17 @@ write('load-order.html',h)
 refjs = baseline('load-order-reference.js').replace('The 210-mod checklist','The 224-mod checklist')
 refjs = refjs.replace("fetch('load-order-reference.json?v=1'", "fetch('load-order-reference.json?v="+TOKEN+"'")
 write('load-order-reference.js',refjs)
-write('site-top.js',baseline('site-top.js').replace('Load order · 210','Load order · 224'))
+write('site-top.js',baseline('site-top.js').replace('Load order · 210','Load order · 224').replace('site-quests.js?v=3','site-quests.js?v=october-sync-1')) # OCTOBER_DYNAMIC_CACHE
 
 # Refresh consumers together so old cached datasets cannot mix with the new numbers.
 consumer_scripts = ['catalog.js','map.js','worlds.js','quests.js','site-quests.js']
 for path in consumer_scripts:
     c = baseline(path)
+    if path in ['quests.js', 'site-quests.js']:
+        variable = 'r' if path == 'quests.js' else 'raw'
+        needle = "Number("+variable+"['LO #'])===q.rewardMod.lo"
+        assert needle in c, path
+        c = c.replace(needle, "(q.rewardMod.name ? "+variable+"['Installed mod']===q.rewardMod.name : "+needle+")")
     for filename in ['catalog-current.html','quests-data.json','artifact-review.json']:
         c = re.sub(re.escape(filename)+r'\?v=[A-Za-z0-9_-]+',filename+'?v='+TOKEN,c)
     write(path,c)
@@ -284,6 +296,7 @@ for path in html_pages:
     write(path,c)
 
 readme = baseline('README.md')
+readme = re.sub(r'^- Current load-order source:.*$', '- Current load-order source: `1a12e7fc6d46-master_playlist.mp4` plus Sam’s final confirmed swaps and placements', readme, flags=re.M)
 readme = readme.replace('210-entry current load-order checklist','224-entry current load-order checklist')
 a = readme.index('## Load-order provenance')
 b = readme.index('## Preservation',a)
