@@ -1,0 +1,44 @@
+name: Reward documentation review
+on:
+  push:
+    branches: [reward-roster-research]
+    paths: ['.github/workflows/reward-source-review.yml']
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read selected public documentation (no login or access-control bypass)
+        run: |
+          python - <<'PY'
+          import concurrent.futures, json, pathlib, urllib.request, urllib.error
+          out=pathlib.Path('source-review');out.mkdir()
+          urls={
+            'orsinium':'https://en.uesp.net/wiki/Skyrim_Mod:Legacy_of_Orsinium',
+            'cataclysm':'https://www.nexusmods.com/skyrimspecialedition/mods/33167',
+            'rotdyflissa':'https://www.nexusmods.com/skyrimspecialedition/mods/94760',
+            'dagoth-ps':'https://creations.bethesda.net/en/skyrim/details/1cd8ec53-d6c4-4631-ba2e-994d21a9ecfb/_PS__Dagoth_Ur_Follower_by_DerKernel',
+            'orsinium-official':'https://creations.bethesda.net/en/skyrim/details/6fd8aec6-9d25-4532-b416-a9a8db6a1ed7/Legacy_of_Orsinium'
+          }
+          def fetch(pair):
+            name,url=pair
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Saqrim reference review (+https://github.com/SamTheBus/saqrim)'})
+              with urllib.request.urlopen(req,timeout=35) as r:
+                body=r.read(4*1024*1024)
+                (out/(name+'.html')).write_bytes(body)
+                return {'name':name,'source':url,'status':r.status,'bytes':len(body),'finalURL':r.url}
+            except Exception as e:
+              return {'name':name,'source':url,'error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:
+            result=list(ex.map(fetch,urls.items()))
+          (out/'manifest.json').write_text(json.dumps(result,indent=2))
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: selected-reward-source-review
+          path: source-review/
+          retention-days: 1
